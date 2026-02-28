@@ -4,7 +4,7 @@ import { Search, Sparkles, User, Calendar, BrainCircuit, Share2, HelpCircle, Ref
 import { motion, AnimatePresence } from 'framer-motion';
 import QuickMBTI from './components/QuickMBTI';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
+const API_URL = import.meta.env.VITE_API_URL || '/api';
 const translations: any = {
   en: {
     title: "K-DESTINY AI",
@@ -925,11 +925,15 @@ const App = () => {
 
       // 후보 목록 처리
       const allCands = candRes.data.candidates || [];
-      // 백엔드에서 이미 is_person 여부를 판단해서 보내주므로 이를 활용
-      const personCands = allCands.filter((c: any) => c.is_person !== false);
+      // 사람인 것을 우선하되, 없으면 전체 목록 사용
+      let personCands = allCands.filter((c: any) => c.is_person !== false);
+      if (personCands.length === 0 && allCands.length > 0) {
+        personCands = allCands;
+      }
 
       // 후보가 1개보다 많으면 → 선택 UI 표시
       if (personCands.length >= 1) {
+        // ... (이전에 수동 선택 UI를 보여주기로 했으므로 유지)
         setCandidates(personCands);
         setShowCandidates(true);
         setLoading(false);

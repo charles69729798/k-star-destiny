@@ -405,9 +405,9 @@ def get_candidates(name: str) -> list:
     # 사람 관련 키워드 (이 키워드가 포함된 항목만 후보로)
     PERSON_KEYWORDS = [
         "singer", "rapper", "actor", "actress", "idol", "kpop", "k-pop",
-        "entertainer", "musician", "artist", "member", "band",
-        "가수", "배우", "아이돌", "가수", "뮤지션", "아티스트",
-        "south korean", "한국의",
+        "entertainer", "musician", "artist", "member", "band", "personality", "model",
+        "가수", "배우", "아이돌", "랩퍼", "가수", "뮤지션", "아티스트", "연예인", "방송인", "모델",
+        "south korean", "한국의", "대한민국의", "출생", "born", "member of",
     ]
 
     try:
@@ -459,7 +459,9 @@ def get_candidates(name: str) -> list:
 
                     # 사람 관련 항목만 포함 (비사람 항목 필터링)
                     combined = (description + " " + extract).lower()
-                    is_person = any(kw in combined for kw in PERSON_KEYWORDS)
+                    person_matches = [kw for kw in PERSON_KEYWORDS if kw in combined]
+                    is_person = len(person_matches) > 0
+                    print(f"  [Candidates] Item: {title}, matches={person_matches}, is_person={is_person}", file=sys.stderr)
 
                     # 항상 후보에 포함 (사람 여부로 정렬만)
                     candidates.append({
