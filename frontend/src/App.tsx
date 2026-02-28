@@ -712,6 +712,39 @@ const App = () => {
   const [mode, setMode] = useState<'idol' | 'friend'>('idol');
   const [friendData, setFriendData] = useState({ name: '', birth_date: '', gender: 'female', mbti: '' });
   const [stats, setStats] = useState({ today_challengers: 0, total_visitors: 0 });
+  const maleScrollRef = useRef<HTMLDivElement>(null);
+  const femaleScrollRef = useRef<HTMLDivElement>(null);
+
+  // Mouse Drag to Scroll Logic
+  const handleMouseDown = (e: React.MouseEvent, ref: React.RefObject<HTMLDivElement | null>) => {
+    if (!ref.current) return;
+    const slider = ref.current;
+    slider.dataset.isDown = 'true';
+    slider.dataset.startX = (e.pageX - slider.offsetLeft).toString();
+    slider.dataset.scrollLeft = slider.scrollLeft.toString();
+    slider.style.cursor = 'grabbing';
+  };
+
+  const handleMouseLeave = (ref: React.RefObject<HTMLDivElement | null>) => {
+    if (!ref.current) return;
+    ref.current.dataset.isDown = 'false';
+    ref.current.style.cursor = 'grab';
+  };
+
+  const handleMouseUp = (ref: React.RefObject<HTMLDivElement | null>) => {
+    if (!ref.current) return;
+    ref.current.dataset.isDown = 'false';
+    ref.current.style.cursor = 'grab';
+  };
+
+  const handleMouseMove = (e: React.MouseEvent, ref: React.RefObject<HTMLDivElement | null>) => {
+    if (!ref.current || ref.current.dataset.isDown !== 'true') return;
+    e.preventDefault();
+    const slider = ref.current;
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - Number(slider.dataset.startX)) * 2; // Scroll speed
+    slider.scrollLeft = Number(slider.dataset.scrollLeft) - walk;
+  };
 
   // Browser Unique ID Generator (Fingerprint)
   const getVisitorId = () => {
@@ -811,9 +844,32 @@ const App = () => {
     const fetchPopular = async () => {
       try {
         const res = await axios.get(`${API_URL}/idols/popular`);
-        if (res.data.status === 'success') setPopularIdols(res.data.data);
+        if (res.data.status === 'success' && res.data.data.male.length > 0) {
+          setPopularIdols(res.data.data);
+        } else {
+          // Fallback if data is empty or API fails
+          throw new Error('Empty data');
+        }
       } catch (err) {
-        console.error('Failed to fetch popular idols', err);
+        console.error('Failed to fetch popular idols, using fallback', err);
+        setPopularIdols({
+          male: [
+            { id: 1, name_kr: '정국', name_en: 'Jungkook', group: 'BTS', birth_date: '1997-09-01', gender: 'male' },
+            { id: 2, name_kr: '차은우', name_en: 'Cha Eun-woo', group: 'ASTRO', birth_date: '1997-03-30', gender: 'male' },
+            { id: 3, name_kr: '뷔', name_en: 'V', group: 'BTS', birth_date: '1995-12-30', gender: 'male' },
+            { id: 4, name_kr: '강다니엘', name_en: 'Kang Daniel', group: 'Solo', birth_date: '1996-12-10', gender: 'male' },
+            { id: 5, name_kr: '현진', name_en: 'Hyunjin', group: 'Stray Kids', birth_date: '2000-03-20', gender: 'male' },
+            { id: 6, name_kr: '민규', name_en: 'Mingyu', group: 'SEVENTEEN', birth_date: '1997-04-06', gender: 'male' },
+          ],
+          female: [
+            { id: 101, name_kr: '아이유', name_en: 'IU', group: 'Solo', birth_date: '1993-05-16', gender: 'female' },
+            { id: 102, name_kr: '제니', name_en: 'Jennie', group: 'BLACKPINK', birth_date: '1996-01-16', gender: 'female' },
+            { id: 103, name_kr: '장원영', name_en: 'Jang Wonyoung', group: 'IVE', birth_date: '2004-08-31', gender: 'female' },
+            { id: 104, name_kr: '카리나', name_en: 'Karina', group: 'aespa', birth_date: '2000-04-11', gender: 'female' },
+            { id: 105, name_kr: '사나', name_en: 'Sana', group: 'TWICE', birth_date: '1996-12-29', gender: 'female' },
+            { id: 106, name_kr: '윈터', name_en: 'Winter', group: 'aespa', birth_date: '2001-01-01', gender: 'female' },
+          ]
+        });
       }
     };
     fetchPopular();
@@ -1424,8 +1480,18 @@ const App = () => {
                     </div>
                   ) : (
                     <motion.div
-                      className="flex gap-4 overflow-x-auto pb-6 px-2 scrollbar-hide no-scrollbar"
-                      style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                      ref={maleScrollRef}
+                      className="flex gap-4 overflow-x-auto pb-8 pt-2 px-2 scrollbar-hide no-scrollbar cursor-grab active:cursor-grabbing select-none"
+                      style={{
+                        scrollbarWidth: 'none',
+                        msOverflowStyle: 'none',
+                        WebkitOverflowScrolling: 'touch',
+                        paddingRight: '2rem' // 카드 잘림 방지 우측 여백
+                      }}
+                      onMouseDown={(e) => handleMouseDown(e, maleScrollRef)}
+                      onMouseLeave={() => handleMouseLeave(maleScrollRef)}
+                      onMouseUp={() => handleMouseUp(maleScrollRef)}
+                      onMouseMove={(e) => handleMouseMove(e, maleScrollRef)}
                     >
                       {popularIdols.male.map((idol: any, idx: number) => (
                         <motion.button
@@ -1465,8 +1531,18 @@ const App = () => {
                     </div>
                   ) : (
                     <motion.div
-                      className="flex gap-4 overflow-x-auto pb-6 px-2 scrollbar-hide no-scrollbar"
-                      style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                      ref={femaleScrollRef}
+                      className="flex gap-4 overflow-x-auto pb-8 pt-2 px-2 scrollbar-hide no-scrollbar cursor-grab active:cursor-grabbing select-none"
+                      style={{
+                        scrollbarWidth: 'none',
+                        msOverflowStyle: 'none',
+                        WebkitOverflowScrolling: 'touch',
+                        paddingRight: '2rem' // 카드 잘림 방지 우측 여백
+                      }}
+                      onMouseDown={(e) => handleMouseDown(e, femaleScrollRef)}
+                      onMouseLeave={() => handleMouseLeave(femaleScrollRef)}
+                      onMouseUp={() => handleMouseUp(femaleScrollRef)}
+                      onMouseMove={(e) => handleMouseMove(e, femaleScrollRef)}
                     >
                       {popularIdols.female.map((idol: any, idx: number) => (
                         <motion.button
