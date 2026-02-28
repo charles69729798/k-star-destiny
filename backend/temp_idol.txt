@@ -1,1 +1,0 @@
-['Winter', 'Hanni', 'Wonyoung', 'Karina', 'Byeon Woo-seok']
