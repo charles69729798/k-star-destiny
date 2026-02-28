@@ -1,0 +1,12 @@
+{
+  "name": "saju-search-worker",
+  "version": "1.0.0",
+  "description": "Naver/Google background search worker using Puppeteer",
+  "main": "search_worker.js",
+  "scripts": {
+    "search": "node search_worker.js"
+  },
+  "dependencies": {
+    "puppeteer": "^22.0.0"
+  }
+}

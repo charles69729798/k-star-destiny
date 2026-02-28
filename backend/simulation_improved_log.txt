@@ -1,0 +1,10 @@
+=== PART 1: K-Saju & God-Saeng Calendar Analysis (Variable: User) ===
+Compare U1 vs U2: Saju Similarity: 0.40, Calendar Similarity: 0.29
+Compare U1 vs U3: Saju Similarity: 0.22, Calendar Similarity: 0.15
+Compare U2 vs U3: Saju Similarity: 0.17, Calendar Similarity: 0.39
+
+=== PART 2: Destiny Signal Analysis (3 Users x 10 Stars = 30 Matches) ===
+Total Matches Analyzed: 30
+Average Similarity: 0.13
+Max Similarity: 0.97
+Min Similarity: 0.00

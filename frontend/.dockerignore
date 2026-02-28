@@ -1,0 +1,13 @@
+node_modules
+dist
+.env*
+*.log
+.git
+.vscode
+build
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.html (excluding index.html)
+debug_*

@@ -1,0 +1,272 @@
+[
+    {
+        "name_kr": "장원영",
+        "name_en": "Wonyoung",
+        "group": "IVE",
+        "gender": "female",
+        "mbti": "ENTJ",
+        "birth_date": "2004-08-31",
+        "tmi": "전형적인 외유내강형 사주! 갓기 카리스마의 원천입니다. ✨"
+    },
+    {
+        "name_kr": "카리나",
+        "name_en": "Karina",
+        "group": "aespa",
+        "gender": "female",
+        "mbti": "ENFP",
+        "birth_date": "2000-04-11",
+        "tmi": "불(Fire)의 기운이 강해 무대 위 에너지가 폭발적이죠. 🔥"
+    },
+    {
+        "name_kr": "정국",
+        "name_en": "Jungkook",
+        "group": "BTS",
+        "gender": "male",
+        "mbti": "ISFP",
+        "birth_date": "1997-09-01",
+        "tmi": "금(Metal)과 물(Water)의 조화로 세련된 감각과 깊은 감성을 가졌습니다. 🌊"
+    },
+    {
+        "name_kr": "차은우",
+        "name_en": "Cha Eun-woo",
+        "group": "ASTRO",
+        "gender": "male",
+        "mbti": "INFJ",
+        "birth_date": "1997-03-30",
+        "tmi": "대지(Earth)의 기운이 안정을 주어 신뢰감을 주는 완벽한 비주얼 완성! ⛰️"
+    },
+    {
+        "name_kr": "연준",
+        "name_en": "Yeonjun",
+        "group": "TXT",
+        "gender": "male",
+        "mbti": "ENFP",
+        "birth_date": "1999-09-13",
+        "tmi": "나무(Wood)의 성장 에너지가 가득해 늘 새로운 매력을 뿜어냅니다. 🌲"
+    },
+    {
+        "name_kr": "아이유",
+        "name_en": "IU",
+        "group": "Solo",
+        "gender": "female",
+        "mbti": "INFJ",
+        "birth_date": "1993-05-16",
+        "tmi": "물(Water)의 지혜가 담긴 따뜻한 가사의 주인공입니다. 💧"
+    },
+    {
+        "name_kr": "윈터",
+        "name_en": "Winter",
+        "group": "aespa",
+        "gender": "female",
+        "mbti": "ISFJ",
+        "birth_date": "2001-01-01",
+        "tmi": "눈꽃처럼 순수하고 차분하지만 속은 알찬 스타일! ❄️"
+    },
+    {
+        "name_kr": "제니",
+        "name_en": "Jennie",
+        "group": "BLACKPINK",
+        "gender": "female",
+        "mbti": "INFP",
+        "birth_date": "1996-01-16",
+        "tmi": "세련된 아우라 뒤에 숨겨진 소녀 같은 반전 매력. 🎀"
+    },
+    {
+        "name_kr": "지수",
+        "name_en": "Jisoo",
+        "group": "BLACKPINK",
+        "gender": "female",
+        "mbti": "ISTP",
+        "birth_date": "1995-01-03",
+        "tmi": "쿨한 성격과 엉뚱한 매력이 조화를 이루는 비주얼 퀸. 👑"
+    },
+    {
+        "name_kr": "한소희",
+        "name_en": "Han So-hee",
+        "group": "Actor",
+        "gender": "female",
+        "mbti": "INFP",
+        "birth_date": "1994-11-18",
+        "tmi": "신비로운 분위기와 예술적 감성이 뛰어난 사주입니다. 🎨"
+    },
+    {
+        "name_kr": "고윤정",
+        "name_en": "Go Youn-jung",
+        "group": "Actor",
+        "gender": "female",
+        "mbti": "ISTP",
+        "birth_date": "1996-04-22",
+        "tmi": "단아함 속에 숨겨진 단단한 결단력과 카리스마. 💎"
+    },
+    {
+        "name_kr": "이도현",
+        "name_en": "Lee Do-hyun",
+        "group": "Actor",
+        "gender": "male",
+        "mbti": "ENFP",
+        "birth_date": "1995-04-11",
+        "tmi": "밝은 웃음 속에 깊은 연기 자아를 품고 있는 스타. 🎭"
+    },
+    {
+        "name_kr": "송강",
+        "name_en": "Song Kang",
+        "group": "Actor",
+        "gender": "male",
+        "mbti": "ENTP",
+        "birth_date": "1994-04-23",
+        "tmi": "호기심 많고 도전적인 기질이 연기 폭을 넓혀줍니다. 🚀"
+    },
+    {
+        "name_kr": "변우석",
+        "name_en": "Byeon Woo-seok",
+        "group": "Actor",
+        "gender": "male",
+        "mbti": "ESTP",
+        "birth_date": "1991-10-31",
+        "tmi": "모델 출신다운 피지컬과 트렌디한 에너지가 강점! 📸"
+    },
+    {
+        "name_kr": "로제",
+        "name_en": "Rosé",
+        "group": "BLACKPINK",
+        "gender": "female",
+        "mbti": "ENFP",
+        "birth_date": "1997-02-11",
+        "tmi": "독보적인 음색만큼이나 섬세하고 따뜻한 영혼의 소유자. 🎤"
+    },
+    {
+        "name_kr": "민지",
+        "name_en": "Minji",
+        "group": "NewJeans",
+        "gender": "female",
+        "mbti": "ESTJ",
+        "birth_date": "2004-05-07",
+        "tmi": "팀의 기둥답게 책임감 강하고 클래식한 매력이 돋보입니다. 🏛️"
+    },
+    {
+        "name_kr": "하니",
+        "name_en": "Hanni",
+        "group": "NewJeans",
+        "gender": "female",
+        "mbti": "INFP",
+        "birth_date": "2004-10-06",
+        "tmi": "사랑스러운 무드와 창의적인 감각이 빛납니다. 🍭"
+    },
+    {
+        "name_kr": "안유진",
+        "name_en": "An Yujin",
+        "group": "IVE",
+        "gender": "female",
+        "mbti": "ENTP",
+        "birth_date": "2003-09-01",
+        "tmi": "영리하고 재치 넘치는 모습이 사주에도 잘 드러나요. 🧠"
+    },
+    {
+        "name_kr": "사쿠라",
+        "name_en": "Sakura",
+        "group": "LE SSERAFIM",
+        "gender": "female",
+        "mbti": "INTP",
+        "birth_date": "1998-03-19",
+        "tmi": "끊임없이 탐구하고 성장하는 개척자 정신이 가득! 🌸"
+    },
+    {
+        "name_kr": "김채원",
+        "name_en": "Kim Chaewon",
+        "group": "LE SSERAFIM",
+        "gender": "female",
+        "mbti": "ISTP",
+        "birth_date": "2000-08-01",
+        "tmi": "강단 있는 리더십과 힙한 감각을 모두 갖췄습니다. 🔥"
+    },
+    {
+        "name_kr": "사나",
+        "name_en": "Sana",
+        "group": "TWICE",
+        "gender": "female",
+        "mbti": "ENFP",
+        "birth_date": "1996-12-29",
+        "tmi": "존재만으로도 주변을 밝게 만드는 긍정 에너지의 화신. ☀️"
+    },
+    {
+        "name_kr": "현진",
+        "name_en": "Hyunjin",
+        "group": "Stray Kids",
+        "gender": "male",
+        "mbti": "INFP",
+        "birth_date": "2000-03-20",
+        "tmi": "예술적인 퍼포먼스와 감성이 풍부한 아티스트형 사주. 🖌️"
+    },
+    {
+        "name_kr": "필릭스",
+        "name_en": "Felix",
+        "group": "Stray Kids",
+        "gender": "male",
+        "mbti": "ESFP",
+        "birth_date": "2000-09-15",
+        "tmi": "동화 속 목소리와 대담한 퍼포먼스의 반전 케미. 🐉"
+    },
+    {
+        "name_kr": "민규",
+        "name_en": "Mingyu",
+        "group": "SEVENTEEN",
+        "gender": "male",
+        "mbti": "ENFJ",
+        "birth_date": "1997-04-06",
+        "tmi": "다재다능하고 친화력이 좋아 어디서든 빛나는 스타일. 🌟"
+    },
+    {
+        "name_kr": "호시",
+        "name_en": "Hoshi",
+        "group": "SEVENTEEN",
+        "gender": "male",
+        "mbti": "INFP",
+        "birth_date": "1996-06-15",
+        "tmi": "무대 위 호랑이 같은 카리스마와 평소의 순둥함. 🐯"
+    },
+    {
+        "name_kr": "뷔",
+        "name_en": "V",
+        "group": "BTS",
+        "gender": "male",
+        "mbti": "INFP",
+        "birth_date": "1995-12-30",
+        "tmi": "유니크한 예술 세계를 가진 자유로운 영혼의 소유자. 🛸"
+    },
+    {
+        "name_kr": "지민",
+        "name_en": "Jimin",
+        "group": "BTS",
+        "gender": "male",
+        "mbti": "ENFJ",
+        "birth_date": "1995-10-13",
+        "tmi": "완벽함을 추구하는 노력과 부드러운 카리스마의 정석. 🐣"
+    },
+    {
+        "name_kr": "리사",
+        "name_en": "Lisa",
+        "group": "BLACKPINK",
+        "gender": "female",
+        "mbti": "ESFP",
+        "birth_date": "1997-03-27",
+        "tmi": "글로벌 무대를 휘어잡는 대담함과 에너지가 최고! ⚡"
+    },
+    {
+        "name_kr": "수지",
+        "name_en": "Suzy",
+        "group": "Solo",
+        "gender": "female",
+        "mbti": "INFP",
+        "birth_date": "1994-10-10",
+        "tmi": "국민 첫사랑다운 맑은 기운과 단단한 자아를 가졌습니다. 🍃"
+    },
+    {
+        "name_kr": "지드래곤",
+        "name_en": "G-Dragon",
+        "group": "BIGBANG",
+        "gender": "male",
+        "mbti": "ENTP",
+        "birth_date": "1988-08-18",
+        "tmi": "천부적인 감각과 시대를 앞서가는 혁신적인 사주. 🐲"
+    }
+]

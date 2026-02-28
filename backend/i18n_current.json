@@ -1,0 +1,366 @@
+{
+  "en": {
+    "ENERGY_TRAITS": {
+      "Wood": {
+        "name": "Unstoppable Growth (Wood) 🌲",
+        "desc_intro": [
+          "You literally radiate that 'Main Character' giant tree energy. In K-Saju, Wood is all about vitality, curiosity, and leveling up non-stop."
+        ],
+        "desc_core": {
+          "E": [
+            "You carry everybody forward in the best way. Outgoing and super focused on growing your squad."
+          ],
+          "I": [
+            "Silent but deadly. You level up without telling anyone and drop the final results to shock everyone."
+          ],
+          "default": [
+            "You're a try-hard in the best way possible. Always ready for side quests and fearless. You can be a bit nosy, but deep down you just want your whole squad to win.\n\nYou're flexible, but cross your bottom line and you stand firm like a GOAT. That stubborn streak is your ultimate rizz."
+          ]
+        },
+        "desc_career": [
+          "[CEO Mindset]\nYou belong in spaces where you can hustle and create. Startup founder, editor, content creator—you literally serve looks and ideas from scratch. Desk jobs? Big yikes. You need that dopamine hit of making moves!"
+        ],
+        "desc_advice": [
+          "[Glow-up Guide]\nRed flag: Starting 10 things and finishing none. You need to focus and tunnel-vision on one goal, and you will absolutely crush it."
+        ]
+      },
+      "Fire": {
+        "name": "Blazing Flame (Fire) 🔥",
+        "desc_intro": [
+          "Your soul gives off major 'Sun' energy. You're a walking torch! Fire means god-tier passion, expansion, and zero filter."
+        ],
+        "desc_core": {
+          "E": [
+            "Literally the life of the party. You fill up the room with loud, vibrant energy."
+          ],
+          "I": [
+            "A loyal, warm hearth only to those you truly appreciate. You save your fire for the right ones."
+          ],
+          "default": [
+            "You steal the show effortlessly, just being there is serving. Your battery is always at 100%, and your over-the-top reactions make you the ultimate hype-person for your besties. You're 100% transparent, zero grudges even after a massive drama.\n\nFire values respect. You're the sweetest to those who pass the vibe check, but cross the line? Demon mode activated."
+          ]
+        },
+        "desc_career": [
+          "[CEO Mindset]\nYou were born for the stage. Influencer, marketing, PR—you leave no crumbs. Sitting at a desk will kill your vibe instantly."
+        ],
+        "desc_advice": [
+          "[Glow-up Guide]\nWith your crazy mood swings, you sometimes go 0 to 100 real quick. Breathing for 3 seconds before roasting someone in the group chat is your ultimate life hack."
+        ]
+      },
+      "Earth": {
+        "name": "Solid Ground (Earth) ⛰️",
+        "desc_intro": [
+          "Your soul is like the 'Vast Earth' that embraces everything. Earth is about mediating, being trustworthy, and having an unshakable vibe."
+        ],
+        "desc_core": {
+          "E": [
+            "You keep everyone together. Friendly, sociable, and the best person at giving advice."
+          ],
+          "I": [
+            "Total tsundere. You secretly care for your close ones with brutal loyalty, even if you don't open up easily."
+          ],
+          "default": [
+            "Zero ghosting. You have a titanium mindset and act as the power bank for your mutuals. You're the mediator who squashes squad beef. Total tsundere, you secretly care for everyone and are hyper-loyal.\n\nBut plot twist: being quiet doesn't mean you're a pushover. When Earth gets mad, it's an earthquake. You naturally spit heavy facts when the time comes."
+          ]
+        },
+        "desc_career": [
+          "[CEO Mindset]\nYou prefer secured bags over impulsive risks. HR, finance, education—you're the GOAT at building teams and fixing broken stuff."
+        ],
+        "desc_advice": [
+          "[Glow-up Guide]\nPutting everyone else first will give you insane burnout. Starting your 'villain era' and prioritizing YOURSELF is the ultimate green flag you need right now."
+        ]
+      },
+      "Metal": {
+        "name": "Sharp Blade (Metal) ⚔️",
+        "desc_intro": [
+          "Your soul screams 'Flawless Jewel' and 'Sharp Blade'. Metal is the poster child for perfectionism and cold hard logic, giving major boss energy."
+        ],
+        "desc_core": {
+          "E": [
+            "Rational and lethal. You lead with firmness, ignore excuses, and always get the project done."
+          ],
+          "I": [
+            "You observe coldly and only speak when 100% necessary. You have life standards that are unreachable for many."
+          ],
+          "default": [
+            "A hard 'T' with zero patience for messiness. You ghost emotional drama and operate like a cold CEO. Once you lock onto a goal, your tunnel vision is insane.\n\nThough you seem like an ice king/queen, your loyalty for your inner circle goes hard. If a friend gets attacked, you activate bodyguard mode."
+          ]
+        },
+        "desc_career": [
+          "[CEO Mindset]\nYou shine with numbers and hard code. Tech, law, med. You're a workaholic who lets the 'receipts' (results) do the talking."
+        ],
+        "desc_advice": [
+          "[Glow-up Guide]\nYour sky-high standards can trap you in toxic perfectionism. Chilling out and showing your messy side will make people ship you even more."
+        ]
+      },
+      "Water": {
+        "name": "Free Flowing (Water) 🌊",
+        "desc_intro": [
+          "Your soul flows with the deep, mysterious vibe of the 'Ocean'. Water means 200 IQ wisdom, total adaptability, and mental depth."
+        ],
+        "desc_core": {
+          "E": [
+            "You adapt in every social group. You can chat with anyone and pull info effortlessly."
+          ],
+          "I": [
+            "Misunderstood genius. You hold immense truths in silence and occasionally shatter everything with a deep realization."
+          ],
+          "default": [
+            "You're the ultimate shapeshifter. You pass every vibe check and fit any aesthetic. Your thoughts are Mariana-Trench deep; you have an intuition that gives 'nerd but aesthetic' vibes.\n\nYou might look soft, but you have beast-like endurance. Yet, since you keep things to yourself, people might think you're living in your own 'delulu' world."
+          ]
+        },
+        "desc_career": [
+          "[CEO Mindset]\nRules? We don't know her. Digital nomad, researcher, creator—you need max flexibility to let your inner genius cook."
+        ],
+        "desc_advice": [
+          "[Glow-up Guide]\nOverthinking is your biggest opp, sinking you into your sad-boy/sad-girl era. Turn off the brain and go 'touch grass' literally; that's how you win the game."
+        ]
+      }
+    },
+    "MONTH_DESCS": [
+      "This month is a massive W! The plot armor is real. Full send on that career move, sneaky link, or new investment.",
+      "Lucky AF! Unexpected random drops of good luck coming your way. Finding cash in old jeans or getting a DM you've been waiting for.",
+      "Entering your ghosting era. Muting toxic group chats and focusing entirely on your own glow-up will save your mental health.",
+      "Say bye to stress. Time for a major dopamine hit. Booking a spontaneous flight or splurging on that aesthetic hobby is fully justified.",
+      "You are literally the moment. Get ready to serve looks and turn heads at every single link-up.",
+      "Your bank account is screaming for help. Don't let 'treating yourself' ruin your bag. Challenge yourself to a strict no-spend week.",
+      "Peak productivity month. Your hustle is unmatched. Diets, language grinds, or bootcamps—you're hitting a 200% success rate.",
+      "Built different! Something you thought was a lost cause is going to massive success. Don't ever back down!",
+      "Your romantic rizz is off the charts. Even random eye contact could spark heavy chemistry, so keep your fit on point.",
+      "You almost caught strays but perfectly dodged the drama. Stress gets real, but a random savior drops in to clutch the game for you.",
+      "The ultimate reality check. Time to clear that massive backlog you've been ignoring. Your execution this month literally sets the vibe for the rest of the year. No more excuses, just start.",
+      "Your health is your real flex this month. Pulling all-nighters and surviving on iced coffee will hard-crash your system. Literally go touch some grass and take your vitamins!",
+      "Warning: An ex or an old situationship might randomly slide into your DMs. Do not let them ruin your peace. Keep your boundaries up and protect your energy at all costs.",
+      "Your hidden talent is finally having its main character moment! Your aesthetic hobby could turn into a massive side hustle, so don't be shy—flex your work to the timeline.",
+      "It's completely fine to enter your villain era and be a bit selfish right now. Stop people-pleasing and practice saying a hard 'No' so you don't miss out on your own bag."
+    ],
+    "LOVE_STYLES": [
+      "Looks quiet, but once they want you, they have massive fox energy and will slide in smooth. They secretly memorize all your lore.",
+      "Golden retriever energy! They give you top-tier loyalty. You drop a text and they reply before the notification even hits.",
+      "Total tsundere. Cold and unbothered to the world, but a complete softie for you. The gap-moe is their deadliest weapon.",
+      "The ultimate green flag. They love daily check-ins and late-night aesthetic calls over loud, expensive surprises.",
+      "Feral cat vibes. They fiercely protect their alone time. Respect their space and hustle, and they'll naturally obsess over you."
+    ],
+    "ELEMENT_SYNERGY": {
+      "생": "[Ultimate Duo] Y'all basically complete each other's sentences. You elevate their ideas to the moon. 200% synergy, the ultimate endgame pair.",
+      "극": "[Spicy Dynamic] Opposite aesthetics but fatal attraction. Enemies to lovers trope. You bicker, but the chemistry is electric and forces massive growth.",
+      "비화": "[Mirror Soulmates] You pass the same vibe check without speaking. Same humor, same unhinged thoughts. The ultimate besties for life."
+    },
+    "TIPS": [
+      "Stop playing games! Trying to make them jealous is an instant ick. Direct, unfiltered honesty is your only cheat code.",
+      "Skip the boring coffee dates. Hit them with a high-dopamine, unhinged surprise adventure.",
+      "Hype them up 24/7! Endless glazer-level compliments will literally melt their defenses.",
+      "Being clingy is a massive red flag. Show off your own independent boss energy—that's what makes them go crazy.",
+      "Instead of loud flexes, casually gift them that niche thing they tweeted about 3 weeks ago. Taking notes is mandatory!"
+    ],
+    "UI_STRINGS": {
+      "profile": "👤 Profile",
+      "mbti_unrevealed": "Gatekept / Unknown",
+      "signature": "🔮 [Your Core Aesthetic]",
+      "potential": "💫 [Hidden Lore & Power]",
+      "stage": "💼 [Where You Slay the Hardest]",
+      "guide": "🚀 [2026 Glow-Up Cheat Sheet]",
+      "idol_mbti_fallback": "Unknown (Vibe matched via '{trait_name}')",
+      "idol_mbti_fallback_random": "Unknown (Destiny matched by fate)",
+      "pure_saju_label": "🌟 Deep Soul Resonance (MBTI Excluded)",
+      "error_msg": "Big yikes, Saju engine crashed. Please re-enter your birth details."
+    },
+    "PURE_LOVE_STYLES": [
+      "This person possesses a deep and mysterious inherent energy that cannot be fully captured by conventional personality types. If they feel drawn to you, they will approach you boldly, prioritizing the tremor of their heart and intuitive sparks over rational judgment. They are a wild romantic who entirely yields the intense passion lying dormant within.",
+      "Their innate birth month energy uniquely aligns with yours, bringing a profound and stable soul-level belonging, as if connected from a past life, even without words. They exhibit a rock-solid, unwavering affection style, showing serious, unshakeable inner support.",
+      "The Yin and Yang of their birth chart perfectly balance yours—providing warmth when you are exhausted and a cooling instinctual balance when you are overheated. Without needing flashy techniques or calculations, they are like a master key for your soul, perfectly fulfilling your emotional voids purely through their natural frequency."
+    ],
+    "PURE_SYNERGY": {
+      "생": "[Harmonious Growth] Their inherent energy acts as a flawless supply line, endlessly nurturing your soul. Simply existing together amplifies positive vibrations, unlocking unprecedented potential and massive fortune—a miraculous cosmic synergy.",
+      "극": "[Intense Clash] Your energies sometimes strongly collide, yet this very friction generates a massive creative force that powerfully catalyzes each other's growth. It is a mesmerizing destiny where you complete one another amidst an undeniable, visceral attraction.",
+      "비화": "[Mirror Soulmates] A solid bond formed by the union of identical elements. You are partners who create your own vast universe through a deep resonance that requires no explanation. Like twins from a past life, your souls share the same grain, capable of being a lifelong sanctuary."
+    },
+    "PURE_TIPS": [
+      "When approaching them, set aside calculated flirting or textbook strategies. Simply radiate the pure, unfiltered charm of your natural base element (Wood/Fire/Earth/Metal/Water). This is when they will feel the most powerful, undeniable pull toward you.",
+      "Rather than heavily staged events or eloquent conversational skills, the cosmic frequencies of you two perfectly synchronize during moments of shared physical presence—like silently gazing at the night sky or walking through nature.",
+      "Instead of being swayed by their exterior or situational factors, show them consistent trust, as if piercing through to the essence of their soul. Sending them unconditional and silent inner support is the absolute master key to opening the deep doors of their heart."
+    ]
+  },
+  "es": {
+    "ENERGY_TRAITS": {
+      "Wood": {
+        "name": "Crecimiento Imparable (Madera) 🌲",
+        "desc_intro": [
+          "Literalmente emanas esa 'Energía de Protagonista' de un árbol gigante. En K-Saju, la Madera es todo sobre vitalidad, curiosidad y subir de nivel sin parar."
+        ],
+        "desc_core": {
+          "E": [
+            "Te llevas a todo el mundo por delante de la mejor manera. Extrovertido y súper enfocado en crecer con tu gente."
+          ],
+          "I": [
+            "Silencioso pero mortal. Subes de nivel sin avisar a nadie y dejas a todos en shock con tus resultados."
+          ],
+          "default": [
+            "Eres un try-hard en el buen sentido. Siempre estás listo/a para nuevas misiones y no le temes a nada. Puedes ser un poco chismoso/a, pero en el fondo solo quieres que tu squad gane.\n\nEres flexible, pero si cruzan tu límite, te plantas como el GOAT. Esa terquedad es tu mayor rizz."
+          ]
+        },
+        "desc_career": [
+          "[Mentalidad de CEO]\nPerteneces a espacios donde puedes crear y romperla. Creador de contenido, editor, fundador de startup: sirviendo ideas de la nada. ¿Trabajo de oficina? Qué cringe. ¡Necesitas la dopamina de estar en movimiento!"
+        ],
+        "desc_advice": [
+          "[Guía Glow-up]\nRed flag: Empezar 10 cosas y no terminar ninguna. Necesitas enfocarte y dárlo todo a un solo objetivo, y la vas a romper absolutamente."
+        ]
+      },
+      "Fire": {
+        "name": "Llama Ardiente (Fuego) 🔥",
+        "desc_intro": [
+          "Tu alma da energías súper fuertes de 'Sol'. ¡Eres la antorcha humana! El Fuego significa pasión nivel Dios, expansión y cero filtro."
+        ],
+        "desc_core": {
+          "E": [
+            "Literalmente el alma de la fiesta. Llenas cualquier cuarto con tu energía vibrante y ruidosa."
+          ],
+          "I": [
+            "Alguien leal y cálido pero solo con quienes aprecias de verdad. Cuidas tu fuego para los indicados."
+          ],
+          "default": [
+            "Robas el show sin esfuerzo, estar ahí ya es servir. Tu batería está siempre al 100%, y tus reacciones exageradas te hacen el/la mejor hype-person de tus besties. Eres 100% transparente, cero rencores incluso después de un drama tremendo.\n\nEl Fuego valora el respeto. Eres lo más tierno con quienes pasan el vibe check, pero si cruzan la línea? Modo diablo activado."
+          ]
+        },
+        "desc_career": [
+          "[Mentalidad de CEO]\nNaciste para el escenario. Influencer, marketing, PR: no dejas ni las migajas. Estar sentado/a en un escritorio matará tu vibra al instante."
+        ],
+        "desc_advice": [
+          "[Guía Glow-up]\nCon tus cambios de humor de locos, a veces vas de 0 a 100 muy rápido. Respirar 3 segundos antes de bardear por el grupo de WhatsApp es tu truco de vida definitivo."
+        ]
+      },
+      "Earth": {
+        "name": "Tierra Sólida (Tierra) ⛰️",
+        "desc_intro": [
+          "Tu alma es como la 'Vasta Tierra' que abraza todo. La Tierra es sobre mediar, dar confianza y tener una vibra inquebrantable."
+        ],
+        "desc_core": {
+          "E": [
+            "Sostenes a todo tu entorno unido. Eres amable, sociable y la mejor persona dando consejos."
+          ],
+          "I": [
+            "Tsundere total. Secretamente cuidas a tus cercanos con una lealtad brutal, aunque no abres tus sentimientos fácil."
+          ],
+          "default": [
+            "Cero fantasma. Tienes una mente de titanio y eres la batería externa de tus mutuals. Eres el/la mediador/a que cancela el drama del squad. Totalmente tsundere, cuidas a todos en secreto y eres hiper leal.\n\nPero ojo, ser callado/a no es ser débil. Cuando la Tierra se enoja, es un terremoto. Naturalmente tiras factos (verdades pesadas) cuando llega el momento."
+          ]
+        },
+        "desc_career": [
+          "[Mentalidad de CEO]\nPrefieres ganancias seguras que riesgos impulsivos. HR, finanzas, educación: eres el GOAT armando equipos y arreglando cosas rotas."
+        ],
+        "desc_advice": [
+          "[Guía Glow-up]\nPoner a todos primero te va a dar un burnout brutal. Empezar tu 'villain era' y priorizarte a TI MISMO/A es la green flag que necesitas urgente."
+        ]
+      },
+      "Metal": {
+        "name": "Espada Afilada (Metal) ⚔️",
+        "desc_intro": [
+          "Tu alma grita 'Joya Pura' y 'Hoja Afilada'. El Metal es el símbolo del perfeccionismo y la lógica fría, modo facha."
+        ],
+        "desc_core": {
+          "E": [
+            "Racional y letal. Lideras con firmeza, ignoras las excusas y siempre sacas el proyecto adelante."
+          ],
+          "I": [
+            "Observas fríamente y hablas solo cuando es 100% necesario. Tienes estándares de vida inalcanzables para muchos."
+          ],
+          "default": [
+            "Una 'T' dura con cero paciencia para el drama. Ignoras (ghosteas) el drama emocional y operas como un/a jefe/a re frío/a. Una vez que fijas un objetivo, tu visión de túnel es de locos.\n\nAunque pareces un/a rey/reina de hielo, tu lealtad por tu círculo íntimo es tremenda. Si atacan a un/a amigo/a, activas el modo guardaespaldas."
+          ]
+        },
+        "desc_career": [
+          "[Mentalidad de CEO]\nBrillas con los números y en el código duro. Tech, leyes, medicina. Eres un/a workaholic que deja que los 'factos' (resultados) hablen."
+        ],
+        "desc_advice": [
+          "[Guía Glow-up]\nTus estándares altísimos te pueden atrapar en lo tóxico del perfeccionismo. Relajarte y mostrar tu lado desordenado hará que la gente te shipee aún más."
+        ]
+      },
+      "Water": {
+        "name": "Flujo Libre (Agua) 🌊",
+        "desc_intro": [
+          "Tu alma fluye con la vibra profunda y misteriosa del 'Océano'. El Agua significa inteligencia de 200 IQ, adaptabilidad total y profundidad mental."
+        ],
+        "desc_core": {
+          "E": [
+            "Te adaptas en cada grupo social. Puedes charlar con cualquiera y sacarle info sin esfuerzo."
+          ],
+          "I": [
+            "Genio incomprendido. Guardas verdades inmensas en silencio y de vez en cuando rompes todo con una reflexión profunda."
+          ],
+          "default": [
+            "Eres el cambiaformas definitivo. Pasas cualquier vibe check y te adaptas a cualquier aesthetic. Tus pensamientos son súper profundos; tienes una intuición que te da esa vibra 'nerd pero aesthetic'.\n\nPuedes parecer suave, pero tienes una fuerza bestial. Sin embargo, como te guardas todo, la gente puede pensar que vives en tu propio mundo de 'delulu'."
+          ]
+        },
+        "desc_career": [
+          "[Mentalidad de CEO]\n¿Reglas? Nada que ver. Nómada digital, investigador, creador: necesitas flexibilidad máxima para dejar salir a tu genio interior."
+        ],
+        "desc_advice": [
+          "[Guía Glow-up]\nPensar de más es tu peor enemigo, te hunde en tu era sad-boy/sad-girl. Apaga el cerebro y sal a 'tocar pasto' (literal, haz las cosas); así se gana el juego."
+        ]
+      }
+    },
+    "MONTH_DESCS": [
+      "¡Este mes es tremenda W! Vas con la del protagonista. Mételo todo en esa nueva meta, date o inversión.",
+      "¡Demasiada suerte! Caen cosas buenas de la nada. Encontrar plata olvidada o recibir el DM que estabas esperando.",
+      "Entrando en tu modo fantasma. Silenciar chats tóxicos y enfocarte full en tu glow-up salvará tu salud mental.",
+      "Chau estrés. Momento de un buen subidón de dopamina. Ese viaje random o comprarte eso súper aesthetic está totalmente justificado.",
+      "Eres el momento. Prepárate para servir looks y robar miradas en cada joda/encuentro.",
+      "Tu cuenta de banco está pidiendo auxilio. No dejes que el 'me lo merezco' te deje pobre. Toca modo ahorro estricto.",
+      "Mes súper productivo. Tu modo try-hard está activado: dietas, estudios, el gym. Tienes un 200% de éxito de locos.",
+      "¡Distinto a los demás! Algo que dabas por perdido será un éxito rotundo. ¡No bajes los brazos!",
+      "Tu rizz está por las nubes. Hasta cruzar miradas puede hacer estallar la química, así que mantente siempre facherito/a.",
+      "Casi caes pero esquivaste el drama nivel Dios. El estrés pega fuerte, pero alguien aparece de la nada para salvarte las papas.",
+      "El verdadero fact-check. Es hora de hacer todo eso que venís pateando. Tu disciplina de este mes literalmente define la vibra del resto del año. Cero excusas, arranca de una.",
+      "Tu mejor flex este mes es tu salud. Quedarte despierto hasta la madrugada a puro café te va a arruinar el sistema. Metele a las vitaminas y anda a dormir tempra.",
+      "Alerta de ex o de un casi-algo random tirándote un DM de la nada. No te dejes llevar y cuida tu paz. Mantén tus límites firmes y cuidá tu energía.",
+      "¡Tu talento oculto al fin tiene su momento de protagonista! Ese hobby aesthetic se puede volver un re laburo extra, así que anímate y mostrale al mundo lo que haces.",
+      "Está perfectísimo tener tu 'villain era' y ser un poco egoísta. Deja de complacer a todos y practicá decir un rotundo 'No' para no perderte tu propia oportunidad."
+    ],
+    "LOVE_STYLES": [
+      "Parecen tranquilos pero tienen full energía de zorro astuto. Secretamente se estudian todo tu lore.",
+      "¡Vibra de Golden Retriever! Lealtad nivel leyenda. Mandas un mensaje y te responden antes de que suene la notificación.",
+      "Totalmente tsundere. Fríos para el mundo pero unos tiernos contigo. Esa dualidad es su arma más letal.",
+      "La green flag absoluta. Prefieren estar en llamada toda la madrugada y contarse chismes que regalos caros y ruidosos.",
+      "Modo gato salvaje. Protegen a muerte su tiempo a solas. Respeta sus espacios y andarán obsecionados contigo."
+    ],
+    "ELEMENT_SYNERGY": {
+      "생": "[Dúo Definitivo] Se leen la mente. Llevan las ideas del otro a la luna. 200% de sinergia, son el mismísimo endgame.",
+      "극": "[Dinámica Picante] Aesthetics opuestos pero atracción fatal. Trope de 'Enemies to lovers'. Discuten pero la tensión suma puntos y crecen muchísimo.",
+      "비화": "[Almas Gemelas] Pasan el vibe check sin decir una palabra. Mismo humor raro, mismos pensamientos random. Mejores amigos nivel dios."
+    },
+    "TIPS": [
+      "¡Cero jueguitos! Hacerlos poner celosos da alto cringe. Ser directo y sincero es el único hack.",
+      "Cero citas aburridas. Sorpréndelos con una salida súper random que dispare la dopamina.",
+      "¡Súbele el hype 24/7! Los cumplidos sinceros literalmente los dejarán derretidos.",
+      "Ser intenso/a es una red flag tremenda. Muestra tu vibra de jefe/a independiente, eso los vuelve locos.",
+      "Nada de regalos enormes. Dáles ese cosito súper específico que tuitearon hace semanas. ¡Tomar notas sirve de locos!"
+    ],
+    "UI_STRINGS": {
+      "profile": "👤 Perfil",
+      "mbti_unrevealed": "Oculto / Enigmático",
+      "signature": "🔮 [Tu Vibe Central]",
+      "potential": "💫 [Lore Oculto & Poder]",
+      "stage": "💼 [Dónde la rompes más]",
+      "guide": "🚀 [Guía del Glow-Up 2026]",
+      "idol_mbti_fallback": "A saber (Vibe conectada por '{trait_name}')",
+      "idol_mbti_fallback_random": "A saber (El destino los unió)",
+      "pure_saju_label": "🌟 Resonancia Profunda del Alma (Excluyendo MBTI)",
+      "error_msg": "Qué cringe, falló el sistema Saju. Vuelve a meter tus datos."
+    },
+    "PURE_LOVE_STYLES": [
+      "Esta persona posee una energía inherente, profunda y misteriosa, que no puede ser capturada por tipos de personalidad estándar. Si sienten atracción hacia ti, se acercarán audazmente, priorizando el latido de su corazón y las chispas intuitivas sobre el juicio racional. Son románticos salvajes que entregan toda la pasión latente en su interior.",
+      "La energía innata de su mes de nacimiento se alinea de manera única con la tuya, brindando un sentido de pertenencia profundo y estable a nivel del alma, como si estuvieran conectados desde una vida pasada. Muestran un estilo de afecto sólido y firme como una roca, brindando un apoyo interno inquebrantable.",
+      "El cruce entre su Yin y Yang equilibra perfectamente el tuyo: brindando calidez cuando estás agotado y un balance fresco e instintivo cuando estás abrumado. Sin necesidad de técnicas llamativas, actúan como una llave maestra para tu alma, llenando tus vacíos emocionales a través de su frecuencia natural."
+    ],
+    "PURE_SYNERGY": {
+      "생": "[Crecimiento Armonioso] Su energía inherente actúa como una línea de suministro impecable que nutre tu alma. El simple hecho de coexistir amplifica las vibraciones positivas, desbloqueando un potencial sin precedentes y una enorme fortuna: una sinergia cósmica milagrosa.",
+      "극": "[Choque Intenso] A veces sus energías chocan fuertemente, pero esta misma fricción genera una inmensa fuerza creativa que impulsa poderosamente el crecimiento de ambos. Es un destino fascinante en el que se complementan en medio de una atracción visceral e innegable.",
+      "비화": "[Almas Gemelas Espejo] Un vínculo sólido formado por la unión de elementos idénticos. Son socios que crean su propio y vasto universo a través de una resonancia profunda que no necesita explicación. Como gemelos de una vida pasada, sus almas comparten el mismo matiz, convirtiéndose en un refugio para toda la vida."
+    },
+    "PURE_TIPS": [
+      "Al acercarte a ellos, deja de lado los coqueteos calculados o las estrategias manuales. Simplemente irradia el encanto puro de tu elemento base natural (Madera/Fuego/Tierra/Metal/Agua). Ahí es cuando sentirán la atracción más poderosa hacia ti.",
+      "En lugar de eventos muy preparados o habilidades de conversación elocuentes, las frecuencias cósmicas de ambos se sincronizan perfectamente en momentos físicos compartidos, como mirar en silencio el cielo nocturno o caminar por la naturaleza.",
+      "En lugar de dejarte llevar por su exterior o factores situacionales, muéstrales una confianza constante, como si vieras directamente la esencia de su alma. Enviarles un apoyo interno incondicional y silencioso es la llave maestra absoluta para abrir las puertas más profundas de su corazón."
+    ]
+  }
+}

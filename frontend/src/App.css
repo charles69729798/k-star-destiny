@@ -1,0 +1,10 @@
+/* K-Destiny AI - Custom Styles */
+
+/* Hide scrollbar for popular idols carousel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
