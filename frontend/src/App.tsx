@@ -944,7 +944,12 @@ const App = () => {
   };
 
   const runFullAnalysis = async (skipMbtiCheck = false, keepTab = false) => {
-    if (!userBirthDate) {
+    if (!userBirthDate || !isValidDate(userBirthDate)) {
+      setErrorMessage(t('birthDateAlert'));
+      setShowErrorShake(true);
+      setTimeout(() => setShowErrorShake(false), 600);
+      document.getElementById('user-profile-section')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
       setErrorMessage(t('birthDateAlert'));
       setShowErrorShake(true);
       setTimeout(() => setShowErrorShake(false), 600);
@@ -1405,33 +1410,35 @@ const App = () => {
               </motion.div >
             )}
 
-            {/* Popular Idols Section */}
-            <div className="mt-8 px-2">
-              {/* Popular Idols Section */}
-              <div className="mt-8 px-2 space-y-8">
+            {/* Popular Idols Section (Horizontal Swipe Restored) */}
+            <div className="mt-8 px-2 overflow-hidden">
+              <div className="space-y-8">
                 {/* Male Idols (Boys) */}
                 <div>
-                  <h3 className="text-sm font-bold text-k-blue uppercase tracking-widest mb-4 flex items-center gap-2">
+                  <h3 className="text-sm font-bold text-k-blue uppercase tracking-widest mb-4 flex items-center gap-2 px-2">
                     <Star className="h-3 w-3 text-k-blue" /> {lang === 'ko' ? '인기 남성 그룹' : 'Trending Boys'}
                   </h3>
                   {(!popularIdols || !popularIdols.male || popularIdols.male.length === 0) ? (
-                    <div className="py-4 text-center bg-slate-800/30 rounded-2xl border border-slate-700/30">
+                    <div className="py-4 text-center bg-slate-800/30 rounded-2xl border border-slate-700/30 mx-2">
                       <p className="text-slate-500 text-[10px]">데이터 로드 중...</p>
                     </div>
                   ) : (
-                    <div className="grid grid-cols-5 gap-3">
+                    <motion.div
+                      className="flex gap-4 overflow-x-auto pb-6 px-2 scrollbar-hide no-scrollbar"
+                      style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                    >
                       {popularIdols.male.map((idol: any, idx: number) => (
                         <motion.button
                           key={idol.id}
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          animate={{ opacity: 1, scale: 1 }}
+                          initial={{ opacity: 0, x: 20 }}
+                          animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: idx * 0.05 }}
                           whileHover={{ y: -5, scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                           onClick={() => handleIdolClick(idol.name_en)}
-                          className="w-full bg-slate-800/50 border border-slate-700/50 rounded-2xl p-2.5 hover:bg-slate-700/50 hover:border-k-blue/50 transition-all text-center group shadow-lg shadow-k-blue/5"
+                          className="flex-shrink-0 w-32 bg-slate-800/50 border border-slate-700/50 rounded-2xl p-3 hover:bg-slate-700/50 hover:border-k-blue/50 transition-all text-center group shadow-lg shadow-k-blue/5"
                         >
-                          <div className="w-full aspect-square bg-slate-900 rounded-xl mb-2 flex items-center justify-center overflow-hidden border border-slate-700 group-hover:border-k-blue/30">
+                          <div className="w-full aspect-square bg-slate-900 rounded-xl mb-3 flex items-center justify-center overflow-hidden border border-slate-700 group-hover:border-k-blue/30">
                             <img
                               src={`/avatars/male_${(idx % 8) + 1}.png`}
                               alt={idol.name_en}
@@ -1439,37 +1446,40 @@ const App = () => {
                               onError={(e: any) => { e.target.src = `/avatars/male_1.png`; }}
                             />
                           </div>
-                          <p className="text-[11px] font-black text-white line-clamp-2 leading-tight break-keep mb-0.5">{lang === 'ko' ? idol.name_kr : idol.name_en}</p>
-                          <p className="text-[9px] text-slate-500 font-bold uppercase tracking-tight truncate">{idol.group}</p>
+                          <p className="text-xs font-black text-white truncate mb-0.5">{lang === 'ko' ? idol.name_kr : idol.name_en}</p>
+                          <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tight truncate">{idol.group}</p>
                         </motion.button>
                       ))}
-                    </div>
+                    </motion.div>
                   )}
                 </div>
 
                 {/* Female Idols (Girls) */}
                 <div>
-                  <h3 className="text-sm font-bold text-k-pink uppercase tracking-widest mb-4 flex items-center gap-2">
+                  <h3 className="text-sm font-bold text-k-pink uppercase tracking-widest mb-4 flex items-center gap-2 px-2">
                     <Heart className="h-3 w-3 text-k-pink" /> {lang === 'ko' ? '인기 여성 그룹' : 'Trending Girls'}
                   </h3>
                   {(!popularIdols || !popularIdols.female || popularIdols.female.length === 0) ? (
-                    <div className="py-4 text-center bg-slate-800/30 rounded-2xl border border-slate-700/30">
+                    <div className="py-4 text-center bg-slate-800/30 rounded-2xl border border-slate-700/30 mx-2">
                       <p className="text-slate-500 text-[10px]">데이터 로드 중...</p>
                     </div>
                   ) : (
-                    <div className="grid grid-cols-5 gap-3">
+                    <motion.div
+                      className="flex gap-4 overflow-x-auto pb-6 px-2 scrollbar-hide no-scrollbar"
+                      style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                    >
                       {popularIdols.female.map((idol: any, idx: number) => (
                         <motion.button
                           key={idol.id}
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          animate={{ opacity: 1, scale: 1 }}
+                          initial={{ opacity: 0, x: 20 }}
+                          animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: 0.2 + idx * 0.05 }}
                           whileHover={{ y: -5, scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                           onClick={() => handleIdolClick(idol.name_en)}
-                          className="w-full bg-slate-800/50 border border-slate-700/50 rounded-2xl p-2.5 hover:bg-slate-700/50 hover:border-k-pink/50 transition-all text-center group shadow-lg shadow-k-pink/5"
+                          className="flex-shrink-0 w-32 bg-slate-800/50 border border-slate-700/50 rounded-2xl p-3 hover:bg-slate-700/50 hover:border-k-pink/50 transition-all text-center group shadow-lg shadow-k-pink/5"
                         >
-                          <div className="w-full aspect-square bg-slate-900 rounded-xl mb-2 flex items-center justify-center overflow-hidden border border-slate-700 group-hover:border-k-pink/30">
+                          <div className="w-full aspect-square bg-slate-900 rounded-xl mb-3 flex items-center justify-center overflow-hidden border border-slate-700 group-hover:border-k-pink/30">
                             <img
                               src={`/avatars/female_${(idx % 8) + 1}.png`}
                               alt={idol.name_en}
@@ -1477,11 +1487,11 @@ const App = () => {
                               onError={(e: any) => { e.target.src = `/avatars/female_1.png`; }}
                             />
                           </div>
-                          <p className="text-[11px] font-black text-white line-clamp-2 leading-tight break-keep mb-0.5">{lang === 'ko' ? idol.name_kr : idol.name_en}</p>
-                          <p className="text-[9px] text-slate-500 font-bold uppercase tracking-tight truncate">{idol.group}</p>
+                          <p className="text-xs font-black text-white truncate mb-0.5">{lang === 'ko' ? idol.name_kr : idol.name_en}</p>
+                          <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tight truncate">{idol.group}</p>
                         </motion.button>
                       ))}
-                    </div>
+                    </motion.div>
                   )}
                 </div>
               </div>
@@ -1603,7 +1613,7 @@ const App = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-slate-800 rounded-[2rem] p-10 border border-slate-700 shadow-2xl overflow-hidden relative"
+            className="bg-slate-800 rounded-[2rem] p-4 sm:p-10 border border-slate-700 shadow-2xl overflow-hidden relative"
           >
             <div className="absolute -top-20 -right-20 w-64 h-64 bg-k-purple/10 rounded-full blur-[80px]"></div>
 
@@ -1702,7 +1712,7 @@ const App = () => {
                 ></motion.div>
                 <motion.div
                   layout
-                  className={`relative bg-slate-900 rounded-[2rem] flex flex-col border-2 border-slate-700 p-5 md:p-8 shadow-inner w-full ${!analysisResult ? 'aspect-square items-center justify-center text-center' : 'min-h-[400px]'}`}
+                  className={`relative bg-slate-900 rounded-[2rem] flex flex-col border-2 border-slate-700 p-4 sm:p-8 shadow-inner w-full ${!analysisResult ? 'aspect-square items-center justify-center text-center' : 'min-h-[400px]'}`}
                 >
                   {/* Results Display Area - Enhanced with Bento Grid for UAT */}
                   {!analysisResult ? (
@@ -1797,29 +1807,29 @@ const App = () => {
                       <div className="grid grid-cols-1 gap-3 mb-6">
                         <button
                           onClick={() => setActiveTab('saju')}
-                          className={`flex items-center justify-between px-6 py-4 rounded-2xl border-2 transition-all ${activeTab === 'saju' ? 'bg-k-pink/10 border-k-pink text-k-pink shadow-[0_0_15px_rgba(236,72,153,0.2)]' : 'bg-slate-800/50 border-slate-700/50 hover:bg-slate-800 hover:border-k-pink/50 text-slate-400 hover:text-white'}`}
+                          className={`flex items-center justify-between px-5 py-3 sm:py-4 rounded-2xl border-2 transition-all ${activeTab === 'saju' ? 'bg-k-pink/10 border-k-pink text-k-pink shadow-[0_0_15px_rgba(236,72,153,0.2)]' : 'bg-slate-800/50 border-slate-700/50 hover:bg-slate-800 hover:border-k-pink/50 text-slate-400 hover:text-white'}`}
                         >
-                          <span className="font-bold text-sm md:text-base">{t('tabSaju')}</span>
-                          <span className="text-xl opacity-80">🔮</span>
+                          <span className="font-bold text-sm md:text-base break-keep">{t('tabSaju')}</span>
+                          <span className="text-lg sm:text-xl opacity-80">🔮</span>
                         </button>
                         <button
                           onClick={() => setActiveTab('fortune')}
-                          className={`flex items-center justify-between px-6 py-4 rounded-2xl border-2 transition-all ${activeTab === 'fortune' ? 'bg-yellow-500/10 border-yellow-500 text-yellow-500 shadow-[0_0_15px_rgba(234,179,8,0.2)]' : 'bg-slate-800/50 border-slate-700/50 hover:bg-slate-800 hover:border-yellow-500/50 text-slate-400 hover:text-white'}`}
+                          className={`flex items-center justify-between px-6 py-2.5 sm:py-4 rounded-2xl border-2 transition-all ${activeTab === 'fortune' ? 'bg-yellow-500/10 border-yellow-500 text-yellow-500 shadow-[0_0_15px_rgba(234,179,8,0.2)]' : 'bg-slate-800/50 border-slate-700/50 hover:bg-slate-800 hover:border-yellow-500/50 text-slate-400 hover:text-white'}`}
                         >
-                          <span className="font-bold text-sm md:text-base">{t('tabFortune')}</span>
-                          <span className="text-xl opacity-80">📅</span>
+                          <span className="font-bold text-sm md:text-base break-keep">{t('tabFortune')}</span>
+                          <span className="text-lg sm:text-xl opacity-80">📅</span>
                         </button>
                         <button
                           onClick={() => setActiveTab('signal')}
-                          className={`flex items-center justify-between px-6 py-4 rounded-2xl border-2 transition-all ${activeTab === 'signal' ? 'bg-k-blue/10 border-k-blue text-k-blue shadow-[0_0_15px_rgba(59,130,246,0.2)]' : 'bg-slate-800/50 border-slate-700/50 hover:bg-slate-800 hover:border-k-blue/50 text-slate-400 hover:text-white'}`}
+                          className={`flex items-center justify-between px-6 py-2.5 sm:py-4 rounded-2xl border-2 transition-all ${activeTab === 'signal' ? 'bg-k-blue/10 border-k-blue text-k-blue shadow-[0_0_15px_rgba(59,130,246,0.2)]' : 'bg-slate-800/50 border-slate-700/50 hover:bg-slate-800 hover:border-k-blue/50 text-slate-400 hover:text-white'}`}
                         >
-                          <span className="font-bold text-sm md:text-base">{t('tabSignal', { name: analysisResult?.chemistry_signal?.idol_name || idolData?.name || '' })}</span>
-                          <span className="text-xl opacity-80">💖</span>
+                          <span className="font-bold text-sm md:text-base break-keep">{t('tabSignal', { name: analysisResult?.chemistry_signal?.idol_name || idolData?.name || '' })}</span>
+                          <span className="text-lg sm:text-xl opacity-80">💖</span>
                         </button>
                       </div>
 
-                      {/* Category Content */}
-                      <div className="min-h-[300px] relative">
+                      {/* Category Content - Gutter Minimalized & Noise Reduced */}
+                      <div className="min-h-[300px] relative backdrop-blur-md bg-slate-900/40 rounded-3xl p-1.5 sm:p-4 border border-slate-700/30 -mx-1 sm:mx-0">
                         <AnimatePresence mode="wait">
                           {/* 탭 1: 내 사주 심층 분석 (전문가 조언 포함) */}
                           {activeTab === 'saju' && (
@@ -1833,17 +1843,17 @@ const App = () => {
                             >
                               {/* Lifetime Fortune Panel */}
                               {analysisResult?.lifetime_fortune && (
-                                <div className="bg-gradient-to-br from-indigo-900/40 to-slate-800/60 rounded-2xl p-6 border border-k-purple/40 shadow-xl relative overflow-hidden">
-                                  <div className="absolute top-0 right-0 w-32 h-32 bg-k-purple/10 rounded-full blur-3xl"></div>
-                                  <div className="flex items-center gap-2 mb-3 px-3 py-1.5 bg-k-purple/20 border border-k-purple/40 rounded-lg w-fit">
+                                <div className="bg-gradient-to-br from-indigo-900/60 to-slate-900/80 rounded-2xl p-4 sm:p-6 border border-k-purple/40 shadow-2xl relative overflow-hidden backdrop-blur-xl">
+                                  <div className="absolute top-0 right-0 w-32 h-32 bg-k-purple/20 rounded-full blur-3xl"></div>
+                                  <div className="flex items-center gap-2 mb-4 px-3 py-1.5 bg-k-purple/30 border border-k-purple/50 rounded-lg w-fit">
                                     <TrendingUp className="h-4 w-4 text-k-pink" />
                                     <span className="text-k-pink text-[10px] font-black uppercase tracking-widest">{t('lifetimeStageTitle')}</span>
                                   </div>
 
                                   <div className="space-y-4">
                                     {analysisResult.lifetime_fortune.split('\n\n').map((segment: string, i: number) => (
-                                      <div key={i} className="p-4 bg-slate-900/60 rounded-xl border border-slate-700/30 text-slate-200 text-sm leading-relaxed">
-                                        <div className="font-black text-k-blue mb-1 text-xs">{t('stage')} {i + 1}</div>
+                                      <div key={i} className="p-4 sm:p-5 bg-slate-900/80 rounded-xl border border-slate-600/50 text-slate-200 text-sm sm:text-[15px] leading-relaxed break-keep shadow-inner">
+                                        <div className="font-black text-k-blue mb-2 text-xs uppercase tracking-tighter opacity-80">{t('stage')} {i + 1}</div>
                                         {segment}
                                       </div>
                                     ))}
@@ -1900,13 +1910,15 @@ const App = () => {
                                 </div>
                               )}
 
-                              {/* Existing Saju Content */}
-                              <div className="bg-slate-800/60 rounded-2xl p-6 border border-slate-700/50 shadow-lg">
-                                <div className="flex items-center gap-2 mb-3 px-3 py-1.5 bg-indigo-500/10 border border-indigo-500/30 rounded-lg w-fit">
-                                  <span className="text-indigo-400 text-xs font-black uppercase tracking-widest">{t('userSajuResult')}</span>
+                              {/* Existing Saju Content (Layout Optimized for Mobile) */}
+                              <div className="bg-slate-800/60 rounded-2xl p-4 sm:p-8 border border-slate-700/50 shadow-lg w-full">
+                                <div className="flex items-center gap-2 mb-4 px-3 py-1.5 bg-indigo-500/10 border border-indigo-500/30 rounded-lg w-fit">
+                                  <span className="text-indigo-400 text-[10px] font-black uppercase tracking-widest">{t('userSajuResult')}</span>
                                 </div>
-                                <h4 className="text-2xl font-black mb-4 text-white">{analysisResult?.user_saju?.summary || analysisResult?.label}</h4>
-                                <div className="text-slate-300 text-sm leading-relaxed whitespace-pre-wrap">
+                                <h4 className="text-xl sm:text-2xl font-black mb-4 text-white break-keep leading-tight">
+                                  {analysisResult?.user_saju?.summary || analysisResult?.label}
+                                </h4>
+                                <div className="text-slate-300 text-[15px] sm:text-base leading-relaxed whitespace-pre-wrap break-keep">
                                   {analysisResult?.user_saju?.content || t('sajuSuccess')}
                                 </div>
                               </div>
@@ -1938,7 +1950,7 @@ const App = () => {
                                           {mf.month}
                                         </div>
                                         <div>
-                                          <h4 className="text-white font-black text-base md:text-lg">{mf.theme || mf.keyword}</h4>
+                                          <h4 className="text-white font-black text-base md:text-lg break-keep">{mf.theme || mf.keyword}</h4>
                                           {mf.synergy && (
                                             <div className="flex items-center gap-1 mt-0.5">
                                               <div className="h-1 w-20 bg-slate-700 rounded-full overflow-hidden">
@@ -1960,18 +1972,18 @@ const App = () => {
                                         </div>
                                         <div>
                                           <p className="text-[10px] font-black text-k-blue uppercase tracking-widest mb-1">Star Signal</p>
-                                          <p className="text-sm text-slate-300 leading-relaxed font-medium">{mf.signal}</p>
+                                          <p className="text-sm text-slate-300 leading-loose font-medium break-keep">{mf.signal}</p>
                                         </div>
                                       </div>
 
                                       {/* Action Guide */}
-                                      <div className="flex gap-3 items-start p-3 bg-yellow-500/5 rounded-2xl border border-yellow-500/10">
+                                      <div className="flex gap-3 items-start p-3 bg-yellow-500/5 rounded-2xl border border-yellow-500/20">
                                         <div className="p-2 bg-yellow-500/10 rounded-xl">
                                           <Target className="w-5 h-5 text-yellow-500" />
                                         </div>
                                         <div>
                                           <p className="text-[10px] font-black text-yellow-500 uppercase tracking-widest mb-1">Action Point</p>
-                                          <p className="text-sm text-slate-300 leading-relaxed">{mf.guide}</p>
+                                          <p className="text-sm text-slate-300 leading-loose break-keep">{mf.guide}</p>
                                         </div>
                                       </div>
                                     </div>
@@ -2053,12 +2065,12 @@ const App = () => {
                                 </div>
                               </div>
 
-                              {/* Chemistry Signal Card */}
+                              {/* Chemistry Signal Card - Re-engineered for Mobile Gutter Minimization */}
                               <motion.div
-                                initial={{ opacity: 0, y: 30 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, ease: "easeOut" }}
-                                className="relative overflow-hidden group mb-8 rounded-3xl glass-premium result-card-glow w-full lg:w-[110%] lg:-ml-[5%]"
+                                initial={{ opacity: 0, scale: 0.98 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.8 }}
+                                className="relative overflow-hidden group mb-8 rounded-[2rem] glass-premium result-card-glow w-full"
                                 style={{ '--theme-accent': getElementTheme(analysisResult.dominant_element).accent } as React.CSSProperties}
                               >
                                 <ParticleField element={analysisResult.dominant_element} />
@@ -2105,7 +2117,7 @@ const App = () => {
                                         <div className="absolute top-0 left-0 w-1.5 h-full rounded-full" style={{ background: getElementTheme(analysisResult.dominant_element).accent }}></div>
                                         <div className="pl-6 py-1">
                                           <h4 className="text-2xl font-black text-white mb-2">{analysisResult.chemistry_signal.idol_name} {t('youLabel')}</h4>
-                                          <p className="text-slate-400 text-sm font-medium leading-relaxed">
+                                          <p className="text-slate-400 text-sm font-medium leading-loose">
                                             {analysisResult.chemistry_signal.synergy}
                                           </p>
                                         </div>
@@ -2138,7 +2150,7 @@ const App = () => {
 
                                   <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                                     {/* 좌측: 상대방 성향 & 관계 Deep Dive */}
-                                    <div className="bg-slate-900/40 p-4 sm:p-6 rounded-2xl border border-slate-700/30 backdrop-blur-sm">
+                                    <div className="bg-slate-900/40 p-4 sm:p-6 rounded-2xl border border-slate-600/50 backdrop-blur-sm">
                                       <div className="flex items-center gap-2 mb-4">
                                         <Sparkles className="h-5 w-5 text-k-pink" />
                                         <span className="font-black text-white text-lg">{t('idolTraits')}</span>
@@ -2154,10 +2166,10 @@ const App = () => {
 
                                         {/* 본질 및 특징 (3-4문장) */}
                                         <div className="space-y-2">
-                                          <p className="text-sm text-slate-300 leading-relaxed pl-4 border-l-2 border-k-pink/50 py-1 break-keep whitespace-pre-wrap">
+                                          <p className="text-sm text-slate-300 leading-loose pl-4 border-l-2 border-k-pink/50 py-1 break-keep whitespace-pre-wrap">
                                             {analysisResult.chemistry_signal.bias}
                                           </p>
-                                          <p className="text-[11px] text-slate-400 leading-relaxed italic pl-4 break-keep whitespace-pre-wrap">
+                                          <p className="text-[11px] text-slate-400 leading-loose italic pl-4 break-keep whitespace-pre-wrap">
                                             {analysisResult.chemistry_signal.tmi}
                                           </p>
                                         </div>
@@ -2174,7 +2186,7 @@ const App = () => {
                                     </div>
 
                                     {/* 우측: 최근 운세 및 꿀팁 */}
-                                    <div className="bg-slate-900/50 rounded-2xl p-4 sm:p-6 border border-slate-700/30">
+                                    <div className="bg-slate-900/50 rounded-2xl p-4 sm:p-6 border border-slate-600/50">
                                       <div className="flex items-center gap-2 mb-4">
                                         <TrendingUp className="h-5 w-5 text-k-green" />
                                         <p className="text-lg font-black text-white">{t('recentFortune')}</p>
@@ -2314,13 +2326,13 @@ const App = () => {
       {/* Footer Stats */}
       <div className="max-w-xl mx-auto px-4 mt-8 pb-12 border-t border-slate-800/50 pt-10">
         <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 mb-8">
-          <div className="flex-1 flex flex-col items-center bg-slate-800/30 px-6 sm:px-8 py-5 rounded-2xl border border-slate-700/30 hover:bg-slate-800/50 transition-colors">
-            <p className="text-[11px] font-black text-k-blue uppercase tracking-[0.2em] mb-3">{t('visitorsToday')}</p>
-            <p className="text-3xl sm:text-4xl font-black text-white">{stats.today_challengers}</p>
+          <div className="flex-1 flex flex-col items-center bg-slate-800/50 px-6 sm:px-8 py-5 rounded-2xl border border-slate-700/50 hover:bg-slate-700/50 transition-colors shadow-lg">
+            <p className="text-[11px] font-black text-white uppercase tracking-[0.2em] mb-3 opacity-90">{t('visitorsToday')}</p>
+            <p className="text-3xl sm:text-4xl font-black text-k-blue drop-shadow-[0_0_10px_rgba(30,144,255,0.3)]">{stats.today_challengers}</p>
           </div>
-          <div className="flex-1 flex flex-col items-center bg-slate-800/30 px-6 sm:px-8 py-5 rounded-2xl border border-slate-700/30 hover:bg-slate-800/50 transition-colors">
-            <p className="text-[11px] font-black text-k-purple uppercase tracking-[0.2em] mb-3">{t('visitorsTotal')}</p>
-            <p className="text-3xl sm:text-4xl font-black text-k-purple">{stats.total_visitors}</p>
+          <div className="flex-1 flex flex-col items-center bg-slate-800/50 px-6 sm:px-8 py-5 rounded-2xl border border-slate-700/50 hover:bg-slate-700/50 transition-colors shadow-lg">
+            <p className="text-[11px] font-black text-white uppercase tracking-[0.2em] mb-3 opacity-90">{t('visitorsTotal')}</p>
+            <p className="text-3xl sm:text-4xl font-black text-k-purple drop-shadow-[0_0_10px_rgba(168,85,247,0.3)]">{stats.total_visitors}</p>
           </div>
         </div>
         <p className="text-center text-[11px] font-bold text-slate-300 tracking-widest drop-shadow-sm">

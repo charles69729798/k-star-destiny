@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   nginx:
     image: nginx:stable-alpine
@@ -18,8 +16,8 @@ services:
   backend:
     build: ./backend
     container_name: sajuapp-backend
-    expose:
-      - "8000"
+    ports:
+      - "8000:8000"
     environment:
       - ENV=production
     networks:
