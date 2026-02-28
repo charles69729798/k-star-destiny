@@ -1439,7 +1439,7 @@ const App = () => {
                               onError={(e: any) => { e.target.src = `/avatars/male_1.png`; }}
                             />
                           </div>
-                          <p className="text-[11px] font-black text-white truncate mb-0.5">{lang === 'ko' ? idol.name_kr : idol.name_en}</p>
+                          <p className="text-[11px] font-black text-white line-clamp-2 leading-tight break-keep mb-0.5">{lang === 'ko' ? idol.name_kr : idol.name_en}</p>
                           <p className="text-[9px] text-slate-500 font-bold uppercase tracking-tight truncate">{idol.group}</p>
                         </motion.button>
                       ))}
@@ -1477,7 +1477,7 @@ const App = () => {
                               onError={(e: any) => { e.target.src = `/avatars/female_1.png`; }}
                             />
                           </div>
-                          <p className="text-[11px] font-black text-white truncate mb-0.5">{lang === 'ko' ? idol.name_kr : idol.name_en}</p>
+                          <p className="text-[11px] font-black text-white line-clamp-2 leading-tight break-keep mb-0.5">{lang === 'ko' ? idol.name_kr : idol.name_en}</p>
                           <p className="text-[9px] text-slate-500 font-bold uppercase tracking-tight truncate">{idol.group}</p>
                         </motion.button>
                       ))}
@@ -2058,11 +2058,11 @@ const App = () => {
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, ease: "easeOut" }}
-                                className="relative overflow-hidden group mb-8 rounded-3xl glass-premium result-card-glow"
+                                className="relative overflow-hidden group mb-8 rounded-3xl glass-premium result-card-glow w-full lg:w-[110%] lg:-ml-[5%]"
                                 style={{ '--theme-accent': getElementTheme(analysisResult.dominant_element).accent } as React.CSSProperties}
                               >
                                 <ParticleField element={analysisResult.dominant_element} />
-                                <div className="p-8 relative z-10">
+                                <div className="p-5 sm:p-8 relative z-10 w-full">
                                   <div className="flex flex-col md:flex-row items-center gap-10">
                                     {/* Gauge Section */}
                                     <div className="relative w-48 h-48 flex-shrink-0">
@@ -2136,9 +2136,9 @@ const App = () => {
                                     </div>
                                   </div>
 
-                                  <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                                  <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                                     {/* 좌측: 상대방 성향 & 관계 Deep Dive */}
-                                    <div className="bg-slate-900/40 p-6 rounded-2xl border border-slate-700/30 backdrop-blur-sm">
+                                    <div className="bg-slate-900/40 p-4 sm:p-6 rounded-2xl border border-slate-700/30 backdrop-blur-sm">
                                       <div className="flex items-center gap-2 mb-4">
                                         <Sparkles className="h-5 w-5 text-k-pink" />
                                         <span className="font-black text-white text-lg">{t('idolTraits')}</span>
@@ -2146,18 +2146,18 @@ const App = () => {
 
                                       <div className="space-y-5">
                                         {/* 관계 개요 (1-2문장) */}
-                                        <div className="p-4 bg-k-purple/10 rounded-xl border border-k-purple/20">
-                                          <p className="text-sm text-slate-200 font-semibold leading-relaxed">
+                                        <div className="p-4 sm:p-5 bg-k-purple/10 rounded-xl border border-k-purple/20">
+                                          <p className="text-sm text-slate-200 font-semibold leading-loose sm:leading-relaxed break-keep whitespace-pre-wrap">
                                             {analysisResult.chemistry_signal.relationship}
                                           </p>
                                         </div>
 
                                         {/* 본질 및 특징 (3-4문장) */}
                                         <div className="space-y-2">
-                                          <p className="text-sm text-slate-300 leading-relaxed pl-4 border-l-2 border-k-pink/50 py-1">
+                                          <p className="text-sm text-slate-300 leading-relaxed pl-4 border-l-2 border-k-pink/50 py-1 break-keep whitespace-pre-wrap">
                                             {analysisResult.chemistry_signal.bias}
                                           </p>
-                                          <p className="text-[11px] text-slate-400 leading-relaxed italic pl-4">
+                                          <p className="text-[11px] text-slate-400 leading-relaxed italic pl-4 break-keep whitespace-pre-wrap">
                                             {analysisResult.chemistry_signal.tmi}
                                           </p>
                                         </div>
@@ -2174,24 +2174,24 @@ const App = () => {
                                     </div>
 
                                     {/* 우측: 최근 운세 및 꿀팁 */}
-                                    <div className="bg-slate-900/50 rounded-2xl p-6 border border-slate-700/30">
+                                    <div className="bg-slate-900/50 rounded-2xl p-4 sm:p-6 border border-slate-700/30">
                                       <div className="flex items-center gap-2 mb-4">
                                         <TrendingUp className="h-5 w-5 text-k-green" />
                                         <p className="text-lg font-black text-white">{t('recentFortune')}</p>
                                       </div>
 
                                       <div className="space-y-4">
-                                        <p className="text-sm text-slate-300 bg-slate-800/60 p-4 rounded-xl border border-slate-700/50 leading-relaxed font-medium">
+                                        <p className="text-sm text-slate-300 bg-slate-800/60 p-4 sm:p-5 rounded-xl border border-slate-700/50 leading-loose sm:leading-relaxed font-medium break-keep whitespace-pre-wrap">
                                           {analysisResult.chemistry_signal.recentFortune}
                                         </p>
 
                                         <div className="pt-2">
                                           <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2 px-1">{t('attackTips') || 'Strategy'}</p>
-                                          <ul className="grid grid-cols-1 gap-2">
+                                          <ul className="grid grid-cols-1 gap-3 sm:gap-4">
                                             {analysisResult.chemistry_signal.tips?.map((tip: string, idx: number) => (
-                                              <li key={idx} className="text-[11px] text-slate-400 bg-slate-800/30 px-3 py-2 rounded-lg border border-slate-700/30 flex items-start gap-2">
+                                              <li key={idx} className="text-[11px] sm:text-xs text-slate-300 bg-slate-800/40 p-4 sm:p-5 rounded-lg border border-slate-700/50 flex items-start gap-3 shadow-sm">
                                                 <span className="text-k-pink mt-0.5">•</span>
-                                                <span className="leading-normal">{tip}</span>
+                                                <span className="leading-loose sm:leading-relaxed break-keep whitespace-pre-wrap">{tip}</span>
                                               </li>
                                             ))}
                                           </ul>
@@ -2312,21 +2312,21 @@ const App = () => {
         )}
       </AnimatePresence>
       {/* Footer Stats */}
-      <footer className="mt-20 py-12 border-t border-slate-800/50 flex flex-col items-center gap-8">
-        <div className="flex flex-wrap justify-center gap-6">
-          <div className="bg-slate-800/40 px-8 py-6 rounded-3xl border border-slate-700/30 text-center min-w-[200px] backdrop-blur-sm">
-            <p className="text-[10px] font-black text-k-blue uppercase tracking-[0.2em] mb-3">{t('visitorsToday')}</p>
-            <p className="text-4xl font-black text-white"><CountingScore targetScore={stats.today_challengers} /></p>
+      <div className="max-w-xl mx-auto px-4 mt-8 pb-12 border-t border-slate-800/50 pt-10">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 mb-8">
+          <div className="flex-1 flex flex-col items-center bg-slate-800/30 px-6 sm:px-8 py-5 rounded-2xl border border-slate-700/30 hover:bg-slate-800/50 transition-colors">
+            <p className="text-[11px] font-black text-k-blue uppercase tracking-[0.2em] mb-3">{t('visitorsToday')}</p>
+            <p className="text-3xl sm:text-4xl font-black text-white">{stats.today_challengers}</p>
           </div>
-          <div className="bg-slate-800/40 px-8 py-6 rounded-3xl border border-slate-700/30 text-center min-w-[200px] backdrop-blur-sm">
-            <p className="text-[10px] font-black text-k-purple uppercase tracking-[0.2em] mb-3">{t('visitorsTotal')}</p>
-            <p className="text-4xl font-black text-k-purple"><CountingScore targetScore={stats.total_visitors} /></p>
+          <div className="flex-1 flex flex-col items-center bg-slate-800/30 px-6 sm:px-8 py-5 rounded-2xl border border-slate-700/30 hover:bg-slate-800/50 transition-colors">
+            <p className="text-[11px] font-black text-k-purple uppercase tracking-[0.2em] mb-3">{t('visitorsTotal')}</p>
+            <p className="text-3xl sm:text-4xl font-black text-k-purple">{stats.total_visitors}</p>
           </div>
         </div>
-        <p className="text-slate-600 text-[11px] font-black uppercase tracking-widest text-center leading-relaxed">
+        <p className="text-center text-[11px] font-bold text-slate-300 tracking-widest drop-shadow-sm">
           {t('footer')}
         </p>
-      </footer>
+      </div>
     </div>
   );
 };
