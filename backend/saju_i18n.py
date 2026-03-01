@@ -381,8 +381,8 @@ I18N_DATA = {
                 "The internal passion is at its absolute peak right now. Whatever {idol} has been creating on their own is about to drop and it will NOT be missed."
             ],
             "synergy_why": [
-                "Your '{u_element}' and their '{i_element}' energy hitting each other is literally a chemical reaction — sparks are absolutely flying.",
-                "Your saju charts cancel out each other's weaknesses and MAX OUT synergy — luck literally opens when you two are together. That's the theory.",
+                "Your '{u_element}' mixed with their '{i_element}' is literally giving unmatched chemistry. The sparks? Absolutely flying. 💥",
+                "Your Saju charts literally cover each other's flaws and max out the synergy. You two together? A certified lucky duo. 🍀",
                 "The {u_mbti} and {i_mbti} combo covers each other's blind spots with scary precision. It's the most balanced duo on the charts, fr.",
                 "'{u_element}' feeding '{i_element}' energy is basically a perfect support-carry dynamic — you are genuinely their power source.",
                 "'{u_element}' and '{i_element}' are different flavors that somehow create an addictive chemistry. The rizz is mutual and it's unmatched.",
@@ -1345,8 +1345,8 @@ I18N_DATA = {
                 "La pasión interna está EN SU PUNTO MÁXIMO. Lo que sea que {idol} haya estado creando por su cuenta está a punto de salir y NO pasará inadvertido."
             ],
             "synergy_why": [
-                "Tu energía '{u_element}' y la de ellos '{i_element}' chocando es literalmente una reacción química — las chispas están volando pa' todos lados.",
-                "Sus cartas de saju cancelan las debilidades del otro y MAXIMIZAN la sinergia — la suerte literalmente se abre cuando están juntos. Así es la teoría.",
+                "Tu '{u_element}' y su '{i_element}' juntos son pura química — literal están saltando chispas y sirviendo fuego. 🔥",
+                "Sus cartas Saju se complementan perfecto y maximizan la sinergia. Juntos son el amuleto de la suerte definitivo, no hay debate. 💅",
                 "El combo de {u_mbti} y {i_mbti} cubre los puntos ciegos del otro con precisión que da escalofrío. El dúo más balanceado del chart, fr.",
                 "'{u_element}' alimentando la energía '{i_element}' es básicamente una dinámica de apoyo perfecta — eres genuinamente su fuente de poder.",
                 "'{u_element}' y '{i_element}' son sabores distintos que de alguna forma crean una química adictiva. El rizz es mutuo y no tiene igual.",
@@ -1951,8 +1951,8 @@ I18N_DATA = {
                 "A paixão interna tá NO PICO MÁXIMO. O que quer que {idol} tenha criado por conta própria tá prestes a cair e NÃO vai passar em branco."
             ],
             "synergy_why": [
-                "Sua energia '{u_element}' e a deles '{i_element}' se encontrando é literalmente uma reação química — as fagulhas tão voando pra todo lado.",
-                "Seus mapas de saju cancelam as fraquezas um do outro e MAXIMIZAM a sinergia — a sorte literalmente abre quando estão juntos. É a teoria.",
+                "A energia do seu '{u_element}' com a do(a) {idol} ('{i_element}') é uma química de milhões — o choque tá entregando tudo! ✨",
+                "Os mapas Saju de vocês se completam perfeitamente e zeram as fraquezas. Juntos, a sorte de vocês simplesmente destrava. Match de milhões! 💖",
                 "O combo de {u_mbti} e {i_mbti} cobre os pontos cegos um do outro com precisão assustadora. O duo mais equilibrado do chart, fr.",
                 "'{u_element}' alimentando a energia '{i_element}' é basicamente uma dinâmica de apoio perfeita — você é genuinamente a fonte de poder deles.",
                 "'{u_element}' e '{i_element}' são sabores diferentes que de alguma forma criam uma química viciante. O rizz é mútuo e não tem igual.",
