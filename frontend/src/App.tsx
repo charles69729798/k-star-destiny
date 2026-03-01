@@ -1733,7 +1733,7 @@ const App = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-slate-800 rounded-[2rem] p-4 sm:p-10 border border-slate-700 shadow-2xl overflow-hidden relative"
+            className="bg-slate-800 rounded-[2rem] px-2 py-6 sm:p-10 border border-slate-700 shadow-2xl overflow-hidden relative"
           >
             <div className="absolute -top-20 -right-20 w-64 h-64 bg-k-purple/10 rounded-full blur-[80px]"></div>
 
@@ -2216,7 +2216,7 @@ const App = () => {
                                 <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-k-pink/20 blur-[80px] rounded-full" />
 
                                 <ParticleField element={analysisResult.dominant_element} />
-                                <div className="p-5 sm:p-8 relative z-10 w-full">
+                                <div className="px-3 py-6 sm:p-8 relative z-10 w-full">
                                   <div className="flex flex-col md:flex-row items-center gap-10">
                                     {/* Gauge Section */}
                                     <div className="relative w-36 h-36 flex-shrink-0 mx-auto md:mx-0">
@@ -2292,7 +2292,7 @@ const App = () => {
 
                                   <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                                     {/* 좌측: 상대방 성향 & 관계 Deep Dive */}
-                                    <div className="bg-slate-900/40 p-4 sm:p-6 rounded-2xl border border-slate-600/50 backdrop-blur-sm">
+                                    <div className="bg-transparent sm:bg-slate-900/40 p-0 sm:p-6 rounded-2xl border-0 sm:border border-slate-600/50 backdrop-blur-sm">
                                       <div className="flex items-center gap-2 mb-4">
                                         <Sparkles className="h-5 w-5 text-k-pink" />
                                         <span className="font-black text-white text-lg">{t('idolTraits')}</span>
@@ -2300,7 +2300,7 @@ const App = () => {
 
                                       <div className="space-y-5">
                                         {/* 관계 개요 (1-2문장) */}
-                                        <div className="p-4 sm:p-5 bg-k-purple/10 rounded-xl border border-k-purple/20">
+                                        <div className="px-3 py-4 sm:p-5 bg-k-purple/10 rounded-xl border border-k-purple/20">
                                           <p className="text-sm text-slate-200 font-semibold leading-loose sm:leading-relaxed break-keep whitespace-pre-wrap">
                                             {analysisResult.chemistry_signal.relationship}
                                           </p>
@@ -2308,10 +2308,10 @@ const App = () => {
 
                                         {/* 본질 및 특징 (3-4문장) */}
                                         <div className="space-y-2">
-                                          <p className="text-sm text-slate-300 leading-loose pl-4 border-l-2 border-k-pink/50 py-1 break-keep whitespace-pre-wrap">
+                                          <p className="text-sm text-slate-300 leading-loose pl-3 border-l-2 border-k-pink/50 py-1 break-keep whitespace-pre-wrap">
                                             {analysisResult.chemistry_signal.bias}
                                           </p>
-                                          <p className="text-[11px] text-slate-400 leading-loose italic pl-4 break-keep whitespace-pre-wrap">
+                                          <p className="text-[11px] text-slate-400 leading-loose italic pl-3 break-keep whitespace-pre-wrap">
                                             {analysisResult.chemistry_signal.tmi}
                                           </p>
                                         </div>
