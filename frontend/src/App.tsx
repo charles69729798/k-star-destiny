@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import axios from 'axios';
-import { Search, Sparkles, User, Calendar, BrainCircuit, Share2, HelpCircle, RefreshCcw, Edit3, ThumbsUp, MessageSquare, Send, LayoutGrid, TrendingUp, Users, ChevronDown, Star, Heart, Zap, Target } from 'lucide-react';
+import { Search, Sparkles, User, Calendar, BrainCircuit, Share2, HelpCircle, RefreshCcw, Edit3, ThumbsUp, MessageSquare, Send, LayoutGrid, TrendingUp, Users, ChevronDown, Star, Heart, Zap, Target, BookOpen, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import QuickMBTI from './components/QuickMBTI';
 
@@ -116,7 +116,17 @@ const translations: any = {
     mbtiNotFoundTitle: "MBTI information missing",
     friendInfoTitle: "FRIEND / PARTNER INFO",
     invalidDate: "Invalid date format",
-    stage: "STAGE"
+    stage: "STAGE",
+    recentFortune: "Recent/Month Fortune",
+    guideTitle: "K-Destiny Guide",
+    guideSubtitle: "How to read your cosmic signals",
+    guideMatchDesc: "Discover the cosmic synergy between you and the star. The glowing line shows your connection strength—can you reach 100% Destined? Select one mission per category to boost your synergy score!",
+    guideSoulDesc: "Your personal life indicator based on authentic Korean Saju algorithms. Uncover your dominant element and deep character analysis.",
+    guideFateDesc: "A month-by-month guide of your destined timeline. Check your Action Points and Star Signals to make the best of each month.",
+    tmiFallback: "This star's energy will brighten your day! ✨",
+    liveSignalPart1: "Currently ",
+    liveSignalPart2: " people are syncing with this star...",
+    friendMatchingTitle: "Matching with Friend"
   },
   ko: {
     title: "K-DESTINY AI",
@@ -159,9 +169,9 @@ const translations: any = {
     copied: "클립보드에 복사되었습니다!",
     trendingTitle: "인기 아이돌",
     trendingSubtitle: "스타를 선택하면 바로 궁합을 확인할 수 있어요.",
-    tabSaju: "Soul Index: K-사주 명식과 평생의 지표",
-    tabFortune: "2026 갓생 캘린더: 월별 도파민 & 운세 흐름",
-    tabSignal: "Destiny Signal: {name}님과의 우주 텔레파시 📡",
+    tabSaju: "My Soul",
+    tabFortune: "Our Fate",
+    tabSignal: "{name} & ME: Destined?",
     introTitle: "운명 찾기",
     introDesc: "자, 이제 K-스타와 당신의 우주적 시그널을 연결할 시간입니다. 당신의 운명적 이상형은 누구일까요? 지금 찾아보세요!",
     birthDatePrompt: "먼저 생년월일을 적어주세요. 꼼꼼히 적을수록 정확해요!",
@@ -228,7 +238,17 @@ const translations: any = {
     mbtiNotFoundTitle: "MBTI 정보 누락",
     friendInfoTitle: "친구 / 연인 정보 입력",
     invalidDate: "올바른 날짜 형식이 아닙니다",
-    stage: "단계"
+    stage: "단계",
+    recentFortune: "최근/월별 운세",
+    guideTitle: "K-Destiny 가이드",
+    guideSubtitle: "우주적 시그널을 읽는 방법",
+    guideMatchDesc: "스타와의 우주적 시너지를 확인하세요. 빛나는 인포그래픽 라인이 연결의 강도를 보여줍니다. 100% 천생연분에 도달할 수 있을까요? 카테고리별로 미션을 하나씩 수행하여 시너지를 높여보세요!",
+    guideSoulDesc: "정통 K-사주 알고리즘을 바탕으로 한 당신만의 인생 지표입니다. 오행의 기운과 깊이 있는 성향 분석을 확인하세요.",
+    guideFateDesc: "월별로 알아보는 운명의 타임라인입니다. 매월 주어지는 행동 강령과 스타 시그널을 확인하여 알찬 한 달을 만들어보세요.",
+    tmiFallback: "이 스타의 에너지는 당신의 하루를 더 밝게 빛내줄 거예요! ✨",
+    liveSignalPart1: "현재 ",
+    liveSignalPart2: "명이 이 스타와 교신 중...",
+    friendMatchingTitle: "친구와 매칭"
   },
   es: {
     title: "K-DESTINY AI",
@@ -265,15 +285,16 @@ const translations: any = {
     destiny: "Destino 👑✨",
     selectType: "Seleccionar Tipo",
     enterManually: "La IA no pudo encontrar datos. Ingresa manualmente.",
+    recentFortune: "Fortuna Reciente/Mensual",
     analysisError: "Error en el análisis. Verifica tus datos.",
     birthDateAlert: "Por favor, ingresa tu fecha de nacimiento...",
     required: "REQUERIDO",
     copied: "¡Copiado al portapapeles!",
     trendingTitle: "Ídolos Populares",
     trendingSubtitle: "Selecciona una estrella para verificar tu destino al instante.",
-    tabSaju: "Soul Index: K-Saju y el Indicador de Vida",
-    tabFortune: "Calendario 2026: Flujo de Dopamina Mensual",
-    tabSignal: "Señal del Destino: Telepatía Universal con {name}",
+    tabSaju: "My Soul",
+    tabFortune: "Our Fate",
+    tabSignal: "{name} & ME: Destined?",
     introTitle: "Encuentra tu Destino",
     introDesc: "Ahora es el momento de conectar tus señales cósmicas con las estrellas de K-pop. Quién es tu tipo ideal predestinado? Descúbrelo ahora!",
     birthDatePrompt: "Por favor, ingresa tu fecha de nacimiento primero para obtener resultados precisos!",
@@ -346,10 +367,18 @@ const translations: any = {
     soulBond: "Vínculo de Alma",
     tmi: "TMI del Destino",
     relationship: "Relación K-pop",
-    recentFortune: "Suerte de Actividades Recentes",
     friendInfoTitle: "INFORMACIÓN DE AMIGO / PAREJA",
     invalidDate: "Formato de fecha inválido",
-    stage: "ETAPA"
+    stage: "ETAPA",
+    guideTitle: "Guía K-Destiny",
+    guideSubtitle: "Cómo leer tus señales cósmicas",
+    guideMatchDesc: "Descubre la sinergia cósmica entre tú y la estrella. La línea brillante muestra la fuerza de tu conexión, ¿puedes llegar al 100% Destinados? ¡Selecciona una misión por categoría para aumentar tu sinergia!",
+    guideSoulDesc: "Tu indicador de vida personal basado en auténticos algoritmos coreanos de Saju. Descubre tu elemento dominante y análisis profundo de carácter.",
+    guideFateDesc: "Una guía mes a mes de tu línea de tiempo destinada. Revisa tus Puntos de Acción y Señales Estelares para aprovechar al máximo cada mes.",
+    tmiFallback: "¡La energía de esta estrella iluminará tu día! ✨",
+    liveSignalPart1: "Actualmente ",
+    liveSignalPart2: " personas se sincronizan con esta estrella...",
+    friendMatchingTitle: "Emparejamiento con Amigo"
   },
   pt: {
     title: "K-DESTINY AI",
@@ -392,9 +421,9 @@ const translations: any = {
     copied: "Copiado para a área de transferência!",
     trendingTitle: "Ídolos Populares",
     trendingSubtitle: "Selecione uma estrela para verificar seu destino instantaneamente.",
-    tabSaju: "Soul Index: K-Saju e o Indicador de Vida",
-    tabFortune: "Calendário 2026: Fluxo de Dopamina Mensal",
-    tabSignal: "Sinal do Destino: Telepatia Universal com {name}",
+    tabSaju: "My Soul",
+    tabFortune: "Our Fate",
+    tabSignal: "{name} & ME: Destined?",
     introTitle: "Encontre seu Destino",
     introDesc: "Agora é o momento de conectar seus sinais cósmicos com as estrelas de K-pop. Quem é seu tipo ideal predestinado? Descubra agora!",
     birthDatePrompt: "Por favor, insira sua data de nascimento primeiro para obter resultados precisos!",
@@ -471,7 +500,16 @@ const translations: any = {
     tmi: "TMI do Destino",
     relationship: "Relação K-pop",
     recentFortune: "Sorte de Atividades Recentes",
-    stage: "ETAPA"
+    stage: "ETAPA",
+    friendMatchingTitle: "Combinando com Amigo",
+    guideTitle: "Guia K-Destiny",
+    guideSubtitle: "Como ler seus sinais cósmicos",
+    guideMatchDesc: "Descubra a sinergia cósmica entre você e a estrela. A linha brilhante mostra a força da sua conexão—você consegue chegar a 100% Destinados? Selecione uma missão por categoria para aumentar sua sinergia!",
+    guideSoulDesc: "Seu indicador de vida pessoal baseado em autênticos algoritmos coreanos de Saju. Descubra seu elemento dominante e análise profunda de caráter.",
+    guideFateDesc: "Um guia mês a mês da sua linha do tempo destinada. Verifique seus Pontos de Ação e Sinais Estelares para aproveitar ao máximo cada mês.",
+    tmiFallback: "A energia desta estrela iluminará o seu dia! ✨",
+    liveSignalPart1: "Atualmente ",
+    liveSignalPart2: " pessoas estão sincronizando com esta estrela..."
   },
 };
 
@@ -697,6 +735,7 @@ const App = () => {
   const [userBirthDate, setUserBirthDate] = useState('');
   const [userGender, setUserGender] = useState('female');
   const [showMBTIQuiz, setShowMBTIQuiz] = useState(false);
+  const [showGuideModal, setShowGuideModal] = useState(false);
   const [mbtiTarget, setMbtiTarget] = useState<'user' | 'idol'>('user');
 
   const [analysisResult, setAnalysisResult] = useState<any>(null);
@@ -705,7 +744,7 @@ const App = () => {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [showErrorShake, setShowErrorShake] = useState(false);
   const [popularIdols, setPopularIdols] = useState<{ male: any[], female: any[] }>({ male: [], female: [] });
-  const [activeTab, setActiveTab] = useState<'saju' | 'fortune' | 'signal'>('saju');
+  const [activeTab, setActiveTab] = useState<'signal' | 'saju' | 'fortune'>('signal');
   const [commentText, setCommentText] = useState('');
   const [isPostingComment, setIsPostingComment] = useState(false);
   const [comments, setComments] = useState<any[]>([]);
@@ -1034,7 +1073,7 @@ const App = () => {
     setAnalyzing(true);
     setErrorMessage(null);
     try {
-      const p_name = mode === 'friend' ? t('friendMatchingTitle') : (idolData?.name || idolSearchName);
+      const p_name = mode === 'friend' ? (friendData.name || t('friendMatchingTitle')) : (idolData?.name || idolSearchName);
       const p_mbti = mode === 'friend' ? friendData.mbti : (idolData?.mbti || '');
       const p_birth = mode === 'friend' ? friendData.birth_date : (idolData?.birth_date || '');
 
@@ -1046,12 +1085,13 @@ const App = () => {
           idol_name: p_name,
           idol_mbti: p_mbti,
           idol_birth_date: p_birth,
-          lang: lang // 현재 선택된 프론트엔드 언어 코드 전송
+          lang: lang, // 현재 선택된 프론트엔드 언어 코드 전송
+          _t: Date.now() // 브라우저 GET 캐시 무력화 패턴
         },
         timeout: 60000
       });
       setAnalysisResult(response.data.analysis);
-      if (!keepTab) setActiveTab('saju'); // 결과가 새로 나올 때만 첫 탭으로 초기화
+      if (!keepTab) setActiveTab('signal'); // 결과가 새로 나올 때만 첫 탭으로 초기화
     } catch (error) {
       console.error('Analysis Error:', error);
       setErrorMessage(t('analysisError'));
@@ -1124,7 +1164,7 @@ const App = () => {
   }, [lang]);
 
   return (
-    <div className="container mx-auto px-4 py-10 max-w-4xl min-h-screen relative z-10">
+    <div className="container mx-auto px-1 sm:px-4 py-6 sm:py-10 max-w-4xl min-h-screen relative z-10">
       {/* Language Switcher */}
       <div className="flex justify-end gap-2 mb-4">
         {['es', 'pt', 'en', 'ko'].map((l) => (
@@ -1743,13 +1783,17 @@ const App = () => {
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-2 flex-shrink-0 bg-slate-800/50 p-3 rounded-xl border border-slate-700/50">
                   <div className="flex items-center gap-2">
                     <Calendar className="h-4 w-4 text-k-blue" />
-                    <input type="text" placeholder="YYYY-MM-DD" maxLength={10} value={idolData.birth_date}
+                    <input type="text" placeholder="YYYY-MM-DD" maxLength={10} value={mode === 'friend' ? friendData.birth_date : (idolData?.birth_date || '')}
                       onChange={(e) => {
                         const raw = e.target.value.replace(/\D/g, '').slice(0, 8);
                         let formatted = raw;
                         if (raw.length > 4) formatted = `${raw.slice(0, 4)}-${raw.slice(4)}`;
                         if (raw.length > 6) formatted = `${formatted.slice(0, 7)}-${raw.slice(6)}`;
-                        setIdolData({ ...idolData, birth_date: formatted });
+                        if (mode === 'friend') {
+                          setFriendData({ ...friendData, birth_date: formatted });
+                        } else {
+                          setIdolData({ ...idolData, birth_date: formatted });
+                        }
                       }}
                       className="bg-transparent text-sm font-bold outline-none w-28 border-b border-slate-700 focus:border-k-blue text-white"
                     />
@@ -1760,10 +1804,14 @@ const App = () => {
                       ref={mbtiInputRef}
                       type="text"
                       placeholder="MBTI"
-                      value={idolData.mbti}
+                      value={mode === 'friend' ? friendData.mbti : (idolData?.mbti || '')}
                       onChange={(e) => {
                         const val = e.target.value.toUpperCase().slice(0, 4);
-                        setIdolData({ ...idolData, mbti: val });
+                        if (mode === 'friend') {
+                          setFriendData({ ...friendData, mbti: val });
+                        } else {
+                          setIdolData({ ...idolData, mbti: val });
+                        }
                       }}
                       className="bg-transparent text-sm font-bold outline-none w-16 border-b border-slate-700 focus:border-k-purple text-white"
                     />
@@ -1792,7 +1840,7 @@ const App = () => {
                 ></motion.div>
                 <motion.div
                   layout
-                  className={`relative bg-slate-900 rounded-[2rem] flex flex-col border-2 border-slate-700 p-4 sm:p-8 shadow-inner w-full ${!analysisResult ? 'aspect-square items-center justify-center text-center' : 'min-h-[400px]'}`}
+                  className={`relative bg-transparent sm:bg-slate-900 rounded-[2rem] flex flex-col border-0 sm:border-2 border-slate-700 p-0 sm:p-8 shadow-none sm:shadow-inner w-full ${!analysisResult ? 'aspect-square items-center justify-center text-center' : 'min-h-[400px]'}`}
                 >
                   {/* Results Display Area - Enhanced with Bento Grid for UAT */}
                   {!analysisResult ? (
@@ -1809,7 +1857,7 @@ const App = () => {
                             <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Star TMI</span>
                           </div>
                           <p className="text-sm font-bold text-white leading-relaxed">
-                            {idolData?.tmi || "이 스타의 에너지는 당신의 하루를 더 밝게 빛내줄 거예요! ✨"}
+                            {idolData?.tmi || t('tmiFallback')}
                           </p>
                         </motion.div>
 
@@ -1843,7 +1891,7 @@ const App = () => {
                             <div className="w-10 h-10 rounded-full bg-slate-900 border border-k-purple/30 flex items-center justify-center text-lg animate-pulse">📡</div>
                             <div>
                               <p className="text-[10px] font-black text-k-purple uppercase tracking-widest mb-1">Live Signal</p>
-                              <p className="text-xs font-bold text-white">현재 {stats.today_challengers.toLocaleString()}명이 이 스타와 교신 중...</p>
+                              <p className="text-xs font-bold text-white">{t('liveSignalPart1')}{stats.today_challengers.toLocaleString()}{t('liveSignalPart2')}</p>
                             </div>
                           </div>
                           <TrendingUp className="h-5 w-5 text-k-blue opacity-50 group-hover:opacity-100 transition-opacity" />
@@ -1884,32 +1932,40 @@ const App = () => {
                     >
 
                       {/* Category Selection */}
-                      <div className="grid grid-cols-1 gap-3 mb-6">
+                      <div className="grid grid-cols-1 gap-2.5 mb-5">
+                        <button
+                          onClick={() => setActiveTab('signal')}
+                          className={`relative flex items-center justify-between px-6 py-3 sm:py-4 rounded-3xl transition-all overflow-hidden ${activeTab === 'signal'
+                            ? 'bg-gradient-to-r from-k-purple/20 via-k-pink/20 to-k-blue/20 text-white shadow-[0_0_20px_rgba(236,72,153,0.3)] border-2 border-k-pink ring-2 ring-k-purple/50'
+                            : 'bg-slate-800/80 border-2 border-slate-700/50 hover:border-k-pink/50 text-slate-400 hover:text-white'
+                            }`}
+                        >
+                          {activeTab === 'signal' && (
+                            <div className="absolute inset-0 bg-gradient-to-r from-k-purple/40 to-k-pink/40 blur-xl -z-10 animate-pulse"></div>
+                          )}
+                          <span className={`font-black text-[15px] sm:text-base break-keep ${activeTab === 'signal' ? 'drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] tracking-wide' : 'font-bold'}`}>
+                            {t('tabSignal', { name: analysisResult?.chemistry_signal?.idol_name || idolData?.name || '' })}
+                          </span>
+                          <span className={`${activeTab === 'signal' ? 'text-xl sm:text-2xl drop-shadow-[0_0_8px_rgba(236,72,153,0.8)]' : 'text-lg opacity-80'}`}>💖</span>
+                        </button>
                         <button
                           onClick={() => setActiveTab('saju')}
-                          className={`flex items-center justify-between px-5 py-3 sm:py-4 rounded-2xl border-2 transition-all ${activeTab === 'saju' ? 'bg-k-pink/10 border-k-pink text-k-pink shadow-[0_0_15px_rgba(236,72,153,0.2)]' : 'bg-slate-800/50 border-slate-700/50 hover:bg-slate-800 hover:border-k-pink/50 text-slate-400 hover:text-white'}`}
+                          className={`flex items-center justify-between px-6 py-3 sm:py-3.5 rounded-2xl border transition-all ${activeTab === 'saju' ? 'bg-k-pink/10 border-k-pink text-k-pink shadow-[0_0_15px_rgba(236,72,153,0.2)]' : 'bg-slate-800/50 border-slate-700/50 hover:bg-slate-800 hover:border-k-pink/50 text-slate-400 hover:text-white'}`}
                         >
                           <span className="font-bold text-sm md:text-base break-keep">{t('tabSaju')}</span>
-                          <span className="text-lg sm:text-xl opacity-80">🔮</span>
+                          <span className="text-lg opacity-80">🔮</span>
                         </button>
                         <button
                           onClick={() => setActiveTab('fortune')}
-                          className={`flex items-center justify-between px-6 py-2.5 sm:py-4 rounded-2xl border-2 transition-all ${activeTab === 'fortune' ? 'bg-yellow-500/10 border-yellow-500 text-yellow-500 shadow-[0_0_15px_rgba(234,179,8,0.2)]' : 'bg-slate-800/50 border-slate-700/50 hover:bg-slate-800 hover:border-yellow-500/50 text-slate-400 hover:text-white'}`}
+                          className={`flex items-center justify-between px-6 py-3 sm:py-3.5 rounded-2xl border transition-all ${activeTab === 'fortune' ? 'bg-yellow-500/10 border-yellow-500 text-yellow-500 shadow-[0_0_15px_rgba(234,179,8,0.2)]' : 'bg-slate-800/50 border-slate-700/50 hover:bg-slate-800 hover:border-yellow-500/50 text-slate-400 hover:text-white'}`}
                         >
                           <span className="font-bold text-sm md:text-base break-keep">{t('tabFortune')}</span>
-                          <span className="text-lg sm:text-xl opacity-80">📅</span>
-                        </button>
-                        <button
-                          onClick={() => setActiveTab('signal')}
-                          className={`flex items-center justify-between px-6 py-2.5 sm:py-4 rounded-2xl border-2 transition-all ${activeTab === 'signal' ? 'bg-k-blue/10 border-k-blue text-k-blue shadow-[0_0_15px_rgba(59,130,246,0.2)]' : 'bg-slate-800/50 border-slate-700/50 hover:bg-slate-800 hover:border-k-blue/50 text-slate-400 hover:text-white'}`}
-                        >
-                          <span className="font-bold text-sm md:text-base break-keep">{t('tabSignal', { name: analysisResult?.chemistry_signal?.idol_name || idolData?.name || '' })}</span>
-                          <span className="text-lg sm:text-xl opacity-80">💖</span>
+                          <span className="text-lg opacity-80">📅</span>
                         </button>
                       </div>
 
                       {/* Category Content - Gutter Minimalized & Noise Reduced */}
-                      <div className="min-h-[300px] relative backdrop-blur-md bg-slate-900/40 rounded-3xl p-1.5 sm:p-4 border border-slate-700/30 -mx-1 sm:mx-0">
+                      <div className="min-h-[300px] relative backdrop-blur-md bg-transparent sm:bg-slate-900/40 rounded-3xl p-0 sm:p-4 border-0 sm:border border-slate-700/30 -mx-1 sm:mx-0">
                         <AnimatePresence mode="wait">
                           {/* 탭 1: 내 사주 심층 분석 (전문가 조언 포함) */}
                           {activeTab === 'saju' && (
@@ -1932,7 +1988,7 @@ const App = () => {
 
                                   <div className="space-y-4">
                                     {analysisResult.lifetime_fortune.split('\n\n').map((segment: string, i: number) => (
-                                      <div key={i} className="p-4 sm:p-5 bg-slate-900/80 rounded-xl border border-slate-600/50 text-slate-200 text-sm sm:text-[15px] leading-relaxed break-keep shadow-inner">
+                                      <div key={i} className="p-3 bg-slate-900/80 rounded-xl border border-slate-600/50 text-slate-200 text-sm sm:text-[15px] leading-relaxed break-keep shadow-inner">
                                         <div className="font-black text-k-blue mb-2 text-xs uppercase tracking-tighter opacity-80">{t('stage')} {i + 1}</div>
                                         {segment}
                                       </div>
@@ -1945,7 +2001,7 @@ const App = () => {
                               {analysisResult?.chemistry_signal?.expert_advice && (
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                   {Object.entries(analysisResult.chemistry_signal.expert_advice).map(([cat, pool]: [string, any]) => (
-                                    <div key={cat} className="bg-slate-800/40 border border-slate-700/50 rounded-2xl p-5 hover:border-k-blue/30 transition-all">
+                                    <div key={cat} className="bg-slate-800/40 border border-slate-700/50 rounded-2xl p-3 sm:p-5 hover:border-k-blue/30 transition-all">
                                       <div className="flex items-center gap-2 mb-3">
                                         <div className="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center text-sm border border-slate-700/50 shadow-inner">
                                           {cat === 'Health' ? '🍎' : cat === 'Wealth' ? '💰' : cat === 'Career' ? '💼' : '❤️'}
@@ -1966,14 +2022,14 @@ const App = () => {
 
                               {/* Expert Consultant Comments (NEW Phase 15) */}
                               {analysisResult?.chemistry_signal?.lifetime_experts && (
-                                <div className="bg-slate-800/60 rounded-2xl p-6 border border-slate-700/50 shadow-lg mt-2">
+                                <div className="bg-slate-800/60 rounded-2xl p-3 sm:p-6 border border-slate-700/50 shadow-lg mt-2">
                                   <h5 className="text-sm font-black text-white mb-4 flex items-center gap-2">
                                     <MessageSquare className="h-4 w-4 text-k-pink" />
                                     {t('expertCommentTitle')}
                                   </h5>
                                   <div className="space-y-4">
                                     {analysisResult.chemistry_signal.lifetime_experts.map((exp: any, i: number) => (
-                                      <div key={i} className="p-4 bg-slate-900/40 rounded-xl border border-slate-700/30 flex gap-4">
+                                      <div key={i} className="p-3 bg-slate-900/40 rounded-xl border border-slate-700/30 flex gap-4">
                                         <div className="w-10 h-10 rounded-full bg-gradient-to-br from-slate-700 to-slate-900 flex-shrink-0 flex items-center justify-center text-xs font-black text-white border border-slate-600/50">
                                           EX
                                         </div>
@@ -1991,14 +2047,14 @@ const App = () => {
                               )}
 
                               {/* Existing Saju Content (Layout Optimized for Mobile) */}
-                              <div className="bg-slate-800/60 rounded-2xl p-4 sm:p-8 border border-slate-700/50 shadow-lg w-full">
+                              <div className="bg-slate-800/60 rounded-2xl p-2 sm:p-8 border border-slate-700/50 shadow-lg w-full">
                                 <div className="flex items-center gap-2 mb-4 px-3 py-1.5 bg-indigo-500/10 border border-indigo-500/30 rounded-lg w-fit">
                                   <span className="text-indigo-400 text-[10px] font-black uppercase tracking-widest">{t('userSajuResult')}</span>
                                 </div>
                                 <h4 className="text-xl sm:text-2xl font-black mb-4 text-white break-keep leading-tight">
                                   {analysisResult?.user_saju?.summary || analysisResult?.label}
                                 </h4>
-                                <div className="text-slate-300 text-[15px] sm:text-base leading-relaxed whitespace-pre-wrap break-keep">
+                                <div className="text-slate-300 text-[18px] sm:text-xl font-medium leading-relaxed whitespace-pre-wrap break-keep">
                                   {analysisResult?.user_saju?.content || t('sajuSuccess')}
                                 </div>
                               </div>
@@ -2016,21 +2072,21 @@ const App = () => {
                               className="flex flex-col gap-4"
                             >
                               <div className="grid grid-cols-1 gap-4 pb-10">
-                                {analysisResult.monthly_fortune.map((mf: any, idx: number) => (
+                                {analysisResult.monthly_fortune?.map((mf: any, idx: number) => (
                                   <motion.div
                                     key={idx}
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: idx * 0.05 }}
-                                    className="bg-slate-800/60 p-6 rounded-3xl border border-slate-700/50 hover:border-yellow-500/30 transition-all shadow-lg group"
+                                    className="bg-slate-800/60 p-1 sm:p-6 rounded-3xl border border-slate-700/50 hover:border-yellow-500/30 transition-all shadow-lg group"
                                   >
                                     <div className="flex items-center justify-between mb-4">
                                       <div className="flex items-center gap-3">
                                         <div className="w-10 h-10 rounded-2xl bg-yellow-500/20 flex items-center justify-center text-lg font-black text-yellow-500 border border-yellow-500/30 shadow-inner">
-                                          {mf.month}
+                                          {mf.month || idx + 1}
                                         </div>
                                         <div>
-                                          <h4 className="text-white font-black text-base md:text-lg break-keep">{mf.theme || mf.keyword}</h4>
+                                          <h4 className="text-white font-black text-[18px] sm:text-xl break-keep">{mf.theme || mf.keyword || t('fortune')}</h4>
                                           {mf.synergy && (
                                             <div className="flex items-center gap-1 mt-0.5">
                                               <div className="h-1 w-20 bg-slate-700 rounded-full overflow-hidden">
@@ -2052,7 +2108,7 @@ const App = () => {
                                         </div>
                                         <div>
                                           <p className="text-[10px] font-black text-k-blue uppercase tracking-widest mb-1">Star Signal</p>
-                                          <p className="text-sm text-slate-300 leading-loose font-medium break-keep">{mf.signal}</p>
+                                          <p className="text-[17px] text-slate-300 leading-relaxed font-medium break-keep">{mf.signal || ""}</p>
                                         </div>
                                       </div>
 
@@ -2063,7 +2119,7 @@ const App = () => {
                                         </div>
                                         <div>
                                           <p className="text-[10px] font-black text-yellow-500 uppercase tracking-widest mb-1">Action Point</p>
-                                          <p className="text-sm text-slate-300 leading-loose break-keep">{mf.guide}</p>
+                                          <p className="text-[17px] text-slate-300 leading-relaxed break-keep">{mf.guide || ""}</p>
                                         </div>
                                       </div>
                                     </div>
@@ -2077,27 +2133,28 @@ const App = () => {
                           {activeTab === 'signal' && analysisResult?.chemistry_signal && (
                             <motion.div
                               key="signal-tab"
-                              initial={{ opacity: 0, x: 20 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              exit={{ opacity: 0, x: -20 }}
-                              transition={{ duration: 0.3 }}
-                              className="bg-gradient-to-br from-k-purple/10 to-k-blue/10 rounded-2xl p-6 mb-4 border border-k-purple/20 shadow-lg h-full"
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              exit={{ opacity: 0 }}
+                              transition={{ duration: 0.2 }}
+                              style={{ willChange: 'opacity' }}
+                              className="bg-transparent sm:bg-gradient-to-br sm:from-k-purple/10 sm:to-k-blue/10 rounded-2xl p-0 sm:p-6 mb-4 border-0 sm:border sm:border-k-purple/20 shadow-none sm:shadow-lg h-full"
                             >
 
                               {/* ===== 오행 연결선 인포그래픽 ===== */}
-                              <div className="flex items-center justify-center gap-4 mb-6 p-5 bg-slate-900/60 rounded-2xl border border-slate-700/40">
+                              <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 p-3 sm:p-5 bg-slate-900/60 rounded-2xl border border-slate-700/40">
                                 <div className="text-center">
-                                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full flex items-center justify-center border-2 border-blue-400/50 mb-2 mx-auto">
-                                    <span className="text-2xl">{analysisResult.user_saju?.element === 'Wood' ? '🌲' : analysisResult.user_saju?.element === 'Fire' ? '🔥' : analysisResult.user_saju?.element === 'Earth' ? '⛰️' : analysisResult.user_saju?.element === 'Metal' ? '⚔️' : '🌊'}</span>
+                                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full flex items-center justify-center border-2 border-blue-400/50 mb-2 mx-auto">
+                                    <span className="text-xl sm:text-2xl">{analysisResult.user_saju?.element === 'Wood' ? '🌲' : analysisResult.user_saju?.element === 'Fire' ? '🔥' : analysisResult.user_saju?.element === 'Earth' ? '⛰️' : analysisResult.user_saju?.element === 'Metal' ? '⚔️' : '🌊'}</span>
                                   </div>
-                                  <p className="text-xs font-black text-blue-300 uppercase">{t('youLabel')}</p>
-                                  <p className="text-[10px] text-slate-500">{analysisResult.user_saju?.element || '?'}</p>
+                                  <p className="text-[10px] sm:text-xs font-black text-blue-300 uppercase">{t('youLabel')}</p>
+                                  <p className="text-[9px] sm:text-[10px] text-slate-500">{analysisResult.user_saju?.element || '?'}</p>
                                 </div>
 
                                 {(() => {
                                   const baseScore = analysisResult.chemistry_signal.base_synergy_score || 52;
                                   const missions = analysisResult.chemistry_signal.synergy_missions || [];
-                                  const totalBoost = missions.filter((m: any) => completedMissions.includes(m.id)).reduce((s: number, m: any) => s + m.boost, 0);
+                                  const totalBoost = missions.filter((m: any) => completedMissions.some(cid => cid.startsWith(`${m.id}-`))).reduce((s: number, m: any) => s + m.boost, 0);
                                   const score = Math.min(100, baseScore + totalBoost);
                                   const lineColor = score >= 100 ? 'from-pink-400 via-yellow-300 to-pink-400' : score >= 86 ? 'from-emerald-400 to-cyan-400' : score >= 71 ? 'from-purple-400 to-pink-400' : score >= 51 ? 'from-yellow-400 to-amber-400' : 'from-red-500 to-orange-400';
                                   const lineH = score >= 100 ? 'h-3' : score >= 86 ? 'h-2.5' : score >= 71 ? 'h-2' : score >= 51 ? 'h-1.5' : 'h-1';
@@ -2117,7 +2174,7 @@ const App = () => {
                                         initial={{ scale: 0 }}
                                         animate={{ scale: 1 }}
                                         transition={{ delay: 0.3, type: 'spring' }}
-                                        className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-900 border-2 ${borderColor} rounded-full px-3 py-1 transition-all duration-500 z-10`}
+                                        className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-900 border-2 ${borderColor} rounded-full px-2 sm:px-3 py-1 transition-all duration-500 z-10`}
                                       >
                                         <motion.span key={lineLabel} initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} className={`text-xs font-black ${labelColor} whitespace-nowrap`}>
                                           {lineLabel}
@@ -2137,44 +2194,49 @@ const App = () => {
                                 })()}
 
                                 <div className="text-center">
-                                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center border-2 border-purple-400/50 mb-2 mx-auto">
-                                    <span className="text-2xl">⭐</span>
+                                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center border-2 border-purple-400/50 mb-2 mx-auto">
+                                    <span className="text-xl sm:text-2xl">⭐</span>
                                   </div>
-                                  <p className="text-xs font-black text-purple-300 uppercase">{analysisResult.chemistry_signal.idol_name}</p>
-                                  <p className="text-[10px] text-slate-500">{analysisResult.chemistry_signal.idol_mbti}</p>
+                                  <p className="text-[10px] sm:text-xs font-black text-purple-300 uppercase">{analysisResult.chemistry_signal.idol_name}</p>
+                                  <p className="text-[9px] sm:text-[10px] text-slate-500">{analysisResult.chemistry_signal.idol_mbti}</p>
                                 </div>
                               </div>
 
-                              {/* Chemistry Signal Card - Re-engineered for Mobile Gutter Minimization */}
+                              {/* Chemistry Signal Card - Premium Destiny UI */}
                               <motion.div
                                 initial={{ opacity: 0, scale: 0.98 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.8 }}
-                                className="relative overflow-hidden group mb-8 rounded-[2rem] glass-premium result-card-glow w-full"
+                                className="relative overflow-hidden group mb-8 rounded-[2rem] bg-slate-900/40 backdrop-blur-xl w-full border border-white/10 ring-2 ring-k-purple/30 shadow-[0_0_40px_rgba(168,85,247,0.2)]"
                                 style={{ '--theme-accent': getElementTheme(analysisResult.dominant_element).accent } as React.CSSProperties}
                               >
+                                {/* Premium Gradient Overlay & Glow Background */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-k-purple/10 via-transparent to-k-pink/10 opacity-70 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                                <div className="absolute -top-32 -right-32 w-64 h-64 bg-k-purple/20 blur-[80px] rounded-full" />
+                                <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-k-pink/20 blur-[80px] rounded-full" />
+
                                 <ParticleField element={analysisResult.dominant_element} />
                                 <div className="p-5 sm:p-8 relative z-10 w-full">
                                   <div className="flex flex-col md:flex-row items-center gap-10">
                                     {/* Gauge Section */}
-                                    <div className="relative w-48 h-48 flex-shrink-0">
+                                    <div className="relative w-36 h-36 flex-shrink-0 mx-auto md:mx-0">
                                       <svg className="w-full h-full transform -rotate-90">
                                         <circle
-                                          cx="96" cy="96" r="88"
+                                          cx="72" cy="72" r="64"
                                           fill="transparent"
                                           stroke="currentColor"
-                                          strokeWidth="12"
+                                          strokeWidth="10"
                                           className="text-slate-700/30"
                                         />
                                         <motion.circle
-                                          cx="96" cy="96" r="88"
+                                          cx="72" cy="72" r="64"
                                           fill="transparent"
                                           stroke={getElementTheme(analysisResult.dominant_element).accent}
-                                          strokeWidth="12"
-                                          strokeDasharray={552.92}
-                                          initial={{ strokeDashoffset: 552.92 }}
+                                          strokeWidth="10"
+                                          strokeDasharray={402.12}
+                                          initial={{ strokeDashoffset: 402.12 }}
                                           animate={{
-                                            strokeDashoffset: 552.92 - (552.92 * Math.min(100, analysisResult.chemistry_signal.base_synergy_score + (analysisResult.chemistry_signal.synergy_missions || []).filter((m: any) => completedMissions.includes(m.id)).reduce((acc: number, m: any) => acc + (m.boost || 0), 0))) / 100
+                                            strokeDashoffset: 402.12 - (402.12 * Math.min(100, analysisResult.chemistry_signal.base_synergy_score + (analysisResult.chemistry_signal.synergy_missions || []).filter((m: any) => completedMissions.some(cid => cid.startsWith(`${m.id}-`))).reduce((acc: number, m: any) => acc + (m.boost || 0), 0))) / 100
                                           }}
                                           transition={{ duration: 2, ease: "easeOut" }}
                                           strokeLinecap="round"
@@ -2184,9 +2246,9 @@ const App = () => {
                                         <motion.span
                                           initial={{ scale: 0.5, opacity: 0 }}
                                           animate={{ scale: 1, opacity: 1 }}
-                                          className="text-5xl font-black text-white"
+                                          className="text-4xl font-black text-white"
                                         >
-                                          <CountingScore targetScore={Math.min(100, analysisResult.chemistry_signal.base_synergy_score + (analysisResult.chemistry_signal.synergy_missions || []).filter((m: any) => completedMissions.includes(m.id)).reduce((acc: number, m: any) => acc + (m.boost || 0), 0))} />
+                                          <CountingScore targetScore={Math.min(100, analysisResult.chemistry_signal.base_synergy_score + (analysisResult.chemistry_signal.synergy_missions || []).filter((m: any) => completedMissions.some(cid => cid.startsWith(`${m.id}-`))).reduce((acc: number, m: any) => acc + (m.boost || 0), 0))} />
                                         </motion.span>
                                         <span className="text-xs font-bold uppercase tracking-widest text-slate-400">{t('destinyEnergy')}</span>
                                       </div>
@@ -2272,18 +2334,18 @@ const App = () => {
                                         <p className="text-lg font-black text-white">{t('recentFortune')}</p>
                                       </div>
 
-                                      <div className="space-y-4">
-                                        <p className="text-sm text-slate-300 bg-slate-800/60 p-4 sm:p-5 rounded-xl border border-slate-700/50 leading-loose sm:leading-relaxed font-medium break-keep whitespace-pre-wrap">
+                                      <div className="space-y-3">
+                                        <p className="text-sm text-slate-300 bg-slate-800/60 p-3 sm:p-4 rounded-xl border border-slate-700/50 leading-snug font-medium break-keep whitespace-pre-wrap">
                                           {analysisResult.chemistry_signal.recentFortune}
                                         </p>
 
-                                        <div className="pt-2">
+                                        <div className="pt-1">
                                           <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2 px-1">{t('attackTips') || 'Strategy'}</p>
-                                          <ul className="grid grid-cols-1 gap-3 sm:gap-4">
+                                          <ul className="grid grid-cols-1 gap-1.5 sm:gap-2">
                                             {analysisResult.chemistry_signal.tips?.map((tip: string, idx: number) => (
-                                              <li key={idx} className="text-[11px] sm:text-xs text-slate-300 bg-slate-800/40 p-4 sm:p-5 rounded-lg border border-slate-700/50 flex items-start gap-3 shadow-sm">
-                                                <span className="text-k-pink mt-0.5">•</span>
-                                                <span className="leading-loose sm:leading-relaxed break-keep whitespace-pre-wrap">{tip}</span>
+                                              <li key={idx} className="text-[11px] sm:text-xs text-slate-300 bg-slate-800/40 py-2.5 px-3 rounded-lg border border-slate-700/50 flex items-center gap-2 shadow-sm">
+                                                <span className="text-k-pink text-lg -mt-0.5">•</span>
+                                                <span className="leading-snug break-keep whitespace-pre-wrap">{tip}</span>
                                               </li>
                                             ))}
                                           </ul>
@@ -2305,48 +2367,58 @@ const App = () => {
                                   </h3>
                                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                     {analysisResult.chemistry_signal.synergy_missions.map((mission: any) => {
-                                      const isCompleted = completedMissions.includes(mission.id);
+                                      // 이 미션 카테고리에서 선택된 task가 3개 모두 지 확인
+                                      const numSelectedTasks = completedMissions.filter(id => id.startsWith(`${mission.id}-`)).length;
+                                      const isCategoryComplete = numSelectedTasks === 3;
+
                                       return (
-                                        <motion.div
+                                        <div
                                           key={mission.id}
-                                          whileHover={{ y: -5 }}
-                                          onClick={() => {
-                                            if (isCompleted) {
-                                              setCompletedMissions(prev => prev.filter(id => id !== mission.id));
-                                            } else {
-                                              setCompletedMissions(prev => [...prev, mission.id]);
-                                            }
-                                          }}
-                                          className={`p-5 rounded-2xl border transition-all cursor-pointer group ${isCompleted ? 'bg-emerald-500/10 border-emerald-500/40' : 'bg-slate-800/60 border-slate-700/50 hover:border-k-pink/40'}`}
+                                          className={`p-4 sm:p-5 rounded-2xl border transition-all flex flex-col h-full bg-slate-800/60 border-slate-700/50 ${isCategoryComplete ? 'ring-2 ring-k-pink/40 shadow-[0_0_15px_rgba(236,72,153,0.15)]' : 'hover:border-k-pink/30'}`}
                                         >
                                           <div className="flex items-start justify-between mb-3">
-                                            <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-black transition-colors ${isCompleted ? 'bg-emerald-500 text-white' : 'bg-slate-900/50 text-k-pink'}`}>
-                                              {isCompleted ? '✓' : `+${mission.boost}`}
+                                            <div className={`w-12 h-12 rounded-xl flex items-center justify-center font-black transition-colors ${isCategoryComplete ? 'bg-k-pink text-white shadow-lg shadow-k-pink/30' : 'bg-slate-900/80 text-k-pink border border-k-pink/20'}`}>
+                                              {isCategoryComplete ? '✓' : `+15`}
                                             </div>
-                                            {isCompleted && <ThumbsUp className="h-5 w-5 text-emerald-400 fill-emerald-400" />}
+                                            {isCategoryComplete && <ThumbsUp className="h-6 w-6 text-k-pink fill-k-pink/20 animate-bounce" />}
                                           </div>
-                                          <h5 className={`text-sm font-black mb-1 leading-snug transition-colors ${isCompleted ? 'text-emerald-300 line-through' : 'text-white group-hover:text-k-pink'}`}>
+                                          <h5 className={`text-base font-black mb-1.5 leading-snug transition-colors ${isCategoryComplete ? 'text-white' : 'text-slate-200'}`}>
                                             {mission.label}
                                           </h5>
-                                          <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tight mb-3">{mission.reason || t('missionDesc')}</p>
+                                          <p className="text-xs text-slate-400 font-bold mb-4">{mission.reason || t('missionDesc')}</p>
 
-                                          {/* Sub-Tasks 3x3 Structure */}
-                                          <div className="space-y-2 pt-1">
-                                            {(mission.tasks || []).map((task: string, tIdx: number) => (
-                                              <div
-                                                key={tIdx}
-                                                className={`flex items-start gap-2 p-2 rounded-lg border transition-all ${isCompleted ? 'bg-emerald-500/5 border-emerald-500/10' : 'bg-slate-900/40 border-slate-700/30 group-hover:border-k-pink/20'}`}
-                                              >
-                                                <div className={`mt-0.5 h-3.5 w-3.5 rounded-full border flex items-center justify-center text-[8px] flex-shrink-0 ${isCompleted ? 'border-emerald-500/40 text-emerald-400' : 'border-slate-600 text-slate-500'}`}>
-                                                  {isCompleted ? '✓' : tIdx + 1}
-                                                </div>
-                                                <span className={`text-[11px] leading-tight ${isCompleted ? 'text-emerald-500/60 line-through' : 'text-slate-400 font-medium'}`}>
-                                                  {task}
-                                                </span>
-                                              </div>
-                                            ))}
+                                          {/* Sub-Tasks (1 Selection per Mission) */}
+                                          <div className="space-y-2.5 mt-auto">
+                                            {(mission.tasks || []).map((task: string, tIdx: number) => {
+                                              const taskId = `${mission.id}-${tIdx}`;
+                                              const isTaskSelected = completedMissions.includes(taskId);
+
+                                              return (
+                                                <motion.button
+                                                  key={tIdx}
+                                                  whileHover={{ scale: 1.02, x: 2 }}
+                                                  whileTap={{ scale: 0.98 }}
+                                                  onClick={() => {
+                                                    if (isTaskSelected) {
+                                                      setCompletedMissions(prev => prev.filter(id => id !== taskId));
+                                                    } else {
+                                                      // 다중 선택 가능하도록 그냥 배열에 추가 
+                                                      setCompletedMissions(prev => [...prev, taskId]);
+                                                    }
+                                                  }}
+                                                  className={`w-full text-left flex items-start gap-3 p-3 rounded-xl border transition-all ${isTaskSelected ? 'bg-k-pink/15 border-k-pink/50 shadow-md' : 'bg-slate-900/50 border-slate-700/50 hover:border-k-pink/30 hover:bg-slate-800'}`}
+                                                >
+                                                  <div className={`mt-0.5 h-4 w-4 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-colors ${isTaskSelected ? 'border-k-pink bg-k-pink text-white' : 'border-slate-600 bg-slate-800 text-transparent'}`}>
+                                                    {isTaskSelected && <span className="text-[10px] font-black leading-none mb-0.5">✓</span>}
+                                                  </div>
+                                                  <span className={`text-sm leading-relaxed break-keep font-medium transition-colors ${isTaskSelected ? 'text-white' : 'text-slate-300'}`}>
+                                                    {task}
+                                                  </span>
+                                                </motion.button>
+                                              );
+                                            })}
                                           </div>
-                                        </motion.div>
+                                        </div>
                                       );
                                     })}
                                   </div>
@@ -2419,6 +2491,77 @@ const App = () => {
           {t('footer')}
         </p>
       </div>
+      {/* Floating Guide Button */}
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={() => setShowGuideModal(true)}
+        className="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-k-purple to-k-pink text-white p-3.5 rounded-full shadow-[0_4px_20px_rgba(236,72,153,0.4)] border border-white/20"
+      >
+        <HelpCircle className="h-6 w-6" />
+      </motion.button>
+
+      {/* Guide Modal */}
+      <AnimatePresence>
+        {showGuideModal && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+            <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm" onClick={() => setShowGuideModal(false)} />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              className="relative w-full max-w-sm sm:max-w-md bg-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-700/50"
+            >
+              <button onClick={() => setShowGuideModal(false)} className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white bg-slate-700/50 hover:bg-slate-700 rounded-full transition-colors">
+                <X className="w-5 h-5" />
+              </button>
+
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 bg-k-purple/20 rounded-2xl">
+                  <BookOpen className="w-6 h-6 text-k-purple" />
+                </div>
+                <div>
+                  <h2 className="text-xl font-black text-white">{t('guideTitle') || 'K-Destiny Guide'}</h2>
+                  <p className="text-sm font-medium text-slate-400">{t('guideSubtitle') || 'How to read your cosmic signals'}</p>
+                </div>
+              </div>
+
+              <div className="space-y-4 max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
+                <div className="p-4 bg-slate-900/50 rounded-2xl border border-slate-700/50">
+                  <h3 className="text-sm font-black text-k-pink mb-2 flex items-center gap-2">
+                    <Heart className="w-4 h-4" /> Soul Match (Destined?)
+                  </h3>
+                  <p className="text-xs text-slate-300 leading-relaxed break-keep">
+                    {t('guideMatchDesc') || 'Discover the cosmic synergy between you and the star. The glowing line shows your connection strength—can you reach 100% Destined? Select one mission per category to boost your synergy score!'}
+                  </p>
+                </div>
+
+                <div className="p-4 bg-slate-900/50 rounded-2xl border border-slate-700/50">
+                  <h3 className="text-sm font-black text-white mb-2 flex items-center gap-2">
+                    <Star className="w-4 h-4 text-k-blue" /> My Soul (K-Saju)
+                  </h3>
+                  <p className="text-xs text-slate-300 leading-relaxed break-keep">
+                    {t('guideSoulDesc') || 'Your personal life indicator based on authentic Korean Saju algorithms. Uncover your dominant element and deep character analysis.'}
+                  </p>
+                </div>
+
+                <div className="p-4 bg-slate-900/50 rounded-2xl border border-slate-700/50">
+                  <h3 className="text-sm font-black text-white mb-2 flex items-center gap-2">
+                    <Calendar className="w-4 h-4 text-yellow-500" /> Our Fate (Calendar)
+                  </h3>
+                  <p className="text-xs text-slate-300 leading-relaxed break-keep">
+                    {t('guideFateDesc') || 'A month-by-month guide of your destined timeline. Check your Action Points and Star Signals to make the best of each month.'}
+                  </p>
+                </div>
+              </div>
+
+              <button onClick={() => setShowGuideModal(false)} className="w-full mt-6 py-4 bg-gradient-to-r from-k-purple to-k-blue rounded-2xl text-white font-black hover:opacity-90 transition-opacity">
+                {t('close')}
+              </button>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

@@ -305,6 +305,33 @@ I18N_DATA = {
             "mystic_v3": "Guided by {p1}'s intuition and refined by {p2}'s execution, the persona of {mbti} serves as a beautiful mask. Behind it, a complex engine of elemental balance operates, creating a magnetic field that is impossible to ignore."
         },
         "MZ_ANALYSIS_FRAGMENTS": {
+            "action_guides": {
+                "vibe": [
+                    "Build a playlist themed around {idol}'s favorite picks and post it on SNS with your MZ spin.",
+                    "Visit a location {idol} recently went to, recreate their photo pose — mini pilgrimage unlocked.",
+                    "Find the overlap in your tastes and send {idol} that 'this is literally SO us' signal.",
+                    "Style a similar look using {idol}'s personal color or fave fashion pieces. Twins era.",
+                    "Write a calligraphy quote from {idol}'s interview that hit hard and post it for the fandom to see.",
+                    "Read or watch something {idol} mentioned and drop your own MZ-style review for the timeline."
+                ],
+                "heart": [
+                    "Remember that tiny habit or preference {idol} mentioned — bring it up at a fan sign or fan app. They'll feel SEEN.",
+                    "Write them a genuine handwritten letter or message using words that hype up {idol}'s inner strength. Make it real.",
+                    "Understand the T/F gap in your MBTIs and prepare the exact kind of words {idol} needs to hear when they're down.",
+                    "Collect words that have given {idol} strength and wrap them into an 'encouragement playlist' caption gift.",
+                    "Plan a sincere, small celebration not just for their birthday but for their debut anniversary too.",
+                    "Edit a short clip capturing all the moments you've watched {idol} grow — send it with nothing but genuine love."
+                ],
+                "energy": [
+                    "Plan a meaningful volunteer event or fan project timed to {idol}'s birthday or anniversary.",
+                    "Put together merch or an outfit in {idol}'s personal color — show up and add to the fandom hype.",
+                    "Pick up the hobby {idol} recently started, learn it together in spirit. New challenge, new era.",
+                    "Create your own challenge video set to {idol}'s song and spread positive energy far and wide.",
+                    "Start the same workout {idol} does, log your progress, and share that energy with the universe.",
+                    "Leave a bright, warm morning message on {idol}'s fan channel every day. Be their daily sunshine."
+                ]
+            },
+
             "relationship_intro": [
                 "Your frequency syncs at {score}%! A {rel_label} combo.",
                 "Cosmic signals are hitting hard in this {rel_label} chemistry.",
@@ -338,22 +365,28 @@ I18N_DATA = {
                 "Unrivaled visual sense and unique aesthetic in every outfit."
             ],
             "bias_tmi": [
-                "Secretly likes niche hobbies, showing an '{mbti}' style depth.",
-                "Is a '{mbti_trait}' type who enjoys midnight snacks in silence.",
-                "Unexpectedly tech-savvy, a '{mbti}' vibe with a geeky side.",
-                "Known as the '{mbti_trait}' of the group, always prepared."
+                "Being {mbti} means they literally live that structured god-tier life — they're out here planning everything while the rest of us are still vibing.",
+                "Because of that iconic {mbti} energy, this one memorizes every tiny fan reaction — yes, your tweet from 3 months ago? They saw it. They remember.",
+                "That {mbti} personality means they absolutely need solo time to recharge — a certified cat who gives BIG independent main character energy.",
+                "Pure {mbti} chaos in the best way: constantly cooking up creative ideas that leave fans shook every single time. Total idea bank era.",
+                "On the surface they look calm, but that unexpected {mbti} quirk hits different — they WILL break the silence with something unhinged and iconic.",
+                "That {mbti_trait} energy is so real — they low-key become the group therapist and everyone just naturally trusts them with everything."
             ],
             "recent_fortune": [
-                "Today {idol} is radiating 'Main Character' energy. Good luck follows!",
-                "A month for {idol} to bloom. Watch for a massive breakthrough.",
-                "Energy is high! {idol} is about to slay the new project.",
-                "Fortune says {idol}'s aura is currently at its 2026 peak."
+                "{idol} is in full comeback mode energy. Career high incoming — the stars literally aligned for this moment, no cap.",
+                "The interaction luck is going UP. A legendary reaction, an iconic moment with the fandom — it's coming and it's going to be on the timeline forever.",
+                "This is a recharging arc, but don't be fooled — the aura is getting DEEPER. When they come back, it's going to be an autumn slay era.",
+                "A major career support figure just entered the orbit. An unexpected global collab? The saju says it's not IF, it's WHEN.",
+                "{idol}'s finance and brand era is hitting different. Ad deals, solo projects — the bag is being secured. We stan a business girlie/king.",
+                "The internal passion is at its absolute peak right now. Whatever {idol} has been creating on their own is about to drop and it will NOT be missed."
             ],
             "synergy_why": [
-                "Because {u_element} and {i_element} elements create a rare harmonic resonance.",
-                "The logic of {u_mbti} vs the vibe of {i_mbti} creates a perfect balance.",
-                "Cosmic alignment between your birth stars is unusually high this year.",
-                "Your '{u_element}' frequency perfectly stabilizes the '{i_element}' energy of your partner."
+                "Your '{u_element}' and their '{i_element}' energy hitting each other is literally a chemical reaction — sparks are absolutely flying.",
+                "Your saju charts cancel out each other's weaknesses and MAX OUT synergy — luck literally opens when you two are together. That's the theory.",
+                "The {u_mbti} and {i_mbti} combo covers each other's blind spots with scary precision. It's the most balanced duo on the charts, fr.",
+                "'{u_element}' feeding '{i_element}' energy is basically a perfect support-carry dynamic — you are genuinely their power source.",
+                "'{u_element}' and '{i_element}' are different flavors that somehow create an addictive chemistry. The rizz is mutual and it's unmatched.",
+                "The hustle of {u_mbti} plus the detail-oriented nature of {i_mbti}? Together you're literally unstoppable. Final boss duo."
             ]
         },
         "PURE_LOVE_STYLES": [
@@ -804,6 +837,32 @@ I18N_DATA = {
             "침묵 속에서도 서로의 본질을 믿어주는 것이 정답."
         ],
         "MZ_ANALYSIS_FRAGMENTS": {
+            "action_guides": {
+                "vibe": [
+                    "평소 스타가 즐겨 듣는 플레이리스트를 테마로 재생목록을 만들어 SNS에 공유해보세요.",
+                    "스타가 최근 방문한 장소의 사진 포즈를 따라하며 소소한 성지순례를 즐기는 것이 팁!",
+                    "서로의 취향 교집합을 찾아 '이거 완전 우리 취향'이라는 시그널을 보내보세요.",
+                    "스타의 퍼스널 컬러나 선호하는 패션 아이템으로 시밀러 룩을 연출해보는 것도 좋습니다.",
+                    "스타의 인터뷰 중 감동받은 구절을 캘리그라피로 적어 팬 커뮤니티에 인증해보세요.",
+                    "스타가 언급한 영화나 책을 감상하고 나만의 MZ스러운 감상평을 공유해보세요."
+                ],
+                "heart": [
+                    "스타의 사소한 습관이나 취향을 기억했다가 팬 사인회나 소통 앱에서 언급해보세요.",
+                    "진심 어린 손편지나 메시지를 통해 스타의 내적인 강인함을 응원하는 단어를 골라보세요.",
+                    "서로의 MBTI T/F 성향 차이를 이해하고, 스타가 가장 듣고 싶어 할 위로의 말 한마디를 준비해보세요.",
+                    "스타가 지칠 때 힘이 되었던 말들을 모아 '응원 플레이리스트' 문구로 선물해보세요.",
+                    "스타의 생일뿐만 아니라 데뷔 기념일 등에 맞춰 소박하지만 진심 어린 축하 이벤트를 준비하세요.",
+                    "스타의 성장을 묵묵히 지켜봐 온 시간을 짧은 영상으로 편집해 진심을 전해보세요."
+                ],
+                "energy": [
+                    "스타의 생일이나 기념일에 맞춰 함께 의미 있는 봉사활동이나 이벤트를 기획해보세요.",
+                    "스타가 관심 있어 하는 사회적 이슈에 동참하거나 관련 캠페인을 지지해보세요.",
+                    "건강과 에너지를 챙기며 스타의 활동을 긍정적인 파동으로 꾸준히 서포트해 보세요.",
+                    "스타의 에너지에 영감을 받아 새로운 목표(예: 취미, 운동)를 세우고 실천해보세요.",
+                    "팬들과 함께하는 오프라인 모임이나 프로젝트에서 긍정적인 에너지를 발산해보세요.",
+                    "지친 일상 속에서 스타와 서로에게 활력을 주는 랜선 파티나 라이브 시청을 기획해보세요."
+                ]
+            },
             "relationship_intro": [
                 "두 사람의 주파수는 {score}%로 일치하는 중! {rel_label} 조합입니다.",
                 "우주적 시그널이 강렬하게 꽂히는 {rel_label} 케미예요.",
@@ -1211,6 +1270,32 @@ I18N_DATA = {
             "mystic_v3": "Guiada por la intuición de {p1} y refinada por la ejecución de {p2}, la persona de {mbti} actúa como una máscara hermosa. Detrás, opera un complejo motor de equilibrio elemental, creando un campo magnético irresistible."
         },
         "MZ_ANALYSIS_FRAGMENTS": {
+            "action_guides": {
+                "vibe": [
+                    "Crea una playlist con los temas favoritos de {idol} y compártela en SNS con tu toque MZ.",
+                    "Visita un lugar que {idol} haya frecuentado y recrea su pose — misión peregrinación completada.",
+                    "Encuentra el punto en común de sus gustos y mándale a {idol} esa señal de 'esto somos totalmente nosotros'.",
+                    "Crea un look con los colores personales de {idol} o sus prendas favoritas. Era gemelas activada.",
+                    "Escribe con caligrafía una frase de la entrevista de {idol} que te llegó al alma y publícala pa' el fandom.",
+                    "Lee o mira algo que {idol} haya mencionado y comparte tu reseña MZ-style en la TL."
+                ],
+                "heart": [
+                    "Recuerda ese habito chiquito de {idol} y tráelo en un fan meet o app de fans. Que sienta que lo ves DE VERDAD.",
+                    "Escríbele una carta o mensaje de puño y letra usando palabras que eleven la fortaleza interior de {idol}. Hazlo real.",
+                    "Entiende la brecha T/F de sus MBTIs y prepara las palabras exactas que {idol} necesita escuchar cuando flaquea.",
+                    "Recopila las frases que le han dado fuerzas a {idol} y empaquétalas como un regalo de 'playlist de aliento'.",
+                    "Planea una celebración pequeña y sincera no solo en su cumpleaños sino también en su aniversario de debut.",
+                    "Edita un clip con todos los momentos en que viste crecer a {idol} — mándaselo con puro amor genuino."
+                ],
+                "energy": [
+                    "Organiza un voluntariado con impacto o proyecto de fans en la fecha de aniversario de {idol}.",
+                    "Arma una outfit o mercancía con el color personal de {idol} para sumar hype en el fandom.",
+                    "Aprende el hobby que {idol} empezó últimamente, en espíritu lo hacen juntos. Nueva era, nuevo reto.",
+                    "Crea tu propio video de challenge con la canción de {idol} y riega energía positiva 'pa todo el mundo.",
+                    "Empieza el ejercicio que {idol} practica, registra tu progreso y comparte esa energía con el universo.",
+                    "Deja un mensaje mañanero vibrante y cálido en el canal de fans de {idol} cada día. Sé su solcito diario."
+                ]
+            },
             "relationship_intro": [
                 "¡Tu frecuencia sincroniza al {score}%! Un combo de {rel_label}.",
                 "Señales cósmicas impactando fuerte en esta química de {rel_label}.",
@@ -1244,22 +1329,28 @@ I18N_DATA = {
                 "Sentido visual inigualable y estética única en cada outfit."
             ],
             "bias_tmi": [
-                "Le gustan secretamente los hobbies de nicho, estilo '{mbti}'.",
-                "Es un tipo '{mbti_trait}' que disfruta de snacks a medianoche en silencio.",
-                "Inesperadamente experto en tecnología, vibra '{mbti}' con un lado geek.",
-                "Conocido como el '{mbti_trait}' del grupo, siempre preparado."
+                "Siendo {mbti}, literalmente vive esa vida de dios súper organizada — este cuate planea todo mientras el resto de nosotros still vibing.",
+                "Con esa energía icónica de {mbti}, recuerda la reacción más mínima del fan — ¿ese tweet de hace 3 meses? Lo vio. Lo recuerda.",
+                "Esa personalidad {mbti} significa que necesita tiempo a solas para recargarse — un gato certificado con energía de protagonista independiente.",
+                "Puro caos {mbti} pero en el mejor sentido: siempre cocinando ideas creativas que dejan a los fans en shock cada vez. Total idea bank.",
+                "Por fuera parece calmado, pero ese quirk inesperado de {mbti} pega diferente — VA a romper el silencio con algo descontrolado e icónico.",
+                "Esa energía {mbti_trait} es tan real — sin querer se vuelve el terapeuta del grupo y todos le confían todo de forma natural."
             ],
             "recent_fortune": [
-                "Hoy {idol} irradia energía de 'Protagonista'. ¡La buena suerte le sigue!",
-                "Un mes para que {idol} florezca. Atentos a un gran avance.",
-                "¡La energía está alta! {idol} va a brillar en su nuevo proyecto.",
-                "La fortuna dice que el aura de {idol} está en su pico de 2026."
+                "{idol} está en modo comeback total. Career high incoming — las estrellas literalmente se alinearon pa' este momento, sin mentiras.",
+                "La suerte de interacción está SUBIENDO. Una reacción legendaria, un momento icónico con el fandom — viene y va a estar en la TL pa' siempre.",
+                "Este es un arco de recarga, pero no te engañes — el aura se está poniendo PROFUNDA. Cuando vuelva, va a ser una era de brillo otoñal.",
+                "Un apoyo mayor en la carrera acaba de entrar en órbita. ¿Una collab global inesperada? El saju dice que no es SI, es CUÁNDO.",
+                "La era financiera y de marca de {idol} está pegando diferente. Contratos publicitarios, proyectos solos — asegurando el bag. Stan queen/king del negocio.",
+                "La pasión interna está EN SU PUNTO MÁXIMO. Lo que sea que {idol} haya estado creando por su cuenta está a punto de salir y NO pasará inadvertido."
             ],
             "synergy_why": [
-                "Porque los elementos {u_element} y {i_element} crean una resonancia armónica rara.",
-                "La lógica de {u_mbti} vs la vibra de {i_mbti} crea un equilibrio perfecto.",
-                "La alineación cósmica entre sus estrellas de nacimiento es inusualmente alta.",
-                "Tu frecuencia '{u_element}' estabiliza perfectamente la energía '{i_element}' de tu pareja."
+                "Tu energía '{u_element}' y la de ellos '{i_element}' chocando es literalmente una reacción química — las chispas están volando pa' todos lados.",
+                "Sus cartas de saju cancelan las debilidades del otro y MAXIMIZAN la sinergia — la suerte literalmente se abre cuando están juntos. Así es la teoría.",
+                "El combo de {u_mbti} y {i_mbti} cubre los puntos ciegos del otro con precisión que da escalofrío. El dúo más balanceado del chart, fr.",
+                "'{u_element}' alimentando la energía '{i_element}' es básicamente una dinámica de apoyo perfecta — eres genuinamente su fuente de poder.",
+                "'{u_element}' y '{i_element}' son sabores distintos que de alguna forma crean una química adictiva. El rizz es mutuo y no tiene igual.",
+                "El empuje de {u_mbti} más la naturaleza detallista de {i_mbti}? Juntos son literalmente imparables. Dúo de final boss."
             ]
         },
         "PURE_LOVE_STYLES": [
@@ -1785,6 +1876,32 @@ I18N_DATA = {
             "mystic_v3": "Guiada pela intuição de {p1} e refinada pela execução de {p2}, a persona de {mbti} atua como uma bela máscara. Por trás dela, opera um complexo motor de equilíbrio elemental, criando um campo magnético irresistível."
         },
         "MZ_ANALYSIS_FRAGMENTS": {
+            "action_guides": {
+                "vibe": [
+                    "Monte uma playlist com as músicas favoritas de {idol} e poste nas redes com seu toque MZ.",
+                    "Visite um lugar que {idol} foi recentemente e recrie a pose deles — missão peregrinação completa.",
+                    "Encontre o gosto em comum e mande pra {idol} aquele sinal de 'isso aí somos demais nós'.",
+                    "Crie um look com a cor pessoal de {idol} ou suas peças favoritas. Era sósias ativada.",
+                    "Escreva com caligrafia uma frase da entrevista de {idol} que te arrasou e poste pro fandom ver.",
+                    "Leia ou assista algo que {idol} mencionou e solte a sua resenha MZ-style na timeline."
+                ],
+                "heart": [
+                    "Lembre daquele hábito miudinho de {idol} e traga no fan meet ou app de fãs. Que sinta que você vê de verdade.",
+                    "Escreva de próprio punho uma carta ou mensagem usando palavras que elevem a força interior de {idol}. Sério mesmo.",
+                    "Entenda a diferença T/F dos MBTIs de vocês e prepare as palavras exatas que {idol} precisa ouvir quando balançar.",
+                    "Reuna as frases que dão força a {idol} e embale como um presente de 'playlist de incentivo'.",
+                    "Planeje uma comemoração simples e sincera não só no aniversário mas também no aniversário de estreia de {idol}.",
+                    "Edite um clip com todos os momentos que você viu {idol} crescer — manda com amor genuino e só."
+                ],
+                "energy": [
+                    "Organize um trabalho voluntário com impacto ou projeto de fãs na data de aniversário de {idol}.",
+                    "Monte merch ou outfit com a cor pessoal de {idol} pra somar hype no fandom.",
+                    "Aprenda o hobby que {idol} começou recentemente, em espírito fazem juntos. Nova era, novo desafio.",
+                    "Crie seu próprio vídeo de challenge com a música de {idol} e espalhe energia positiva pra geral.",
+                    "Começe o exercício que {idol} pratica, registre seu progresso e compartilhe essa energia com o universo.",
+                    "Deixe uma mensagem matinal vibrante e quentinha no canal de fãs de {idol} todo dia. Seja o solzinho deles."
+                ]
+            },
             "relationship_intro": [
                 "Sua frequência sincroniza em {score}%! Um combo de {rel_label}.",
                 "Sinais cósmicos atingindo forte nesta química de {rel_label}.",
@@ -1818,22 +1935,28 @@ I18N_DATA = {
                 "Senso visual inigualável e estética única em cada visual."
             ],
             "bias_tmi": [
-                "Secretamente gosta de hobbies de nicho, estilo '{mbti}'.",
-                "É um tipo '{mbti_trait}' que desfruta de lanches à meia-noite em silêncio.",
-                "Inesperadamente mestre em tecnologia, vibe '{mbti}' com um lado geek.",
-                "Conhecido como o '{mbti_trait}' do grupo, sempre preparado."
+                "Sendo {mbti}, literalmente vive aquela vida de deus ultra organizada — esse personão planeja tudo enquanto a gente ainda tá no modo vibe.",
+                "Com essa energia icônica de {mbti}, lembra até da reação mais mínima do fã — aquele tweet de 3 meses atrás? Viu sim. Lembra sim.",
+                "Essa personalidade {mbti} significa que precisa de tempo a sós pra recarregar — gato certificado com energia de protagonista independente.",
+                "Puro caos {mbti} mas do bom: sempre cozinhando ideias criativas que deixam os fãs em choque toda vez. Total ideia bank.",
+                "Por fora parece calmo, mas aquele quirk inesperado de {mbti} bate diferente — VAI quebrar o silêncio com algo loucamente icônico.",
+                "Essa energia {mbti_trait} é muito real — sem querer vira o terapeuta do grupo e todo mundo confia naturalmente nele tudo."
             ],
             "recent_fortune": [
-                "Hoje {idol} irradia energia de 'Protagonista'. A sorte o segue!",
-                "Um mês para {idol} florescer. Fique de olho num grande avanço.",
-                "A energia está alta! {idol} vai brilhar no seu novo projeto.",
-                "A fortuna diz que a aura de {idol} está no seu pico de 2026."
+                "{idol} está no modo comeback total. Career high entrando — as estrelas literalmente se alinharam pra esse momento, sem mentira.",
+                "A sorte de interação tá SUBINDO. Uma reação legendária, um momento icônico com o fandom — vem aí e vai ficar na TL pra sempre.",
+                "Esse é um arco de recarga, mas não se engane — a aura tá ficando MAIS PROFUNDA. Quando voltar, vai ser uma era de arrasa no outono.",
+                "Um apoio major na carreira acabou de entrar em órbita. Uma collab global inesperada? O saju diz que não é SE, é QUANDO.",
+                "A era financeira e de marca de {idol} tá batendo diferente. Contratos, projetos solos — garantindo o bag. Stan queen/king do negócio.",
+                "A paixão interna tá NO PICO MÁXIMO. O que quer que {idol} tenha criado por conta própria tá prestes a cair e NÃO vai passar em branco."
             ],
             "synergy_why": [
-                "Porque os elementos {u_element} e {i_element} criam uma ressonância harmônica rara.",
-                "A lógica de {u_mbti} vs a vibe de {i_mbti} cria um equilíbrio perfeito.",
-                "O alinhamento cósmico entre suas estrelas de nascimento é inusitadamente alto.",
-                "Sua frequência '{u_element}' estabiliza perfeitamente a energia '{i_element}' do seu parceiro."
+                "Sua energia '{u_element}' e a deles '{i_element}' se encontrando é literalmente uma reação química — as fagulhas tão voando pra todo lado.",
+                "Seus mapas de saju cancelam as fraquezas um do outro e MAXIMIZAM a sinergia — a sorte literalmente abre quando estão juntos. É a teoria.",
+                "O combo de {u_mbti} e {i_mbti} cobre os pontos cegos um do outro com precisão assustadora. O duo mais equilibrado do chart, fr.",
+                "'{u_element}' alimentando a energia '{i_element}' é basicamente uma dinâmica de apoio perfeita — você é genuinamente a fonte de poder deles.",
+                "'{u_element}' e '{i_element}' são sabores diferentes que de alguma forma criam uma química viciante. O rizz é mútuo e não tem igual.",
+                "O impulso de {u_mbti} mais a natureza detalhista de {i_mbti}? Juntos são literalmente imparáveis. Duo de final boss."
             ]
         },
         "PURE_LOVE_STYLES": [

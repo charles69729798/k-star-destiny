@@ -57,6 +57,14 @@ def generate_scientific_hypothesis(weights: Dict[str, int], mbti: str, lang: str
 def _hash_seed(text: str) -> int:
     return sum(ord(c) for c in text)
 
+def _det_pick(key: str, pool: list):
+    """풀에서 언어가 달라도 동일한 인덱스 항목을 결정론적으로 선택합니다.
+    동일 key → 동일 인덱스 → 언어별 병렬 pool에서 같은 번째 항목 반환"""
+    if not pool:
+        return ""
+    idx = _hash_seed(key) % len(pool)
+    return pool[idx]
+
 def calc_element_weights(date_str: str) -> Dict[str, int]:
     """연, 월, 일의 분포를 기반으로 5행 가중치를 계산합니다 (100% 환산)."""
     elements = ["Wood", "Fire", "Earth", "Metal", "Water"]
@@ -204,24 +212,28 @@ def filter_missions_by_element(missions, element, seed_val: str = None) -> list:
     return selected
 
 def assemble_mz_report(fragments: dict, user_el: str, idol_el: str, user_mbti: str, idol_mbti: str, score: int, idol_name: str, lang: str = "ko", UI: dict = None) -> dict:
-    """하드코딩 배제: 조각들을 조합하여 5문장 이상의 디테일한 MZ 리포트 생성"""
-    random.seed(_hash_seed(f"MZ_REPORT_D5_{user_el}_{idol_el}_{user_mbti}_{idol_mbti}_{score}_{idol_name}"))
+    """하드코딩 배제: 조각들을 조합하여 5문장 이상의 디테일한 MZ 리포트 생성
+    ✅ 언어에 관계없이 동일한 내용(인덱스)이 선택되도록 _det_pick() 사용"""
+    # 결정론적 시드 키 (언어 제외 → 언어마다 같은 항목 선택)
+    base_key = f"MZ_REPORT_D5_{user_el}_{idol_el}_{user_mbti}_{idol_mbti}_{score}_{idol_name}"
     
     # 1. Relationship (Intro + Core)
     rel_type = get_element_relation(user_el, idol_el)
-    rel_labels = UI.get("REL_LABELS", {})
-    intro_tpl = random.choice(fragments.get("relationship_intro", ["{score}%"]))
+    rel_labels = UI.get("REL_LABELS", {}) if UI else {}
+    intro_pool = fragments.get("relationship_intro", ["{score}%"])
+    intro_tpl = _det_pick(f"{base_key}_intro", intro_pool)
     intro = intro_tpl.format(score=score, rel_label=rel_labels.get(rel_type, rel_type))
-    core = fragments.get("relationship_core", [""])[0] if isinstance(fragments.get("relationship_core"), list) else fragments.get("relationship_core", {}).get(rel_type, "")
-    # Use deterministic choice for list fragments
-    if isinstance(fragments.get("relationship_core"), list):
-        core = random.choice(fragments.get("relationship_core"))
-        
+    
+    core_raw = fragments.get("relationship_core", [""])
+    if isinstance(core_raw, list):
+        core = _det_pick(f"{base_key}_core", core_raw)
+    else:
+        core = core_raw.get(rel_type, "")
     relationship = f"{intro} {core}"
     
     # 2. Bias Analysis (Essence + Point)
-    essence = random.choice(fragments.get("bias_essence", [""])).format(element=idol_el)
-    point = random.choice(fragments.get("bias_point", [""]))
+    essence = _det_pick(f"{base_key}_ess", fragments.get("bias_essence", [""])).format(element=idol_el)
+    point = _det_pick(f"{base_key}_pt", fragments.get("bias_point", [""]))
     bias_desc = f"{essence} {point}"
     
     # 3. MBTI TMI
@@ -234,15 +246,20 @@ def assemble_mz_report(fragments: dict, user_el: str, idol_el: str, user_mbti: s
         'F': '공감 능력 만렙인' if lang == "ko" else 'Highly Empathetic',
         'J': '계획적이고 철저한' if lang == "ko" else 'Organized and Systematic',
         'P': '자유롭고 호기심 많은' if lang == "ko" else 'Free-spirited and Curious'
-    })
-    trait_desc = mbti_traits.get(idol_mbti[0].upper() if idol_mbti and idol_mbti != 'Unknown' else 'E', "신비로운" if lang == "ko" else "Mysterious")
-    bias_tmi = random.choice(fragments.get("bias_tmi", [""])).format(mbti=idol_mbti, mbti_trait=trait_desc)
+    }) if UI else {}
+    trait_desc = mbti_traits.get(
+        idol_mbti[0].upper() if idol_mbti and idol_mbti != 'Unknown' else 'E',
+        "신비로운" if lang == "ko" else "Mysterious"
+    )
+    bias_tmi = _det_pick(f"{base_key}_tmi", fragments.get("bias_tmi", [""])).format(
+        mbti=idol_mbti, mbti_trait=trait_desc
+    )
     
-    # 4. Recent Fortune
-    recent = random.choice(fragments.get("recent_fortune", ["오늘도 빛나는 하루!"])).format(idol=idol_name)
+    # 4. Recent Fortune — 결정론적 선택 (KO와 동일 인덱스 → 의미 일치)
+    recent = _det_pick(f"{base_key}_fortune", fragments.get("recent_fortune", ["오늘도 빛나는 하루!"])).format(idol=idol_name)
     
-    # 5. Synergy Why & Action Guide Reference
-    synergy_why = random.choice(fragments.get("synergy_why", [""])).format(
+    # 5. Synergy Why
+    synergy_why = _det_pick(f"{base_key}_why", fragments.get("synergy_why", [""])).format(
         u_element=user_el, i_element=idol_el, u_mbti=user_mbti, i_mbti=idol_mbti
     )
     
@@ -366,6 +383,7 @@ def analyze_destiny(
             monthly_fortune.append({
                 "month": m,
                 "score": m_score,
+                "synergy": m_score, # 프론트엔드에서 기대하는 키 추가
                 "theme": theme,
                 "signal": signal,
                 "guide": guide,
@@ -447,19 +465,29 @@ def analyze_destiny(
                 guide_pool = action_guides_mz.get(m_key, [])
                 if len(guide_pool) >= 3:
                     tasks = random.sample(guide_pool, 3)
+                elif len(guide_pool) > 0:
+                    # 가이드가 3개 미만이면 기존 가이드를 순환 재사용하여 3개를 채움
+                    tasks = [guide_pool[i % len(guide_pool)] for i in range(3)]
                 else:
-                    # Fallback or pad
-                    tasks = guide_pool + [f"Task {i+1} for {point_val}" for i in range(3 - len(guide_pool))]
+                    # action_guides 데이터가 아예 없으면 빈 리스트 (UI에서 빈 칸으로 표시)
+                    tasks = []
                 
                 label = m_data.get("label", "").format(point_1=point_val, point_2=point_val, point_3=point_val)
                 reason = m_data.get("reason", "").format(reason_1=reason_val, reason_2=reason_val, reason_3=reason_val)
+                
+                # {idol} 플레이스홀더를 실제 아이돌 이름으로 치환
+                def _fmt_task(t: str) -> str:
+                    try:
+                        return f_str(t.format(idol=idol_name))
+                    except Exception:
+                        return f_str(t)
                 
                 synergy_missions.append({
                     "id": guide_key,
                     "boost": m_data.get("boost", 15),
                     "label": f_str(label),
                     "reason": f_str(reason),
-                    "tasks": [f_str(t) for t in tasks],
+                    "tasks": [_fmt_task(t) for t in tasks],
                     "completed": False
                 })
 
