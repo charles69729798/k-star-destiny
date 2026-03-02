@@ -231,8 +231,32 @@ I18N_DATA = {
             "Skip the boring coffee dates. Hit them with a high-dopamine, unhinged surprise adventure.",
             "Hype them up 24/7! Endless glazer-level compliments will literally melt their defenses.",
             "Being clingy is a massive red flag. Show off your own independent boss energy—that's what makes them go crazy.",
-            "Instead of loud flexes, casually gift them that niche thing they tweeted about 3 weeks ago. Taking notes is mandatory!"
+            "Instead of loud flexes, casually gift them that niche thing they tweeted about 3 weeks ago. Taking notes is mandatory!",
+            "Mystery is your best friend. Don't reveal all your lore at once; keep them guessing for the next chapter.",
+            "Visuals matter! Send them an aesthetic 'vibe check' photo of your day to keep the connection alive.",
+            "Acts of service go a long way. Quietly handle that one chore they hate—it's a major green flag.",
+            "Share your vulnerability. Showing the 'real' you behind the filter creates a deep, unbreakable bond.",
+            "Be their biggest defender. Standing up for them in the group chat is the ultimate loyalty test.",
+            "Create a 'just for us' tradition. Even a small weekly ritual makes the relationship feel elite.",
+            "Physical touch (when the vibe is right) is a game changer. A subtle, well-timed gesture speaks volumes.",
+            "Respect their 'Do Not Disturb' mode. Giving space is as important as giving attention.",
+            "Level up together. Start a shared hobby or project to build a power-duo dynamic.",
+            "Keep the banter sharp! A little playful roasting is the secret sauce to keeping the sparks flying."
         ],
+        "MISSION_FRAGMENTS": {
+            "labels": [
+                "God-tier Taste Sync 📸", "Soul Connection Deep-Dive 💬", "Dopamine Healing Arc 🎡",
+                "Cosmic Aesthetic Merge ✨", "Main Character Energy Sync 🌟", "Secret Lore UNLOCKED 🔑"
+            ],
+            "reasons": [
+                "Based on the unique {u_el} vs {i_el} energy magnetic field.",
+                "Analyzing the {u_mbti} & {i_mbti} psychological communication gap.",
+                "Synchronizing the destined soul frequency between you two.",
+                "Optimizing the elemental flow for a perfect support-carry dynamic.",
+                "Resolving the hidden friction in your collective cosmic charts.",
+                "Amplifying the latent synergy for an unstoppable power-duo era."
+            ]
+        },
         "UI_STRINGS": {
             "profile": "👤 Profile",
             "mbti_unrevealed": "Gatekept / Unknown",
@@ -278,6 +302,10 @@ I18N_DATA = {
                 "E": "Extroverted", "I": "Introverted", "S": "Realistic", "N": "Intuitive",
                 "T": "Logical", "F": "Feeling", "J": "Planned", "P": "Spontaneous"
             },
+            "SYNERGY_LABELS": {
+                "생": "Synergy", "극": "Conflict", "조화": "Harmony"
+            },
+            "MISSION_POINTS": ["charm", "special", "twist", "heart-fluttering", "stan-point"],
             "month_names": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
             "stage_label": "STAGE"
         },
@@ -372,6 +400,22 @@ I18N_DATA = {
                 "On the surface they look calm, but that unexpected {mbti} quirk hits different — they WILL break the silence with something unhinged and iconic.",
                 "That {mbti_trait} energy is so real — they low-key become the group therapist and everyone just naturally trusts them with everything."
             ],
+            "bias_growth": [
+                "The way they level up is actually insane, always finding the most efficient 'XP farm' in life.",
+                "They have this hidden grit that only shows up when they are truly passionate about a project.",
+                "Growth for them isn't a race; it's about building a solid foundation that never crumbles.",
+                "They absorb new skills like a sponge, making every 'side quest' look like a main mission.",
+                "Their evolution is constant, serving a new 'era' every time you think you've seen it all.",
+                "Resilience is their middle name; they turn every setback into a massive comeback story."
+            ],
+            "bias_aura": [
+                "They carry this 'Main Character' aura that makes the whole room stop and stare.",
+                "There's a subtle mystery in their eyes that makes people want to know their deep lore.",
+                "They radiate a warm, healing frequency that naturally draws everyone toward them.",
+                "A sharp, sophisticated aesthetic that screams 'High-End' even in casual fits.",
+                "Their vibe is like a cozy rainy day - calm, deep, and incredibly comforting.",
+                "They possess a magnetic field that effortlessly pulls in lucky opportunities."
+            ],
             "recent_fortune": [
                 "{idol} is in full comeback mode energy. Career high incoming — the stars literally aligned for this moment, no cap.",
                 "The interaction luck is going UP. A legendary reaction, an iconic moment with the fandom — it's coming and it's going to be on the timeline forever.",
@@ -453,6 +497,141 @@ I18N_DATA = {
                 "comment": "Your ultimate mission isn't just success, but '{mission}'. Your clear aura will naturally guide others and create a positive butterfly effect around you."
             }
         ],
+        "TIP_COMPONENTS": {
+            "actions": [
+                "Lead with authentic {mbti} honesty instead of playing mind games",
+                "Channel the mutual {u_el} energy in a direction that uplifts each other",
+                "Plan an unexpected surprise event at {place}",
+                "Respect their little {mbti_trait} quirks — that's where the magic lives",
+                "Enjoy some one-on-one {exercise} sessions together",
+                "Time your vibes to align when {star} energy is peaking",
+                "Drop some unexpected {mbti}-coded humor every once in a while",
+                "Keep that steady, textbook {mbti_trait} main character energy",
+                "Show up with the star's fave {luck_item} — understood the assignment",
+                "Flex your expert-level {skill} and let them notice",
+                "Give big genuine reactions — that's your rizz",
+                "Prioritize mindful {organ} care first — wellness is the glow-up",
+                "Go on a pilgrimage together to {place} holy sites",
+                "Write a heartfelt letter praising star's {trait} — no crumbs left",
+                "Maintain that signature cool {mbti} aura that makes you iconic"
+            ],
+            "topics": [
+                "complimenting the star's magnetic {trait} energy",
+                "leveraging the {u_el}/{i_el} elemental synergy between you two",
+                "checking on their {organ} wellness before anything else",
+                "activating the star's cherished {luck_item} for good vibes",
+                "sharing real, thoughtful advice about {skill}",
+                "proposing a tour of {place} together",
+                "exchanging each other's {star} fortune readings",
+                "hyping up the star's {mbti_trait} side — they need to hear it",
+                "bringing up that iconic {trait} keyword from an old interview",
+                "spilling the tea on the star's #1 {luck_item} obsession",
+                "proposing a duo {exercise} challenge between you two",
+                "gifting a lucky color item matching star's {u_el} energy"
+            ],
+            "results": [
+                "the ultimate cheat code to flood the relationship with dopamine.",
+                "the secret to syncing your soul frequencies on the same wavelength.",
+                "the path to planting an unshakeable green flag of certainty.",
+                "the move that tightens the fate string that's existed since past lives.",
+                "the fastest shortcut to becoming their #1 person.",
+                "the final puzzle piece that completes your exclusive chemistry.",
+                "the way to create god-tier synergy that makes hearts race.",
+                "the method to level up into each other's destined main characters.",
+                "the ultimate signal that answers the star's unspoken opening line.",
+                "the strategy to amplify your {rel_type} synergy by 200%."
+            ]
+        },
+        "GEN_MISSION_COMPONENTS": {
+            "actions": {
+                "E": [
+                    "Sharing a {target} proof shot in the community", "Pushing the agenda of the star's {trait} to besties", 
+                    "Participating in a public SNS challenge", "Doing a live pilgrimage to a energetic {place}",
+                    "Creating and sharing a {mbti} meme of the star", "Running an {exercise} challenge with fellow fans",
+                    "Dropping by the star's birthday ad for a pic", "Brainstorming for group-order merch",
+                    "Filming yourself screaming the fanchant to the new bop", "Simping over a {point} eye-contact moment with the star"
+                ],
+                "I": [
+                    "Quietly journaling with a {target}", "Binge-watching the star's past {trait} fancams",
+                    "Having alone time at the {place} the star mentioned", "Meditating to the star's playlist",
+                    "Writing a heartfelt letter to the star", "Secretly hoarding the star's {luck_item}",
+                    "Keeping a private log of the star's {mbti} daily life", "Having a fancam marathon at home",
+                    "Analyzing the star's {star} fortune as a lucky charm", "Writing down the warm comforting words the star said"
+                ]
+            },
+            "targets": {
+                "Wood": ["green sprout-themed merch", "forest-scented pilgrimage spot", "video of their growth era", "green lucky item"],
+                "Fire": ["bold red colored item", "fiery stage fancam", "dazzling night view spot", "scene of burning passion"],
+                "Earth": ["aesthetically pleasing beige merch", "calming earthy place", "photo of the star's daily life", "record of their silent hard work"],
+                "Metal": ["chic silver accessory", "sharp charismatic photoshoot", "minimalist designed place", "interview showing their iron will"],
+                "Water": ["photocard with a blue ocean vibe", "calming rainy radio session", "slow song with a deep afterglow", "clear and transparent vibe item"]
+            },
+            "contexts": [
+                "Amplify your {rel_type} synergy by 200%!", "Enjoy the moment your destined frequencies sync.",
+                "Make the invisible thread from your past life even stronger.", "The fastest shortcut to becoming their #1.",
+                "Complete the ultimate green flag.", "Sync your energy to the star's {u_el} vibe.",
+                "The final puzzle to your secret chemistry.", "Experience the god-tier synergy that makes your heart race.",
+                "Become the ultimate bestie.", "The magic to turn your differences into a {point} charm."
+            ]
+        },
+        "MISSION_COMPONENTS": {
+            "labels": [
+                "{u_mbti} x {i_mbti} Stage {n} Mission",
+                "{u_el} & {i_el} Energy Fusion",
+                "Escape the Stan Denial Era: {point}",
+                "Unlock the Main Character Buff: {point}",
+                "Destiny Frequency Sync",
+                "Custom {i_mbti} Strategy Guide",
+                "Break the Chemistry Ceiling: {point}",
+                "Soul Bestie Selfie Proof",
+                "Dopamine Full Charge Mission",
+                "God-Tier Synergy Routine",
+                "Escape the Past Life Parking Lot: {point}",
+                "Unlock Star's Unique {trait} Force Field",
+                "Walk the {rel_type} Flower Path Together"
+            ],
+            "reasons": [
+                "In K-saju, {u_el} creates and supports {i_el} — that's your blueprint.",
+                "Your {u_mbti}'s {mbti_trait} energy is a fresh stimulant that resonates with the star.",
+                "This bridges the tension point where your {organ} energies clash.",
+                "It's the solution to fix the subtle misalignment found in your past life chart.",
+                "The star's {star} energy is literally resonating with your {u_el} frequency right now.",
+                "This pushes the {rel_type} synergy between you two to its absolute peak.",
+                "The star's {mbti} vibe is lowkey obsessed with your {mbti_trait} energy."
+            ],
+            "tasks": {
+                "vibe": [
+                    "Create custom merch centered around star's iconic {trait}",
+                    "Decorate your journal with photo cards featuring your {mbti} compatibility score",
+                    "Recreate a photo at {place} that the star once mentioned in the same exact pose",
+                    "Actually learn the {skill} the star is currently obsessed with",
+                    "Flex a {luck_item} that matches the star's personal color palette",
+                    "Write out the star's most iconic quote in calligraphy and share it",
+                    "Stream the star's new stage performance {n} times and post proof",
+                    "Create a viral meme about the star's everyday {mbti}-coded moments"
+                ],
+                "heart": [
+                    "Mass tag the SNS hashtag to support the star's {organ} health",
+                    "Send a heartfelt support message that's authentically {mbti_trait}",
+                    "Gift an item similar to star's treasured {luck_item}",
+                    "Write calligraphy praising the star's mesmerizing {star} aura",
+                    "Binge the star's debut era {trait} videos to reconnect with the origin story",
+                    "Send the exact warm words of comfort the star deserves to hear",
+                    "Write a handwritten letter analyzing the star's {mbti} personality and post it",
+                    "Give yourself a self-appreciation moment for patiently supporting star's growth"
+                ],
+                "energy": [
+                    "Post your workout proof with the mindset of doing {exercise} together with the star",
+                    "Dress in a lucky color that aligns with the star's {i_el} energy",
+                    "Edit a {n}-minute video capturing the star's epic growth narrative",
+                    "Trust your {u_el}/{i_el} synergy and take on a new personal goal challenge",
+                    "Meditate to the star's playlist and cleanse your energy field",
+                    "Live your best life like the star would — log it and share proof",
+                    "Flex your daily outfit featuring star's {star} lucky item",
+                    "Spread the word about star's {trait} magic to at least one person today"
+                ]
+            }
+        },
         "SYNERGY_MISSIONS": {
             "analysis_1": {
                 "label": "Deep Vibe: {point_1} 📸",
@@ -472,6 +651,26 @@ I18N_DATA = {
                 "reason": "Synergy boost action to solve {reason_3}.",
                 "tasks": ["{task_3_1}", "{task_3_2}", "{task_3_3}"]
             }
+        },
+        "MZ_SAJU_DICTIONARY": {
+            "일주": "The energy of the day you were born! It's the core 'vibe' of your Saju chart, representing your true self.",
+            "용신": "Your ultimate 'lucky charm' energy. Amplifying this lowers life's difficulty level instantly!",
+            "기구신": "The subtle 'villain' energy in your chart. Manage it well to protect your peace.",
+            "상생": "A mutually supportive, ultimate bestie dynamic. The definition of 'we just click'.",
+            "상극": "A spicy chemistry where friction creates massive, unstoppable energy.",
+            "도화살": "Main character energy. A natural 'stan attractor' vibe that makes everyone look at you.",
+            "역마살": "Global wanderer energy. You can't stay still, and movement brings you massive success!",
+            "현침살": "The ultimate 'fact-checker'. Sharp insight and unmatched attention to detail.",
+            "비견": "Soulmate colleague energy. Increases your reliable mutuals and squad size.",
+            "겁재": "A competitive drive. Having a little rivalry actually makes you glow up faster!",
+            "편인": "The quirky 'idea bank'. Out-of-the-box thinking that becomes your unique charm.",
+            "정인": "Born to be loved. The ultimate 'maknae' vibe who naturally receives affection wherever they go.",
+            "식신": "Overflowing talent and good food luck. The ultimate productive and enjoying-life 'god-saeng' vibe.",
+            "상관": "The rebellious innovator energy. Breaks the rules and hates being boxed in—pure creative chaos!",
+            "편재": "Unexpected jackpot energy. Big scale flexers looking for that massive payout.",
+            "정재": "The steady, reliable 'human ledger' energy. Slowly but surely building an empire.",
+            "편관": "Charismatic leader energy born from overcoming extreme trials. High risk, legendary rewards.",
+            "정관": "The textbook rule-follower. A principled, unshakable straight-A student vibe."
         }
     },
     "ko": {
@@ -721,12 +920,36 @@ I18N_DATA = {
             "비화": "[찐친 바이브] 말 안 해도 통하는 소울메이트."
         },
         "TIPS": [
-            "직구만이 답이다!",
-            "깜짝 데이트로 도파민 충전!",
-            "무한 칭찬 지옥으로!",
-            "독립적인 모습이 매력 포인트!",
-            "디테일한 취향 저격 선물!"
+            "밀당은 절대 금지! 솔직한 직진만이 상대방의 마음을 여는 유일한 패스워드입니다.",
+            "뻔한 데이트는 지루함의 상징. 예상치 못한 장소나 활동으로 도파민을 강력하게 선사하세요.",
+            "무한 칭찬 지옥으로 초대하세요! 상대방의 사소한 변화를 알아차리고 언급하는 것이 핵심입니다.",
+            "집착은 최대의 레드플래그. 나만의 '갓생'을 사는 당당한 모습이 상대에게는 더 매력적으로 다가옵니다.",
+            "디테일한 취향 저격 선물을 준비하세요. 스타가 예전에 흘리듯 말했던 아이템이라면 감동 200%.",
+            "미스터리함을 유지하세요. 당신의 모든 정보를 한 번에 공개하지 말고 천천히 보여주는 것이 팁입니다.",
+            "시각적인 시그널을 보내세요. 세련된 스타일링이나 감각적인 일상 사진 공유가 호감도를 높입니다.",
+            "말보다 행동이 중요합니다. 상대방이 번거로워하는 일을 조용히 챙겨주는 모습에 심쿵할 거예요.",
+            "가끔은 취약한 모습도 보여주세요. 완벽한 모습 뒤의 인간미가 서로를 더 가깝게 연결해줍니다.",
+            "든든한 편이 되어주세요. 고민을 들어줄 때 공감과 지지를 아끼지 않는 것이 가장 큰 위로입니다.",
+            "둘만의 시그니처 루틴을 만드세요. 작은 습관 하나가 관계를 특별하게 만드는 치트키가 됩니다.",
+            "적절한 스킨십은 관계의 촉매제. 상황에 맞는 자연스러운 제스처로 설렘 지수를 높여보세요.",
+            "상대방의 개인 시간을 존중하세요. 적당한 거리가 오히려 서로를 더 갈망하게 만듭니다.",
+            "함께 성장하는 파트너가 되세요. 서로의 목표를 응원하며 함께 레벨업하는 시너지를 즐기세요.",
+            "위트 있는 대화로 폼을 유지하세요. 적절한 농담과 티키타카는 관계의 활력소입니다."
         ],
+        "MISSION_FRAGMENTS": {
+            "labels": [
+                "갓벽한 취향 공유: {point} 📸", "영혼의 딥다이브 토크: {point} 💬", "도파민 힐링 데이트: {point} 🎡",
+                "우주적 감성 동기화: {point} ✨", "주인공 에너지 싱크: {point} 🌟", "숨겨진 로어 해제: {point} 🔑"
+            ],
+            "reasons": [
+                "서로의 {u_el}와 {i_el} 에너지가 만나 생기는 독특한 자기장 때문입니다.",
+                "{u_mbti}와 {i_mbti} 사이의 심리적 소통 간극을 분석한 결과입니다.",
+                "운명적으로 설정된 두 사람만의 영혼 주파수를 동기화하는 단계입니다.",
+                "오행의 흐름을 최적화하여 완벽한 서포트-캐리 다이내믹을 형성합니다.",
+                "전체적인 사주 차트에서 발견된 미세한 마찰을 해결하기 위한 솔루션입니다.",
+                "잠재된 시너지를 증폭시켜 무엇도 막을 수 없는 무적의 듀오 시대를 엽니다."
+            ]
+        },
         "LIFETIME_STAGES": {
             "Wood": {
                 "youth": "[초년운: 봄의 싹] 호기심이 왕성하고 배움에 대한 열망이 강한 시기입니다. 10-20대에는 주변의 도움으로 재능을 꽃피울 기회를 얻게 됩니다.",
@@ -819,7 +1042,11 @@ I18N_DATA = {
             "MBTI_TRAITS": {
                 "E": "외향적", "I": "내성적", "S": "현실적", "N": "직관적",
                 "T": "논리적", "F": "감성적", "J": "계획적", "P": "자유로운"
-            }
+            },
+            "SYNERGY_LABELS": {
+                "생": "상생", "극": "상극", "조화": "조화"
+            },
+            "MISSION_POINTS": ["매력", "특별한", "반전", "심쿵", "입덕"]
         },
         "PURE_LOVE_STYLES": [
             "직관적인 끌림을 믿고 돌진하는 야생마 타입.",
@@ -839,28 +1066,34 @@ I18N_DATA = {
         "MZ_ANALYSIS_FRAGMENTS": {
             "action_guides": {
                 "vibe": [
-                    "평소 스타가 즐겨 듣는 플레이리스트를 테마로 재생목록을 만들어 SNS에 공유해보세요.",
-                    "스타가 최근 방문한 장소의 사진 포즈를 따라하며 소소한 성지순례를 즐기는 것이 팁!",
-                    "서로의 취향 교집합을 찾아 '이거 완전 우리 취향'이라는 시그널을 보내보세요.",
-                    "스타의 퍼스널 컬러나 선호하는 패션 아이템으로 시밀러 룩을 연출해보는 것도 좋습니다.",
-                    "스타의 인터뷰 중 감동받은 구절을 캘리그라피로 적어 팬 커뮤니티에 인증해보세요.",
-                    "스타가 언급한 영화나 책을 감상하고 나만의 MZ스러운 감상평을 공유해보세요."
+                    "스타의 {trait}을 주제로 한 커스텀 굿즈 제작하기",
+                    "나만의 {mbti} 궁합 점수가 담긴 포토카드로 다이어리 꾸미기",
+                    "스타가 언급했던 {place}의 성지순례 사진을 똑같은 포즈로 재현하기",
+                    "스타가 최근 꽂혀 있는 {skill}을 직접 배워보기",
+                    "스타의 퍼스널 컬러에 맞는 {luck_item} 착용 인증하기",
+                    "스타의 가장 아이코닉한 명언을 캘리그라피로 적어 공유하기",
+                    "스타의 신규 무대 영상을 {n}번 스트리밍하고 인증남기기",
+                    "스타의 일상 속 {mbti} 모먼트를 포착해 밈(Meme) 제작하기"
                 ],
                 "heart": [
-                    "스타의 사소한 습관이나 취향을 기억했다가 팬 사인회나 소통 앱에서 언급해보세요.",
-                    "진심 어린 손편지나 메시지를 통해 스타의 내적인 강인함을 응원하는 단어를 골라보세요.",
-                    "서로의 MBTI T/F 성향 차이를 이해하고, 스타가 가장 듣고 싶어 할 위로의 말 한마디를 준비해보세요.",
-                    "스타가 지칠 때 힘이 되었던 말들을 모아 '응원 플레이리스트' 문구로 선물해보세요.",
-                    "스타의 생일뿐만 아니라 데뷔 기념일 등에 맞춰 소박하지만 진심 어린 축하 이벤트를 준비하세요.",
-                    "스타의 성장을 묵묵히 지켜봐 온 시간을 짧은 영상으로 편집해 진심을 전해보세요."
+                    "스타의 {organ} 건강을 응원하는 SNS 해시태그 총공하기",
+                    "진심이 담긴 {mbti_trait}한 응원 메시지 보내기",
+                    "스타가 아끼는 {luck_item}과 비슷한 아이템 선물하기",
+                    "스타의 {star} 아우라를 찬양하는 캘리그라피 작성하기",
+                    "스타의 데뷔 초 {trait} 영상 정주행하며 초심 되새기기",
+                    "스타가 듣고 싶어 할 따뜻한 위로의 말 한마디 건네기",
+                    "스타의 {mbti} 성향을 분석한 정성 어린 손편지 작성하기",
+                    "스타를 묵묵히 기다려준 나 자신에게 셀프 칭찬 한마디 하기"
                 ],
                 "energy": [
-                    "스타의 생일이나 기념일에 맞춰 함께 의미 있는 봉사활동이나 이벤트를 기획해보세요.",
-                    "스타가 관심 있어 하는 사회적 이슈에 동참하거나 관련 캠페인을 지지해보세요.",
-                    "건강과 에너지를 챙기며 스타의 활동을 긍정적인 파동으로 꾸준히 서포트해 보세요.",
-                    "스타의 에너지에 영감을 받아 새로운 목표(예: 취미, 운동)를 세우고 실천해보세요.",
-                    "팬들과 함께하는 오프라인 모임이나 프로젝트에서 긍정적인 에너지를 발산해보세요.",
-                    "지친 일상 속에서 스타와 서로에게 활력을 주는 랜선 파티나 라이브 시청을 기획해보세요."
+                    "함께 {exercise}를 한다는 마음으로 오운완 인증하기",
+                    "스타의 {i_el} 기운에 맞는 행운 컬러로 착장하기",
+                    "스타의 서사를 담은 {n}분 분량의 성격 분석 영상 편집하기",
+                    "스타와의 {u_el}/{i_el} 시너지를 믿고 새로운 목표 도전하기",
+                    "스타의 플레이리스트로 명상하는 것은 맑은 에너지 채우기",
+                    "스타처럼 멋진 하루를 살아보고 브이로그로 기록하기",
+                    "스타의 {star} 행운 아이템을 활용한 데일리 룩 공유하기",
+                    "스타의 {trait} 매력을 주변 지인 1명에게 전파하기"
                 ]
             },
             "relationship_intro": [
@@ -903,6 +1136,22 @@ I18N_DATA = {
                 "보기와 다르게 {mbti} 특유의 엉뚱함이 있어, 가끔 예상치 못한 행동으로 정적을 깨기도 합니다.",
                 "{mbti_trait}한 기질 덕분에 동료들 사이에서도 상담사 역할을 자처하는 든든한 존재예요."
             ],
+            "bias_growth": [
+                "자신만의 속도로 성장하는 대기만성형 스타일이라, 시간이 갈수록 그 깊이가 남달라집니다.",
+                "한 번 꽂힌 분야는 끝장보는 '독종' 기질이 있어, 어떤 장애물도 성장의 발판으로 삼아요.",
+                "무조건적인 질주보다 효율적인 루틴을 설계하여 영리하게 '갓생'을 개척하는 능력이 탁월합니다.",
+                "주변의 피드백을 스펀지처럼 흡수하여 매일 '어제보다 나은 나'를 갱신하는 성장캐입니다.",
+                "겉으로는 평온해 보여도 내면에서는 쉼 없이 자신을 채찍질하며 레벨업을 멈추지 않는 스타일이죠.",
+                "실패를 두려워하지 않는 대범함 덕분에 남들이 가지 않는 길에서 독보적인 성과를 냅니다."
+            ],
+            "bias_aura": [
+                "말하지 않아도 느껴지는 '주인공 아우라'가 있어 어디서든 군중 속의 보석처럼 빛납니다.",
+                "특유의 신비롭고 고요한 분위기는 주변 사람들까지 차분하게 만드는 힐링 마력을 지녔어요.",
+                "세련된 감각과 지적인 분위기가 어우러져, 가만히 있어도 고급스러운 '본투비 스타' 느낌을 줍니다.",
+                "친근하면서도 함부로 대할 수 없는 묘한 카리스마가 공존하여 사람들을 끌어당기는 자석 같아요.",
+                "맑고 깨끗한 영혼의 주파수를 가지고 있어, 보고만 있어도 마음이 정화되는 듯한 기분을 선사합니다.",
+                "강렬한 눈빛 속에 따뜻한 진심을 숨기고 있어, 알면 알수록 헤어 나올 수 없는 블랙홀 매력이에요."
+            ],
             "recent_fortune": [
                 "올해 운세상 컴백이나 새로운 활동에서 커리어 하이를 찍을 기운이 아주 강하게 들어와 있습니다.",
                 "최근 활동운이 상승 곡선을 그리며 팬들과의 소통에서 역대급 레전드 짤이 생성될 타이밍이에요.",
@@ -921,52 +1170,136 @@ I18N_DATA = {
             ],
             "action_guides": {
                 "vibe": [
-                    "평소 스타가 즐겨 듣는 플레이리스트를 테마로 재생목록을 만들어 SNS에 공유해보세요.",
-                    "스타가 최근 방문한 장소의 사진 포즈를 따라하며 소소한 성지순례를 즐기는 것이 팁!",
-                    "서로의 취향 교집합을 찾아 '이거 완전 우리 취향'이라는 시그널을 보내보세요.",
-                    "스타의 퍼스널 컬러나 선호하는 패션 아이템으로 시밀러 룩을 연출해보는 것도 좋습니다.",
-                    "스타의 인터뷰 중 감동받은 구절을 캘리그라피로 적어 팬 커뮤니티에 인증해보세요.",
-                    "스타가 언급한 영화나 책을 감상하고 나만의 MZ스러운 감상평을 공유해보세요."
+                    "스타의 {trait} 매력을 살린 팬아트나 편집 영상을 공유해 보세요.",
+                    "스타가 자주 사용하는 말투나 유행어를 활용해 친근감을 높이세요.",
+                    "서로의 취향 교집합인 {place} 투어를 계획해 보는 것도 좋습니다.",
+                    "스타의 {mbti} 성향에 맞춘 깜짝 응원 이벤트를 기획해 보세요."
                 ],
                 "heart": [
-                    "스타의 사소한 습관이나 취향을 기억했다가 팬 사인회나 소통 앱에서 언급해보세요.",
-                    "진심 어린 손편지나 메시지를 통해 스타의 내적인 강인함을 응원하는 단어를 골라보세요.",
-                    "서로의 MBTI T/F 성향 차이를 이해하고, 스타가 가장 듣고 싶어 할 위로의 말 한마디를 준비해보세요.",
-                    "스타가 지칠 때 힘이 되었던 말들을 모아 '응원 플레이리스트' 문구로 선물해보세요.",
-                    "스타의 생일뿐만 아니라 데뷔 기념일 등에 맞춰 소박하지만 진심 어린 축하 이벤트를 준비하세요.",
-                    "스타의 성장을 묵묵히 지켜봐 온 시간을 짧은 영상으로 편집해 진심을 전해보세요."
+                    "스타의 {organ} 건강을 걱정하는 세심한 안부 인사를 건네보세요.",
+                    "스타가 평소 소중히 여기는 {luck_item}의 의미를 함께 되새겨보세요.",
+                    "서로의 {u_el}/{i_el} 상생을 기원하는 작은 선물이나 편지를 준비하세요.",
+                    "스타의 {mbti_trait}한 면모를 있는 그대로 긍정해주고 응원하세요."
                 ],
                 "energy": [
-                    "스타의 생일이나 기념일에 맞춰 함께 의미 있는 봉사활동이나 이벤트를 기획해보세요.",
-                    "스타의 퍼스널 컬러에 맞춘 굿즈나 착장을 준비해 응원 열기를 더해보세요.",
-                    "함께 새로운 도전을 한다는 마음으로 스타가 최근 시작한 취미를 함께 배워보는 건 어떨까요?",
-                    "스타의 노래에 맞춘 나만의 챌린지 영상을 만들어 긍정적인 에너지를 널리 퍼뜨려보세요.",
-                    "스타가 자주 하는 운동을 시작해보고, 건강해지는 과정을 기록하며 스타와 에너지를 공유하세요.",
-                    "지친 스타를 위해 가장 밝고 따뜻한 에너지가 담긴 모닝 문구를 소통 채널에 매일 남겨주세요."
+                    "스타의 에너제틱한 무대를 보며 함께 {exercise}로 활력을 채워보세요.",
+                    "스타의 {star} 기운이 가장 빛나는 시기를 달력에 표시하고 함께 기다려요.",
+                    "스타의 {skill}이 한 단계 도약할 수 있도록 꾸준한 비드백과 지지를 보내세요.",
+                    "서로의 운명적 주파수가 일치하는 날, 특별한 커뮤니티 활동에 참여해보세요."
                 ]
             },
             "love_style_adjectives": [
-                "치명적인", "순수한", "반전 있는", "든든한", "섬세한"
+                "치명적인", "순수한", "반전 있는", "든든한", "섬세한", "압도적인", "신비로운", "투명한"
             ]
         },
         "SYNERGY_MISSIONS": {
             "analysis_1": {
-                "label": "갓벽한 무드 공유: {point_1} 📸",
+                "label": "갓벽한 무드 공유: {point} 📸",
                 "boost": 15,
-                "reason": "{reason_1} 기반의 깊은 취향 분석 결과입니다.",
+                "reason": "{rel_type} 기반의 깊은 취향 분석 결과입니다.",
                 "tasks": ["{task_1_1}", "{task_1_2}", "{task_1_3}"]
             },
             "analysis_2": {
-                "label": "딥다이브 진심 토크: {point_2} 💬",
+                "label": "딥다이브 진심 토크: {point} 💬",
                 "boost": 15,
-                "reason": "{reason_2} 시그널을 통한 영혼의 공명 단계입니다.",
+                "reason": "{mbti_trait} 시그널을 통한 영혼의 공명 단계입니다.",
                 "tasks": ["{task_2_1}", "{task_2_2}", "{task_2_3}"]
             },
             "analysis_3": {
-                "label": "도파민 힐링 데이트: {point_3} 🎡",
+                "label": "도파민 힐링 데이트: {point} 🎡",
                 "boost": 20,
-                "reason": "{reason_3} 해결을 위한 시너지 증폭 액션입니다.",
+                "reason": "{rel_type} 해결을 위한 시너지 증폭 액션입니다.",
                 "tasks": ["{task_3_1}", "{task_3_2}", "{task_3_3}"]
+            }
+        },
+        "TIP_COMPONENTS": {
+            "actions": [
+                "밀당보다는 {mbti}다운 솔직함으로", "서로의 {u_el} 기운을 북돋는 방향으로", "예상치 못한 {place}에서의 이벤트를 통해",
+                "사소한 {mbti_trait} 성향을 존중해주며", "단둘이 {exercise}를 즐기며", "{star} 기운이 강한 날에 맞춘 소통으로",
+                "가끔은 엉뚱한 {mbti}식 유머로", "정석적인 {mbti_trait} 무드로", "스타가 선호하는 {luck_item}을 지참하고",
+                "전문가급 {skill}을 선보이며", "진심 어린 리액션과 함께", "세심한 {organ} 케어를 우선으로",
+                "함께 {place} 성지순례를 하며", "스타의 {trait}을 찬양하는 편지와 함께", "{mbti} 특유의 쿨한 무드를 유지하며"
+            ],
+            "topics": [
+                "스타의 {trait} 매력을 칭찬하는 것이", "서로의 {u_el}/{i_el} 상생 관계를 이용하는 것이", "취약한 {organ} 건강을 먼저 챙겨주는 것이",
+                "평소 스타가 아끼는 {luck_item}을 활용하는 것이", "{skill}에 대한 진심 어린 조언을 나누는 것이", "함께 {place} 투어를 제안하는 것이",
+                "서로의 {star} 운세를 공유하는 것이", "스타의 {mbti_trait}한 면모를 응원하는 것이", "과거 인터뷰 속 {trait} 키워드를 언급하는 것이",
+                "스타의 최애 {luck_item} 정보를 스포하는 것이", "둘만의 {exercise} 챌린지를 제안하는 것이", "스타의 {u_el} 기운에 맞는 행우 컬러 아이템을 선물하는 것이"
+            ],
+            "results": [
+                "관계의 도파민을 폭발시키는 치트키입니다.", "서로의 영혼 주파수를 일치시키는 비결입니다.", "흔들리지 않는 확신의 그린플래그를 세우는 길입니다.",
+                "전생부터 이어진 인연의 끈을 더욱 단단하게 만듭니다.", "스타의 마음속 1순위로 등극하는 가장 빠른 지름길입니다.",
+                "둘만의 비밀스러운 케미를 완성하는 마지막 퍼즐입니다.", "심장이 반응하는 갓벽한 시너지를 만들어냅니다.", "운명적인 갓생 메이트로 거듭나는 방법입니다.",
+                "스타의 오프닝 멘트에 응답하는 최고의 시그널입니다.", "서로의 {rel_type} 시너지를 200% 증폭시키는 전략입니다."
+            ]
+        },
+        "GEN_MISSION_COMPONENTS": {
+            "actions": {
+                "E": [
+                    "팬 커뮤니티에 {target} 인증샷을 공유하는 것은", "주변 지인들에게 스타의 {trait} 매력을 영업하는 것은", 
+                    "공개적인 SNS 챌린지에 참여하는 것은", "활기찬 {place} 성지순례 현장을 라이브로 전하는 것은",
+                    "스타의 {mbti} 밈을 직접 제작해 배포하는 것은", "동료 팬들과 함께 {exercise} 챌린지를 진행하는 것은",
+                    "스타의 생일 광고를 찾아가 인증샷을 남기는 것은", "공동 구매 굿즈 제작에 아이디어를 보태는 것은",
+                    "스타의 신곡 무대 응원법을 크게 외치는 영상을 찍는 것은", "팬 미팅 현장에서 스타와 {point} 교감을 나누는 상상을 하는 것은"
+                ],
+                "I": [
+                    "조용히 나만의 {target} 다꾸 시간을 갖는 것은", "스타의 과거 {trait} 영상을 정주행하는 것은",
+                    "스타가 언급한 {place}에서 혼자만의 시간을 보내는 것은", "스타의 선곡 플레이리스트로 명상하는 것은",
+                    "스타에게 줄 진심 어린 손편지를 정성껏 쓰는 것은", "스타의 럭키 아이템인 {luck_item}을 몰래 소장하는 것은",
+                    "스타의 {mbti}식 일상을 나만의 기록으로 남기는 것은", "집에서 스타의 무대 직캠을 무한 반복하는 것은",
+                    "스타의 {star} 운세를 분석해 나만의 부적으로 만드는 것은", "스타가 했던 따뜻한 위로의 말을 필사하는 것은"
+                ]
+            },
+            "targets": {
+                "Wood": ["푸른 새싹 굿즈", "나무 향기 가득한 성지", "성장 서사가 담긴 영상", "초록색 럭키 아이템"],
+                "Fire": ["강렬한 레드 컬러 아이템", "에너지 넘치는 무대 직캠", "화려한 야경의 성지", "뜨거운 열정의 현장"],
+                "Earth": ["안정감을 주는 베이지 톤 굿조", "차분한 흙 내음의 장소", "스타의 일상이 담긴 사진", "묵묵한 노력을 엿볼 수 있는 기록"],
+                "Metal": ["세련된 실버 액세서리", "날카로운 카리스마의 화보", "미니멀한 디자인의 장소", "스타의 단단한 의지가 느껴지는 인터뷰"],
+                "Water": ["푸른 바다 이미지를 담은 포토카드", "차분한 빗소리의 라디오 세션", "깊은 여운을 주는 슬로우 곡", "투명하고 맑은 분위기의 아이템"]
+            },
+            "contexts": [
+                "서로의 {rel_type} 시너지를 200% 증폭시켜 보세요!", "운명적인 주파수가 일치하는 순간을 즐겨보세요.",
+                "전생부터 이어진 인연의 끈을 더욱 단단하게 만듭니다.", "스타의 마음속 1순위로 각인되는 최고의 방법입니다.",
+                "흔들리지 않는 확신의 그린플래그를 완성해 보세요.", "스타의 {u_el} 기운에 당신의 에너지를 동기화하세요.",
+                "둘만의 비밀스러운 케미를 완성하는 마지막 퍼즐입니다.", "심장이 반응하는 갓벽한 시너지를 직접 체험해 보세요.",
+                "세상에서 가장 가까운 갓생 메이트로 거듭나는 길입니다.", "서로의 다름을 {point} 매력으로 승화시키는 마법입니다."
+            ]
+        },
+        "MISSION_COMPONENTS": {
+            "labels": [
+                "{u_mbti} x {i_mbti} {n}단계 미션", "{u_el} & {i_el} 에너지 융합", "입덕 부정기 탈출: {point}",
+                "주인공 버프 해제: {point}", "운명적 주파수 동기화", "{i_mbti} 맞춤형 공략법",
+                "케미 한계 돌파: {point}", "영혼의 단짝 인증샷", "도파민 풀충전 과업", "갓벽한 시너지 루틴",
+                "전생 주차장 탈출: {point}", "스타의 {trait} 고유결계 해제", "함께 걷는 {rel_type} 꽃길 미션"
+            ],
+            "reasons": [
+                "사주상 {u_el}이 {i_el}을 {rel_type}하는 구조이기 때문입니다.",
+                "{u_mbti}의 {mbti_trait}함이 스타에게 신선한 자극이 됩니다.",
+                "서로의 {organ} 기운이 충돌하는 지점을 보완하기 위함입니다.",
+                "전생 차트에서 발견된 미세한 어긋남을 맞추는 솔루션입니다.",
+                "스타의 {star} 기운이 당신의 {u_el} 에너지와 공명하고 있습니다.",
+                "둘 사이의 {rel_type} 시너지를 최고조로 끌어올리기 위해서입니다.",
+                "스타의 {mbti} 성향이 당신의 {mbti_trait} 무드에 매료되었기 때문입니다."
+            ],
+            "tasks": {
+                "vibe": [
+                    "스타의 {trait}을 주제로 한 커스텀 굿즈 제작하기", "서로의 {mbti} 궁합이 적힌 포토카드로 다꾸하기",
+                    "스타가 언급한 {place}에서 같은 구도로 인증샷 찍기", "최근 스타가 꽂힌 {skill} 직접 배워보기",
+                    "스타의 퍼스널 컬러에 맞춘 {luck_item} 인증하기", "스타의 명언을 캘리그라피로 적어 공유하기",
+                    "스타의 신곡 무대 {n}회 스트리밍 인증하기", "스타의 {mbti}식 일상 밈(Meme) 제작하기"
+                ],
+                "heart": [
+                    "스타의 {organ} 건강을 응원하는 SNS 해시태그 총공", "진심을 담아 {mbti_trait}한 응원 메시지 보내기",
+                    "스타가 아끼는 {luck_item}과 비슷한 아이템 선물하기", "스타의 {star} 아우라를 찬양하는 캘리그라피 쓰기",
+                    "스타의 데뷔 시절 {trait} 영상을 정주행하는 것은 초심 찾기", "스타가 듣고 싶어 할 따뜻한 위로의 말 한마디 전하기",
+                    "스타의 {mbti} 성향을 분석한 손글씨 편지 인증하기", "스타의 성장을 묵묵히 기다려준 나에게 셀프 칭찬하기"
+                ],
+                "energy": [
+                    "함께 {exercise}를 한다는 마음으로 오운완 인증하기", "스타의 {i_el} 기운에 맞는 행운 컬러로 착장하기",
+                    "스타의 성장 서사가 담긴 {n}분 분량의 영상 편집하기", "서로의 {u_el}/{i_el} 시너지를 믿고 새로운 목표 도전하기",
+                    "스타의 노래 플레이리스트로 명상하는 것은 에너지 정화하기", "스타를 본받아 오늘 하루 갓생 살기 실천하고 기록하기",
+                    "스타의 {star} 행운 아이템을 활용한 데일리 룩 공유하기", "주변 지인 1명에게 스타의 {trait} 매력 전파하기"
+                ]
             }
         },
         "MBTI_FUNC_FRAGMENTS": {
@@ -989,6 +1322,26 @@ I18N_DATA = {
         },
         "RPRE_TEMPLATES": {
             "core_v1": "{p1}의 강력한 본질 위에 {p2}의 세련된 감각이 더해졌습니다. 스타의 겉모습은 {mbti}의 페르소나를 입어 대중에게는 {mbti}스럽게 보이지만, 결정적인 순간에는 {p1} 특유의 뚝심이 드러나는 '외유내강' 스타일입니다."
+        },
+        "MZ_SAJU_DICTIONARY": {
+            "일주": "당신이 태어난 날의 기운! 사주의 꽃이자 '나 자신'을 나타내는 가장 핵심적인 바이브.",
+            "용신": "당신에게 가장 필요한 '럭키 아이템' 같은 기운. 이걸 채워주면 인생 난이도가 훅 내려감!",
+            "기구신": "나를 치고 들어오는 은근한 '빌런' 기운. 피하거나 잘 다스려야 멘탈이 보호됨.",
+            "상생": "서로 밀어주고 당겨주는 찐친 바이브. '우린 제법 잘 어울려요'의 정석.",
+            "상극": "가끔은 으르렁거리지만, 그 마찰 속에서 엄청난 에너지가 터지는 매운맛 케미.",
+            "도화살": "그냥 가만히 있어도 사람들이 쳐다보게 만드는 '시선 강탈' 본투비 연예인 기운.",
+            "역마살": "한 곳에 머물면 좀이 쑤시는 글로벌 방랑자 기운. 역마가 터지면 인생 스케일이 달라짐!",
+            "현침살": "말 한마디루 뼈를 때리는 '팩폭 장인' 기운. 예리한 통찰력과 디테일의 끝판왕.",
+            "비견": "나와 어깨를 나란히 하는 소울메이트 동료 기운. 내 편이 많아지는 핵인싸 바이브.",
+            "겁재": "경쟁심이 불타오르는 기운. 약간의 라이벌리가 오히려 나를 폭풍 성장시킴!",
+            "편인": "남들은 생각도 못할 기발한 '아이디어 뱅크' 기운. 엉뚱하지만 그게 찐 매력.",
+            "정인": "받는 사랑에 익숙한 '본투비 사랑둥이' 기운. 어딜 가나 예쁨 받는 막내 바이브.",
+            "식신": "내 안의 먹을 복과 재능이 팡팡 터지는 기운. 일도 잘하고 먹기도 잘하는 갓생러.",
+            "상관": "기존의 틀을 깨부수는 '반항아' 기운. 틀에 갇힌 걸 극혐하는 창의성 폭발!",
+            "편재": "예상치 못한 곳에서 잭팟이 터지는 기운. 인생 한 방을 노리는 스케일 큰 플렉스.",
+            "정재": "차곡차곡 착실하게 쌓아가는 '인간 가계부' 기운. 제일 안정적이고 믿음직한 바이브.",
+            "편관": "극한의 시련을 뚫고 올라가는 '카리스마 리더' 기운. 빡센 만큼 결과는 레전드.",
+            "정관": "FM의 정석, 바른 생활 '반장' 기운. 원칙을 지키며 흔들림 없이 직진하는 스타일."
         }
     },
     "es": {
@@ -1019,7 +1372,7 @@ I18N_DATA = {
             "Fire": {
                 "name": "Llama Ardiente (Fuego) 🔥",
                 "desc_intro": [
-                    "Tu alma da energías súper fuertes de 'Sol'. ¡Eres la antorcha humana! El Fuego significa pasión nivel Dios, expansión y cero filtro."
+                    "Tu alma da energías súper fuertes de 'Sol'. Eres la antorcha humana! El Fuego significa pasión nivel Dios, expansión y cero filtro."
                 ],
                 "desc_core": {
                     "E": [
@@ -1114,7 +1467,7 @@ I18N_DATA = {
             "[Pico de Fuego] Explosión de Pasión: La energía llega a su cenit. Resuelve tareas con un impulso poderoso.",
             "[Cosecha Metal] Decisión Fría: Se vuelve claro qué descartar y qué tomar. La eficiencia es tu arma.",
             "[Sabiduría Agua] Acumulación de Sabiduría: Tiempo de almacenar energía interna y conocimiento.",
-            "[Modo Dios] Tu era ha llegado: looks, skills y suerte están al máximo. ¡A brillar!",
+            "[Modo Dios] Tu era ha llegado: looks, skills y suerte están al máximo. A brillar!",
             "[Crecimiento Madera] Potencial en Flor: Tus ideas creativas ganan tracción. Comparte tu visión con el mundo.",
             "[Brillo de Fuego] Foco Radiante: Eres el centro de atención. Excelente para relaciones sociales y networking.",
             "[Precisión Metal] Enfoque Agudo: Gran momento para planes financieros o actualizaciones técnicas importantes.",
@@ -1145,9 +1498,9 @@ I18N_DATA = {
             "[Espejo Metal] Autorreflexión: Mírate claramente. La evaluación honesta lleva al crecimiento rápido.",
             "[Niebla Agua] Misterio Creativo: Perfecto para pensamiento no lineal. Arte y música son tus guías.",
             "[Montaña Tierra] Roca Sólida: La gente te busca por estabilidad. Brinda liderazgo y calma.",
-            "[Protagonista] Plot Armor: Sin importar el obstáculo, encuentras el camino. ¡Es tu historia!",
+            "[Protagonista] Plot Armor: Sin importar el obstáculo, encuentras el camino. Es tu historia!",
             "[Brote Madera] Comienzo Suave: Cultiva pequeñas ideas. Serán árboles gigantes pronto.",
-            "[Chispa Fuego] Insight Inicial: Un momento '¡Aha!' repentino. Anótalo de inmediato.",
+            "[Chispa Fuego] Insight Inicial: Un momento 'Aha!' repentino. Anótalo de inmediato.",
             "[Mineral Metal] Potencial Oculto: Se necesita trabajo duro para revelar el diamante interior.",
             "[Arroyo Agua] Movimiento Constante: Mantente activo. El estancamiento es el único enemigo.",
             "[Campo Tierra] Fertilidad: Todo lo que plantes crecerá. Inicia un nuevo hábito o skill.",
@@ -1157,7 +1510,7 @@ I18N_DATA = {
             "[Escudo Metal] Mente Resiliente: Nada sacude tu determinación. Mantente enfocado.",
             "[Pozo Agua] Recurso Infinito: Tienes más energía de la que crees. Deep dive en tareas.",
             "[Piedra Tierra] Éxito Durable: Una victoria que dura. La estabilidad es tu nuevo estatus.",
-            "[Final Boss] Imparable: Has superado todos los retos. ¡Ahora, reclama tu trono!"
+            "[Final Boss] Imparable: Has superado todos los retos. Ahora, reclama tu trono!"
         ],
         "LOVE_STYLES": [
             "Parecen tranquilos pero tienen full energía de zorro astuto. Secretamente se estudian todo tu lore.",
@@ -1199,7 +1552,7 @@ I18N_DATA = {
             "runAnalysis": "Analizar resultado",
             "birthDatePrompt": "Por favor, ingresa tu fecha de nacimiento primero para obtener resultados precisos!",
             "mbtiPrompt": "No sabes el MBTI del idolo? Usa la busqueda de IA o elige uno de Popular abajo!",
-            "error_msg": "Qué onda.. el motor de Saju se rompio. Intenta de nuevo.",
+            "visitor_count": "Retadores de Hoy",
             "visitorsToday": "Retadores de Hoy",
             "visitorsTotal": "Visitantes Totales",
             "analysisSuccess": "Entrada de datos completa. Listo para analizar!",
@@ -1219,7 +1572,8 @@ I18N_DATA = {
             "sameNameFound": "Varios idolos encontrados con el mismo nombre",
             "searchingWiki": "La IA esta extrayendo datos de la estrella...",
             "feedbackTitle": "Chat: Reacciones y Historias del Alma",
-            "feedbackDesc": "Comparte tus resultados de forma anonima! Cual es tu vibra hoy?",
+            "feedbackDesc": "Comparta tus resultados de forma anonima! Cual es tu vibra hoy?",
+            "error_msg": "Qué onda.. el motor de Saju se rompio. Intenta de nuevo.",
             "organ_map": {"Wood": "Hígado/Vesícula", "Fire": "Corazón/ID", "Earth": "Estómago/Bazo", "Metal": "Pulmón/IG", "Water": "Riñón/Vejiga"},
             "body_part_map": {"Wood": "Músculos/Ojos", "Fire": "Vasos/Lengua", "Earth": "Piel/Boca", "Metal": "Vías/Nariz", "Water": "Huesos/Oídos"},
             "exercise_map": {"Wood": "Caminar/Pilates", "Fire": "HIIT/Baile", "Earth": "Senderismo/Pesas", "Metal": "Yoga/Boxeo", "Water": "Natación/Meditación"},
@@ -1244,7 +1598,11 @@ I18N_DATA = {
             "MBTI_TRAITS": {
                 "E": "Extrovertido", "I": "Introvertido", "S": "Realista", "N": "Intuitivo",
                 "T": "Lógico", "F": "Sensible", "J": "Planificado", "P": "Espontáneo"
-            }
+            },
+            "SYNERGY_LABELS": {
+                "생": "Sinergia", "극": "Conflicto", "조화": "Armonía"
+            },
+            "MISSION_POINTS": ["encanto", "especial", "giro", "que enamora", "punto stan"]
         },
         "MBTI_FUNC_FRAGMENTS": {
             "e_i": {
@@ -1297,10 +1655,10 @@ I18N_DATA = {
                 ]
             },
             "relationship_intro": [
-                "¡Tu frecuencia sincroniza al {score}%! Un combo de {rel_label}.",
+                "Tu frecuencia sincroniza al {score}%! Un combo de {rel_label}.",
                 "Señales cósmicas impactando fuerte en esta química de {rel_label}.",
                 "Básicamente destino, esta vibra de {rel_label} es innegable.",
-                "Los datos prueban que este match de {rel_label} es élite, ¡puntos: {score}!",
+                "Los datos prueban que este match de {rel_label} es élite, puntos: {score}!",
                 "La resonancia entre sus ondas crea una obra maestra de {rel_label}.",
                 "Un timing de {rel_label} a través del tiempo y espacio, {score}% de probabilidad."
             ],
@@ -1330,7 +1688,7 @@ I18N_DATA = {
             ],
             "bias_tmi": [
                 "Siendo {mbti}, literalmente vive esa vida de dios súper organizada — este cuate planea todo mientras el resto de nosotros still vibing.",
-                "Con esa energía icónica de {mbti}, recuerda la reacción más mínima del fan — ¿ese tweet de hace 3 meses? Lo vio. Lo recuerda.",
+                "Con esa energía icónica de {mbti}, recuerda la reacción más mínima del fan — ese tweet de hace 3 meses? Lo vio. Lo recuerda.",
                 "Esa personalidad {mbti} significa que necesita tiempo a solas para recargarse — un gato certificado con energía de protagonista independiente.",
                 "Puro caos {mbti} pero en el mejor sentido: siempre cocinando ideas creativas que dejan a los fans en shock cada vez. Total idea bank.",
                 "Por fuera parece calmado, pero ese quirk inesperado de {mbti} pega diferente — VA a romper el silencio con algo descontrolado e icónico.",
@@ -1340,7 +1698,7 @@ I18N_DATA = {
                 "{idol} está en modo comeback total. Career high incoming — las estrellas literalmente se alinearon pa' este momento, sin mentiras.",
                 "La suerte de interacción está SUBIENDO. Una reacción legendaria, un momento icónico con el fandom — viene y va a estar en la TL pa' siempre.",
                 "Este es un arco de recarga, pero no te engañes — el aura se está poniendo PROFUNDA. Cuando vuelva, va a ser una era de brillo otoñal.",
-                "Un apoyo mayor en la carrera acaba de entrar en órbita. ¿Una collab global inesperada? El saju dice que no es SI, es CUÁNDO.",
+                "Un apoyo mayor en la carrera acaba de entrar en órbita. Una collab global inesperada? El saju dice que no es SI, es CUÁNDO.",
                 "La era financiera y de marca de {idol} está pegando diferente. Contratos publicitarios, proyectos solos — asegurando el bag. Stan queen/king del negocio.",
                 "La pasión interna está EN SU PUNTO MÁXIMO. Lo que sea que {idol} haya estado creando por su cuenta está a punto de salir y NO pasará inadvertido."
             ],
@@ -1378,7 +1736,7 @@ I18N_DATA = {
             "[Pico de Fuego] Explosión de Pasión: La energía alcanza su cenit. Resuelve tareas pendientes con un impulso poderoso.",
             "[Cosecha Metal] Decisión Fría: Se vuelve claro qué descartar y qué mantener. La eficiencia es tu arma.",
             "[Sabiduría Agua] Acumulación de Sabiduría: Tiempo de almacenar energía interna y conocimiento profundo.",
-            "[Modo Dios] Tu era ha llegado: looks, skills y suerte están en su ápice. ¡Arrasa!",
+            "[Modo Dios] Tu era ha llegado: looks, skills y suerte están en su ápice. Arrasa!",
             "[Crecimiento Madera] Potencial en Flor: Tus ideas creativas comienzan a ganar tracción. Comparte tu visión.",
             "[Brillo de Fuego] Foco Radiante: Eres el centro de atención. Excelente para eventos sociales y networking.",
             "[Precisión Metal] Enfoque Agudo: Gran momento para planeación financiera o upgrades técnicos.",
@@ -1417,6 +1775,141 @@ I18N_DATA = {
                 "young_adult": "[Juventud: Río Sinuoso] Ganando experiencia en el mundo ancho. En tus 30s y 40s, atraparás oportunidades inesperadas mediante el cambio.",
                 "middle_age": "[Madurez: Lago Profundo] Convirtiéndote en guía espiritual con vasto conocimiento. En tus 50s y 60s, expandirás tu influencia silenciosamente.",
                 "senior": "[Vejez: Mar Infinito] Hallando paz con un corazón amplio como el mar. Después de los 70s, hallarás alegría en viajes o estudios."
+            }
+        },
+                "TIP_COMPONENTS": {
+            "actions": [
+                "Con la honestidad característica de {mbti}, sin juegos de manipulación",
+                "Canalizando la energía positiva de {u_el} para impulsarse mutuamente",
+                "Planeando un evento sorpresa en {place} que nadie espera",
+                "Respetando cada pequeño rasgo {mbti_trait} — ahí está la magia real",
+                "Disfrutando sesiones de {exercise} en privado, solo ustedes dos",
+                "Sincronizando la vibra cuando la energía de {star} está en su punto máximo",
+                "Soltando un humor {mbti}-coded totalmente inesperado de vez en cuando",
+                "Manteniendo ese aura clásica y estable de {mbti_trait} que te define",
+                "Llegando con el {luck_item} favorito del star — eso es cumplir el nivel",
+                "Mostrando tu {skill} de nivel pro para que lo note",
+                "Siendo el rey/reina de las reacciones genuinas — esa es tu vibra",
+                "Priorizando el cuidado de {organ} primero — el bienestar es el glow-up real",
+                "Haciendo una peregrinación juntos a los lugares sagrados de {place}",
+                "Escribiendo una carta sincera que celebre el {trait} del star",
+                "Manteniendo esa vibe cool y única de {mbti} que te hace iconique"
+            ],
+            "topics": [
+                "elogiar la energía magnética de {trait} del star",
+                "aprovechar la sinergia elemental {u_el}/{i_el} que los une",
+                "preocuparte primero por el bienestar de {organ} del star",
+                "activar el poder del {luck_item} que el star más atesora",
+                "compartir consejos genuinos y reflexivos sobre {skill}",
+                "proponer un tour juntos por {place}",
+                "intercambiando las lecturas de fortuna de {star} entre ustedes",
+                "hypeando el lado {mbti_trait} del star — necesita escucharlo",
+                "mencionando esa palabra clave de {trait} de una entrevista antigua",
+                "spileando todo sobre la obsesión #1 del star con {luck_item}",
+                "proponiendo un challenge de {exercise} en dúo",
+                "regalando un ítem de color de suerte que conecte con la energía {u_el} del star"
+            ],
+            "results": [
+                "el cheat code definitivo para inundar la relación de dopamina.",
+                "el secreto para sincronizar sus almas en la misma frecuencia.",
+                "el camino para plantar una green flag inquebrantable de certeza.",
+                "el movimiento que fortalece el hilo del destino que existe desde vidas pasadas.",
+                "el atajo más rápido para convertirte en su persona #1.",
+                "la pieza final que completa la química exclusiva entre ustedes.",
+                "la forma de crear una sinergia de nivel god que acelera el corazón.",
+                "el método para convertirse en personajes principales del destino del otro.",
+                "la señal definitiva que responde al opening line no dicho del star.",
+                "la estrategia para amplificar la sinergia de {rel_type} al 200%."
+            ]
+        },
+        "GEN_MISSION_COMPONENTS": {
+            "actions": {
+                "E": [
+                    "Compartiendo una foto de {target} en la comunidad", "Promocionando a full el encanto {trait} del star", 
+                    "Sumándote a un reto viral en redes", "Transmitiendo en vivo desde un {place} icónico",
+                    "Creando y difundiendo memes {mbti} del star", "Haciendo el reto de {exercise} con el fandom",
+                    "Yendo a ver el anuncio de cumple del star y subiendo foto", "Dando ideas para hacer merch grupal",
+                    "Grabándote gritando el fanchant del nuevo comeback", "Llorando brillitos imaginando un momento {point} con el star"
+                ],
+                "I": [
+                    "Haciendo journaling de {target} a solas", "Haciendo maratón de fancams de su era {trait}",
+                    "Pasando tiempo a solas en el {place} que mencionó el star", "Meditando con la playlist del star",
+                    "Escribiendo una carta súper sincera para el star", "Coleccionando en secreto el {luck_item} del star",
+                    "Guardando un registro privado de sus vibes {mbti}", "Bingeando fancams en casa sin parar",
+                    "Analizando su fortuna {star} para usarlo de amuleto", "Escribiendo las palabras tan lindas que dijo el star"
+                ]
+            },
+            "targets": {
+                "Wood": ["merch temática de plantitas verdes", "lugar de peregrinación con olor a bosque", "video de su era de crecimiento", "lucky item color verde"],
+                "Fire": ["ítem rojo súper llamativo", "fancam de un stage que arde", "lugar con una vista nocturna deslumbrante", "escena de pura pasión"],
+                "Earth": ["merch beige súper aesthetic", "lugar tranqui con vibra earthy", "foto de su vida diaria", "registro de su esfuerzo constante"],
+                "Metal": ["accesorio plateado chic", "sesión de fotos con carisma afilado", "lugar de diseño minimalista", "entrevista que muestra su voluntad de hierro"],
+                "Water": ["photocard con vibra de océano azul", "sesión de radio relajante con lluvia", "canción lenta que te deja pensando", "ítem con vibra transparente y clara"]
+            },
+            "contexts": [
+                "¡Amplifica su sinergia de {rel_type} al 200%!", "Disfruta el momento en que sus frecuencias del destino se sincronizan.",
+                "Haz aún más fuerte el hilo rojo de su vida pasada.", "El atajo más rápido para ser su #1.",
+                "Completa la green flag definitiva.", "Sincroniza tu energía con la vibra {u_el} del star.",
+                "La pieza final para su química secreta.", "Experimenta la sinergia god-tier que hace latir tu corazón.",
+                "Conviértete en su bestie definitivo.", "La magia para convertir sus diferencias en un encanto {point}."
+            ]
+        },
+        "MISSION_COMPONENTS": {
+            "labels": [
+                "Misión Etapa {n}: {u_mbti} x {i_mbti}",
+                "Fusión de Energía {u_el} & {i_el}",
+                "Escapar del Período de Negación Stan: {point}",
+                "Activar el Buff de Protagonista: {point}",
+                "Sincronización de Frecuencia del Destino",
+                "Guía de Estrategia {i_mbti} Personalizada",
+                "Romper el Techo de Química: {point}",
+                "Foto Prueba del Alma Gemela",
+                "Misión Carga Total de Dopamina",
+                "Rutina de Sinergia God-Tier",
+                "Escapar del Estacionamiento de Vidas Pasadas: {point}",
+                "Desbloquear el Campo de Fuerza de {trait} del Star",
+                "Caminar Juntos por el Sendero de {rel_type}"
+            ],
+            "reasons": [
+                "En K-saju, {u_el} crea y soporta a {i_el} — ese es su blueprint del destino.",
+                "La energía {mbti_trait} de {u_mbti} es un estímulo fresco que el star necesita.",
+                "Esto repara el punto de tensión donde las energías de {organ} chocan.",
+                "Es la solución para arreglar el pequeño desajuste del mapa de vidas pasadas.",
+                "La energía {star} del star está resonando con tu frecuencia {u_el} ahora mismo.",
+                "Esto lleva la sinergia de {rel_type} entre ustedes a su nivel absoluto máximo.",
+                "La vibra {mbti} del star está lowkey obsesionada con tu energía {mbti_trait}."
+            ],
+            "tasks": {
+                "vibe": [
+                    "Crear merch personalizado centrado en el {trait} icónico del star",
+                    "Decorar tu diario con fotocards que muestren tu compatibilidad {mbti}",
+                    "Recrear una foto en {place} que el star mencionó, en la misma pose exacta",
+                    "Aprender realmente el {skill} con el que el star actualmente está obsesionado",
+                    "Presumir un {luck_item} que haga match con la paleta de color personal del star",
+                    "Escribir la frase más icónica del star en caligrafía y compartirla",
+                    "Streamear {n} veces el nuevo escenario del star y publicar prueba",
+                    "Crear un meme viral sobre los momentos cotidianos {mbti}-coded del star"
+                ],
+                "heart": [
+                    "Hacer tag masivo en el hashtag de SNS para apoyar la salud de {organ} del star",
+                    "Enviar un mensaje de apoyo genuinamente {mbti_trait} y desde el corazón",
+                    "Regalar un ítem similar al {luck_item} que el star más atesora",
+                    "Escribir caligrafía alabando el aura de {star} del star",
+                    "Ver en maratón los videos de la era debut del star sobre {trait}",
+                    "Enviar exactamente las palabras cálidas de consuelo que el star merece oír",
+                    "Escribir una carta a mano analizando la personalidad {mbti} del star y postearla",
+                    "Darse un momento de autoapreciación por apoyar pacientemente el crecimiento del star"
+                ],
+                "energy": [
+                    "Postear prueba del workout con la mentalidad de hacer {exercise} junto al star",
+                    "Vestirse de un color de suerte alineado con la energía {i_el} del star",
+                    "Editar un video de {n} minutos que capture la narrativa épica del star",
+                    "Confiar en la sinergia {u_el}/{i_el} y aceptar un nuevo desafío personal",
+                    "Meditar con la playlist del star y limpiar tu campo de energía",
+                    "Vivir tu mejor vida como el star lo haría — anotarlo y compartir prueba",
+                    "Lucir tu outfit diario con el ítem de suerte de {star} del star",
+                    "Hablarle a al menos una persona hoy sobre la magia de {trait} del star"
+                ]
             }
         },
         "SYNERGY_MISSIONS": {
@@ -1491,8 +1984,8 @@ I18N_DATA = {
         "MONTH_FORTUNES": {
             "1": {
                 "theme": "Vibra de Nuevos Comienzos, Energía de '{dominant}' 🌱",
-                "signal": "El mejor mes para poner metas con {idol}. ¡La sinergia va a explotar!",
-                "guide": "¡Modo Dios activado! Empieza con 10min de lectura o ejercicio. 💰 ¡La riqueza sube!"
+                "signal": "El mejor mes para poner metas con {idol}. La sinergia va a explotar!",
+                "guide": "Modo Dios activado! Empieza con 10min de lectura o ejercicio. 💰 La riqueza sube!"
             },
             "2": {
                 "theme": "Logro Intelectual y Reflexión 📚",
@@ -1502,11 +1995,11 @@ I18N_DATA = {
             "3": {
                 "theme": "Vitalidad de Primavera y Expansión Social 🌸",
                 "signal": "Momento perfecto para eventos al aire libre con {idol}.",
-                "guide": "Nuevas conexiones vienen en camino. Sé sociable. 💓 ¡Vibras de amor UP!"
+                "guide": "Nuevas conexiones vienen en camino. Sé sociable. 💓 Vibras de amor UP!"
             },
             "4": {
                 "theme": "Energía Apasionada y Crecimiento ⚡",
-                "signal": "La pasión de {idol} te va a motivar. ¡Tomen el reto juntos!",
+                "signal": "La pasión de {idol} te va a motivar. Tomen el reto juntos!",
                 "guide": "Empieza lo que postergaste. La ejecución ahora decide tus resultados finales."
             },
             "5": {
@@ -1547,8 +2040,28 @@ I18N_DATA = {
             "12": {
                 "theme": "Terminar y Descansar para Nuevos Sueños ❄️",
                 "signal": "Un mes cálido para cerrar el año con el corazón lleno por {idol}.",
-                "guide": "¡Tiempo de treat! Premiarte mantiene tu energía al máximo."
+                "guide": "Tiempo de treat! Premiarte mantiene tu energía al máximo."
             }
+        },
+        "MZ_SAJU_DICTIONARY": {
+            "일주": "¡La energía del día en que naciste! El 'vibe' central de tu Saju, tu verdadero yo.",
+            "용신": "Tu suprema energía 'amuleto de la suerte'. ¡Potenciarla baja la dificultad de la vida al instante!",
+            "기구신": "La sutil energía 'villana'. Manéjala bien para proteger tu paz mental.",
+            "상생": "Una dinámica de mejores amigos con apoyo mutuo. La definición de 'hacemos clic'.",
+            "상극": "Química picante donde la fricción crea pura energía imparable.",
+            "도화살": "Energía de protagonista. Un aura natural que atrae todas las miradas.",
+            "역마살": "Vibra de trotamundos global. ¡No te quedas quieto y el movimiento te trae éxito masivo!",
+            "현침살": "El supremo 'verificador de datos'. Perspicacia aguda y atención al detalle inigualable.",
+            "비견": "Energía de colega alma gemela. Aumenta tu equipo y amigos confiables.",
+            "겁재": "Impulso competitivo. ¡Tener un poco de rivalidad te hace crecer rapidísimo!",
+            "편인": "El peculiar 'banco de ideas'. Pensamiento fuera de la caja que es tu encanto único.",
+            "정인": "Nacido para ser amado. La vibra del consentido que recibe cariño donde sea.",
+            "식신": "Talento desbordante y buena suerte para la comida. El máximo disfrutador de la vida productiva.",
+            "상관": "Innovador rebelde. ¡Rompe las reglas y odia ser encasillado—puro caos creativo!",
+            "편재": "Energía de premio gordo inesperado. Flex a gran escala en busca de resultados enormes.",
+            "정재": "El constante y confiable 'libro contable humano'. Construye su imperio paso a paso.",
+            "편관": "Líder carismático nacido tras superar pruebas extremas. Alto riesgo, recompensa legendaria.",
+            "정관": "El seguidor de reglas de manual. Vibra de estudiante perfecto con principios inquebrantables."
         }
     },
     "pt": {
@@ -1738,7 +2251,7 @@ I18N_DATA = {
             "[Pico de Fogo] Explosão de Paixão: A energia atinge o seu auge. Resolva tarefas com um impulso poderoso.",
             "[Colheita Metal] Decisão Fria: Torna-se claro o que descartar e o que manter. Eficiência é sua arma.",
             "[Sabedoria Água] Acúmulo de Sabedoria: Tempo de armazenar energia interna e conhecimento profundo.",
-            "[Modo Deus] Sua era chegou: looks, skills e sorte estão no seu ápice. ¡Arrase!",
+            "[Modo Deus] Sua era chegou: looks, skills e sorte estão no seu ápice. Arrase!",
             "[Crescimento Madeira] Potencial em Flor: Suas ideias criativas começam a ganhar tração. Compartilhe sua visão.",
             "[Brilho de Fogo] Holofote Radiante: Você é o centro das atenções. Excelente para eventos sociais e networking.",
             "[Precisão Metal] Foco Aguçado: Ótimo momento para planejamentos financeiros ou upgrades técnicos.",
@@ -1849,6 +2362,10 @@ I18N_DATA = {
                 "E": "Extrovertido", "I": "Introvertido", "S": "Realista", "N": "Intuitivo",
                 "T": "Lógico", "F": "Sensível", "J": "Planejado", "P": "Espontâneo"
             },
+            "SYNERGY_LABELS": {
+                "생": "Sinergia", "극": "Conflito", "조화": "Harmonia"
+            },
+            "MISSION_POINTS": ["charme", "especial", "twist", "de apaixonar", "ponto stan"],
             "month_names": ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
             "stage_label": "ETAPA"
         },
@@ -1974,6 +2491,141 @@ I18N_DATA = {
             "Caminhar juntos na natureza fará a sincronização explodir.",
             "Acreditar na essência um do outro, mesmo no silêncio, é a resposta certa."
         ],
+        "TIP_COMPONENTS": {
+            "actions": [
+                "Com a honestidade autêntica de {mbti}, sem jogar mind games",
+                "Canalizando a energia mútua de {u_el} pra elevar um ao outro",
+                "Planejando um evento surpresa inesperado em {place}",
+                "Respeitando cada traço pequenininho de {mbti_trait} — é aí que a magia acontece",
+                "Curtindo sessões só de vocês dois de {exercise}",
+                "Sincronizando a vibe quando a energia de {star} tá no pico",
+                "Soltando um humor {mbti}-coded inesperado de vez em quando",
+                "Mantendo aquela aura clássica e estável de {mbti_trait} que te define",
+                "Chegando com o {luck_item} favorito do star — mó hype",
+                "Mostrando seu {skill} de nível pro pra ele/ela notar",
+                "Sendo o/a dono/a das reações genuínas — essa é sua vibra",
+                "Priorizando cuidar de {organ} primeiro — saúde é o verdadeiro glow-up",
+                "Fazendo uma peregrinação juntos pelos lugares sagrados de {place}",
+                "Escrevendo uma carta de coração celebrando o {trait} do star",
+                "Mantendo aquela vibe cool única de {mbti} que te faz icônico/a"
+            ],
+            "topics": [
+                "elogiar a energia magnética de {trait} do star",
+                "aproveitar a sinergia elemental {u_el}/{i_el} que une vocês",
+                "se preocupar primeiro com o bem-estar de {organ} do star",
+                "ativar o poder do {luck_item} mais querido pelo star",
+                "trocar conselhos genuínos e reflexivos sobre {skill}",
+                "propor um tour juntos por {place}",
+                "compartilhando as leituras de fortuna de {star} entre vocês",
+                "hypeando o lado {mbti_trait} do star — ele/ela precisa ouvir isso",
+                "mencionando aquela palavra-chave de {trait} de uma entrevista antiga",
+                "spilando tudo sobre a obsessão #1 do star com {luck_item}",
+                "propondo um challenge de {exercise} em dupla",
+                "presenteando com um item de cor da sorte que conecta com a energia {u_el} do star"
+            ],
+            "results": [
+                "o cheat code definitivo pra inundar o relacionamento de dopamina.",
+                "o segredo pra sincronizar as almas de vocês na mesma frequência.",
+                "o caminho pra plantar uma green flag inabalável de certeza.",
+                "o movimento que fortalece o fio do destino que existe desde vidas passadas.",
+                "o atalho mais rápido pra se tornar a pessoa #1 na vida dele/dela.",
+                "a peça final que completa a química exclusiva de vocês.",
+                "a forma de criar uma sinergia de nível god que acelera o coração.",
+                "o método pra virar personagens principais do destino um do outro.",
+                "o sinal definitivo que responde ao opening line não dito do star.",
+                "a estratégia pra amplificar a sinergia de {rel_type} em 200%."
+            ]
+        },
+        "GEN_MISSION_COMPONENTS": {
+            "actions": {
+                "E": [
+                    "Panfletando as fotos de {target} na comunidade", "Divulgando o charme {trait} do star pros besties", 
+                    "Participando de uma trend no TikTok/Twitter", "Fazendo live num {place} icônico que ele foi",
+                    "Criando e espalhando memes bem {mbti} dele", "Fazendo um desafio de {exercise} junto com o fandom",
+                    "Indo tirar foto no anúncio de aniversário do star", "Dando ideias pra fazer merch em grupo",
+                    "Gravando você gritando o fanchant do comeback", "Surtando junto imaginando uma interação {point} com ele"
+                ],
+                "I": [
+                    "Fazendo um polco (journal) tranquilamente com {target}", "Fazendo maratona das fancams {trait} do passado",
+                    "Passando um tempo sozinho no {place} que o star citou", "Meditando com a playlist do star",
+                    "Escrevendo uma cartinha cheia de sentimentos pra ele", "Guardando em segredo o {luck_item} do star",
+                    "Mantendo um diário privado das vibes {mbti} dele", "Assistindo fancam no repeat em casa",
+                    "Analisando o mapa {star} dele como amuleto da sorte", "Escrevendo as palavras de conforto que ele disse"
+                ]
+            },
+            "targets": {
+                "Wood": ["merch com tema de plantinhas verde", "local de peregrinação com cheiro de floresta", "vídeo da era de crescimento dele", "lucky item verde"],
+                "Fire": ["item vermelho bem chamativo", "fancam fiery do palco", "local com uma vista noturna deslumbrante", "cena de paixão pura"],
+                "Earth": ["merch bege bem aesthetic", "lugar calmo com vibe earthy", "foto do dia a dia do star", "registro do esforço silencioso dele"],
+                "Metal": ["acessório prateado chic", "photoshoot com carisma afiado", "lugar com design minimalista", "entrevista mostrando a força de vontade dele"],
+                "Water": ["photocard com vibe de oceano azul", "rádio relaxante com som de chuva", "música lenta profunda", "item com vibe transparente e clara"]
+            },
+            "contexts": [
+                "Amplifique a sinergia de {rel_type} em 200%!", "Aproveite o momento em que as frequências de vocês se alinham.",
+                "Fortaleça ainda mais o fio vermelho da vida passada.", "O atalho mais rápido pra virar o #1 no coração dele.",
+                "Complete a sua green flag suprema.", "Sincronize sua energia com a vibe {u_el} do star.",
+                "A última peça pro quebra-cabeça da química secreta de vocês.", "Experimente aquela sinergia god-tier que faz o coração acelerar.",
+                "Se torne o bestie definitivo.", "A mágica pra transformar as diferenças num charme {point}."
+            ]
+        },
+        "MISSION_COMPONENTS": {
+            "labels": [
+                "Missão Fase {n}: {u_mbti} x {i_mbti}",
+                "Fusão de Energia {u_el} & {i_el}",
+                "Escapar da Era de Negação Stan: {point}",
+                "Ativar o Buff de Protagonista: {point}",
+                "Sincronização de Frequência do Destino",
+                "Guia de Estratégia {i_mbti} Personalizada",
+                "Quebrar o Teto da Química: {point}",
+                "Foto Prova da Alma Gêmea",
+                "Missão Carga Total de Dopamina",
+                "Rotina de Sinergia God-Tier",
+                "Escapar do Estacionamento de Vidas Passadas: {point}",
+                "Desbloquear o Campo de Força de {trait} do Star",
+                "Caminhar Juntos pelo Caminho de {rel_type}"
+            ],
+            "reasons": [
+                "No K-saju, {u_el} cria e sustenta {i_el} — esse é o blueprint do destino de vocês.",
+                "A energia {mbti_trait} de {u_mbti} é um estímulo fresco que o star precisa.",
+                "Isso repara o ponto de tensão onde as energias de {organ} se chocam.",
+                "É a solução pra corrigir o pequeno desalinhamento do mapa de vidas passadas.",
+                "A energia {star} do star tá em ressonância com sua frequência {u_el} agora mesmo.",
+                "Isso eleva a sinergia de {rel_type} entre vocês ao nível absoluto máximo.",
+                "A vibe {mbti} do star tá lowkey obcecada com sua energia {mbti_trait}."
+            ],
+            "tasks": {
+                "vibe": [
+                    "Criar merch personalizada centrada no {trait} icônico do star",
+                    "Decorar seu diário com fotocards que mostram a compatibilidade {mbti} de vocês",
+                    "Recriar uma foto em {place} que o star mencionou, na mesma pose exata",
+                    "Aprender de verdade o {skill} que o star tá obcecado agora",
+                    "Postar com um {luck_item} que bate com a paleta de cor pessoal do star",
+                    "Escrever a frase mais icônica do star em caligrafia e compartilhar",
+                    "Streamear {n} vezes o novo palco do star e postar prova",
+                    "Criar um meme viral sobre os momentos cotidianos {mbti}-coded do star"
+                ],
+                "heart": [
+                    "Fazer tag em massa na hashtag da SNS pra apoiar a saúde de {organ} do star",
+                    "Mandar uma mensagem de apoio genuinamente {mbti_trait} e do coração",
+                    "Presentear com um item parecido com o {luck_item} que o star mais ama",
+                    "Escrever uma caligrafia exaltando a aura de {star} do star",
+                    "Assistir em maratona os vídeos da era debut do star sobre {trait}",
+                    "Mandar exatamente as palavras calorosas de conforto que o star merece ouvir",
+                    "Escrever uma carta à mão analisando a personalidade {mbti} do star e postar",
+                    "Se dar um momento de autoapreciação por apoiar pacientemente o crescimento do star"
+                ],
+                "energy": [
+                    "Postar prova do treino com a mentalidade de fazer {exercise} junto ao star",
+                    "Se vestir com uma cor da sorte alinhada à energia {i_el} do star",
+                    "Editar um vídeo de {n} minutos que capture a narrativa épica do star",
+                    "Confiar na sinergia {u_el}/{i_el} e aceitar um novo desafio pessoal",
+                    "Meditar com a playlist do star e limpar seu campo de energia",
+                    "Viver sua melhor vida como o star faria — anotar e compartilhar prova",
+                    "Exibir o outfit do dia com o item de sorte de {star} do star",
+                    "Falar pra pelo menos uma pessoa hoje sobre a magia de {trait} do star"
+                ]
+            }
+        },
         "SYNERGY_MISSIONS": {
             "analysis_1": {
                 "label": "Compartilhar Vibes: {point_1} 📸",
@@ -2042,11 +2694,29 @@ I18N_DATA = {
                 "focus": "Missão de Vida e Alinhamento Holístico",
                 "comment": "Sua missão final não é apenas o sucesso, mas '{mission}'. Sua aura clara guiará naturalmente os outros e criará um efeito positivo."
             }
-        ]
+        ],
+        "MZ_SAJU_DICTIONARY": {
+            "일주": "A energia do dia em que você nasceu! A vibe central e sua verdadeira essência.",
+            "용신": "Seu amuleto da sorte. Estimular essa energia deixa a vida muito mais fácil!",
+            "기구신": "A energia 'vilã' sutil. Domine-a para proteger sua paz mental.",
+            "상생": "Apoio mútuo e vibe de melhores amigos. A definição de 'nós combinamos muito'.",
+            "상극": "Química intensa onde o atrito gera um crescimento estrondoso.",
+            "도화살": "Energia de personagem principal. Uma aura natural que atrai olhares facilmente.",
+            "역마살": "Vibe de viajante global. Não consegue ficar parado; fluir atrai a grande sorte.",
+            "현침살": "O mestre dos 'fatos'. Percepção extrema e amor pelos mínimos detalhes.",
+            "비견": "Dinâmica de colega alma gêmea. Aumenta seu squad de amigos confiáveis.",
+            "겁재": "Instinto competitivo. Uma leve rivalidade te faz crescer na velocidade da luz!",
+            "편인": "O excêntrico 'banco de ideias'. Pensar fora da caixa é o seu grande charme.",
+            "정인": "Nascido para ser amado. A vibe de caçula que todo mundo enche de mimos.",
+            "식신": "Cheio de talento e com sorte para a comida. Produtivo e sabe curtir a vida como ninguém.",
+            "상관": "Inovador rebelde. Quebra os padrões e detesta rótulos—caos puramente criativo!",
+            "편재": "Jackpot inesperado. Adora arriscar alto atrás daquele sucesso monumental.",
+            "정재": "O seguro e confiável 'livro caixa humano'. Constrói a vida passo a passo.",
+            "편관": "Líder carismático temperado pelas dificuldades. Risco alto, recompensa lendária.",
+            "정관": "O aluno nota 10 certinho. Vibra princípios fortes e segue um caminho sólido."
+        }
     }
 }
 
 def get_localized_data(lang: str) -> Dict[str, Any]:
     return I18N_DATA.get(lang, I18N_DATA.get('ko'))
-
-MBTI_CHEMISTRY = {"ENFJ": {"INFP": 20, "ISFP": 15}, "INFP": {"ENFJ": 20, "ENTJ": 20}, "ENTJ": {"INFP": 20, "ISFP": 15}, "ISFP": {"ENFJ": 20, "ENTJ": 15}}

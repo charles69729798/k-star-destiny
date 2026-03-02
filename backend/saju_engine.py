@@ -1,7 +1,8 @@
 from typing import Dict, Any
 import random
 from datetime import datetime
-from saju_i18n import get_localized_data, MBTI_CHEMISTRY
+from saju_i18n import get_localized_data
+from saju_rules import MBTI_CHEMISTRY, ELEMENT_CREATION_MAP, SYNERGY_SCORE_RANGES
 
 # ──────────────────────────────────────────────
 # 1. K-사주 오행 별 심층 텍스트 베이스 (Soul Index) - KO Default
@@ -10,8 +11,7 @@ from saju_i18n import get_localized_data, MBTI_CHEMISTRY
 
 def get_element_relation(e1: str, e2: str) -> str:
     if e1 == e2: return "HARMONY"
-    생_map = {"Wood":"Fire", "Fire":"Earth", "Earth":"Metal", "Metal":"Water", "Water":"Wood"}
-    if 생_map.get(e1) == e2 or 생_map.get(e2) == e1: return "CREATE"
+    if ELEMENT_CREATION_MAP.get(e1) == e2 or ELEMENT_CREATION_MAP.get(e2) == e1: return "CREATE"
     return "CONTROL"
 
 def get_mbti_quad_description(mbti: str, lang: str = "ko") -> list:
@@ -54,8 +54,11 @@ def generate_scientific_hypothesis(weights: Dict[str, int], mbti: str, lang: str
     template = rpre_data.get(t_id, "{p1}의 본질에 {p2}의 재능이 더해진 당신.")
     return template.format(p1=p1, p2=p2, mbti=mbti, element=primary)
 
+import hashlib
+
 def _hash_seed(text: str) -> int:
-    return sum(ord(c) for c in text)
+    """단순 합산 방식에서 SHA-256 기반 고도화 해시로 변경하여 충돌 최소화"""
+    return int(hashlib.sha256(text.encode()).hexdigest(), 16)
 
 def _det_pick(key: str, pool: list):
     """풀에서 언어가 달라도 동일한 인덱스 항목을 결정론적으로 선택합니다.
@@ -161,8 +164,7 @@ def get_segmented_fortune(dominant: str, segments: dict, seed_val: str = None) -
 
 def calculate_synergy_score(e1, e2, u_birth, i_birth, u_mbti, i_mbti) -> int:
     rel = get_element_relation(e1, e2)
-    score_ranges = {"CREATE": (88, 98), "HARMONY": (82, 92), "CONTROL": (68, 85)}
-    base_min, base_max = score_ranges.get(rel, (70, 90))
+    base_min, base_max = SYNERGY_SCORE_RANGES.get(rel, (70, 90))
     
     seed_val = f"CHEM_SCORE_{e1}_{e2}_{u_birth}_{i_birth}"
     random.seed(_hash_seed(seed_val))
@@ -211,7 +213,7 @@ def filter_missions_by_element(missions, element, seed_val: str = None) -> list:
     
     return selected
 
-def assemble_mz_report(fragments: dict, user_el: str, idol_el: str, user_mbti: str, idol_mbti: str, score: int, idol_name: str, lang: str = "ko", UI: dict = None) -> dict:
+def assemble_mz_report(fragments: dict, user_el: str, idol_el: str, user_mbti: str, idol_mbti: str, score: int, idol_name: str, lang: str = "ko", UI: dict = None, user_name: str = "You") -> dict:
     """하드코딩 배제: 조각들을 조합하여 5문장 이상의 디테일한 MZ 리포트 생성
     ✅ 언어에 관계없이 동일한 내용(인덱스)이 선택되도록 _det_pick() 사용"""
     # 결정론적 시드 키 (언어 제외 → 언어마다 같은 항목 선택)
@@ -231,10 +233,11 @@ def assemble_mz_report(fragments: dict, user_el: str, idol_el: str, user_mbti: s
         core = core_raw.get(rel_type, "")
     relationship = f"{intro} {core}"
     
-    # 2. Bias Analysis (Essence + Point)
+    # 2. Bias Analysis (5-sentence Synthesis: Essence + Point + Growth + Aura + TMI)
     essence = _det_pick(f"{base_key}_ess", fragments.get("bias_essence", [""])).format(element=idol_el)
     point = _det_pick(f"{base_key}_pt", fragments.get("bias_point", [""]))
-    bias_desc = f"{essence} {point}"
+    growth = _det_pick(f"{base_key}_growth", fragments.get("bias_growth", [""]))
+    aura = _det_pick(f"{base_key}_aura", fragments.get("bias_aura", [""]))
     
     # 3. MBTI TMI
     mbti_traits = UI.get("MBTI_TRAITS", {
@@ -252,20 +255,34 @@ def assemble_mz_report(fragments: dict, user_el: str, idol_el: str, user_mbti: s
         "신비로운" if lang == "ko" else "Mysterious"
     )
     bias_tmi = _det_pick(f"{base_key}_tmi", fragments.get("bias_tmi", [""])).format(
-        mbti=idol_mbti, mbti_trait=trait_desc
+        mbti=idol_mbti, mbti_trait=trait_desc,
+        user=user_name, idol=idol_name,
+        u_el=user_el, i_el=idol_el,
+        u_mbti=user_mbti, i_mbti=idol_mbti
     )
     
+    # Combined Bias Description (5 sentences)
+    bias_desc = f"{essence} {point} {growth} {aura} {bias_tmi}"
+    
     # 4. Recent Fortune — 결정론적 선택 (KO와 동일 인덱스 → 의미 일치)
-    recent = _det_pick(f"{base_key}_fortune", fragments.get("recent_fortune", ["오늘도 빛나는 하루!"])).format(idol=idol_name)
+    recent = _det_pick(f"{base_key}_fortune", fragments.get("recent_fortune", ["오늘도 빛나는 하루!"])).format(
+        idol=idol_name, user=user_name,
+        u_el=user_el, i_el=idol_el,
+        u_mbti=user_mbti, i_mbti=idol_mbti
+    )
     
     # 5. Synergy Why
     synergy_why = _det_pick(f"{base_key}_why", fragments.get("synergy_why", [""])).format(
-        u_element=user_el, i_element=idol_el, u_mbti=user_mbti, i_mbti=idol_mbti
+        u_element=user_el, i_element=idol_el, 
+        u_mbti=user_mbti, i_mbti=idol_mbti,
+        user=user_name, idol=idol_name,
+        u_el=user_el, i_el=idol_el
     )
     
     return {
         "relationship": relationship,
         "bias": bias_desc,
+        "bias_list": [essence, point, growth, aura, bias_tmi], # 프론트엔드 호환성을 위한 리스트 추가
         "tmi": bias_tmi,
         "recentFortune": recent,
         "synergyWhy": synergy_why,
@@ -361,6 +378,7 @@ def analyze_destiny(
         idol_dominant = calc_dominant(idol_birth_date) if idol_birth_date else None
         idol_loc = L_ENERGY_TRAITS.get(idol_dominant, L_ENERGY_TRAITS.get("Earth")) if idol_dominant else trait
         display_idol = idol_name if idol_name else (UI.get("idol_name_fallback", "아이돌/Idol") if lang == "ko" else "Idol")
+        display_user = UI.get("user_name_fallback", "You") if lang != "ko" else "당신"
 
         # 2026 Monthly Fortune (3-Layer Analysis)
         monthly_fortune = []
@@ -386,7 +404,9 @@ def analyze_destiny(
                 "synergy": m_score, # 프론트엔드에서 기대하는 키 추가
                 "theme": theme,
                 "signal": signal,
+                "star_signal": signal,
                 "guide": guide,
+                "action_point": guide,
                 # 하위 호환성을 위한 원본 필드 유지 (조합형)
                 "keyword": theme.split(' ')[0], 
                 "desc": f"{theme} {signal} {guide}"
@@ -425,87 +445,145 @@ def analyze_destiny(
         missions_raw = loc.get("SYNERGY_MISSIONS", {})
         base_score = calculate_synergy_score(dominant, idol_dominant if idol_dominant else dominant, birth_date_str, idol_birth_date if idol_birth_date else birth_date_str, user_mbti, idol_mbti)
         
-        def f_str(s):
-            if not s: return ""
-            # Context Override based on Score & Element Relationship
-            if base_score < 60:
-                s = s.replace("[도파민 폭발]", "[에너지 회복]").replace("[Dopamine Explosion]", "[Energy Recovery]").replace("[Explosión de Dopamina]", "[Recuperación de Energía]").replace("[Explosão de Dopamina]", "[Recuperação de Energía]")
-                s = s.replace("하이텐션 듀오", "케미 복구 듀오").replace("High Tension Duo", "Chemistry Recovery Duo").replace("Dúo de Alta Tensión", "Dúo de Recuperación de Química").replace("Dupla de Alta Tensão", "Dupla de Recuperação de Química")
+        # 꿀팁/미션 유니크성 강화를 위한 결정론적 시드 설정 (완전한 언어 독립적 시드)
+        sampling_key = f"SAMPLING_{user_seed}_{idol_name}_{idol_birth_date}"
+        random.seed(_hash_seed(sampling_key))
+
+        # MISSION_COMPONENTS (고도화된 조합형 데이터) 우선 참조
+        mission_frags = loc.get("GEN_MISSION_COMPONENTS", {})
+        if not mission_frags:
+            mission_frags = loc.get("MISSION_COMPONENTS", loc.get("SYNERGY_MISSIONS", loc.get("MISSION_FRAGMENTS", {})))
             
-            return s.format(user=display_user, idol=display_idol)
+        m_labels = mission_frags.get("labels", ["Analysis {n}"])
+        m_reasons = mission_frags.get("reasons", ["Due to {u_el} & {i_el} synergy"])
+        m_tasks_pool = mission_frags.get("tasks", {})
+        
+        user_el = UI.get("element_labels", {}).get(dominant, dominant)
+        idol_el = UI.get("element_labels", {}).get(idol_dominant, idol_dominant) if idol_dominant else user_el
+
+        def f_str(s, idx=1, target=""):
+            if not s: return ""
+            # MZ 성향 키워드 추출
+            u_mbti_trait = UI.get("mbti_trait_map", {}).get(user_mbti, "독창적인")
+            
+            # rel_type 지역화 (상생, 상극, 조화)
+            s_labels = UI.get("SYNERGY_LABELS", {"생": "상생", "극": "상극", "조화": "조화"})
+            raw_type = "생" if base_score > 70 else "극" if base_score < 40 else "조화"
+            rel_type = s_labels.get(raw_type, s_labels.get("조화"))
+            
+            return s.format(
+                user=display_user, idol=display_idol, n=idx, idx=idx,
+                u_mbti=user_mbti, i_mbti=idol_mbti_fallback,
+                mbti=user_mbti,
+                u_el=user_el, i_el=idol_el,
+                target=target,
+                trait=_det_pick(f"{sampling_key}_trait_{idx}", UI.get("trait_map", {}).get(dominant, ["반전", "치명적"])),
+                place=_det_pick(f"{sampling_key}_place_{idx}", UI.get("place_map", {}).get(dominant, ["단골", "추억의"])),
+                organ=UI.get("organ_map", {}).get(dominant, "에너지"),
+                luck_item=UI.get("luck_item_map", {}).get(dominant, "아이템"),
+                star=UI.get("star_map", {}).get(dominant, "별자리"),
+                skill=UI.get("skill_map", {}).get(dominant, "능력"),
+                mbti_trait=u_mbti_trait,
+                rel_type=rel_type,
+                point=_det_pick(f"{sampling_key}_pt_{idx}", UI.get("MISSION_POINTS", ["특별한"])),
+                exercise=UI.get("exercise_map", {}).get(dominant, "운동")
+            )
 
         synergy_missions = []
-        if isinstance(missions_raw, dict):
-            # Dynamic Content Generation for Missions
-            # Using fragments to create labels and reasons
-            points = [
-                f"{dominant} vs {idol_dominant or dominant} 에너지 차이" if lang == "ko" else f"Energy Gap: {dominant} vs {idol_dominant or dominant}",
-                f"{user_mbti} & {idol_mbti} 소통 방식" if lang == "ko" else f"Talk Vibe: {user_mbti} & {idol_mbti}",
-                "우주적 시너 솔루션" if lang == "ko" else "Cosmic Synergy Solution"
-            ]
-            reasons = [
-                f"서로의 {dominant}/{idol_dominant or dominant} 성향이 만나 생기는 자기장" if lang == "ko" else f"Magnetic field from {dominant}/{idol_dominant or dominant} elements",
-                f"{user_mbti}의 {user_mbti[2:] if user_mbti and len(user_mbti)>2 else user_mbti}와 {idol_mbti}의 {idol_mbti[2:] if idol_mbti and len(idol_mbti)>2 else idol_mbti} 성향 차이" if lang == "ko" else f"Traits diff between {user_mbti} and {idol_mbti}",
-                "운명적인 주파수 동기화" if lang == "ko" else "Destined frequency sync"
-            ]
+        is_gen = "GEN_MISSION_COMPONENTS" in loc
+        
+        # Map action guide keys to mission keys
+        guide_map = {"vibe": "analysis_1", "heart": "analysis_2", "energy": "analysis_3"}
+        
+        used_combinations = set()
+        for m_type, m_key in guide_map.items():
+            idx = int(m_key.split('_')[1])
+            m_seed_key = f"{sampling_key}_m{idx}"
             
-            # Map action guide keys to mission keys
-            guide_map = {"vibe": "analysis_1", "heart": "analysis_2", "energy": "analysis_3"}
-            action_guides_mz = fragments.get("action_guides", {})
+            label_tpl = _det_pick(f"{m_seed_key}_lbl", m_labels)
+            reason_tpl = _det_pick(f"{m_seed_key}_rsn", m_reasons)
             
-            for m_key, guide_key in guide_map.items():
-                m_data = missions_raw.get(guide_key, {})
-                if not m_data: continue
+            selected_tasks = []
+            if is_gen:
+                # 알고리즘 기반 파편화 생성 (1,000+ Variations)
+                g_actions = mission_frags.get("actions", {}).get(mbti_e_i, mission_frags.get("actions", {}).get("I", []))
+                g_targets = mission_frags.get("targets", {}).get(idol_dominant, mission_frags.get("targets", {}).get("Earth", []))
+                g_contexts = mission_frags.get("contexts", ["시너지를 극대화하세요."])
                 
-                idx = int(guide_key.split('_')[1]) - 1
-                point_val = points[idx]
-                reason_val = reasons[idx]
-                
-                # Get tasks from action guides if available
-                guide_pool = action_guides_mz.get(m_key, [])
-                if len(guide_pool) >= 3:
-                    tasks = random.sample(guide_pool, 3)
-                elif len(guide_pool) > 0:
-                    # 가이드가 3개 미만이면 기존 가이드를 순환 재사용하여 3개를 채움
-                    tasks = [guide_pool[i % len(guide_pool)] for i in range(3)]
-                else:
-                    # action_guides 데이터가 아예 없으면 빈 리스트 (UI에서 빈 칸으로 표시)
-                    tasks = []
-                
-                label = m_data.get("label", "").format(point_1=point_val, point_2=point_val, point_3=point_val)
-                reason = m_data.get("reason", "").format(reason_1=reason_val, reason_2=reason_val, reason_3=reason_val)
-                
-                # {idol} 플레이스홀더를 실제 아이돌 이름으로 치환
-                def _fmt_task(t: str) -> str:
-                    try:
-                        return f_str(t.format(idol=idol_name))
-                    except Exception:
-                        return f_str(t)
-                
-                synergy_missions.append({
-                    "id": guide_key,
-                    "boost": m_data.get("boost", 15),
-                    "label": f_str(label),
-                    "reason": f_str(reason),
-                    "tasks": [_fmt_task(t) for t in tasks],
-                    "completed": False
-                })
+                # 3개의 유니크한 조합 생성
+                for t_idx in range(3):
+                    attempt = 0
+                    while True:
+                        t_seed = f"{m_seed_key}_t{t_idx}_try{attempt}"
+                        act = _det_pick(f"{t_seed}_a", g_actions)
+                        tgt = _det_pick(f"{t_seed}_t", g_targets)
+                        ctx = _det_pick(f"{t_seed}_c", g_contexts)
+                        full_task = f"{act} {ctx}"
+                        
+                        # 체크 조합은 행동과 대상을 합쳐서 확인 (타겟이 달라져도 같은 행동이면 중복으로 처리)
+                        # f_str 변환 후의 최종 완성 문장을 기준으로 중복 검사
+                        final_sentence = f_str(full_task, idx, target=tgt)
+                        
+                        # 한국어 문법 호응 자동 교정 (어미와 서술어 맞춤)
+                        # '만듭니다', '방법입니다', '길입니다', '마법입니다', '퍼즐입니다' -> 명사형 '하는 것은'
+                        if any(x in final_sentence for x in ['방법입니다', '길입니다', '마법입니다', '퍼즐입니다', '만듭니다']):
+                            final_sentence = final_sentence.replace('하며 ', '하는 것은 ').replace('갖으며 ', '갖는 것은 ').replace('쓰며 ', '쓰는 것은 ')
+                        # '보세요', '하세요' -> 동시동작 '하며'
+                        elif any(x in final_sentence for x in ['보세요', '하세요']):
+                            final_sentence = final_sentence.replace('하는 것은 ', '하며 ').replace('갖는 것은 ', '갖으며 ').replace('쓰는 것은 ', '쓰며 ')
+                            # Handle remaining edge cases caught by oracle
+                            final_sentence = final_sentence.replace('남기는 것은', '남기며').replace('찍는 것은', '찍으며').replace('보태는 것은', '보태며')
+
+                        # 단어 겹침 및 오타 최종 필터링
+                        final_sentence = final_sentence.replace('매력 매력', '매력')
+                        final_sentence = final_sentence.replace('공 성지순례', '공연장 성지순례').replace('원 성지순례', '응원 성지순례')
+                        final_sentence = final_sentence.replace('감 매력', '반전 매력').replace('동 매력', '감동 매력').replace('생 매력', '생생한 매력')
+
+                        if final_sentence not in used_combinations or attempt > 50:
+                            used_combinations.add(final_sentence)
+                            selected_tasks.append(final_sentence)
+                            break
+                        attempt += 1
+            else:
+                # 기존 방식 (폴백)
+                tasks_pool = m_tasks_pool.get(m_type, ["{idx}번 미션 수행하기"])
+                t_indices = list(range(len(tasks_pool)))
+                random.seed(_hash_seed(f"{m_seed_key}_shuffle")) # 추가 시드 고정
+                random.shuffle(t_indices)
+                for t_idx in t_indices[:3]:
+                    selected_tasks.append(f_str(tasks_pool[t_idx], idx))
+
+            synergy_missions.append({
+                "id": m_key,
+                "label": f_str(label_tpl, idx),
+                "boost": 15 if idx < 3 else 20,
+                "reason": f_str(reason_tpl, idx),
+                "tasks": selected_tasks,
+                "completed": False
+            })
+
+        # Dynamic Tips Generation (1,000+ Combinations)
+        tip_frags = loc.get("TIP_COMPONENTS", {})
+        t_actions = tip_frags.get("actions", ["{mbti}답게"])
+        t_topics = tip_frags.get("topics", ["{trait} 매력을"])
+        t_results = tip_frags.get("results", ["성공하세요."])
+        
+        dynamic_tips = []
+        for i in range(4):
+            t_seed_key = f"{sampling_key}_tip{i}"
+            act = _det_pick(f"{t_seed_key}_act", t_actions)
+            top = _det_pick(f"{t_seed_key}_top", t_topics)
+            res = _det_pick(f"{t_seed_key}_res", t_results)
+            dynamic_tips.append(f_str(f"{act} {top} {res}", i+1))
 
         # 전문가 에이전트 피드백 (Health, Wealth, Career, Love)
-        # BUG FIX: Seed must include idol info to be unique per partner
-        expert_seed = f"EXPERT_{user_seed}_{idol_name}_{idol_birth_date}"
+        expert_seed = f"EXPERT_{sampling_key}"
         random.seed(_hash_seed(expert_seed))
         expert_advice = {}
         L_EXPERT_POOL = loc.get("EXPERT_ADVICE", {})
         
-        # Mapping elements to organs/categories
-        organ_map = {"Wood": "간/담", "Fire": "심장/소장", "Earth": "위/비장", "Metal": "폐/대장", "Water": "신장/방광"}
-        body_part_map = {"Wood": "근육/눈", "Fire": "혈관/혀", "Earth": "피부/입", "Metal": "호흡기/코", "Water": "뼈/귀"}
-        exercise_map = {"Wood": "산책/필라테스", "Fire": "고강도 인터벌/댄스", "Earth": "등산/근력운동", "Metal": "요가/복싱", "Water": "수영/명상"}
-        
         for category, pool in L_EXPERT_POOL.items():
             if not pool: continue
-            # 필드 치환 (예: {organ}, {exercise} 등)
             formatted_pool = []
             for advice in pool:
                 adv = advice.format(
@@ -523,7 +601,7 @@ def analyze_destiny(
                 formatted_pool.append(adv)
             expert_advice[category] = formatted_pool
 
-        # 5인 전문가 에이전트 평생 사주 (LIFETIME_EXPERTS)
+        # 5인 전문가 에이전트 평생 사주
         L_LIFETIME_EXPERTS = loc.get("LIFETIME_EXPERTS", [])
         formatted_lifetime = []
         for exp in L_LIFETIME_EXPERTS:
@@ -541,42 +619,23 @@ def analyze_destiny(
 
         # MZ Dynamic Analysis Synthesis (5-sentence logic)
         mz_report = assemble_mz_report(
-            fragments, 
-            dominant, 
-            idol_dominant if idol_dominant else dominant, 
-            user_mbti, 
-            idol_mbti, 
-            base_score, 
-            display_idol, 
-            lang,
-            UI=UI
+            fragments, dominant, idol_dominant if idol_dominant else dominant, 
+            user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI,
+            user_name=display_user
         )
 
-        # Enhance missions with specific action guides if present
-        action_guides = mz_report.get("actionGuides", {})
-        if synergy_missions and action_guides:
-            for mission in synergy_missions:
-                m_cat = mission["id"].replace("mission_", "") # e.g., vibe, heart, energy
-                if m_cat in action_guides:
-                    guide_pool = action_guides[m_cat]
-                    # Select 2 action tasks if they are not already in tasks
-                    action_tasks = random.sample(guide_pool, min(2, len(guide_pool)))
-                    # Merge with existing tasks (ensure unique and max 3 total)
-                    mission["tasks"] = list(dict.fromkeys(mission["tasks"] + action_tasks))[:3]
-                    mission["action_guide"] = random.choice(guide_pool)
-
         chemistry_signal = {
-            "idol_name": display_idol,
+            "idol_name": idol_name,
             "idol_mbti": idol_mbti_fallback,
             "idol_birth_date": idol_birth_date,
-            "idol_detailed_traits": [mz_report["bias"]],
+            "idol_detailed_traits": mz_report.get("bias_list", []),
             "relationship": mz_report["relationship"],
             "bias": mz_report["bias"],
             "tmi": mz_report["tmi"],
             "recentFortune": mz_report["recentFortune"],
             "synergyWhy": mz_report["synergyWhy"],
             "synergy": synergy_text,
-            "tips": [f_str(t) for t in random.sample(L_CUR_TIPS, min(4, len(L_CUR_TIPS)))] if L_CUR_TIPS else [],
+            "tips": dynamic_tips,
             "base_synergy_score": base_score,
             "synergy_missions": synergy_missions,
             "expert_advice": expert_advice,
