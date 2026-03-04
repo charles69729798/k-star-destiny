@@ -13,7 +13,7 @@ from datetime import datetime
 import random
 from saju_engine import analyze_destiny
 from ai_search import search_idol_perplexity
-from saju_i18n import MBTI_CHEMISTRY
+from saju_rules import MBTI_CHEMISTRY
 from apscheduler.schedulers.background import BackgroundScheduler
 import git_sync
 
@@ -65,7 +65,7 @@ class Comment(BaseModel):
     avatar_color: str
     replies: List[Dict[str, Any]] = []
 
-# Mock Comments (YouTube Style)
+# Mock Comments (YouTube Style) - 더미 데이터 확충
 COMMENTS = [
     {
         "id": "1",
@@ -75,7 +75,17 @@ COMMENTS = [
         "timestamp": "2 hours ago",
         "likes": 124,
         "avatar_color": "#FF6B6B",
-        "replies": []
+        "replies": [
+            {
+                "id": "1-1",
+                "author": "StargazerMK",
+                "handle": "@stargazer_mk",
+                "content": "Same!! 나도 결과 보고 소름 돋았어 ㄹㅇ 🌙",
+                "timestamp": "1 hour ago",
+                "likes": 34,
+                "avatar_color": "#A855F7"
+            }
+        ]
     },
     {
         "id": "2",
@@ -85,6 +95,135 @@ COMMENTS = [
         "timestamp": "5 hours ago",
         "likes": 89,
         "avatar_color": "#4D96FF",
+        "replies": []
+    },
+    {
+        "id": "3",
+        "author": "MoonChild_92",
+        "handle": "@moon_vibe",
+        "content": "사주 결과 나오고 나서 오래된 친구한테 연락했더니 진짜 연락이 왔음... 운명이 맞는 것 같아 💜",
+        "timestamp": "7 hours ago",
+        "likes": 214,
+        "avatar_color": "#8B5CF6",
+        "replies": [
+            {
+                "id": "3-1",
+                "author": "CosmicDreamer",
+                "handle": "@cosmic_d",
+                "content": "대박... 사주 진짜 신기하다 나도 해봐야겠어",
+                "timestamp": "6 hours ago",
+                "likes": 18,
+                "avatar_color": "#EC4899"
+            },
+            {
+                "id": "3-2",
+                "author": "DestinyFlow",
+                "handle": "@destiny_f",
+                "content": "오행 시너지 분석이 진짜 신선하다 이런 앱은 처음ㅠㅠ",
+                "timestamp": "5 hours ago",
+                "likes": 9,
+                "avatar_color": "#3B82F6"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "author": "FireWater_IVE",
+        "handle": "@fwive_fan",
+        "content": "장원영이랑 나 둘 다 Fire기운인데 시너지가 이렇게 높을수가..🔥🔥 천생연분 뜰 뻔",
+        "timestamp": "10 hours ago",
+        "likes": 156,
+        "avatar_color": "#F97316",
+        "replies": []
+    },
+    {
+        "id": "5",
+        "author": "ESTJGang",
+        "handle": "@estj_mode",
+        "content": "ESTJ 유저인데 MBTI 시너지 분석이 진짜 기가막히게 잘 맞음. 소울메이트 결과가 나왔는데 눈물날뻔ㅠ",
+        "timestamp": "12 hours ago",
+        "likes": 98,
+        "avatar_color": "#10B981",
+        "replies": []
+    },
+    {
+        "id": "6",
+        "author": "WoodEnergy_K",
+        "handle": "@wood_k",
+        "content": "木기운이라 성장 스타일이 완전 나랑 같다고 나와서 기절할뻔 🌲 미션도 너무 재밌어요!",
+        "timestamp": "1 day ago",
+        "likes": 73,
+        "avatar_color": "#22C55E",
+        "replies": []
+    },
+    {
+        "id": "7",
+        "author": "MetalMind_Z",
+        "handle": "@metal_z",
+        "content": "I got Metal + Water with my bias Jimin and the compatibility analysis is insanely detailed 🌊⚔️",
+        "timestamp": "1 day ago",
+        "likes": 201,
+        "avatar_color": "#64748B",
+        "replies": [
+            {
+                "id": "7-1",
+                "author": "PurpleOcean",
+                "handle": "@purple_sea",
+                "content": "Metal + Water is such a beautiful combo honestly 💜",
+                "timestamp": "23 hours ago",
+                "likes": 45,
+                "avatar_color": "#7C3AED"
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "author": "SajuNewbie",
+        "handle": "@saju_nb",
+        "content": "사주 처음 접해봤는데 이렇게 재밌을 줄이야... 덕분에 나 자신에 대해 다시 생각해보게 됐어요!",
+        "timestamp": "2 days ago",
+        "likes": 52,
+        "avatar_color": "#F59E0B",
+        "replies": []
+    },
+    {
+        "id": "9",
+        "author": "INFPStar",
+        "handle": "@infp_s",
+        "content": "INFP 입장에서 Water기운 분석이 너무 공감됨... 우주가 나를 이해하는 것 같은 느낌 💙",
+        "timestamp": "2 days ago",
+        "likes": 167,
+        "avatar_color": "#06B6D4",
+        "replies": []
+    },
+    {
+        "id": "10",
+        "author": "EarthVibeOnly",
+        "handle": "@earth_vibe",
+        "content": "土기운 특징이 진짜 나랑 똑같음. 중재자 스타일에 속으로 다 품는다는 거... 소름 ⛰️",
+        "timestamp": "3 days ago",
+        "likes": 88,
+        "avatar_color": "#92400E",
+        "replies": []
+    },
+    {
+        "id": "11",
+        "author": "KStarFan2024",
+        "handle": "@kstar24",
+        "content": "미션 시스템이 진짜 신박하다 덕질에 이런 걸 접목시키다니 ✨ 3개 다 클리어했어요!",
+        "timestamp": "3 days ago",
+        "likes": 134,
+        "avatar_color": "#BE185D",
+        "replies": []
+    },
+    {
+        "id": "12",
+        "author": "GlobalKpopper",
+        "handle": "@global_k",
+        "content": "This is literally the best K-pop + Saju app I've ever seen. Please keep developing this!! 🙏",
+        "timestamp": "4 days ago",
+        "likes": 287,
+        "avatar_color": "#7C3AED",
         "replies": []
     }
 ]
@@ -111,6 +250,14 @@ app.add_middleware(
 @app.get("/")
 async def root():
     return {"message": "Welcome to K-Destiny AI API", "status": "active"}
+
+@app.get("/api/debug")
+async def debug_info():
+    import saju_engine
+    return {
+        "saju_engine_file": saju_engine.__file__,
+        "cwd": os.getcwd()
+    }
 
 @app.post("/api/internal/bot-run")
 async def run_bot_manually():
@@ -375,12 +522,15 @@ def analyze_saju(
     idol_name: str = "",
     idol_mbti: str = "",
     idol_birth_date: str = "",
-    lang: str = "ko"
+    lang: str = "ko",
+    is_friend: bool = False
 ):
-    print(f"🔮 [API] Analyze Saju: {birth_date} | {gender} | user_mbti={user_mbti} | idol={idol_name} | lang={lang}")
+    print(f"🔮 [API] Analyze Saju: {birth_date} | {gender} | user_mbti={user_mbti} | idol={idol_name} | lang={lang} | is_friend={is_friend}")
     try:
         from saju_engine import analyze_destiny
-        result = analyze_destiny(birth_date, gender, user_mbti, idol_name, idol_mbti, idol_birth_date, lang)
+        result = analyze_destiny(birth_date, gender, user_mbti, idol_name, idol_mbti, idol_birth_date, lang, is_friend)
+        if "error" in result:
+            return {"status": "error", "message": result["error"]}
         return {"status": "success", "analysis": result}
     except Exception as e:
         print(f"❌ [API] Analyze Error: {e}")
@@ -388,8 +538,26 @@ def analyze_saju(
 
 
 @app.get("/api/comments")
-def get_comments():
-    return {"status": "success", "comments": COMMENTS}
+def get_comments(
+    page: int = Query(1, ge=1, description="페이지 번호 (1부터 시작)"),
+    limit: int = Query(5, ge=1, le=50, description="페이지당 항목 수")
+):
+    """댓글 목록 반환 (페이지네이션 지원)"""
+    total = len(COMMENTS)
+    total_pages = (total + limit - 1) // limit
+    start = (page - 1) * limit
+    end = start + limit
+    paged = COMMENTS[start:end]
+    return {
+        "status": "success",
+        "comments": paged,
+        "pagination": {
+            "total": total,
+            "page": page,
+            "limit": limit,
+            "total_pages": total_pages
+        }
+    }
 
 class PostCommentRequest(BaseModel):
     author: str
@@ -410,6 +578,29 @@ def post_comment(req: PostCommentRequest):
     }
     COMMENTS.insert(0, new_comment)
     return {"status": "success", "comment": new_comment}
+
+
+class PostReplyRequest(BaseModel):
+    author: str
+    content: str
+
+@app.post("/api/comments/{comment_id}/replies")
+def post_reply(comment_id: str, req: PostReplyRequest):
+    """특정 댓글에 답글 추가"""
+    for comment in COMMENTS:
+        if comment["id"] == comment_id:
+            new_reply = {
+                "id": f"{comment_id}-{len(comment['replies']) + 1}",
+                "author": req.author,
+                "handle": f"@{req.author.lower().replace(' ', '_')}",
+                "content": req.content,
+                "timestamp": "Just now",
+                "likes": 0,
+                "avatar_color": f"#{random.randint(0, 0xFFFFFF):06x}"
+            }
+            comment["replies"].append(new_reply)
+            return {"status": "success", "reply": new_reply}
+    raise HTTPException(status_code=404, detail="Comment not found")
 
 
 @app.delete("/api/comments/{comment_id}")

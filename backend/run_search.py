@@ -406,7 +406,9 @@ def get_candidates(name: str) -> list:
     PERSON_KEYWORDS = [
         "singer", "rapper", "actor", "actress", "idol", "kpop", "k-pop",
         "entertainer", "musician", "artist", "member", "band", "personality", "model",
+        "group", "vocal", "dance", "performance", "leader",
         "가수", "배우", "아이돌", "랩퍼", "가수", "뮤지션", "아티스트", "연예인", "방송인", "모델",
+        "그룹", "보컬", "댄스", "퍼포먼스", "리더",
         "south korean", "한국의", "대한민국의", "출생", "born", "member of",
     ]
 
@@ -415,7 +417,7 @@ def get_candidates(name: str) -> list:
         search_url = (
             f"https://{lang}.wikipedia.org/w/api.php"
             f"?action=query&list=search&srsearch={quote(name)}"
-            f"&format=json&srlimit=5&srnamespace=0"
+            f"&format=json&srlimit=10&srnamespace=0"
         )
         r = requests.get(search_url, headers=HEADERS, timeout=10) # 8에서 10으로 상향
         hits = r.json().get("query", {}).get("search", [])
@@ -553,6 +555,7 @@ def search(name: str, wiki_title: str = "", wiki_lang: str = "en"):
 
     print(f"[Search] Result: {result}", file=sys.stderr)
     print(json.dumps(result, ensure_ascii=False))
+    return result
 
 
 if __name__ == "__main__":

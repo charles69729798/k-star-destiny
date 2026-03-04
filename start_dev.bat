@@ -18,7 +18,8 @@ echo.
 
 echo [2/3] Preparing Docker environment...
 echo Restarting Docker containers with Volume Mounts (Hot Reload Enabled)...
-docker-compose down
+docker rm -f sajuapp-backend sajuapp-frontend sajuapp-gateway 2>nul
+docker-compose down --remove-orphans
 docker-compose up -d --build
 echo Done.
 echo.

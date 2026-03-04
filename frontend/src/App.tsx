@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import axios from 'axios';
-import { Search, Sparkles, User, Calendar, BrainCircuit, Share2, HelpCircle, RefreshCcw, Edit3, ThumbsUp, MessageSquare, Send, LayoutGrid, TrendingUp, Users, ChevronDown, Star, Heart, Zap, Target, BookOpen, X } from 'lucide-react';
+import { Search, Sparkles, User, BrainCircuit, Share2, HelpCircle, RefreshCcw, Edit3, ThumbsUp, MessageSquare, Send, LayoutGrid, TrendingUp, Users, ChevronDown, Star, Heart, BookOpen, X, Check, CheckCircle2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import QuickMBTI from './components/QuickMBTI';
 
@@ -48,7 +48,7 @@ const translations: any = {
     trendingTitle: "Trending Idols",
     trendingSubtitle: "Select a star to check your destiny instantly.",
     tabSaju: "Soul Index: K-Saju and Lifetime Indicators",
-    tabFortune: "2026 God-life Calendar: Monthly Dopamine & Luck Flow",
+    tabFortune: "2026 Destiny Log ✨",
     tabSignal: "Destiny Signal: Cosmic Telepathy with {name} 📡",
     introTitle: "Find Your Destiny",
     introDesc: "It's time to connect your cosmic signals with K-stars. Who is your predestined type? Find out now!",
@@ -126,7 +126,20 @@ const translations: any = {
     tmiFallback: "This star's energy will brighten your day! ✨",
     liveSignalPart1: "Currently ",
     liveSignalPart2: " people are syncing with this star...",
-    friendMatchingTitle: "Matching with Friend"
+    friendMatchingTitle: "Matching with Friend",
+    starTmiLabel: "Star TMI",
+    destinyPreviewLabel: "Destiny Preview",
+    liveSignalLabel: "Live Signal",
+    synergyLabel: "Synergy",
+    starSignalLabel: "Star Signal",
+    actionPointLabel: "Action Point",
+    guideSoulMatch: "Soul Match (Destined?)",
+    guideMySoul: "My Soul (K-Saju)",
+    guideFate: "2026 Destiny Log ✨ (Calendar)",
+    fortuneSuccess: "2026 Destiny Log has been generated.",
+    taskTitle: "SYNERGY TASKS",
+    lifetimeFortuneTitle: "LIFETIME DESTINY PATH",
+    missionHint: "Boost your synergy score for each mission completed!",
   },
   ko: {
     title: "K-DESTINY AI",
@@ -139,8 +152,8 @@ const translations: any = {
     nonBinary: "논바이너리",
     mbti: "MBTI",
     dontKnow: "모르겠어요?",
-    searchLabel: "아이돌 검색",
-    searchDescription: "좋아하는 K-pop 스타의 이름을 입력하세요. AI가 자동으로 정보를 찾아줍니다.",
+    searchLabel: "상대방 검색",
+    searchDescription: "매칭하고 싶은 상대의 이름을 입력하세요. AI가 자동으로 정보를 찾아줍니다.",
     searchPlaceholder: "아이돌 이름을 입력하세요 (예: 아이유, 정국, 고윤정)...",
     aiMode: "AI 검색",
     searching: "AI가 데이터를 찾는 중...",
@@ -168,14 +181,14 @@ const translations: any = {
     required: "필수",
     copied: "클립보드에 복사되었습니다!",
     trendingTitle: "인기 아이돌",
-    trendingSubtitle: "스타를 선택하면 바로 궁합을 확인할 수 있어요.",
+    trendingSubtitle: "상대를 선택하면 바로 궁합을 확인할 수 있어요.",
     tabSaju: "My Soul",
-    tabFortune: "Our Fate",
+    tabFortune: "2026 운명 타임라인",
     tabSignal: "{name} & ME: Destined?",
     introTitle: "운명 찾기",
-    introDesc: "자, 이제 K-스타와 당신의 우주적 시그널을 연결할 시간입니다. 당신의 운명적 이상형은 누구일까요? 지금 찾아보세요!",
+    introDesc: "자, 이제 상대방과 당신의 우주적 시그널을 연결할 시간입니다. 당신의 운명적 파트너는 누구일까요? 지금 찾아보세요!",
     birthDatePrompt: "먼저 생년월일을 적어주세요. 꼼꼼히 적을수록 정확해요!",
-    mbtiPrompt: "아이돌의 이름이나 MBTI를 모르시나요? 검색 버튼이나 인기 스타를 선택해 보세요!",
+    mbtiPrompt: "상대방의 이름이나 MBTI를 모르시나요? 검색 버튼이나 아래 추천 리스트를 선택해 보세요!",
     visitorsToday: "오늘의 도전자",
     visitorsTotal: "누적 접속자",
     modeIdol: "스타와 매칭",
@@ -242,13 +255,26 @@ const translations: any = {
     recentFortune: "최근/월별 운세",
     guideTitle: "K-Destiny 가이드",
     guideSubtitle: "우주적 시그널을 읽는 방법",
-    guideMatchDesc: "스타와의 우주적 시너지를 확인하세요. 빛나는 인포그래픽 라인이 연결의 강도를 보여줍니다. 100% 천생연분에 도달할 수 있을까요? 카테고리별로 미션을 하나씩 수행하여 시너지를 높여보세요!",
+    guideMatchDesc: "상대방과의 우주적 시너지를 확인하세요. 빛나는 인포그래픽 라인이 연결의 강도를 보여줍니다. 100% 천생연분에 도달할 수 있을까요? 카테고리별로 미션을 하나씩 수행하여 시너지를 높여보세요!",
     guideSoulDesc: "정통 K-사주 알고리즘을 바탕으로 한 당신만의 인생 지표입니다. 오행의 기운과 깊이 있는 성향 분석을 확인하세요.",
     guideFateDesc: "월별로 알아보는 운명의 타임라인입니다. 매월 주어지는 행동 강령과 스타 시그널을 확인하여 알찬 한 달을 만들어보세요.",
-    tmiFallback: "이 스타의 에너지는 당신의 하루를 더 밝게 빛내줄 거예요! ✨",
+    tmiFallback: "상대방의 에너지는 당신의 하루를 더 밝게 빛내줄 거예요! ✨",
     liveSignalPart1: "현재 ",
-    liveSignalPart2: "명이 이 스타와 교신 중...",
-    friendMatchingTitle: "친구와 매칭"
+    liveSignalPart2: "명이 이 시그널을 확인 중...",
+    friendMatchingTitle: "친구와 매칭",
+    starTmiLabel: "최애 TMI",
+    destinyPreviewLabel: "운명 미리보기",
+    liveSignalLabel: "실시간 시그널",
+    synergyLabel: "시너지",
+    starSignalLabel: "스타 시그널",
+    actionPointLabel: "액션 포인트",
+    guideSoulMatch: "소울 매치 (운명일까?)",
+    guideMySoul: "나의 소울 (K-사주)",
+    guideFate: "2026 운명 타임라인 ✨",
+    fortuneSuccess: "2026 운명 타임라인이 생성되었습니다.",
+    taskTitle: "실천 미션 리스트",
+    lifetimeFortuneTitle: "나의 평생 운세 분석",
+    missionHint: "미션을 완료할 때마다 시너지 점수가 올라갑니다!",
   },
   es: {
     title: "K-DESTINY AI",
@@ -293,7 +319,7 @@ const translations: any = {
     trendingTitle: "Ídolos Populares",
     trendingSubtitle: "Selecciona una estrella para verificar tu destino al instante.",
     tabSaju: "My Soul",
-    tabFortune: "Our Fate",
+    tabFortune: "Línea del Tiempo 2026 ✨",
     tabSignal: "{name} & ME: Destined?",
     introTitle: "Encuentra tu Destino",
     introDesc: "Ahora es el momento de conectar tus señales cósmicas con las estrellas de K-pop. Quién es tu tipo ideal predestinado? Descúbrelo ahora!",
@@ -378,7 +404,19 @@ const translations: any = {
     tmiFallback: "¡La energía de esta estrella iluminará tu día! ✨",
     liveSignalPart1: "Actualmente ",
     liveSignalPart2: " personas se sincronizan con esta estrella...",
-    friendMatchingTitle: "Emparejamiento con Amigo"
+    friendMatchingTitle: "Emparejamiento con Amigo",
+    starTmiLabel: "TMI de la Estrella",
+    destinyPreviewLabel: "Previa del Destino",
+    liveSignalLabel: "Señal en Vivo",
+    synergyLabel: "Sinergia",
+    starSignalLabel: "Señal de Estrella",
+    actionPointLabel: "Punto de Acción",
+    guideSoulMatch: "Coincidencia de Almas",
+    guideMySoul: "Mi Alma (K-Saju)",
+    guideFate: "Línea del Tiempo 2026 ✨",
+    taskTitle: "LISTA DE MISIONES",
+    lifetimeFortuneTitle: "ANÁLISIS DE DESTINO DE VIDA",
+    missionHint: "¡Aumenta tu puntuación de sinergia con cada misión!",
   },
   pt: {
     title: "K-DESTINY AI",
@@ -422,7 +460,7 @@ const translations: any = {
     trendingTitle: "Ídolos Populares",
     trendingSubtitle: "Selecione uma estrela para verificar seu destino instantaneamente.",
     tabSaju: "My Soul",
-    tabFortune: "Our Fate",
+    tabFortune: "Linha do Tempo 2026 ✨",
     tabSignal: "{name} & ME: Destined?",
     introTitle: "Encontre seu Destino",
     introDesc: "Agora é o momento de conectar seus sinais cósmicos com as estrelas de K-pop. Quem é seu tipo ideal predestinado? Descubra agora!",
@@ -509,7 +547,19 @@ const translations: any = {
     guideFateDesc: "Um guia mês a mês da sua linha do tempo destinada. Verifique seus Pontos de Ação e Sinais Estelares para aproveitar ao máximo cada mês.",
     tmiFallback: "A energia desta estrela iluminará o seu dia! ✨",
     liveSignalPart1: "Atualmente ",
-    liveSignalPart2: " pessoas estão sincronizando com esta estrela..."
+    liveSignalPart2: " pessoas estão sincronizando com esta estrela...",
+    starTmiLabel: "TMI da Estrela",
+    destinyPreviewLabel: "Prévia do Destino",
+    liveSignalLabel: "Sinal ao Vivo",
+    synergyLabel: "Sinergia",
+    starSignalLabel: "Sinal da Estrela",
+    actionPointLabel: "Ponto de Ação",
+    guideSoulMatch: "Alma Gêmea",
+    guideMySoul: "Minha Alma (K-Saju)",
+    guideFate: "Linha do Tempo 2026 ✨",
+    taskTitle: "LISTA DE MISSÕES",
+    lifetimeFortuneTitle: "ANÁLISE DO DESTINO DA VIDA",
+    missionHint: "Aumente sua sinergia a cada missão!",
   },
 };
 
@@ -585,16 +635,78 @@ const CountingScore = ({ targetScore }: { targetScore: number }) => {
   return <>{displayScore}</>;
 };
 
+const OrbitalParticles = ({ color }: { color: string }) => {
+  return (
+    <div className="absolute inset-0 pointer-events-none">
+      {Array.from({ length: 3 }).map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-1.5 h-1.5 rounded-full blur-[1px]"
+          style={{ backgroundColor: color, boxShadow: `0 0 8px ${color}` }}
+          animate={{
+            rotate: 360,
+          }}
+          transition={{
+            duration: 8 + i * 2,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        >
+          <div
+            className="w-full h-full"
+            style={{
+              transform: `translateX(${72 + i * 10}px)`,
+            }}
+          />
+        </motion.div>
+      ))}
+    </div>
+  );
+};
+
+
+
 const SoulCommunity: React.FC<{
   comments: any[];
+  pagination: { total: number; page: number; limit: number; total_pages: number } | null;
   onPostComment: (text: string) => void;
+  onPostReply: (commentId: string, text: string) => void;
   onDeleteComment: (id: string) => void;
+  onPageChange: (page: number) => void;
   isAdmin: boolean;
   isPosting: boolean;
   commentText: string;
   setCommentText: (text: string) => void;
   t: (key: string, params?: any) => string;
-}> = ({ comments, onPostComment, onDeleteComment, isAdmin, isPosting, commentText, setCommentText, t }) => {
+}> = ({ comments, pagination, onPostComment, onPostReply, onDeleteComment, onPageChange, isAdmin, isPosting, commentText, setCommentText, t }) => {
+  // 답글 입력 상태: { [commentId]: string }
+  const [replyTexts, setReplyTexts] = React.useState<Record<string, string>>({});
+  // 답글 입력창 열림 상태
+  const [openReplies, setOpenReplies] = React.useState<Record<string, boolean>>({});
+  // 답글 목록 펼치기 상태
+  const [expandedReplies, setExpandedReplies] = React.useState<Record<string, boolean>>({});
+
+  const toggleReplyInput = (id: string) => {
+    setOpenReplies(prev => ({ ...prev, [id]: !prev[id] }));
+  };
+
+  const toggleReplies = (id: string) => {
+    setExpandedReplies(prev => ({ ...prev, [id]: !prev[id] }));
+  };
+
+  const handleSendReply = (commentId: string) => {
+    const text = replyTexts[commentId];
+    if (!text?.trim()) return;
+    onPostReply(commentId, text);
+    setReplyTexts(prev => ({ ...prev, [commentId]: '' }));
+    setOpenReplies(prev => ({ ...prev, [commentId]: false }));
+    setExpandedReplies(prev => ({ ...prev, [commentId]: true })); // 답글 쓴 후 펼치기
+  };
+
+  const totalComments = pagination?.total ?? comments.length;
+  const currentPage = pagination?.page ?? 1;
+  const totalPages = pagination?.total_pages ?? 1;
+
   return (
     <div className="mt-12 pt-10 border-t border-slate-800/50">
       <div className="flex items-center justify-between mb-8">
@@ -608,11 +720,11 @@ const SoulCommunity: React.FC<{
           </div>
         </div>
         <div className="bg-slate-800/80 backdrop-blur-sm border border-slate-700 px-3 py-1 rounded-full">
-          <span className="text-xs font-bold text-slate-300">{t('commentsCount', { count: comments.length })}</span>
+          <span className="text-xs font-bold text-slate-300">{t('commentsCount', { count: totalComments })}</span>
         </div>
       </div>
 
-      {/* Post Comment Input (YouTube Style) */}
+      {/* 댓글 입력창 */}
       <div className="flex gap-4 mb-10 group">
         <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center text-white font-black text-sm shadow-lg border border-white/10 flex-shrink-0">
           U
@@ -645,7 +757,7 @@ const SoulCommunity: React.FC<{
         </div>
       </div>
 
-      {/* Comment List */}
+      {/* 댓글 목록 */}
       <div className="space-y-8">
         <AnimatePresence initial={false}>
           {comments.map((c) => (
@@ -655,18 +767,24 @@ const SoulCommunity: React.FC<{
               animate={{ opacity: 1, x: 0 }}
               className="flex gap-4"
             >
+              {/* 아바타 */}
               <div
                 className="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm flex-shrink-0 shadow-inner border border-white/5"
                 style={{ backgroundColor: c.avatar_color, boxShadow: `0 4px 12px ${c.avatar_color}33` }}
               >
                 {c.author[0].toUpperCase()}
               </div>
+
               <div className="flex-1">
+                {/* 핸들 + 시간 */}
                 <div className="flex items-center gap-2 mb-1">
                   <span className="text-[13px] font-bold text-white hover:text-indigo-300 cursor-pointer transition-colors">{c.handle}</span>
                   <span className="text-[11px] text-slate-500 font-medium">{c.timestamp}</span>
                 </div>
+                {/* 댓글 내용 */}
                 <p className="text-sm text-slate-300 leading-relaxed font-medium">{c.content}</p>
+
+                {/* 좋아요 / 답글 버튼 */}
                 <div className="flex items-center gap-5 mt-3">
                   <div className="flex items-center gap-1">
                     <button className="p-1 hover:bg-slate-800 rounded-full text-slate-500 hover:text-k-pink transition-all">
@@ -674,25 +792,133 @@ const SoulCommunity: React.FC<{
                     </button>
                     <span className="text-[11px] text-slate-500 font-bold">{c.likes > 0 ? c.likes : ''}</span>
                   </div>
-                  <button className="text-[11px] text-slate-500 hover:bg-slate-800 px-2 py-1 rounded-full transition-all font-bold">{t('reply')}</button>
+                  {/* 답글 버튼 - 활성화됨 */}
+                  <button
+                    onClick={() => toggleReplyInput(c.id)}
+                    className={`text-[11px] px-2 py-1 rounded-full transition-all font-bold ${openReplies[c.id] ? 'bg-k-pink/20 text-k-pink' : 'text-slate-500 hover:bg-slate-800'}`}
+                  >
+                    {t('reply')}
+                  </button>
+                  {/* 답글 펼치기 버튼 */}
+                  {c.replies && c.replies.length > 0 && (
+                    <button
+                      onClick={() => toggleReplies(c.id)}
+                      className="text-[11px] text-indigo-400 hover:text-indigo-300 font-bold transition-colors flex items-center gap-1"
+                    >
+                      {expandedReplies[c.id] ? '▲' : '▼'} {c.replies.length}개 답글
+                    </button>
+                  )}
                   {isAdmin && (
                     <button
-                      onClick={() => {
-                        if (window.confirm("Delete this comment?")) {
-                          onDeleteComment(c.id);
-                        }
-                      }}
+                      onClick={() => { if (window.confirm("Delete this comment?")) { onDeleteComment(c.id); } }}
                       className="text-[11px] text-red-500 hover:bg-red-500/10 px-2 py-1 rounded-full transition-all font-bold"
                     >
                       Delete
                     </button>
                   )}
                 </div>
+
+                {/* 답글 입력창 (토글) */}
+                {openReplies[c.id] && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="flex gap-3 mt-4"
+                  >
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-black text-xs flex-shrink-0">U</div>
+                    <div className="flex-1">
+                      <input
+                        type="text"
+                        value={replyTexts[c.id] || ''}
+                        onChange={(e) => setReplyTexts(prev => ({ ...prev, [c.id]: e.target.value }))}
+                        placeholder={`@${c.handle.replace('@', '')}에게 답글...`}
+                        onKeyDown={(e) => e.key === 'Enter' && handleSendReply(c.id)}
+                        className="w-full bg-transparent border-b border-slate-600 focus:border-k-purple outline-none py-1 text-slate-200 text-sm transition-all placeholder:text-slate-600"
+                        autoFocus
+                      />
+                      <div className="flex justify-end gap-2 mt-2">
+                        <button onClick={() => toggleReplyInput(c.id)} className="px-3 py-1 text-xs font-bold text-slate-500 hover:text-white transition-colors">{t('cancel')}</button>
+                        <button
+                          onClick={() => handleSendReply(c.id)}
+                          disabled={!replyTexts[c.id]?.trim()}
+                          className="px-4 py-1 bg-indigo-600 hover:bg-indigo-500 disabled:opacity-30 text-white rounded-full text-xs font-bold transition-all"
+                        >
+                          {t('reply')}
+                        </button>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* 답글 목록 (펼쳐진 경우) */}
+                {expandedReplies[c.id] && c.replies && c.replies.length > 0 && (
+                  <div className="mt-4 space-y-4 pl-2 border-l-2 border-slate-700/50">
+                    {c.replies.map((r: any) => (
+                      <div key={r.id} className="flex gap-3">
+                        <div
+                          className="w-8 h-8 rounded-full flex items-center justify-center text-white font-black text-xs flex-shrink-0"
+                          style={{ backgroundColor: r.avatar_color }}
+                        >
+                          {r.author[0].toUpperCase()}
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-2 mb-0.5">
+                            <span className="text-[12px] font-bold text-slate-200">{r.handle}</span>
+                            <span className="text-[10px] text-slate-500">{r.timestamp}</span>
+                          </div>
+                          <p className="text-xs text-slate-400 leading-relaxed">{r.content}</p>
+                          <div className="flex items-center gap-3 mt-2">
+                            <button className="p-0.5 hover:bg-slate-800 rounded-full text-slate-600 hover:text-k-pink transition-all">
+                              <ThumbsUp className="h-3 w-3" />
+                            </button>
+                            {r.likes > 0 && <span className="text-[10px] text-slate-500">{r.likes}</span>}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
         </AnimatePresence>
       </div>
+
+      {/* 페이지네이션 */}
+      {totalPages > 1 && (
+        <div className="flex items-center justify-center gap-2 mt-10 pt-6 border-t border-slate-800/40">
+          {/* 이전 */}
+          <button
+            onClick={() => onPageChange(currentPage - 1)}
+            disabled={currentPage <= 1}
+            className="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+          >
+            ‹
+          </button>
+          {/* 페이지 번호들 */}
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+            <button
+              key={p}
+              onClick={() => onPageChange(p)}
+              className={`w-8 h-8 rounded-lg text-xs font-black transition-all ${p === currentPage
+                ? 'bg-k-pink text-white shadow-[0_0_12px_rgba(236,72,153,0.5)]'
+                : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                }`}
+            >
+              {p}
+            </button>
+          ))}
+          {/* 다음 */}
+          <button
+            onClick={() => onPageChange(currentPage + 1)}
+            disabled={currentPage >= totalPages}
+            className="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+          >
+            ›
+          </button>
+        </div>
+      )}
     </div>
   );
 };
@@ -717,11 +943,18 @@ const App = () => {
     else setLanguage('en');
   }, []);
   const t = (key: string, params: any = {}) => {
-    let text = translations[lang][key] || key;
-    Object.keys(params).forEach(p => {
-      text = text.replace(`{${p}}`, params[p]);
-    });
-    return text;
+    try {
+      if (!translations[lang]) return key;
+      let text = translations[lang][key] || key;
+      if (typeof text !== 'string') return key;
+      Object.keys(params).forEach(p => {
+        text = text.replace(`{${p}}`, params[p]);
+      });
+      return text;
+    } catch (e) {
+      console.error("Translation error:", e);
+      return key;
+    }
   };
 
   // States for Idol Search & Data
@@ -748,11 +981,42 @@ const App = () => {
   const [commentText, setCommentText] = useState('');
   const [isPostingComment, setIsPostingComment] = useState(false);
   const [comments, setComments] = useState<any[]>([]);
+  const [commentPagination, setCommentPagination] = useState<{ total: number; page: number; limit: number; total_pages: number } | null>(null);
+  const [commentPage, setCommentPage] = useState(1);
   const [mode, setMode] = useState<'idol' | 'friend'>('idol');
   const [friendData, setFriendData] = useState({ name: '', birth_date: '', gender: 'female', mbti: '' });
   const [stats, setStats] = useState({ today_challengers: 0, total_visitors: 0 });
+  const [dictModal, setDictModal] = useState({ isOpen: false, word: '', desc: '' });
   const maleScrollRef = useRef<HTMLDivElement>(null);
   const femaleScrollRef = useRef<HTMLDivElement>(null);
+
+  // MZ Saju Dictionary Renderer
+  const renderWithDictionary = (text: string) => {
+    if (!text || typeof text !== 'string') return text;
+    const dict = analysisResult?.mz_saju_dictionary;
+    if (!dict || Object.keys(dict).length === 0) return text;
+
+    const keys = Object.keys(dict).sort((a, b) => b.length - a.length);
+    const escapedKeys = keys.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    const regex = new RegExp(`(${escapedKeys.join('|')})`, 'g');
+
+    const parts = text.split(regex);
+    return parts.map((part, i) => {
+      if (dict[part]) {
+        return (
+          <span
+            key={i}
+            onClick={() => setDictModal({ isOpen: true, word: part, desc: dict[part] })}
+            className="text-k-pink border-b border-dashed border-k-pink cursor-pointer hover:bg-k-pink/10 transition-colors mx-0.5 rounded px-0.5"
+            title="MZ 용어 사전 보기"
+          >
+            {part}<Sparkles className="inline w-3 h-3 ml-0.5 mb-1" />
+          </span>
+        );
+      }
+      return <React.Fragment key={i}>{part}</React.Fragment>;
+    });
+  };
 
   // Mouse Drag to Scroll Logic
   const handleMouseDown = (e: React.MouseEvent, ref: React.RefObject<HTMLDivElement | null>) => {
@@ -819,15 +1083,23 @@ const App = () => {
     } catch (e) { console.error("Record challenge error", e); }
   };
 
-  const fetchComments = async () => {
+  const fetchComments = async (page: number = 1) => {
     try {
-      const res = await axios.get(`${API_URL.replace('/api', '')}/api/comments`);
+      const res = await axios.get(`${API_URL.replace('/api', '')}/api/comments?page=${page}&limit=5`);
       if (res.data.status === 'success') {
         setComments(res.data.comments);
+        if (res.data.pagination) {
+          setCommentPagination(res.data.pagination);
+        }
       }
     } catch (e) {
       console.error("Fetch comments error:", e);
     }
+  };
+
+  const handlePageChange = (page: number) => {
+    setCommentPage(page);
+    fetchComments(page);
   };
 
   const handlePostComment = async () => {
@@ -839,7 +1111,8 @@ const App = () => {
         content: commentText
       });
       if (res.data.status === 'success') {
-        setComments(prev => [res.data.comment, ...prev]);
+        setCommentPage(1);
+        fetchComments(1); // 1페이지로 이동해서 최신 댓글 표시
         setCommentText('');
       }
     } catch (e) {
@@ -849,10 +1122,25 @@ const App = () => {
     }
   };
 
+  const handlePostReply = async (commentId: string, text: string) => {
+    try {
+      const res = await axios.post(`${API_URL.replace('/api', '')}/api/comments/${commentId}/replies`, {
+        author: 'User',
+        content: text
+      });
+      if (res.data.status === 'success') {
+        // 현재 페이지 다시 불러오기
+        fetchComments(commentPage);
+      }
+    } catch (e) {
+      console.error("Post reply error:", e);
+    }
+  };
+
   const handleDeleteComment = async (commentId: string) => {
     try {
       await axios.delete(`${API_URL.replace('/api', '')}/api/comments/${commentId}`);
-      setComments(prev => prev.filter(c => c.id !== commentId));
+      fetchComments(commentPage);
     } catch (e) {
       console.error("Delete comment error:", e);
     }
@@ -860,7 +1148,7 @@ const App = () => {
 
   React.useEffect(() => {
     if (analysisResult && activeTab === 'signal') {
-      fetchComments();
+      fetchComments(commentPage);
     }
   }, [analysisResult, activeTab]);
 
@@ -874,9 +1162,10 @@ const App = () => {
   const [candidatesLoading, setCandidatesLoading] = useState(false);
 
   // 구글 보조 검색 UI
-  const [assistantLoading, setAssistantLoading] = useState(false);
+
   const [completedMissions, setCompletedMissions] = useState<string[]>([]);
-  const mbtiInputRef = useRef<HTMLInputElement>(null);
+  const [expandedMission, setExpandedMission] = useState<string | null>(null);
+
 
   // Fetch Popular Idols on Mount
   React.useEffect(() => {
@@ -965,14 +1254,13 @@ const App = () => {
       // 후보 목록 처리
       const allCands = candRes.data.candidates || [];
       // 사람인 것을 우선하되, 없으면 전체 목록 사용
-      let personCands = allCands.filter((c: any) => c.is_person !== false);
+      let personCands = allCands?.filter((c: any) => c.is_person !== false);
       if (personCands.length === 0 && allCands.length > 0) {
         personCands = allCands;
       }
 
-      // 후보가 1개보다 많으면 → 선택 UI 표시
+      // 후보가 1개 이상일 때 선택 UI 표시 (사용자 확인을 위해)
       if (personCands.length >= 1) {
-        // ... (이전에 수동 선택 UI를 보여주기로 했으므로 유지)
         setCandidates(personCands);
         setShowCandidates(true);
         setLoading(false);
@@ -1039,6 +1327,9 @@ const App = () => {
       setErrorMessage(null);
     } finally {
       setLoading(false);
+      setCandidatesLoading(false);
+      setShowCandidates(false);
+      setCandidates([]);
     }
   };
 
@@ -1085,13 +1376,22 @@ const App = () => {
           idol_name: p_name,
           idol_mbti: p_mbti,
           idol_birth_date: p_birth,
-          lang: lang, // 현재 선택된 프론트엔드 언어 코드 전송
-          _t: Date.now() // 브라우저 GET 캐시 무력화 패턴
+          lang: lang,
+          is_friend: mode === 'friend',
+          _t: Date.now()
         },
         timeout: 60000
       });
+
+      if (response.data.status === 'error') {
+        setErrorMessage(response.data.message || t('analysisError'));
+        setShowErrorShake(true);
+        setTimeout(() => setShowErrorShake(false), 600);
+        return;
+      }
+
       setAnalysisResult(response.data.analysis);
-      if (!keepTab) setActiveTab('signal'); // 결과가 새로 나올 때만 첫 탭으로 초기화
+      if (!keepTab) setActiveTab('signal'); 
     } catch (error) {
       console.error('Analysis Error:', error);
       setErrorMessage(t('analysisError'));
@@ -1101,39 +1401,7 @@ const App = () => {
     }
   };
 
-  const handleAssistantSearch = async () => {
-    setAssistantLoading(true);
-    try {
-      const res = await axios.get(`${API_URL}/idol/assistant`, {
-        params: { name: idolData?.name || idolSearchName }
-      });
-      if (res.data.status === 'success') {
-        const info = res.data.data;
-        const newMbti = info.mbti || idolData?.mbti;
 
-        setIdolData((prev: any) => ({
-          ...prev,
-          birth_date: info.birth_date || prev.birth_date,
-          mbti: newMbti
-        }));
-
-        // 검색했는데도 데이터가 부족하면 수동 입력 모드로 자동 전환 및 포커스
-        if (!info.birth_date && (!newMbti || newMbti === 'Unknown')) {
-          setIsManualMode(true);
-          setErrorMessage(null);
-          setTimeout(() => mbtiInputRef.current?.focus(), 100);
-        } else {
-          // 데이터가 충분히 수집되었으면 시각적 피드백 제공 후 자동 스크롤
-          setIsManualMode(false);
-          document.getElementById('idol-data-ready')?.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    } catch (e) {
-      console.error('Assistant Error:', e);
-    } finally {
-      setAssistantLoading(false);
-    }
-  };
 
   const handleShare = async () => {
     const shareData = {
@@ -1202,7 +1470,7 @@ const App = () => {
         </motion.div>
         <div className="mt-8 flex items-center justify-center gap-2 text-slate-500 text-xs font-bold">
           <Users className="h-3 w-3" />
-          {t('visitor_count', { count: stats.total_visitors.toLocaleString() })}
+          {t('visitor_count', { count: (stats?.total_visitors || 0).toLocaleString() })}
         </div>
       </header>
 
@@ -1685,7 +1953,7 @@ const App = () => {
                   <button
                     onClick={() => {
                       setShowMissingMbtiModal(false);
-                      runFullAnalysis(true);
+                      setTimeout(() => runFullAnalysis(true), 100);
                     }}
                     className="w-full flex items-center justify-center gap-2 py-4 px-4 bg-slate-700/50 hover:bg-k-purple text-white font-black rounded-xl transition-all shadow-lg"
                   >
@@ -1718,18 +1986,64 @@ const App = () => {
         }
       </AnimatePresence >
 
-      {/* Results Display */}
+      {/* MZ Saju Dictionary Modal */}
       <AnimatePresence>
-        {
-          loading && (
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-20">
-              <div className="animate-spin h-12 w-12 border-4 border-k-purple border-t-transparent rounded-full mx-auto mb-4"></div>
-              <p className="text-xl font-medium text-slate-300 italic">{t('searching')}</p>
-            </motion.div>
-          )
-        }
+        {dictModal.isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+            onClick={() => setDictModal({ ...dictModal, isOpen: false })}
+          >
+            <motion.div
+              initial={{ scale: 0.9, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 20 }}
+              onClick={(e) => e.stopPropagation()}
+              className="bg-slate-800 border border-slate-700 rounded-[2rem] p-6 max-w-sm w-full shadow-2xl relative overflow-hidden flex flex-col items-center"
+            >
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-k-pink/20 rounded-full blur-[40px]"></div>
 
-        {((idolData && !loading) || (mode === 'friend' && analysisResult)) && (
+              <button
+                onClick={() => setDictModal({ ...dictModal, isOpen: false })}
+                className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white hover:bg-slate-700 rounded-full transition-colors z-10"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              <div className="flex justify-center mb-4 mt-2">
+                <div className="p-3 bg-k-pink/10 rounded-full border border-k-pink/30 flex items-center justify-center">
+                  <BookOpen className="h-8 w-8 text-k-pink animate-bounce" />
+                </div>
+              </div>
+
+              <h3 className="text-xl font-black text-center mb-2 text-white">✨ MZ 사주 사전 ✨</h3>
+              <div className="text-k-pink font-bold text-lg mb-4 bg-slate-900/50 px-4 py-1.5 rounded-full border border-k-pink/30">
+                {dictModal.word}
+              </div>
+
+              <div className="bg-slate-900/80 p-4 rounded-2xl border border-slate-700 w-full mb-6 relative">
+                <div className="absolute top-0 left-4 w-4 h-[1px] bg-k-pink shadow-[0_0_10px_#ec4899]"></div>
+                <p className="text-slate-300 text-sm leading-relaxed whitespace-pre-wrap break-keep font-medium">
+                  {dictModal.desc}
+                </p>
+              </div>
+
+              <button
+                onClick={() => setDictModal({ ...dictModal, isOpen: false })}
+                className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-slate-700/50 hover:bg-k-pink text-white font-black rounded-xl transition-all shadow-lg hover:shadow-k-pink/30"
+              >
+                {t('close')}
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Results Display Area */}
+      <AnimatePresence>
+        {((idolData && !loading) || (mode === 'friend')) && (
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -1746,7 +2060,7 @@ const App = () => {
               <Edit3 className={`h-5 w-5 ${isManualMode ? 'text-k-blue' : 'text-slate-400'}`} />
             </button>
 
-            {/* ===== 아이돌 프로필 배너 (컴팩트) ===== */}
+            {/* Idol Profile Banner */}
             <div className="flex flex-col md:flex-row items-center gap-4 bg-slate-900/80 rounded-2xl p-4 mb-6 border border-slate-700/50 relative z-10">
               <div className="flex items-center gap-4 flex-1 min-w-0">
                 <div className="p-2 bg-k-pink/10 rounded-xl relative w-14 h-14 shrink-0 flex items-center justify-center">
@@ -1754,749 +2068,617 @@ const App = () => {
                     src={`/avatars/${(mode === 'friend' ? friendData.gender : (idolData?.gender || 'female')) === 'male' ? 'male' : 'female'}_1.png`}
                     alt={mode === 'friend' ? 'Friend' : (idolData?.name || 'Idol')}
                     className="w-full h-full object-cover opacity-90"
-                    onError={(e: any) => {
-                      e.target.src = `/avatars/female_1.png`;
-                    }}
+                    onError={(e: any) => { e.target.src = '/avatars/female_1.png'; }}
                   />
                 </div>
                 <div className="min-w-0 flex flex-col">
                   {mode === 'friend' ? (
-                    <h3 className="text-xl font-black uppercase tracking-tighter text-k-blue leading-none mb-1">{t('friendMatchingTitle')}</h3>
-                  ) : isManualMode ? (
-                    <input
-                      value={idolData?.name || ''}
-                      onChange={(e) => setIdolData({ ...idolData, name: e.target.value })}
-                      className="bg-transparent border-b-2 border-k-pink text-xl font-black uppercase tracking-tighter outline-none w-full mb-1"
-                    />
+                    <>
+                      <h2 className="text-lg font-black text-white truncate">{friendData.name || t('partner')}</h2>
+                      <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">{friendData.mbti || '????'}</p>
+                    </>
                   ) : (
-                    <h3 className="text-xl font-black uppercase tracking-tighter text-k-pink leading-none mb-1">{idolData.name}</h3>
+                    <>
+                      <h2 className="text-lg font-black text-white truncate">{idolData?.name || 'Idol'}</h2>
+                      <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">{idolData?.mbti || '????'}</p>
+                    </>
                   )}
-                  {/* 스타 생일 & MBTI 표시 (복구) */}
-                  <div className="flex items-center gap-2 text-[10px] font-bold text-slate-400">
-                    <span className="bg-slate-800 px-2 py-0.5 rounded border border-slate-700">🎂 {mode === 'friend' ? friendData.birth_date : (idolData.birth_date || '????-??-??')}</span>
-                    <span className="bg-slate-800 px-2 py-0.5 rounded border border-slate-700 uppercase">⚡ {mode === 'friend' ? friendData.mbti : (idolData.mbti || 'Unknown')}</span>
-                  </div>
                 </div>
               </div>
-              {/* 수동 편집을 위한 추가 필드들 (수동 모드일 때만 표시) */}
-              {isManualMode && (
-                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 flex-shrink-0 bg-slate-800/50 p-3 rounded-xl border border-slate-700/50">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="h-4 w-4 text-k-blue" />
-                    <input type="text" placeholder="YYYY-MM-DD" maxLength={10} value={mode === 'friend' ? friendData.birth_date : (idolData?.birth_date || '')}
-                      onChange={(e) => {
-                        const raw = e.target.value.replace(/\D/g, '').slice(0, 8);
-                        let formatted = raw;
-                        if (raw.length > 4) formatted = `${raw.slice(0, 4)}-${raw.slice(4)}`;
-                        if (raw.length > 6) formatted = `${formatted.slice(0, 7)}-${raw.slice(6)}`;
-                        if (mode === 'friend') {
-                          setFriendData({ ...friendData, birth_date: formatted });
-                        } else {
-                          setIdolData({ ...idolData, birth_date: formatted });
-                        }
-                      }}
-                      className="bg-transparent text-sm font-bold outline-none w-28 border-b border-slate-700 focus:border-k-blue text-white"
-                    />
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <BrainCircuit className="h-4 w-4 text-k-purple cursor-pointer hover:text-k-pink transition-colors" onClick={() => { setMbtiTarget('idol'); setShowMBTIQuiz(true); }} />
-                    <input
-                      ref={mbtiInputRef}
-                      type="text"
-                      placeholder="MBTI"
-                      value={mode === 'friend' ? friendData.mbti : (idolData?.mbti || '')}
-                      onChange={(e) => {
-                        const val = e.target.value.toUpperCase().slice(0, 4);
-                        if (mode === 'friend') {
-                          setFriendData({ ...friendData, mbti: val });
-                        } else {
-                          setIdolData({ ...idolData, mbti: val });
-                        }
-                      }}
-                      className="bg-transparent text-sm font-bold outline-none w-16 border-b border-slate-700 focus:border-k-purple text-white"
-                    />
-                  </div>
-                  {(!idolData.mbti || idolData.mbti === 'Unknown') && (
-                    <div className="flex items-center gap-2">
-                      <span className="text-xs font-bold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/30 animate-pulse">⚠️ {t('mbtiMissing')}</span>
-                      <button onClick={handleAssistantSearch} disabled={assistantLoading}
-                        className="px-3 py-1.5 bg-blue-600/40 hover:bg-blue-600/60 rounded-lg text-sm font-bold text-blue-200 border border-blue-400/50 flex items-center gap-1.5 transition-all animate-pulse ring-1 ring-blue-400/30 shadow-[0_0_10px_rgba(59,130,246,0.3)]"
-                      >
-                        {assistantLoading ? <RefreshCcw className="h-4 w-4 animate-spin" /> : <Search className="h-4 w-4" />}
-                        {t('autoDetect')}
-                      </button>
-                    </div>
-                  )}
-                </div>
-              )}
             </div>
 
-            {/* ===== 분석 결과 영역 (전체 폭) ===== */}
-            <div className="relative z-10">
-              <div className="relative group">
-                <motion.div
-                  layout
-                  className="absolute inset-0 bg-gradient-to-br from-k-purple/30 to-k-blue/30 rounded-[2.5rem] blur-2xl group-hover:blur-3xl transition-all"
-                ></motion.div>
-                <motion.div
-                  layout
-                  className={`relative bg-transparent sm:bg-slate-900 rounded-[2rem] flex flex-col border-0 sm:border-2 border-slate-700 p-0 sm:p-8 shadow-none sm:shadow-inner w-full ${!analysisResult ? 'aspect-square items-center justify-center text-center' : 'min-h-[400px]'}`}
-                >
-                  {/* Results Display Area - Enhanced with Bento Grid for UAT */}
-                  {!analysisResult ? (
-                    <div className="w-full flex flex-col items-center">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mb-8">
-                        {/* Card 1: Star TMI */}
-                        <motion.div
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          className="bg-slate-800/40 p-5 rounded-3xl border border-slate-700/50 flex flex-col gap-3 hover:border-k-pink/30 transition-all group"
-                        >
-                          <div className="flex items-center gap-2">
-                            <Sparkles className="h-4 w-4 text-k-pink" />
-                            <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Star TMI</span>
-                          </div>
-                          <p className="text-sm font-bold text-white leading-relaxed">
-                            {idolData?.tmi || t('tmiFallback')}
-                          </p>
-                        </motion.div>
-
-                        {/* Card 2: Destiny Preview */}
-                        <motion.div
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.1 }}
-                          className="bg-slate-800/40 p-5 rounded-3xl border border-slate-700/50 flex flex-col gap-3 hover:border-k-blue/30 transition-all"
-                        >
-                          <div className="flex items-center gap-2">
-                            <BrainCircuit className="h-4 w-4 text-k-blue" />
-                            <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Destiny Preview</span>
-                          </div>
-                          <div className="flex items-center gap-3">
-                            <div className="text-2xl">🔮</div>
-                            <p className="text-xs text-slate-300 font-medium">
-                              {t('connectDestiny', { name: idolData.name })}
-                            </p>
-                          </div>
-                        </motion.div>
-
-                        {/* Card 3: Real-time Signal (Wide) */}
-                        <motion.div
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.2 }}
-                          className="md:col-span-2 bg-gradient-to-r from-k-purple/10 to-k-blue/10 p-5 rounded-3xl border border-k-purple/20 flex items-center justify-between group"
-                        >
-                          <div className="flex items-center gap-4">
-                            <div className="w-10 h-10 rounded-full bg-slate-900 border border-k-purple/30 flex items-center justify-center text-lg animate-pulse">📡</div>
-                            <div>
-                              <p className="text-[10px] font-black text-k-purple uppercase tracking-widest mb-1">Live Signal</p>
-                              <p className="text-xs font-bold text-white">{t('liveSignalPart1')}{stats.today_challengers.toLocaleString()}{t('liveSignalPart2')}</p>
-                            </div>
-                          </div>
-                          <TrendingUp className="h-5 w-5 text-k-blue opacity-50 group-hover:opacity-100 transition-opacity" />
-                        </motion.div>
-                      </div>
-
-                      <h3 className="text-xl font-bold mb-6 text-slate-400 italic">{t('checkComp')}</h3>
-
-                      {errorMessage && (
-                        <div className="w-full mb-6 px-4 py-3 bg-red-500/10 border border-red-500/30 rounded-xl text-red-300 text-sm font-bold flex items-center gap-2 animate-pulse">
-                          <HelpCircle className="h-4 w-1 flex-shrink-0" />
-                          {errorMessage}
+            <div className="relative overflow-hidden">
+              <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm rounded-[2rem]"></div>
+              <div className={`relative bg-transparent sm:bg-slate-900 rounded-[2rem] flex flex-col border-0 sm:border-2 border-slate-700 p-0 sm:p-8 shadow-none sm:shadow-inner w-full ${!analysisResult ? 'aspect-square items-center justify-center text-center' : 'min-h-[400px]'}`}>
+                {/* Initial View or Analysis View */}
+                {!analysisResult ? (
+                  <div className="w-full flex flex-col items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mb-8">
+                      {/* Star TMI Card */}
+                      <div className="bg-slate-800/80 rounded-2xl p-4 border border-slate-700 relative overflow-hidden group">
+                        <div className="flex items-center gap-2 mb-3">
+                          <Sparkles className="w-4 h-4 text-slate-400" />
+                          <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{t('starTmiLabel')}</span>
                         </div>
-                      )}
-
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => runFullAnalysis(false)}
-                        disabled={analyzing}
-                        className="w-full py-5 bg-gradient-to-r from-k-purple to-k-blue rounded-2xl font-black text-xl shadow-[0_0_20px_rgba(139,92,246,0.3)] flex items-center justify-center gap-3 active:scale-95"
-                      >
-                        {analyzing ? <RefreshCcw className="h-6 w-6 animate-spin" /> : (
-                          <>
-                            <Sparkles className="h-6 w-6" />
-                            {t('runAnalysis')}
-                          </>
-                        )}
-                      </motion.button>
-                    </div>
-                  ) : (
-
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, ease: "easeOut" }}
-                      className="w-full text-left mt-4"
-                    >
-
-                      {/* Category Selection */}
-                      <div className="grid grid-cols-1 gap-2.5 mb-5">
-                        <button
-                          onClick={() => setActiveTab('signal')}
-                          className={`relative flex items-center justify-between px-6 py-3 sm:py-4 rounded-3xl transition-all overflow-hidden ${activeTab === 'signal'
-                            ? 'bg-gradient-to-r from-k-purple/20 via-k-pink/20 to-k-blue/20 text-white shadow-[0_0_20px_rgba(236,72,153,0.3)] border-2 border-k-pink ring-2 ring-k-purple/50'
-                            : 'bg-slate-800/80 border-2 border-slate-700/50 hover:border-k-pink/50 text-slate-400 hover:text-white'
-                            }`}
-                        >
-                          {activeTab === 'signal' && (
-                            <div className="absolute inset-0 bg-gradient-to-r from-k-purple/40 to-k-pink/40 blur-xl -z-10 animate-pulse"></div>
-                          )}
-                          <span className={`font-black text-[15px] sm:text-base break-keep ${activeTab === 'signal' ? 'drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] tracking-wide' : 'font-bold'}`}>
-                            {t('tabSignal', { name: analysisResult?.chemistry_signal?.idol_name || idolData?.name || '' })}
-                          </span>
-                          <span className={`${activeTab === 'signal' ? 'text-xl sm:text-2xl drop-shadow-[0_0_8px_rgba(236,72,153,0.8)]' : 'text-lg opacity-80'}`}>💖</span>
-                        </button>
-                        <button
-                          onClick={() => setActiveTab('saju')}
-                          className={`flex items-center justify-between px-6 py-3 sm:py-3.5 rounded-2xl border transition-all ${activeTab === 'saju' ? 'bg-k-pink/10 border-k-pink text-k-pink shadow-[0_0_15px_rgba(236,72,153,0.2)]' : 'bg-slate-800/50 border-slate-700/50 hover:bg-slate-800 hover:border-k-pink/50 text-slate-400 hover:text-white'}`}
-                        >
-                          <span className="font-bold text-sm md:text-base break-keep">{t('tabSaju')}</span>
-                          <span className="text-lg opacity-80">🔮</span>
-                        </button>
-                        <button
-                          onClick={() => setActiveTab('fortune')}
-                          className={`flex items-center justify-between px-6 py-3 sm:py-3.5 rounded-2xl border transition-all ${activeTab === 'fortune' ? 'bg-yellow-500/10 border-yellow-500 text-yellow-500 shadow-[0_0_15px_rgba(234,179,8,0.2)]' : 'bg-slate-800/50 border-slate-700/50 hover:bg-slate-800 hover:border-yellow-500/50 text-slate-400 hover:text-white'}`}
-                        >
-                          <span className="font-bold text-sm md:text-base break-keep">{t('tabFortune')}</span>
-                          <span className="text-lg opacity-80">📅</span>
-                        </button>
+                        <p className="text-sm font-medium text-white leading-relaxed break-keep">
+                          {idolData?.tmi || t('tmiFallback')}
+                        </p>
                       </div>
 
-                      {/* Category Content - Gutter Minimalized & Noise Reduced */}
-                      <div className="min-h-[300px] relative backdrop-blur-md bg-transparent sm:bg-slate-900/40 rounded-3xl p-0 sm:p-4 border-0 sm:border border-slate-700/30 -mx-1 sm:mx-0">
-                        <AnimatePresence mode="wait">
-                          {/* 탭 1: 내 사주 심층 분석 (전문가 조언 포함) */}
-                          {activeTab === 'saju' && (
-                            <motion.div
-                              key="saju-tab"
-                              initial={{ opacity: 0, x: 20 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              exit={{ opacity: 0, x: -20 }}
-                              transition={{ duration: 0.3 }}
-                              className="flex flex-col gap-6 h-full"
-                            >
-                              {/* Lifetime Fortune Panel */}
-                              {analysisResult?.lifetime_fortune && (
-                                <div className="bg-gradient-to-br from-indigo-900/60 to-slate-900/80 rounded-2xl p-4 sm:p-6 border border-k-purple/40 shadow-2xl relative overflow-hidden backdrop-blur-xl">
-                                  <div className="absolute top-0 right-0 w-32 h-32 bg-k-purple/20 rounded-full blur-3xl"></div>
-                                  <div className="flex items-center gap-2 mb-4 px-3 py-1.5 bg-k-purple/30 border border-k-purple/50 rounded-lg w-fit">
-                                    <TrendingUp className="h-4 w-4 text-k-pink" />
-                                    <span className="text-k-pink text-[10px] font-black uppercase tracking-widest">{t('lifetimeStageTitle')}</span>
-                                  </div>
+                      {/* Destiny Preview Card */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="bg-slate-800/40 p-5 rounded-3xl border border-slate-700/50 flex flex-col gap-3 hover:border-k-blue/30 transition-all"
+                      >
+                        <div className="flex items-center gap-2">
+                          <BrainCircuit className="h-4 w-4 text-k-blue" />
+                          <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Destiny Preview</span>
+                        </div>
+                        <p className="text-xs text-slate-300 font-medium">
+                          {t('connectDestiny', { name: mode === 'friend' ? (friendData.name || t('partner')) : (idolData?.name || 'Star') })}
+                        </p>
+                      </motion.div>
+                    </div>
 
-                                  <div className="space-y-4">
-                                    {analysisResult.lifetime_fortune.split('\n\n').map((segment: string, i: number) => (
-                                      <div key={i} className="p-3 bg-slate-900/80 rounded-xl border border-slate-600/50 text-slate-200 text-sm sm:text-[15px] leading-relaxed break-keep shadow-inner">
-                                        <div className="font-black text-k-blue mb-2 text-xs uppercase tracking-tighter opacity-80">{t('stage')} {i + 1}</div>
-                                        {segment}
-                                      </div>
-                                    ))}
-                                  </div>
-                                </div>
-                              )}
+                    <h3 className="text-xl font-bold mb-6 text-slate-400 italic">{t('checkComp')}</h3>
 
-                              {/* Expert Advice Grid (NEW Phase 15) */}
-                              {analysisResult?.chemistry_signal?.expert_advice && (
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                  {Object.entries(analysisResult.chemistry_signal.expert_advice).map(([cat, pool]: [string, any]) => (
-                                    <div key={cat} className="bg-slate-800/40 border border-slate-700/50 rounded-2xl p-3 sm:p-5 hover:border-k-blue/30 transition-all">
-                                      <div className="flex items-center gap-2 mb-3">
-                                        <div className="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center text-sm border border-slate-700/50 shadow-inner">
-                                          {cat === 'Health' ? '🍎' : cat === 'Wealth' ? '💰' : cat === 'Career' ? '💼' : '❤️'}
-                                        </div>
-                                        <span className="text-xs font-black text-slate-200 uppercase tracking-tighter">{t(`expert${cat}`)}</span>
+                    {errorMessage && (
+                      <div className="w-full mb-6 px-4 py-3 bg-red-500/10 border border-red-500/30 rounded-xl text-red-300 text-sm font-bold flex items-center gap-2 animate-pulse">
+                        <HelpCircle className="h-4 w-1 flex-shrink-0" />
+                        {errorMessage}
+                      </div>
+                    )}
+
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      onClick={() => runFullAnalysis(false)}
+                      disabled={analyzing}
+                      className="w-full py-5 bg-gradient-to-r from-k-purple to-k-blue rounded-2xl font-black text-xl shadow-[0_0_20px_rgba(139,92,246,0.3)] flex items-center justify-center gap-3 active:scale-95"
+                    >
+                      {analyzing ? <RefreshCcw className="h-6 w-6 animate-spin" /> : (
+                        <>
+                          <Sparkles className="h-6 w-6" />
+                          {t('runAnalysis')}
+                        </>
+                      )}
+                    </motion.button>
+                  </div>
+                ) : (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="w-full text-left mt-4"
+                  >
+                    {/* Category Selection Tabs */}
+                    <div className="grid grid-cols-1 gap-2.5 mb-5">
+                      <button
+                        onClick={() => setActiveTab('signal')}
+                        className={`flex items-center justify-between px-6 py-3 sm:py-4 rounded-3xl transition-all border-2 ${activeTab === 'signal' ? 'bg-gradient-to-r from-k-purple/20 to-k-blue/20 border-k-pink ring-2 ring-k-purple/50' : 'bg-slate-800/80 border-slate-700/50 text-slate-400 hover:text-white'}`}
+                      >
+                        <span className="font-black text-[15px] sm:text-base">
+                          {t('tabSignal', { name: analysisResult?.chemistry_signal?.idol_name || idolData?.name || '' })}
+                        </span>
+                        <span className="text-xl">💖</span>
+                      </button>
+                      <button
+                        onClick={() => setActiveTab('saju')}
+                        className={`flex items-center justify-between px-6 py-3 sm:py-3.5 rounded-2xl border transition-all ${activeTab === 'saju' ? 'bg-k-pink/10 border-k-pink text-k-pink shadow-lg' : 'bg-slate-800/50 border-slate-700/50 text-slate-400'}`}
+                      >
+                        <span className="font-bold text-sm md:text-base">{t('tabSaju')}</span>
+                        <span className="text-lg">🔮</span>
+                      </button>
+                      <button
+                        onClick={() => setActiveTab('fortune')}
+                        className={`flex items-center justify-between px-6 py-3 sm:py-3.5 rounded-2xl border transition-all ${activeTab === 'fortune' ? 'bg-yellow-500/10 border-yellow-500 text-yellow-500 shadow-lg' : 'bg-slate-800/50 border-slate-700/50 text-slate-400'}`}
+                      >
+                        <span className="font-bold text-sm md:text-base">{t('tabFortune')}</span>
+                        <span className="text-lg">📅</span>
+                      </button>
+                    </div>
+
+                    {/* Tab Content Area */}
+                    <div className="min-h-[300px] relative backdrop-blur-md bg-transparent sm:bg-slate-900/40 rounded-3xl p-0 sm:p-4 border-0 sm:border border-slate-700/30">
+                      <AnimatePresence mode="wait">
+                        {/* SAJU Tab */}
+                        {activeTab === 'saju' && (
+                          <motion.div
+                            key="saju-tab"
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -20 }}
+                            className="flex flex-col gap-6"
+                          >
+                            <div className="bg-slate-800/60 rounded-2xl p-4 sm:p-8 border border-slate-700/50 shadow-lg">
+                              <h4 className="text-xl sm:text-2xl font-black mb-4 text-white">
+                                {renderWithDictionary(analysisResult?.user_saju?.summary || analysisResult?.label)}
+                              </h4>
+                              <div className="text-slate-300 text-[18px] sm:text-xl font-medium leading-relaxed whitespace-pre-wrap mb-6">
+                                {renderWithDictionary(analysisResult?.user_saju?.content || t('sajuSuccess'))}
+                              </div>
+
+                              {/* Five Elements Indicators Overlay */}
+                              {analysisResult?.user_saju?.elements && (
+                                <div className="grid grid-cols-5 gap-2 mt-4 pt-6 border-t border-slate-700/50">
+                                  {Object.entries(analysisResult.user_saju.elements).map(([el, val]: [string, any]) => (
+                                    <div key={el} className="flex flex-col items-center">
+                                      <div className="text-[10px] font-bold text-slate-500 mb-1 uppercase tracking-tighter">{el}</div>
+                                      <div className="w-full bg-slate-900 h-1.5 rounded-full overflow-hidden">
+                                        <motion.div
+                                          initial={{ width: 0 }}
+                                          animate={{ width: `${val}%` }}
+                                          className={`h-full ${el === 'Wood' ? 'bg-green-500' : el === 'Fire' ? 'bg-red-500' : el === 'Earth' ? 'bg-yellow-600' : el === 'Metal' ? 'bg-slate-400' : 'bg-blue-500'}`}
+                                        />
                                       </div>
-                                      <div className="space-y-2">
-                                        {pool.map((txt: string, i: number) => (
-                                          <p key={i} className="text-[11px] leading-relaxed text-slate-400 pl-2 border-l border-slate-700">
-                                            {txt}
-                                          </p>
-                                        ))}
-                                      </div>
+                                      <div className="text-[10px] font-black text-slate-400 mt-1">{val}%</div>
                                     </div>
                                   ))}
                                 </div>
                               )}
+                            </div>
 
-                              {/* Expert Consultant Comments (NEW Phase 15) */}
-                              {analysisResult?.chemistry_signal?.lifetime_experts && (
-                                <div className="bg-slate-800/60 rounded-2xl p-3 sm:p-6 border border-slate-700/50 shadow-lg mt-2">
-                                  <h5 className="text-sm font-black text-white mb-4 flex items-center gap-2">
-                                    <MessageSquare className="h-4 w-4 text-k-pink" />
-                                    {t('expertCommentTitle')}
-                                  </h5>
-                                  <div className="space-y-4">
-                                    {analysisResult.chemistry_signal.lifetime_experts.map((exp: any, i: number) => (
-                                      <div key={i} className="p-3 bg-slate-900/40 rounded-xl border border-slate-700/30 flex gap-4">
-                                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-slate-700 to-slate-900 flex-shrink-0 flex items-center justify-center text-xs font-black text-white border border-slate-600/50">
-                                          EX
-                                        </div>
-                                        <div>
-                                          <div className="flex items-center gap-2 mb-1">
-                                            <span className="text-xs font-black text-white">{exp.name}</span>
-                                            <span className="text-[9px] text-slate-500 font-bold px-1.5 py-0.5 bg-slate-800 rounded">{exp.focus}</span>
-                                          </div>
-                                          <p className="text-[11px] text-slate-300 leading-relaxed italic line-clamp-2 md:line-clamp-none">"{exp.comment}"</p>
-                                        </div>
-                                      </div>
-                                    ))}
+                            {/* Restored: Lifetime Fortune Section in My Soul Tab */}
+                            {analysisResult.lifetime_fortune && (
+                              <div className="mt-4 bg-slate-800/80 rounded-3xl p-6 sm:p-8 border border-slate-700/50 relative overflow-hidden group shadow-2xl">
+                                <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-k-purple/5 rounded-full blur-[60px] group-hover:bg-k-purple/10 transition-colors"></div>
+                                <div className="relative z-10">
+                                  <div className="flex items-center gap-3 mb-5 px-4 py-2 bg-k-purple/10 border border-k-purple/20 rounded-xl w-fit">
+                                    <BookOpen className="h-5 w-5 text-k-purple" />
+                                    <span className="text-base sm:text-lg font-black text-white">{t('lifetimeFortuneTitle') || '나의 평생 운세 분석'}</span>
+                                  </div>
+                                  <div className="text-slate-200 text-base sm:text-lg leading-relaxed whitespace-pre-wrap font-medium border-l-4 border-k-purple/30 pl-6 bg-slate-900/60 py-6 rounded-r-2xl shadow-inner">
+                                    {renderWithDictionary(analysisResult.lifetime_fortune)}
+                                  </div>
+                                  <div className="mt-6 flex items-center justify-end gap-2 opacity-40">
+                                    <Sparkles className="h-3 w-3 text-k-blue" />
+                                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Advanced Saju Engine v2.0 - Deep Insight</span>
                                   </div>
                                 </div>
-                              )}
-
-                              {/* Existing Saju Content (Layout Optimized for Mobile) */}
-                              <div className="bg-slate-800/60 rounded-2xl p-2 sm:p-8 border border-slate-700/50 shadow-lg w-full">
-                                <div className="flex items-center gap-2 mb-4 px-3 py-1.5 bg-indigo-500/10 border border-indigo-500/30 rounded-lg w-fit">
-                                  <span className="text-indigo-400 text-[10px] font-black uppercase tracking-widest">{t('userSajuResult')}</span>
-                                </div>
-                                <h4 className="text-xl sm:text-2xl font-black mb-4 text-white break-keep leading-tight">
-                                  {analysisResult?.user_saju?.summary || analysisResult?.label}
-                                </h4>
-                                <div className="text-slate-300 text-[18px] sm:text-xl font-medium leading-relaxed whitespace-pre-wrap break-keep">
-                                  {analysisResult?.user_saju?.content || t('sajuSuccess')}
-                                </div>
                               </div>
-                            </motion.div>
-                          )}
+                            )}
+                          </motion.div>
+                        )}
 
-                          {/* 탭 2: 올해의 K-운세 (월별 캘린더 상세 확장) */}
-                          {activeTab === 'fortune' && analysisResult?.monthly_fortune && (
-                            <motion.div
-                              key="fortune-tab"
-                              initial={{ opacity: 0, x: 20 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              exit={{ opacity: 0, x: -20 }}
-                              transition={{ duration: 0.3 }}
-                              className="flex flex-col gap-4"
-                            >
-                              <div className="grid grid-cols-1 gap-4 pb-10">
-                                {analysisResult.monthly_fortune?.map((mf: any, idx: number) => (
-                                  <motion.div
-                                    key={idx}
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: idx * 0.05 }}
-                                    className="bg-slate-800/60 p-1 sm:p-6 rounded-3xl border border-slate-700/50 hover:border-yellow-500/30 transition-all shadow-lg group"
-                                  >
-                                    <div className="flex items-center justify-between mb-4">
-                                      <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 rounded-2xl bg-yellow-500/20 flex items-center justify-center text-lg font-black text-yellow-500 border border-yellow-500/30 shadow-inner">
-                                          {mf.month || idx + 1}
-                                        </div>
-                                        <div>
-                                          <h4 className="text-white font-black text-[18px] sm:text-xl break-keep">{mf.theme || mf.keyword || t('fortune')}</h4>
-                                          {mf.synergy && (
-                                            <div className="flex items-center gap-1 mt-0.5">
-                                              <div className="h-1 w-20 bg-slate-700 rounded-full overflow-hidden">
-                                                <div className="h-full bg-yellow-500" style={{ width: `${mf.synergy}%` }}></div>
-                                              </div>
-                                              <span className="text-[10px] text-yellow-500/70 font-bold">{mf.synergy}% Synergy</span>
-                                            </div>
-                                          )}
-                                        </div>
-                                      </div>
-                                      <Calendar className="h-5 w-5 text-slate-600 group-hover:text-yellow-500/50 transition-colors" />
+                        {/* FORTUNE (Timeline) Tab */}
+                        {activeTab === 'fortune' && (
+                          <motion.div
+                            key="fortune-tab"
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            className="flex flex-col gap-4"
+                          >
+                            {analysisResult?.monthly_fortune && Array.isArray(analysisResult.monthly_fortune) ? (
+                              <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2 custom-scrollbar">
+                                {analysisResult.monthly_fortune.map((item: any, idx: number) => (
+                                  <div key={idx} className="relative pl-12 pb-6 border-l-2 border-slate-700/50 last:pb-0">
+                                    <div className="absolute left-[-11px] top-0 w-5 h-5 rounded-full bg-slate-800 border-2 border-k-purple flex items-center justify-center">
+                                      <div className="w-1.5 h-1.5 rounded-full bg-k-purple animate-pulse"></div>
                                     </div>
-
-                                    <div className="space-y-4">
-                                      {/* Signal with Idol */}
-                                      <div className="flex gap-3 items-start p-3 bg-slate-900/50 rounded-2xl border border-slate-700/30">
-                                        <div className="p-2 bg-k-blue/10 rounded-xl">
-                                          <Zap className="w-5 h-5 text-k-blue" />
-                                        </div>
-                                        <div>
-                                          <p className="text-[10px] font-black text-k-blue uppercase tracking-widest mb-1">Star Signal</p>
-                                          <p className="text-[17px] text-slate-300 leading-relaxed font-medium break-keep">{mf.signal || ""}</p>
-                                        </div>
+                                    <div className="bg-slate-800/60 rounded-2xl p-5 border border-slate-700/30 hover:border-k-purple/30 transition-all shadow-xl backdrop-blur-sm">
+                                      <div className="flex items-center justify-between mb-3">
+                                        <span className="text-xl font-black text-white">{item.month}</span>
+                                        <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest bg-slate-900/50 px-2 py-1 rounded-lg">
+                                          {t('starSignalLabel')}
+                                        </span>
                                       </div>
-
-                                      {/* Action Guide */}
-                                      <div className="flex gap-3 items-start p-3 bg-yellow-500/5 rounded-2xl border border-yellow-500/20">
-                                        <div className="p-2 bg-yellow-500/10 rounded-xl">
-                                          <Target className="w-5 h-5 text-yellow-500" />
+                                      <h5 className="text-lg font-black text-k-purple mb-2">{item.theme}</h5>
+                                      <p className="text-sm text-slate-300 font-medium leading-relaxed mb-4 break-keep">
+                                        {item.star_signal}
+                                      </p>
+                                      <div className="bg-k-blue/5 rounded-xl p-3 border border-k-blue/10">
+                                        <div className="flex items-center gap-2 mb-1">
+                                          <TrendingUp className="w-4 h-4 text-k-blue" />
+                                          <span className="text-[10px] font-black text-k-blue uppercase tracking-widest">{t('actionPointLabel')}</span>
                                         </div>
-                                        <div>
-                                          <p className="text-[10px] font-black text-yellow-500 uppercase tracking-widest mb-1">Action Point</p>
-                                          <p className="text-[17px] text-slate-300 leading-relaxed break-keep">{mf.guide || ""}</p>
-                                        </div>
+                                        <p className="text-xs text-slate-400 font-bold italic leading-relaxed">
+                                          {item.action_point}
+                                        </p>
                                       </div>
                                     </div>
-                                  </motion.div>
+                                  </div>
                                 ))}
                               </div>
-                            </motion.div>
-                          )}
-
-                          {/* 탭 3: 아이돌 궁합 시그널 */}
-                          {activeTab === 'signal' && analysisResult?.chemistry_signal && (
-                            <motion.div
-                              key="signal-tab"
-                              initial={{ opacity: 0 }}
-                              animate={{ opacity: 1 }}
-                              exit={{ opacity: 0 }}
-                              transition={{ duration: 0.2 }}
-                              style={{ willChange: 'opacity' }}
-                              className="bg-transparent sm:bg-gradient-to-br sm:from-k-purple/10 sm:to-k-blue/10 rounded-2xl p-0 sm:p-6 mb-4 border-0 sm:border sm:border-k-purple/20 shadow-none sm:shadow-lg h-full"
-                            >
-
-                              {/* ===== 오행 연결선 인포그래픽 ===== */}
-                              <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 p-3 sm:p-5 bg-slate-900/60 rounded-2xl border border-slate-700/40">
-                                <div className="text-center">
-                                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full flex items-center justify-center border-2 border-blue-400/50 mb-2 mx-auto">
-                                    <span className="text-xl sm:text-2xl">{analysisResult.user_saju?.element === 'Wood' ? '🌲' : analysisResult.user_saju?.element === 'Fire' ? '🔥' : analysisResult.user_saju?.element === 'Earth' ? '⛰️' : analysisResult.user_saju?.element === 'Metal' ? '⚔️' : '🌊'}</span>
-                                  </div>
-                                  <p className="text-[10px] sm:text-xs font-black text-blue-300 uppercase">{t('youLabel')}</p>
-                                  <p className="text-[9px] sm:text-[10px] text-slate-500">{analysisResult.user_saju?.element || '?'}</p>
-                                </div>
-
-                                {(() => {
-                                  const baseScore = analysisResult.chemistry_signal.base_synergy_score || 52;
-                                  const missions = analysisResult.chemistry_signal.synergy_missions || [];
-                                  const totalBoost = missions.filter((m: any) => completedMissions.some(cid => cid.startsWith(`${m.id}-`))).reduce((s: number, m: any) => s + m.boost, 0);
-                                  const score = Math.min(100, baseScore + totalBoost);
-                                  const lineColor = score >= 100 ? 'from-pink-400 via-yellow-300 to-pink-400' : score >= 86 ? 'from-emerald-400 to-cyan-400' : score >= 71 ? 'from-purple-400 to-pink-400' : score >= 51 ? 'from-yellow-400 to-amber-400' : 'from-red-500 to-orange-400';
-                                  const lineH = score >= 100 ? 'h-3' : score >= 86 ? 'h-2.5' : score >= 71 ? 'h-2' : score >= 51 ? 'h-1.5' : 'h-1';
-                                  const lineShadow = score >= 100 ? 'shadow-[0_0_16px_rgba(236,72,153,0.7)]' : score >= 86 ? 'shadow-[0_0_12px_rgba(52,211,153,0.5)]' : 'shadow-[0_0_8px_rgba(168,85,247,0.5)]';
-                                  const lineLabel = score >= 100 ? t('destiny') : score >= 86 ? t('soulmate') : score >= 71 ? t('deepBond') : score >= 51 ? t('resonance') : t('tension');
-                                  const labelColor = score >= 100 ? 'text-yellow-300' : score >= 86 ? 'text-emerald-300' : score >= 71 ? 'text-purple-300' : score >= 51 ? 'text-amber-300' : 'text-red-400';
-                                  const borderColor = score >= 100 ? 'border-yellow-400' : score >= 86 ? 'border-emerald-400' : score >= 71 ? 'border-purple-400' : score >= 51 ? 'border-amber-400' : 'border-red-400';
-                                  return (
-                                    <div className={`flex-1 relative transition-all duration-700 ${score >= 100 ? '-mx-8' : 'mx-2'}`}>
-                                      <motion.div
-                                        initial={{ scaleX: 0 }}
-                                        animate={{ scaleX: score >= 100 ? 1.05 : 1 }}
-                                        transition={{ duration: 1, ease: 'easeOut' }}
-                                        className={`${lineH} bg-gradient-to-r ${lineColor} rounded-full ${lineShadow} transition-all duration-700 ${score >= 100 ? 'animate-pulse' : ''}`}
-                                      />
-                                      <motion.div
-                                        initial={{ scale: 0 }}
-                                        animate={{ scale: 1 }}
-                                        transition={{ delay: 0.3, type: 'spring' }}
-                                        className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-900 border-2 ${borderColor} rounded-full px-2 sm:px-3 py-1 transition-all duration-500 z-10`}
-                                      >
-                                        <motion.span key={lineLabel} initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} className={`text-xs font-black ${labelColor} whitespace-nowrap`}>
-                                          {lineLabel}
-                                        </motion.span>
-                                      </motion.div>
-                                      {score >= 100 && (
-                                        <motion.div
-                                          initial={{ opacity: 0 }}
-                                          animate={{ opacity: 1 }}
-                                          className="absolute -top-4 left-1/2 -translate-x-1/2 text-lg z-20"
-                                        >
-                                          ✨💖✨
-                                        </motion.div>
-                                      )}
-                                    </div>
-                                  );
-                                })()}
-
-                                <div className="text-center">
-                                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center border-2 border-purple-400/50 mb-2 mx-auto">
-                                    <span className="text-xl sm:text-2xl">⭐</span>
-                                  </div>
-                                  <p className="text-[10px] sm:text-xs font-black text-purple-300 uppercase">{analysisResult.chemistry_signal.idol_name}</p>
-                                  <p className="text-[9px] sm:text-[10px] text-slate-500">{analysisResult.chemistry_signal.idol_mbti}</p>
+                            ) : (
+                              <div className="bg-slate-800/60 rounded-2xl p-8 border border-slate-700/50">
+                                <div className="text-slate-300 text-[18px] sm:text-xl font-medium leading-relaxed whitespace-pre-wrap">
+                                  {renderWithDictionary(analysisResult?.lifetime_fortune || t('fortuneSuccess'))}
                                 </div>
                               </div>
+                            )}
+                          </motion.div>
+                        )}
 
-                              {/* Chemistry Signal Card - Premium Destiny UI */}
-                              <motion.div
-                                initial={{ opacity: 0, scale: 0.98 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.8 }}
-                                className="relative overflow-hidden group mb-8 rounded-[2rem] bg-slate-900/40 backdrop-blur-xl w-full border border-white/10 ring-2 ring-k-purple/30 shadow-[0_0_40px_rgba(168,85,247,0.2)]"
-                                style={{ '--theme-accent': getElementTheme(analysisResult.dominant_element).accent } as React.CSSProperties}
-                              >
-                                {/* Premium Gradient Overlay & Glow Background */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-k-purple/10 via-transparent to-k-pink/10 opacity-70 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-                                <div className="absolute -top-32 -right-32 w-64 h-64 bg-k-purple/20 blur-[80px] rounded-full" />
-                                <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-k-pink/20 blur-[80px] rounded-full" />
+                        {/* SIGNAL Tab */}
+                        {activeTab === 'signal' && (
+                          <motion.div
+                            key="signal-tab"
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: 20 }}
+                            className="flex flex-col gap-4"
+                          >
+                            {/* Premium Chemistry Card */}
+                            <motion.div className="relative overflow-hidden rounded-[2.5rem] bg-slate-900/60 backdrop-blur-xl border border-white/10 ring-2 ring-k-purple/30 shadow-2xl mb-6">
+                              <ParticleField element={analysisResult?.dominant_element || 'wood'} />
 
-                                <ParticleField element={analysisResult.dominant_element} />
-                                <div className="px-3 py-6 sm:p-8 relative z-10 w-full">
-                                  <div className="flex flex-col md:flex-row items-center gap-10">
-                                    {/* Gauge Section */}
-                                    <div className="relative w-36 h-36 flex-shrink-0 mx-auto md:mx-0">
-                                      <svg className="w-full h-full transform -rotate-90">
-                                        <circle
-                                          cx="72" cy="72" r="64"
-                                          fill="transparent"
-                                          stroke="currentColor"
-                                          strokeWidth="10"
-                                          className="text-slate-700/30"
-                                        />
-                                        <motion.circle
-                                          cx="72" cy="72" r="64"
-                                          fill="transparent"
-                                          stroke={getElementTheme(analysisResult.dominant_element).accent}
-                                          strokeWidth="10"
-                                          strokeDasharray={402.12}
-                                          initial={{ strokeDashoffset: 402.12 }}
-                                          animate={{
-                                            strokeDashoffset: 402.12 - (402.12 * Math.min(100, analysisResult.chemistry_signal.base_synergy_score + (analysisResult.chemistry_signal.synergy_missions || []).filter((m: any) => completedMissions.some(cid => cid.startsWith(`${m.id}-`))).reduce((acc: number, m: any) => acc + (m.boost || 0), 0))) / 100
-                                          }}
-                                          transition={{ duration: 2, ease: "easeOut" }}
-                                          strokeLinecap="round"
-                                        />
-                                      </svg>
-                                      <div className="absolute inset-0 flex flex-col items-center justify-center">
-                                        <motion.span
-                                          initial={{ scale: 0.5, opacity: 0 }}
-                                          animate={{ scale: 1, opacity: 1 }}
-                                          className="text-4xl font-black text-white"
-                                        >
-                                          <CountingScore targetScore={Math.min(100, analysisResult.chemistry_signal.base_synergy_score + (analysisResult.chemistry_signal.synergy_missions || []).filter((m: any) => completedMissions.some(cid => cid.startsWith(`${m.id}-`))).reduce((acc: number, m: any) => acc + (m.boost || 0), 0))} />
-                                        </motion.span>
-                                        <span className="text-xs font-bold uppercase tracking-widest text-slate-400">{t('destinyEnergy')}</span>
-                                      </div>
-                                    </div>
-
-                                    <div className="flex-1">
-                                      <div className="mb-6 relative">
-                                        <div className="absolute top-0 left-0 w-1.5 h-full rounded-full" style={{ background: getElementTheme(analysisResult.dominant_element).accent }}></div>
-                                        <div className="pl-6 py-1">
-                                          <h4 className="text-2xl font-black text-white mb-2">{analysisResult.chemistry_signal.idol_name} {t('youLabel')}</h4>
-                                          <p className="text-slate-400 text-sm font-medium leading-loose">
-                                            {analysisResult.chemistry_signal.synergy}
-                                          </p>
-                                        </div>
-                                      </div>
-
-                                      <div className="flex flex-wrap gap-2">
-                                        {(() => {
-                                          const score = analysisResult.chemistry_signal.base_synergy_score;
-                                          let levelKey = 'levelStart';
-                                          if (score >= 95) levelKey = 'levelDestiny';
-                                          else if (score >= 90) levelKey = 'levelSoulmate';
-                                          else if (score >= 85) levelKey = 'levelDeepBond';
-                                          else if (score >= 80) levelKey = 'levelResonance';
-                                          else if (score >= 70) levelKey = 'levelInterest';
-
-                                          return (
-                                            <div className="px-4 py-2 bg-white/5 rounded-full border border-white/10 flex items-center gap-2">
-                                              <Sparkles className="h-3.5 w-3.5" style={{ color: getElementTheme(analysisResult.dominant_element).accent }} />
-                                              <span className="text-xs font-black text-white tracking-wide uppercase">{t(levelKey)}</span>
-                                            </div>
-                                          );
-                                        })()}
-                                        <div className="px-4 py-2 bg-white/5 rounded-full border border-white/10 flex items-center gap-2">
-                                          <BrainCircuit className="h-3.5 w-3.5 text-k-blue" />
-                                          <span className="text-xs font-black text-white tracking-wide uppercase">{analysisResult.chemistry_signal.idol_mbti}</span>
-                                        </div>
-                                      </div>
+                              <div className="px-4 py-8 sm:p-10 relative z-10 w-full">
+                                {/* ===== Restored: 오행 연결 인포그래픽 ===== */}
+                                <div className="flex items-center justify-center gap-4 sm:gap-8 mb-10 p-6 bg-slate-900/80 rounded-3xl border border-white/5 shadow-inner">
+                                  {/* User Element */}
+                                  <div className="text-center group">
+                                    <motion.div
+                                      whileHover={{ scale: 1.1, rotate: 5 }}
+                                      className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center border-2 border-blue-400/50 mb-3 mx-auto shadow-[0_0_20px_rgba(59,130,246,0.2)] group-hover:border-blue-400 transition-all overflow-hidden"
+                                    >
+                                      <img
+                                        src={`/avatars/${userGender === 'male' ? 'male' : 'female'}_1.png`}
+                                        alt="User"
+                                        className="w-full h-full object-cover opacity-90"
+                                        onError={(e: any) => { e.target.src = '/avatars/female_1.png'; }}
+                                      />
+                                      <div className="absolute inset-0 bg-blue-500/10 group-hover:bg-transparent transition-colors" />
+                                    </motion.div>
+                                    <p className="text-[11px] font-black text-blue-300 uppercase tracking-widest">{t('youLabel')}</p>
+                                    <div className="flex items-center justify-center gap-1">
+                                      <span className="text-[10px]">
+                                        {analysisResult.user_saju?.element === 'Wood' ? '🌲' : analysisResult.user_saju?.element === 'Fire' ? '🔥' : analysisResult.user_saju?.element === 'Earth' ? '⛰️' : analysisResult.user_saju?.element === 'Metal' ? '⚔️' : '🌊'}
+                                      </span>
+                                      <p className="text-[10px] text-slate-500 font-bold">{analysisResult.user_saju?.element || '?'}</p>
                                     </div>
                                   </div>
 
-                                  <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                                    {/* 좌측: 상대방 성향 & 관계 Deep Dive */}
-                                    <div className="bg-transparent sm:bg-slate-900/40 p-0 sm:p-6 rounded-2xl border-0 sm:border border-slate-600/50 backdrop-blur-sm">
-                                      <div className="flex items-center gap-2 mb-4">
-                                        <Sparkles className="h-5 w-5 text-k-pink" />
-                                        <span className="font-black text-white text-lg">{t('idolTraits')}</span>
+                                  {/* Connection Line */}
+                                  {(() => {
+                                    const baseScore = analysisResult.chemistry_signal.base_synergy_score || 52;
+                                    const missions = analysisResult.chemistry_signal.synergy_missions || [];
+                                    const totalBoost = missions.filter((m: any) => completedMissions.includes(m.id)).reduce((s: number, m: any) => s + m.boost, 0);
+                                    const score = Math.min(100, baseScore + totalBoost);
+
+                                    const lineColor = score >= 100 ? 'from-pink-400 via-yellow-300 to-pink-400' : score >= 86 ? 'from-emerald-400 to-cyan-400' : score >= 71 ? 'from-purple-400 to-pink-400' : score >= 51 ? 'from-yellow-400 to-amber-400' : 'from-red-500 to-orange-400';
+                                    const lineH = score >= 100 ? 'h-3' : score >= 86 ? 'h-2.5' : score >= 71 ? 'h-2' : score >= 51 ? 'h-1.5' : 'h-1';
+                                    const lineShadow = score >= 100 ? 'shadow-[0_0_20px_rgba(236,72,153,0.6)]' : score >= 86 ? 'shadow-[0_0_15px_rgba(52,211,153,0.4)]' : 'shadow-[0_0_10px_rgba(168,85,247,0.4)]';
+                                    const lineLabel = score >= 100 ? t('destiny') : score >= 86 ? t('soulmate') : score >= 71 ? t('deepBond') : score >= 51 ? t('resonance') : t('tension');
+                                    const labelColor = score >= 100 ? 'text-yellow-300' : score >= 86 ? 'text-emerald-300' : score >= 71 ? 'text-purple-300' : score >= 51 ? 'text-amber-300' : 'text-red-400';
+                                    const borderColor = score >= 100 ? 'border-yellow-400' : score >= 86 ? 'border-emerald-400' : score >= 71 ? 'border-purple-400' : score >= 51 ? 'border-amber-400' : 'border-red-400';
+
+                                    return (
+                                      <div className={`flex-1 relative transition-all duration-700 ${score >= 100 ? '-mx-4 sm:-mx-8' : 'mx-1'}`}>
+                                        <motion.div
+                                          initial={{ scaleX: 0 }}
+                                          animate={{ scaleX: score >= 100 ? 1.05 : 1 }}
+                                          transition={{ duration: 1.5, ease: 'easeOut' }}
+                                          className={`${lineH} bg-gradient-to-r ${lineColor} rounded-full ${lineShadow} transition-all duration-700 relative`}
+                                        >
+                                          {score >= 100 && <div className="absolute inset-0 bg-white/30 animate-pulse rounded-full" />}
+                                        </motion.div>
+
+                                        <motion.div
+                                          initial={{ scale: 0, opacity: 0 }}
+                                          animate={{ scale: 1, opacity: 1 }}
+                                          transition={{ delay: 0.8, type: 'spring' }}
+                                          className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-900 border-2 ${borderColor} rounded-full px-4 py-1.5 transition-all duration-500 z-10 shadow-2xl`}
+                                        >
+                                          <motion.span
+                                            key={lineLabel}
+                                            initial={{ opacity: 0, scale: 0.8 }}
+                                            animate={{ opacity: 1, scale: 1 }}
+                                            className={`text-[11px] sm:text-xs font-black ${labelColor} whitespace-nowrap uppercase tracking-tighter`}
+                                          >
+                                            {lineLabel}
+                                          </motion.span>
+                                        </motion.div>
+
+                                        {score >= 80 && (
+                                          <div className="absolute -top-6 left-0 right-0 flex justify-around pointer-events-none opacity-60">
+                                            {[...Array(3)].map((_, i) => (
+                                              <motion.span
+                                                key={i}
+                                                animate={{ y: [-5, 5, -5], opacity: [0.3, 1, 0.3] }}
+                                                transition={{ duration: 2, delay: i * 0.4, repeat: Infinity }}
+                                                className="text-xs"
+                                              >
+                                                ✨
+                                              </motion.span>
+                                            ))}
+                                          </div>
+                                        )}
                                       </div>
+                                    );
+                                  })()}
 
-                                      <div className="space-y-5">
-                                        {/* 관계 개요 (1-2문장) */}
-                                        <div className="px-3 py-4 sm:p-5 bg-k-purple/10 rounded-xl border border-k-purple/20">
-                                          <p className="text-sm text-slate-200 font-semibold leading-loose sm:leading-relaxed break-keep whitespace-pre-wrap">
-                                            {analysisResult.chemistry_signal.relationship}
-                                          </p>
-                                        </div>
+                                  {/* Idol Element */}
+                                  <div className="text-center group">
+                                    <motion.div
+                                      whileHover={{ scale: 1.1, rotate: -5 }}
+                                      className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center border-2 border-purple-400/50 mb-3 mx-auto shadow-[0_0_20px_rgba(168,85,247,0.2)] group-hover:border-purple-400 transition-all overflow-hidden"
+                                    >
+                                      <img
+                                        src={`/avatars/${(mode === 'friend' ? friendData.gender : (idolData?.gender || 'female')) === 'male' ? 'male' : 'female'}_1.png`}
+                                        alt="Target"
+                                        className="w-full h-full object-cover opacity-90"
+                                        onError={(e: any) => { e.target.src = '/avatars/female_1.png'; }}
+                                      />
+                                      <div className="absolute inset-0 bg-purple-500/10 group-hover:bg-transparent transition-colors" />
+                                    </motion.div>
+                                    <p className="text-[11px] font-black text-purple-300 uppercase tracking-widest">{analysisResult.chemistry_signal.idol_name || 'STAR'}</p>
+                                    <p className="text-[10px] text-slate-500 font-bold">{analysisResult.chemistry_signal.idol_mbti || '????'}</p>
+                                  </div>
+                                </div>
 
-                                        {/* 본질 및 특징 (3-4문장) */}
-                                        <div className="space-y-2">
-                                          <p className="text-sm text-slate-300 leading-loose pl-3 border-l-2 border-k-pink/50 py-1 break-keep whitespace-pre-wrap">
-                                            {analysisResult.chemistry_signal.bias}
-                                          </p>
-                                          <p className="text-[11px] text-slate-400 leading-loose italic pl-3 break-keep whitespace-pre-wrap">
-                                            {analysisResult.chemistry_signal.tmi}
-                                          </p>
-                                        </div>
+                                <div className="flex flex-col md:flex-row items-center gap-10">
+                                  {/* Gauge Section */}
+                                  <div className="relative w-40 h-40 flex items-center justify-center">
+                                    <OrbitalParticles color={getElementTheme(analysisResult?.dominant_element || 'wood').accent} />
+                                    <svg className="w-36 h-36 transform -rotate-90 relative z-10">
+                                      <circle cx="72" cy="72" r="64" fill="transparent" stroke="currentColor" strokeWidth="10" className="text-slate-700/20" />
+                                      <motion.circle
+                                        cx="72" cy="72" r="64" fill="transparent"
+                                        stroke={getElementTheme(analysisResult?.dominant_element || 'wood').accent}
+                                        strokeWidth="10"
+                                        strokeDasharray={402.12}
+                                        initial={{ strokeDashoffset: 402.12 }}
+                                        animate={{ strokeDashoffset: 402.12 - (402.12 * Math.min(100, (analysisResult?.chemistry_signal?.base_synergy_score || 0) + (analysisResult?.chemistry_signal?.synergy_missions?.filter((m: any) => completedMissions.includes(m.id)).reduce((s: number, m: any) => s + m.boost, 0) || 0))) / 100 }}
+                                        transition={{ duration: 2 }}
+                                        strokeLinecap="round"
+                                      />
+                                    </svg>
+                                    <div className="absolute inset-0 flex flex-col items-center justify-center z-20">
+                                      <span className="text-5xl font-black text-white">
+                                        <CountingScore targetScore={Math.min(100, (analysisResult?.chemistry_signal?.base_synergy_score || 0) + (analysisResult?.chemistry_signal?.synergy_missions?.filter((m: any) => completedMissions.includes(m.id)).reduce((s: number, m: any) => s + m.boost, 0) || 0))} />
+                                      </span>
+                                      <span className="text-[10px] font-black uppercase text-slate-400 mt-1">{t('destinyEnergy')}</span>
+                                    </div>
+                                  </div>
 
-                                        {/* 시너지 원인 분석 (New) */}
-                                        {analysisResult.chemistry_signal.synergyWhy && (
+                                  {/* Description & Relationship */}
+                                  <div className="flex-1">
+                                    <div className="pl-6 py-1 border-l-2" style={{ borderColor: getElementTheme(analysisResult?.dominant_element || 'wood').accent }}>
+                                      <h4 className="text-2xl font-black text-white mb-2">
+                                        {analysisResult?.chemistry_signal?.idol_name || (mode === 'friend' ? friendData.name : idolData?.name)} {t('youLabel')}
+                                      </h4>
+                                      <p className="text-slate-400 text-sm font-medium leading-relaxed">
+                                        {analysisResult?.chemistry_signal?.synergy}
+                                      </p>
+                                    </div>
+                                    <div className="mt-8">
+                                      <div className="w-full max-w-3xl bg-slate-900/40 p-4 sm:p-8 rounded-3xl border border-slate-600/30 backdrop-blur-md shadow-2xl">
+                                        <p className="text-sm text-slate-200 font-semibold leading-relaxed break-keep">
+                                          {analysisResult.chemistry_signal.relationship}
+                                        </p>
+                                        {/* synergyWhy analysis */}
+                                        {analysisResult?.chemistry_signal?.synergyWhy && (
                                           <div className="pt-3 mt-3 border-t border-slate-700/30">
                                             <p className="text-[11px] text-k-blue font-bold italic">
-                                              ✨ {analysisResult.chemistry_signal.synergyWhy}
+                                              ✨ {analysisResult?.chemistry_signal?.synergyWhy}
                                             </p>
                                           </div>
                                         )}
                                       </div>
                                     </div>
-
-                                    {/* 우측: 최근 운세 및 꿀팁 */}
-                                    <div className="bg-slate-900/50 rounded-2xl p-4 sm:p-6 border border-slate-600/50">
-                                      <div className="flex items-center gap-2 mb-4">
-                                        <TrendingUp className="h-5 w-5 text-k-green" />
-                                        <p className="text-lg font-black text-white">{t('recentFortune')}</p>
-                                      </div>
-
-                                      <div className="space-y-3">
-                                        <p className="text-sm text-slate-300 bg-slate-800/60 p-3 sm:p-4 rounded-xl border border-slate-700/50 leading-snug font-medium break-keep whitespace-pre-wrap">
-                                          {analysisResult.chemistry_signal.recentFortune}
-                                        </p>
-
-                                        <div className="pt-1">
-                                          <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2 px-1">{t('attackTips') || 'Strategy'}</p>
-                                          <ul className="grid grid-cols-1 gap-1.5 sm:gap-2">
-                                            {analysisResult.chemistry_signal.tips?.map((tip: string, idx: number) => (
-                                              <li key={idx} className="text-[11px] sm:text-xs text-slate-300 bg-slate-800/40 py-2.5 px-3 rounded-lg border border-slate-700/50 flex items-center gap-2 shadow-sm">
-                                                <span className="text-k-pink text-lg -mt-0.5">•</span>
-                                                <span className="leading-snug break-keep whitespace-pre-wrap">{tip}</span>
-                                              </li>
-                                            ))}
-                                          </ul>
-                                        </div>
-                                      </div>
-                                    </div>
                                   </div>
                                 </div>
-                              </motion.div>
-
-                              {/* Missions Section */}
-                              {analysisResult.chemistry_signal.synergy_missions && (
-                                <div className="mt-8">
-                                  <h3 className="text-lg font-black text-white mb-4 flex items-center gap-2">
-                                    <div className="w-8 h-8 rounded-lg bg-k-pink/10 flex items-center justify-center">
-                                      <Sparkles className="h-5 w-5 text-k-pink" />
-                                    </div>
-                                    {t('missionTitle')}
-                                  </h3>
-                                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                    {analysisResult.chemistry_signal.synergy_missions.map((mission: any) => {
-                                      // 이 미션 카테고리에서 선택된 task가 3개 모두 지 확인
-                                      const numSelectedTasks = completedMissions.filter(id => id.startsWith(`${mission.id}-`)).length;
-                                      const isCategoryComplete = numSelectedTasks === 3;
-
-                                      return (
-                                        <div
-                                          key={mission.id}
-                                          className={`p-4 sm:p-5 rounded-2xl border transition-all flex flex-col h-full bg-slate-800/60 border-slate-700/50 ${isCategoryComplete ? 'ring-2 ring-k-pink/40 shadow-[0_0_15px_rgba(236,72,153,0.15)]' : 'hover:border-k-pink/30'}`}
-                                        >
-                                          <div className="flex items-start justify-between mb-3">
-                                            <div className={`w-12 h-12 rounded-xl flex items-center justify-center font-black transition-colors ${isCategoryComplete ? 'bg-k-pink text-white shadow-lg shadow-k-pink/30' : 'bg-slate-900/80 text-k-pink border border-k-pink/20'}`}>
-                                              {isCategoryComplete ? '✓' : `+15`}
-                                            </div>
-                                            {isCategoryComplete && <ThumbsUp className="h-6 w-6 text-k-pink fill-k-pink/20 animate-bounce" />}
-                                          </div>
-                                          <h5 className={`text-base font-black mb-1.5 leading-snug transition-colors ${isCategoryComplete ? 'text-white' : 'text-slate-200'}`}>
-                                            {mission.label}
-                                          </h5>
-                                          <p className="text-xs text-slate-400 font-bold mb-4">{mission.reason || t('missionDesc')}</p>
-
-                                          {/* Sub-Tasks (1 Selection per Mission) */}
-                                          <div className="space-y-2.5 mt-auto">
-                                            {(mission.tasks || []).map((task: string, tIdx: number) => {
-                                              const taskId = `${mission.id}-${tIdx}`;
-                                              const isTaskSelected = completedMissions.includes(taskId);
-
-                                              return (
-                                                <motion.button
-                                                  key={tIdx}
-                                                  whileHover={{ scale: 1.02, x: 2 }}
-                                                  whileTap={{ scale: 0.98 }}
-                                                  onClick={() => {
-                                                    if (isTaskSelected) {
-                                                      setCompletedMissions(prev => prev.filter(id => id !== taskId));
-                                                    } else {
-                                                      // 다중 선택 가능하도록 그냥 배열에 추가 
-                                                      setCompletedMissions(prev => [...prev, taskId]);
-                                                    }
-                                                  }}
-                                                  className={`w-full text-left flex items-start gap-3 p-3 rounded-xl border transition-all ${isTaskSelected ? 'bg-k-pink/15 border-k-pink/50 shadow-md' : 'bg-slate-900/50 border-slate-700/50 hover:border-k-pink/30 hover:bg-slate-800'}`}
-                                                >
-                                                  <div className={`mt-0.5 h-4 w-4 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-colors ${isTaskSelected ? 'border-k-pink bg-k-pink text-white' : 'border-slate-600 bg-slate-800 text-transparent'}`}>
-                                                    {isTaskSelected && <span className="text-[10px] font-black leading-none mb-0.5">✓</span>}
-                                                  </div>
-                                                  <span className={`text-sm leading-relaxed break-keep font-medium transition-colors ${isTaskSelected ? 'text-white' : 'text-slate-300'}`}>
-                                                    {task}
-                                                  </span>
-                                                </motion.button>
-                                              );
-                                            })}
-                                          </div>
-                                        </div>
-                                      );
-                                    })}
-                                  </div>
-                                </div>
-                              )}
-
-                              <motion.button
-                                whileHover={{ scale: 1.02 }}
-                                whileTap={{ scale: 0.98 }}
-                                onClick={handleShare}
-                                className="w-full py-4 bg-white text-slate-900 rounded-2xl font-black text-lg hover:bg-slate-100 transition-all flex items-center justify-center gap-2 shadow-xl mb-12"
-                              >
-                                <Share2 className="h-5 w-5" /> {t('shareResult')}
-                              </motion.button>
-
-                              {analysisResult && (
-                                <SoulCommunity
-                                  comments={comments}
-                                  onPostComment={handlePostComment}
-                                  onDeleteComment={handleDeleteComment}
-                                  isAdmin={isAdmin}
-                                  isPosting={isPostingComment}
-                                  commentText={commentText}
-                                  setCommentText={setCommentText}
-                                  t={t}
-                                />
-                              )}
+                              </div>
                             </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
-                    </motion.div>
-                  )}
-                </motion.div>
+
+                            {/* Opponent Disposition & Tips */}
+                            <div className="space-y-4">
+                              <div className="bg-slate-900/40 p-5 rounded-2xl border border-slate-700/30">
+                                <span className="font-black text-k-purple block mb-3 text-lg flex items-center gap-2">
+                                  <Sparkles className="h-5 w-5" /> 상대방 성향 🔮
+                                </span>
+                                <p className="text-base text-slate-200 leading-relaxed font-medium">
+                                  {analysisResult.chemistry_signal.bias}
+                                </p>
+                              </div>
+                              <div className="bg-slate-900/50 rounded-2xl p-5 border border-slate-700/30">
+                                <p className="text-sm font-black text-slate-300 mb-4 flex items-center gap-2">
+                                  <TrendingUp className="h-4 w-4 text-k-pink" /> {t('attackTips')}
+                                </p>
+                                <ul className="space-y-3">
+                                  {analysisResult.chemistry_signal.tips?.map((tip: string, idx: number) => (
+                                    <li key={idx} className="text-sm text-slate-300 flex items-start gap-3 leading-relaxed">
+                                      <span className="w-1.5 h-1.5 rounded-full bg-k-pink mt-1.5 shrink-0" />
+                                      {tip}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+
+                            {/* Synergy Booster Missions */}
+                            {analysisResult.chemistry_signal.synergy_missions && (
+                              <div className="mt-4 p-5 bg-gradient-to-br from-slate-900/80 to-slate-800/60 rounded-2xl border border-k-purple/30">
+                                <h4 className="text-lg font-black text-white mb-1 flex items-center gap-2">
+                                  {t('missionTitle')}
+                                </h4>
+                                <p className="text-xs text-slate-400 mb-5">{t('missionDesc')}</p>
+                                <div className="space-y-4">
+                                  {analysisResult.chemistry_signal.synergy_missions.map((mission: any) => {
+                                    const isCompleted = completedMissions.includes(mission.id);
+                                    // 다국어 필드 동적 참조 (백엔드에서 label_en, reason_pt 등으로 내려줌)
+                                    const suffix = lang === 'ko' ? '' : `_${lang}`;
+                                    const mLabel = mission[`label${suffix}`] || mission.label;
+                                    const mReason = mission[`reason${suffix}`] || mission.reason;
+                                    const mTasks = mission[`tasks${suffix}`] || mission.tasks;
+                                    return (
+                                      <motion.div
+                                        key={mission.id}
+                                        layout
+                                        className={`p-4 rounded-2xl border transition-all ${isCompleted
+                                          ? 'bg-emerald-500/10 border-emerald-500/40 shadow-[0_0_15px_rgba(16,185,129,0.1)]'
+                                          : 'bg-slate-900/40 border-slate-700/30 hover:border-k-pink/40'
+                                          }`}
+                                      >
+                                        <div className="flex items-start gap-4">
+                                          <div
+                                            onClick={() => {
+                                              if (isCompleted) {
+                                                setCompletedMissions(prev => prev.filter(id => id !== mission.id));
+                                              } else {
+                                                setCompletedMissions(prev => [...prev, mission.id]);
+                                              }
+                                            }}
+                                            className={`w-7 h-7 rounded-full border-2 flex items-center justify-center flex-shrink-0 mt-0.5 cursor-pointer transition-all ${isCompleted ? 'bg-emerald-500 border-emerald-400 scale-110' : 'border-slate-600 hover:border-k-pink'
+                                              }`}
+                                          >
+                                            {isCompleted && <Check className="text-white h-4 w-4" />}
+                                          </div>
+                                          <div className="flex-1">
+                                            <div
+                                              className="flex items-center justify-between cursor-pointer"
+                                              onClick={() => {
+                                                if (isCompleted) {
+                                                  setCompletedMissions(prev => prev.filter(id => id !== mission.id));
+                                                } else {
+                                                  setCompletedMissions(prev => [...prev, mission.id]);
+                                                }
+                                              }}
+                                            >
+                                              <span className={`text-[15px] font-black ${isCompleted ? 'text-emerald-300 line-through opacity-70' : 'text-white'}`}>
+                                                {mLabel}
+                                              </span>
+                                              <span className="text-[10px] font-black text-white bg-gradient-to-r from-k-pink to-k-purple px-2 py-1 rounded-lg">
+                                                +{mission.boost}%
+                                              </span>
+                                            </div>
+                                            {/* Accordion: reason + tasks */}
+                                            {(() => {
+                                              const isExpanded = expandedMission === mission.id;
+                                              return (
+                                                <>
+                                                  <button
+                                                    onClick={(e) => { e.stopPropagation(); setExpandedMission(isExpanded ? null : mission.id); }}
+                                                    className="text-[11px] text-k-purple hover:text-k-pink mt-2.5 font-black transition-colors uppercase tracking-widest flex items-center gap-1"
+                                                  >
+                                                    {isExpanded ? t('collapse') : t('expand')}
+                                                  </button>
+                                                  <AnimatePresence>
+                                                    {isExpanded && mReason && (
+                                                      <motion.div
+                                                        initial={{ opacity: 0, height: 0 }}
+                                                        animate={{ opacity: 1, height: 'auto' }}
+                                                        exit={{ opacity: 0, height: 0 }}
+                                                        className="mt-3 space-y-3 overflow-hidden"
+                                                      >
+                                                        <div className="bg-slate-800/60 rounded-xl p-4 border-l-4 border-k-purple shadow-inner">
+                                                          <p className="text-[13px] text-slate-200 leading-relaxed font-medium italic">"{mReason}"</p>
+                                                        </div>
+                                                        {mTasks && mTasks.length > 0 && (
+                                                          <div className="bg-slate-900/60 rounded-xl p-5 border border-emerald-500/20 shadow-inner">
+                                                            <p className="text-[12px] font-black text-emerald-400 mb-4 flex items-center gap-2 uppercase tracking-widest">
+                                                              <CheckCircle2 className="h-4 w-4" /> {t('taskTitle') || '실천 미션 리스트'}
+                                                            </p>
+                                                            <ul className="space-y-3">
+                                                              {mTasks.map((task: string, ti: number) => (
+                                                                <motion.li
+                                                                  key={ti}
+                                                                  initial={{ x: -10, opacity: 0 }}
+                                                                  animate={{ x: 0, opacity: 1 }}
+                                                                  transition={{ delay: ti * 0.1 }}
+                                                                  className="text-[13px] text-slate-300 flex items-start gap-3 bg-slate-800/40 p-3 rounded-xl border border-white/5 hover:border-emerald-500/30 transition-all font-medium group/line"
+                                                                >
+                                                                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-[10px] font-black border border-emerald-500/20 group-hover/line:bg-emerald-500 group-hover/line:text-white transition-colors">
+                                                                    {ti + 1}
+                                                                  </span>
+                                                                  <span className="leading-relaxed">{task}</span>
+                                                                </motion.li>
+                                                              ))}
+                                                            </ul>
+                                                            <p className="mt-4 text-[10px] text-slate-500 text-center font-bold tracking-tight opacity-60">
+                                                              {t('missionHint') || '미션을 완료할 때마다 시너지 점수가 올라갑니다!'}
+                                                            </p>
+                                                          </div>
+                                                        )}
+                                                      </motion.div>
+                                                    )}
+                                                  </AnimatePresence>
+                                                </>
+                                              );
+                                            })()}
+                                          </div>
+                                        </div>
+                                      </motion.div>
+                                    );
+                                  })}
+                                </div>
+                              </div>
+                            )}
+
+                            {/* Share & Community */}
+                            <motion.button
+                              whileHover={{ scale: 1.02 }}
+                              whileTap={{ scale: 0.98 }}
+                              onClick={handleShare}
+                              className="w-full py-4 bg-white text-slate-900 rounded-2xl font-black text-lg hover:bg-slate-100 transition-all flex items-center justify-center gap-2 shadow-xl mb-12"
+                            >
+                              <Share2 className="h-5 w-5" /> {t('shareResult')}
+                            </motion.button>
+
+                            {analysisResult && (
+                              <SoulCommunity
+                                comments={comments}
+                                pagination={commentPagination}
+                                onPostComment={handlePostComment}
+                                onPostReply={handlePostReply}
+                                onDeleteComment={handleDeleteComment}
+                                onPageChange={handlePageChange}
+                                isAdmin={isAdmin}
+                                isPosting={isPostingComment}
+                                commentText={commentText}
+                                setCommentText={setCommentText}
+                                t={t}
+                              />
+                            )}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  </motion.div>
+                )}
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
+      {/* Overlays & Modals */}
       <AnimatePresence>
         {showMBTIQuiz && (
           <QuickMBTI
             lang={lang}
             onClose={() => setShowMBTIQuiz(false)}
-            onComplete={(mbti: string) => {
-              if (mbtiTarget === 'user') {
-                setUserMBTI(mbti);
-              } else if (mbtiTarget === 'idol') {
-                setIdolData((prev: any) => ({ ...prev, mbti: mbti }));
-              }
+            onComplete={(mbti) => {
+              if (mbtiTarget === 'user') setUserMBTI(mbti);
+              else if (mbtiTarget === 'idol') setIdolData((prev: any) => ({ ...prev, mbti: mbti }));
               setShowMBTIQuiz(false);
             }}
           />
         )}
       </AnimatePresence>
-      {/* Footer Stats */}
-      <div className="max-w-xl mx-auto px-4 mt-8 pb-12 border-t border-slate-800/50 pt-10">
-        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 mb-8">
-          <div className="flex-1 flex flex-col items-center bg-slate-800/50 px-6 sm:px-8 py-5 rounded-2xl border border-slate-700/50 hover:bg-slate-700/50 transition-colors shadow-lg">
+
+      {/* Footer Stats Area */}
+      <div className="max-w-xl mx-auto px-4 mt-8 pb-12 border-t border-slate-800/50 pt-10 text-center">
+        <div className="flex justify-center gap-8 mb-8">
+          <div className="flex-1 flex flex-col items-center bg-slate-800/50 py-5 rounded-2xl border border-slate-700/50 shadow-lg">
             <p className="text-[11px] font-black text-white uppercase tracking-[0.2em] mb-3 opacity-90">{t('visitorsToday')}</p>
-            <p className="text-3xl sm:text-4xl font-black text-k-blue drop-shadow-[0_0_10px_rgba(30,144,255,0.3)]">{stats.today_challengers}</p>
+            <p className="text-3xl font-black text-k-blue">{stats.today_challengers}</p>
           </div>
-          <div className="flex-1 flex flex-col items-center bg-slate-800/50 px-6 sm:px-8 py-5 rounded-2xl border border-slate-700/50 hover:bg-slate-700/50 transition-colors shadow-lg">
+          <div className="flex-1 flex flex-col items-center bg-slate-800/50 py-5 rounded-2xl border border-slate-700/50 shadow-lg">
             <p className="text-[11px] font-black text-white uppercase tracking-[0.2em] mb-3 opacity-90">{t('visitorsTotal')}</p>
-            <p className="text-3xl sm:text-4xl font-black text-k-purple drop-shadow-[0_0_10px_rgba(168,85,247,0.3)]">{stats.total_visitors}</p>
+            <p className="text-3xl font-black text-k-purple">{stats.total_visitors}</p>
           </div>
         </div>
-        <p className="text-center text-[11px] font-bold text-slate-300 tracking-widest drop-shadow-sm">
-          {t('footer')}
-        </p>
+        <p className="text-center text-[11px] font-bold text-slate-300 tracking-widest">{t('footer')}</p>
       </div>
-      {/* Floating Guide Button */}
+
+      {/* Guide Trigger Button */}
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setShowGuideModal(true)}
-        className="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-k-purple to-k-pink text-white p-3.5 rounded-full shadow-[0_4px_20px_rgba(236,72,153,0.4)] border border-white/20"
+        className="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-k-purple to-k-pink text-white p-3.5 rounded-full shadow-lg border border-white/20"
       >
         <HelpCircle className="h-6 w-6" />
       </motion.button>
@@ -2507,62 +2689,29 @@ const App = () => {
           <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
             <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm" onClick={() => setShowGuideModal(false)} />
             <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative w-full max-w-sm sm:max-w-md bg-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-700/50"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              className="relative w-full max-w-md bg-slate-800 rounded-3xl p-8 shadow-2xl border border-slate-700/50"
             >
-              <button onClick={() => setShowGuideModal(false)} className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white bg-slate-700/50 hover:bg-slate-700 rounded-full transition-colors">
+              <button onClick={() => setShowGuideModal(false)} className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white">
                 <X className="w-5 h-5" />
               </button>
-
               <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 bg-k-purple/20 rounded-2xl">
-                  <BookOpen className="w-6 h-6 text-k-purple" />
-                </div>
-                <div>
-                  <h2 className="text-xl font-black text-white">{t('guideTitle') || 'K-Destiny Guide'}</h2>
-                  <p className="text-sm font-medium text-slate-400">{t('guideSubtitle') || 'How to read your cosmic signals'}</p>
-                </div>
+                <div className="p-3 bg-k-purple/20 rounded-2xl"><BookOpen className="w-6 h-6 text-k-purple" /></div>
+                <h2 className="text-xl font-black text-white">{t('guideTitle')}</h2>
               </div>
-
-              <div className="space-y-4 max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
-                <div className="p-4 bg-slate-900/50 rounded-2xl border border-slate-700/50">
-                  <h3 className="text-sm font-black text-k-pink mb-2 flex items-center gap-2">
-                    <Heart className="w-4 h-4" /> Soul Match (Destined?)
-                  </h3>
-                  <p className="text-xs text-slate-300 leading-relaxed break-keep">
-                    {t('guideMatchDesc') || 'Discover the cosmic synergy between you and the star. The glowing line shows your connection strength—can you reach 100% Destined? Select one mission per category to boost your synergy score!'}
-                  </p>
-                </div>
-
-                <div className="p-4 bg-slate-900/50 rounded-2xl border border-slate-700/50">
-                  <h3 className="text-sm font-black text-white mb-2 flex items-center gap-2">
-                    <Star className="w-4 h-4 text-k-blue" /> My Soul (K-Saju)
-                  </h3>
-                  <p className="text-xs text-slate-300 leading-relaxed break-keep">
-                    {t('guideSoulDesc') || 'Your personal life indicator based on authentic Korean Saju algorithms. Uncover your dominant element and deep character analysis.'}
-                  </p>
-                </div>
-
-                <div className="p-4 bg-slate-900/50 rounded-2xl border border-slate-700/50">
-                  <h3 className="text-sm font-black text-white mb-2 flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-yellow-500" /> Our Fate (Calendar)
-                  </h3>
-                  <p className="text-xs text-slate-300 leading-relaxed break-keep">
-                    {t('guideFateDesc') || 'A month-by-month guide of your destined timeline. Check your Action Points and Star Signals to make the best of each month.'}
-                  </p>
-                </div>
-              </div>
-
-              <button onClick={() => setShowGuideModal(false)} className="w-full mt-6 py-4 bg-gradient-to-r from-k-purple to-k-blue rounded-2xl text-white font-black hover:opacity-90 transition-opacity">
+              <p className="text-xs text-slate-300 leading-relaxed mb-6">{t('guideMatchDesc')}</p>
+              <button onClick={() => setShowGuideModal(false)} className="w-full py-4 bg-gradient-to-r from-k-purple to-k-blue rounded-2xl text-white font-black hover:opacity-90 transition-opacity">
                 {t('close')}
               </button>
             </motion.div>
           </div>
         )}
       </AnimatePresence>
-    </div>
+
+      {/* Main AnimatePresence End */}
+    </div >
   );
 };
 

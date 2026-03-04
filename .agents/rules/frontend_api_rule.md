@@ -1,3 +1,7 @@
+---
+description:  K-Destiny Project Local Rules
+---
+
 # K-Destiny Project Local Rules
 ---
 description: 에이전트 반복 오류 방지를 위한 프로젝트 로컬 환경 규칙입니다.
