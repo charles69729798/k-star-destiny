@@ -1340,16 +1340,17 @@ const App = () => {
       setTimeout(() => setShowErrorShake(false), 600);
       document.getElementById('user-profile-section')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
+    }
+
+    if (mode === 'idol' && isManualMode && (!idolData || !idolData.birth_date)) {
       setErrorMessage(t('birthDateAlert'));
       setShowErrorShake(true);
       setTimeout(() => setShowErrorShake(false), 600);
-      // 프로필 영역으로 스크롤하여 사용자에게 안내
-      document.getElementById('user-profile-section')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
     }
 
-    if (isManualMode && !idolData.birth_date) {
-      setErrorMessage(t('birthDateAlert'));
+    if (mode === 'friend' && (!friendData || !friendData.birth_date || !isValidDate(friendData.birth_date))) {
+      setErrorMessage(t('invalidDate') || 'Invalid Friend Date');
       setShowErrorShake(true);
       setTimeout(() => setShowErrorShake(false), 600);
       return;
@@ -1391,7 +1392,7 @@ const App = () => {
       }
 
       setAnalysisResult(response.data.analysis);
-      if (!keepTab) setActiveTab('signal'); 
+      if (!keepTab) setActiveTab('signal');
     } catch (error) {
       console.error('Analysis Error:', error);
       setErrorMessage(t('analysisError'));
@@ -1585,6 +1586,7 @@ const App = () => {
                 setIdolData(null);
                 setAnalysisResult(null);
                 setCompletedMissions([]);
+                setIsManualMode(false);
               }}
               className={`flex-1 px-6 py-3 rounded-xl text-sm font-black transition-all flex items-center justify-center gap-2 ${mode === 'friend' ? 'bg-gradient-to-r from-k-blue to-cyan-500 text-white shadow-lg shadow-k-blue/20' : 'text-slate-500 hover:text-slate-300'}`}
             >

@@ -1,0 +1,2242 @@
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 592, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 260, in assemble_mz_report
+    user=display_user, idol=idol_name,
+         ^^^^^^^^^^^^
+NameError: name 'display_user' is not defined
+======================================================================
+  誘몄뀡 ?앹꽦 ?덉쭏 寃利?(100+ ?섑뵆)
+======================================================================
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+Saju MZ Logic Error: name 'display_user' is not defined
+
+珥?議고빀 ?? 50
+珥?誘몄뀡 ?앹꽦 ?? 0 (紐⑺몴: 100+)
+
+????????????????????????????????????????????????????????????
+  [?쒓뎅?? ?섑뵆 誘몄뀡 (泥섏쓬 10媛?
+????????????????????????????????????????????????????????????
+  ... 珥?0媛??좊땲??誘몄뀡 (?꾩껜 0媛?
+
+????????????????????????????????????????????????????????????
+  [English] ?섑뵆 誘몄뀡 (泥섏쓬 10媛?
+????????????????????????????????????????????????????????????
+  ... 珥?0媛??좊땲??誘몄뀡 (?꾩껜 0媛?
+
+????????????????????????????????????????????????????????????
+  [Espa챰ol] ?섑뵆 誘몄뀡 (泥섏쓬 10媛?
+????????????????????????????????????????????????????????????
+  ... 珥?0媛??좊땲??誘몄뀡 (?꾩껜 0媛?
+
+????????????????????????????????????????????????????????????
+  [Portugu챗s] ?섑뵆 誘몄뀡 (泥섏쓬 10媛?
+????????????????????????????????????????????????????????????
+  ... 珥?0媛??좊땲??誘몄뀡 (?꾩껜 0媛?
+
+============================================================
+  寃利?寃곌낵 ?붿빟
+============================================================
+
+  ???댁뒋 ?놁쓬! 紐⑤뱺 誘몄뀡???뺤긽 ?앹꽦?섏뿀?듬땲??
+
+  ?뱤 ?몄뼱蹂??좊땲??誘몄뀡 ??
+     [ko] 0媛??좊땲??/ 0媛??꾩껜
+     [en] 0媛??좊땲??/ 0媛??꾩껜
+     [es] 0媛??좊땲??/ 0媛??꾩껜
+     [pt] 0媛??좊땲??/ 0媛??꾩껜
+
+============================================================
+  寃利??꾨즺!
+============================================================

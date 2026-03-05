@@ -15,7 +15,7 @@ from saju_engine import analyze_destiny
 from ai_search import search_idol_perplexity
 from saju_rules import MBTI_CHEMISTRY
 from apscheduler.schedulers.background import BackgroundScheduler
-import git_sync
+# import git_sync  # 제거됨 (Missing Module)
 
 # Global Stats Persistence
 STATS_FILE = "stats.json"
@@ -237,10 +237,17 @@ app = FastAPI(
 )
 
 # CORS setup
-# 환경 변수에 관계없이 모든 도메인/포트에서의 접근을 허용하여 접속 포트 불일치 근본 원인 해결
+# 환경 변수에 관계없이 모든 도메인/포트에서의 접근을 허용하여 접속 포트 불일치 근본 원인 해결 (로컬 폴백)
+# 운영 환경의 경우 CORS_ORIGINS 환경 변수로 허용 도메인을 제어합니다.
+cors_origins_env = os.environ.get("CORS_ORIGINS", "")
+if cors_origins_env:
+    allow_origins = [origin.strip() for origin in cors_origins_env.split(",")]
+else:
+    allow_origins = ["*"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=allow_origins,
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -308,7 +315,7 @@ def auto_bot_update():
     new_count = len(IDOL_POOL) - original_count
     
     # 3. Git 역공급 및 이메일 알림 실행
-    git_sync.push_to_git(new_count)
+    # git_sync.push_to_git(new_count) # 모듈 누락으로 인한 주석 처리
 
 # 스케줄러 설정
 scheduler = BackgroundScheduler()

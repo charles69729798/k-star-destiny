@@ -173,7 +173,8 @@ def get_assistant_info(name: str) -> dict:
                     birth_match = re.search(r'([12]\d{3})[-년\.\s]+([01]?\d)[-월\.\s]+([0123]?\d)[일\.\s]?', text)
                     if birth_match:
                         y, m, d = birth_match.groups()
-                        result["birth_date"] = f"{int(y):04d}-{int(m):02d}-{int(d):02d}"
+                        if 1900 < int(y) < datetime.date.today().year - 2:
+                            result["birth_date"] = f"{int(y):04d}-{int(m):02d}-{int(d):02d}"
                         
             if result["mbti"] and result["birth_date"]:
                 break
@@ -552,6 +553,15 @@ def search(name: str, wiki_title: str = "", wiki_lang: str = "en"):
         # 일반 검색
         search_wikipedia(name, result)
         search_namuwiki(name, result)
+
+    # Fallback to assistant if essential info is missing
+    if not result["mbti"] or not result["birth_date"]:
+        print(f"  [Assistant] Fallback initiated for {name}...", file=sys.stderr)
+        ast = get_assistant_info(name)
+        if not result["mbti"] and ast["mbti"]:
+            result["mbti"] = ast["mbti"]
+        if not result["birth_date"] and ast["birth_date"]:
+            result["birth_date"] = ast["birth_date"]
 
     print(f"[Search] Result: {result}", file=sys.stderr)
     print(json.dumps(result, ensure_ascii=False))

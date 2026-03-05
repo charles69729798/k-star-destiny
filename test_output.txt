@@ -1,0 +1,178 @@
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 582, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 269, in assemble_mz_report
+    synergy_why = _det_pick(f"{base_key}_why", fragments.get("synergy_why", [""])).format(
+        u_element=user_el, i_element=idol_el, u_mbti=user_mbti, i_mbti=idol_mbti
+    )
+KeyError: 'idol'
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 582, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 269, in assemble_mz_report
+    synergy_why = _det_pick(f"{base_key}_why", fragments.get("synergy_why", [""])).format(
+        u_element=user_el, i_element=idol_el, u_mbti=user_mbti, i_mbti=idol_mbti
+    )
+KeyError: 'idol'
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 582, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 269, in assemble_mz_report
+    synergy_why = _det_pick(f"{base_key}_why", fragments.get("synergy_why", [""])).format(
+        u_element=user_el, i_element=idol_el, u_mbti=user_mbti, i_mbti=idol_mbti
+    )
+KeyError: 'idol'
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 582, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 269, in assemble_mz_report
+    synergy_why = _det_pick(f"{base_key}_why", fragments.get("synergy_why", [""])).format(
+        u_element=user_el, i_element=idol_el, u_mbti=user_mbti, i_mbti=idol_mbti
+    )
+KeyError: 'idol'
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 582, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 269, in assemble_mz_report
+    synergy_why = _det_pick(f"{base_key}_why", fragments.get("synergy_why", [""])).format(
+        u_element=user_el, i_element=idol_el, u_mbti=user_mbti, i_mbti=idol_mbti
+    )
+KeyError: 'idol'
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 582, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 269, in assemble_mz_report
+    synergy_why = _det_pick(f"{base_key}_why", fragments.get("synergy_why", [""])).format(
+        u_element=user_el, i_element=idol_el, u_mbti=user_mbti, i_mbti=idol_mbti
+    )
+KeyError: 'idol'
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 582, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 269, in assemble_mz_report
+    synergy_why = _det_pick(f"{base_key}_why", fragments.get("synergy_why", [""])).format(
+        u_element=user_el, i_element=idol_el, u_mbti=user_mbti, i_mbti=idol_mbti
+    )
+KeyError: 'idol'
+Traceback (most recent call last):
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 582, in analyze_destiny
+    mz_report = assemble_mz_report(
+        fragments, dominant, idol_dominant if idol_dominant else dominant,
+        user_mbti, idol_mbti, base_score, idol_name, lang, UI=UI
+    )
+  File "C:\InsuranceProject\k-star-destiny\tests\..\backend\saju_engine.py", line 269, in assemble_mz_report
+    synergy_why = _det_pick(f"{base_key}_why", fragments.get("synergy_why", [""])).format(
+        u_element=user_el, i_element=idol_el, u_mbti=user_mbti, i_mbti=idol_mbti
+    )
+KeyError: 'idol'
+======================================================================
+  誘몄뀡 ?앹꽦 ?덉쭏 寃利?(100+ ?섑뵆)
+======================================================================
+Saju MZ Logic Error: 'idol'
+Saju MZ Logic Error: 'idol'
+Saju MZ Logic Error: 'idol'
+Saju MZ Logic Error: 'idol'
+Saju MZ Logic Error: 'idol'
+Saju MZ Logic Error: 'idol'
+Saju MZ Logic Error: 'idol'
+Saju MZ Logic Error: 'idol'
+
+珥?議고빀 ?? 50
+珥?誘몄뀡 ?앹꽦 ?? 1728 (紐⑺몴: 100+)
+
+????????????????????????????????????????????????????????????
+  [?쒓뎅?? ?섑뵆 誘몄뀡 (泥섏쓬 10媛?
+????????????????????????????????????????????????????????????
+   1. ?ㅽ?媛 ?멸툒??怨듭뿉???쇱옄留뚯쓽 ?쒓컙??蹂대궡硫??깆옣 ?쒖궗媛 ?닿릿 ?곸긽 ?쒕줈???ㅻ쫫???밸퀎?쒗븳 留ㅻ젰?쇰줈 ?뱁솕?쒗궎??留덈쾿?낅땲??
+   2. ?ㅽ???Star_Fire???쇱긽???섎쭔??湲곕줉?쇰줈 ?④린硫??깆옣 ?쒖궗媛 ?닿릿 ?곸긽 ?붾뱾由ъ? ?딅뒗 ?뺤떊??洹몃┛?뚮옒洹몃? ?꾩꽦??蹂댁꽭??
+   3. ?ㅽ???Star_Metal???쇱긽???섎쭔??湲곕줉?쇰줈 ?④린硫?珥덈줉????궎 ?꾩씠???ъ옣??諛섏쓳?섎뒗 媛볥꼍???쒕꼫吏瑜?吏곸젒 泥댄뿕??蹂댁꽭??
+   4. ?ㅽ???湲덇컯 ?댁꽭瑜?遺꾩꽍???섎쭔??遺?곸쑝濡?留뚮뱾硫??섎Т ?κ린 媛?앺븳 ?깆? ?꾩깮遺???댁뼱吏??몄뿰???덉쓣 ?붿슧 ?⑤떒?섍쾶 留뚮벊?덈떎.
+   5. ?ㅽ?媛 ?멸툒??媛뺤뿉???쇱옄留뚯쓽 ?쒓컙??蹂대궡硫??섎Т ?κ린 媛?앺븳 ?깆? ?쒕줈???ㅻ쫫???밸퀎?쒗븳 留ㅻ젰?쇰줈 ?뱁솕?쒗궎??留덈쾿?낅땲??
+   6. 議곗슜???섎쭔??珥덈줉????궎 ?꾩씠???ㅺ씀 ?쒓컙??媛뽰쑝硫?珥덈줉????궎 ?꾩씠???ㅽ???留덉쓬??1?쒖쐞濡?媛곸씤?섎뒗 理쒓퀬??諛⑸쾿?낅땲??
+   7. ?ㅽ?媛 ?멸툒???먯뿉???쇱옄留뚯쓽 ?쒓컙??蹂대궡硫??섎Т ?κ린 媛?앺븳 ?깆? ?쒕줈???곸깮 ?쒕꼫吏瑜?200% 利앺룺?쒖폒 蹂댁꽭??
+   8. ?ㅽ?媛 ?멸툒???쒖뿉???쇱옄留뚯쓽 ?쒓컙??蹂대궡硫??깆옣 ?쒖궗媛 ?닿릿 ?곸긽 ?ㅽ?????湲곗슫???뱀떊???먮꼫吏瑜??숆린?뷀븯?몄슂.
+   9. 議곗슜???섎쭔???몃Ⅸ ?덉떦 援우쫰 ?ㅺ씀 ?쒓컙??媛뽰쑝硫??몃Ⅸ ?덉떦 援우쫰 ?쒕줈???곸깮 ?쒕꼫吏瑜?200% 利앺룺?쒖폒 蹂댁꽭??
+  10. ?ㅽ??먭쾶 以?吏꾩떖 ?대┛ ?먰렪吏瑜??뺤꽦猿??곕ŉ ?섎Т ?κ린 媛?앺븳 ?깆? ?ㅽ???留덉쓬??1?쒖쐞濡?媛곸씤?섎뒗 理쒓퀬??諛⑸쾿?낅땲??
+  ... 珥?331媛??좊땲??誘몄뀡 (?꾩껜 450媛?
+
+????????????????????????????????????????????????????????????
+  [English] ?섑뵆 誘몄뀡 (泥섏쓬 10媛?
+????????????????????????????????????????????????????????????
+   1. Secretly hoarding the star's Black/Water green lucky item Make the invisible thread from your past life even stronger.
+   2. Meditating to the star's playlist forest-scented pilgrimage spot Amplify your Synergy synergy by 200%!
+   3. Secretly hoarding the star's White/Metal green lucky item Enjoy the moment your destined frequencies sync.
+   4. Having a fancam marathon at home green lucky item Sync your energy to the star's Earth vibe.
+   5. Quietly journaling with a green sprout-themed merch green sprout-themed merch Experience the god-tier synergy that makes your heart race.
+   6. Binge-watching the star's past y fancams video of their growth era Experience the god-tier synergy that makes your heart race.
+   7. Binge-watching the star's past t fancams forest-scented pilgrimage spot Become the ultimate bestie.
+   8. Writing down the warm comforting words the star said video of their growth era Make the invisible thread from your past life even stronger.
+   9. Analyzing the star's Ocean fortune as a lucky charm forest-scented pilgrimage spot Amplify your Synergy synergy by 200%!
+  10. Binge-watching the star's past i fancams video of their growth era Become the ultimate bestie.
+  ... 珥?335媛??좊땲??誘몄뀡 (?꾩껜 450媛?
+
+????????????????????????????????????????????????????????????
+  [Espa챰ol] ?섑뵆 誘몄뀡 (泥섏쓬 10媛?
+????????????????????????????????????????????????????????????
+   1. Haciendo marat처n de fancams de su era t lugar de peregrinaci처n con olor a bosque Convi챕rtete en su bestie definitivo.
+   2. Pasando tiempo a solas en el e que mencion처 el star merch tem찼tica de plantitas verdes La pieza final para su qu챠mica secreta.
+   3. Coleccionando en secreto el Madera/Verde del star merch tem찼tica de plantitas verdes La magia para convertir sus diferencias en un encanto ?밸퀎??
+   4. Guardando un registro privado de sus vibes Star_Water lugar de peregrinaci처n con olor a bosque Experimenta la sinergia god-tier que hace latir tu coraz처n.
+   5. Pasando tiempo a solas en el u que mencion처 el star merch tem찼tica de plantitas verdes El atajo m찼s r찼pido para ser su #1.
+   6. Pasando tiempo a solas en el C que mencion처 el star merch tem찼tica de plantitas verdes Haz a첬n m찼s fuerte el hilo rojo de su vida pasada.
+   7. Coleccionando en secreto el Blanco/Metal del star merch tem찼tica de plantitas verdes La pieza final para su qu챠mica secreta.
+   8. Meditando con la playlist del star lucky item color verde Completa la green flag definitiva.
+   9. Analizando su fortuna Oc챕ano para usarlo de amuleto video de su era de crecimiento Experimenta la sinergia god-tier que hace latir tu coraz처n.
+  10. Bingeando fancams en casa sin parar lugar de peregrinaci처n con olor a bosque La magia para convertir sus diferencias en un encanto ?밸퀎??
+  ... 珥?334媛??좊땲??誘몄뀡 (?꾩껜 450媛?
+
+????????????????????????????????????????????????????????????
+  [Portugu챗s] ?섑뵆 誘몄뀡 (泥섏쓬 10媛?
+????????????????????????????????????????????????????????????
+   1. Fazendo maratona das fancams c do passado lucky item verde Se torne o bestie definitivo.
+   2. Fazendo um polco (journal) tranquilamente com local de peregrina챌찾o com cheiro de floresta local de peregrina챌찾o com cheiro de floresta Amplifique a sinergia de Sinergia em 200%!
+   3. Meditando com a playlist do star lucky item verde Sincronize sua energia com a vibe Metal do star.
+   4. Mantendo um di찼rio privado das vibes Star_Fire dele merch com tema de plantinhas verde Amplifique a sinergia de Sinergia em 200%!
+   5. Escrevendo uma cartinha cheia de sentimentos pra ele merch com tema de plantinhas verde Experimente aquela sinergia god-tier que faz o cora챌찾o acelerar.
+   6. Passando um tempo sozinho no C que o star citou merch com tema de plantinhas verde Sincronize sua energia com a vibe Terra do star.
+   7. Passando um tempo sozinho no 챕 que o star citou merch com tema de plantinhas verde Complete a sua green flag suprema.
+   8. Mantendo um di찼rio privado das vibes Star_Fire dele local de peregrina챌찾o com cheiro de floresta Amplifique a sinergia de Sinergia em 200%!
+   9. Passando um tempo sozinho no B que o star citou local de peregrina챌찾o com cheiro de floresta A 첬ltima pe챌a pro quebra-cabe챌a da qu챠mica secreta de voc챗s.
+  10. Passando um tempo sozinho no o que o star citou local de peregrina챌찾o com cheiro de floresta A m찼gica pra transformar as diferen챌as num charme ?밸퀎??
+  ... 珥?287媛??좊땲??誘몄뀡 (?꾩껜 378媛?
+
+============================================================
+  寃利?寃곌낵 ?붿빟
+============================================================
+
+  ???댁뒋 ?놁쓬! 紐⑤뱺 誘몄뀡???뺤긽 ?앹꽦?섏뿀?듬땲??
+
+  ?뱤 ?몄뼱蹂??좊땲??誘몄뀡 ??
+     [ko] 331媛??좊땲??/ 450媛??꾩껜
+     [en] 335媛??좊땲??/ 450媛??꾩껜
+     [es] 334媛??좊땲??/ 450媛??꾩껜
+     [pt] 287媛??좊땲??/ 378媛??꾩껜
+
+============================================================
+  寃利??꾨즺!
+============================================================

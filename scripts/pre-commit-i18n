@@ -1,0 +1,28 @@
+#!/bin/sh
+# .git/hooks/pre-commit
+# KO i18n 변경 감지 → 자동 번역 동기화 트리거
+# 설치: cp scripts/pre-commit-i18n .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+
+# saju_i18n.py가 staged 변경 파일에 포함되어 있는지 확인
+if git diff --cached --name-only | grep -q "saju_i18n.py"; then
+    echo ""
+    echo "🔔 saju_i18n.py 변경 감지 — 다국어 에이전트 동기화 실행 중..."
+    
+    cd backend
+    python validate_i18n.py
+    EXIT_CODE=$?
+    
+    if [ $EXIT_CODE -ne 0 ]; then
+        echo ""
+        echo "⚠️  다국어 불일치 발견! 자동 번역을 실행합니다..."
+        python i18n_sync_agent.py --force
+        
+        # 업데이트된 파일을 스테이징에 추가
+        git add saju_i18n.py
+        echo "✅ 번역 동기화 완료 — 커밋에 자동 포함됩니다."
+    else
+        echo "✅ 모든 번역 일치 확인 — 커밋 진행"
+    fi
+fi
+
+exit 0
